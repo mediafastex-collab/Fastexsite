@@ -1,0 +1,8 @@
+# Cloudflare Pages configuration.
+#
+# `next.config.mjs` sets `output: "export"`, so the built site lands in `out/`.
+# Declaring it here means the deploy does not depend on the dashboard's
+# "Build output directory" field being set correctly.
+name = "fastexsite"
+pages_build_output_dir = "out"
+compatibility_date = "2026-08-16"
