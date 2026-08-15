@@ -34,3 +34,6 @@ next-env.d.ts
 
 # claude code worktrees (nested repos)
 .claude/worktrees/
+
+# stray nested repo of the previous static site
+Site/
