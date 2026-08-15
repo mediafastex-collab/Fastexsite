@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fastex Media | B2B Marketing Agency</title>
-    <meta name="description" content="Fastex Media is a B2B marketing agency helping brands build their lead generation systems on autopilot.">
+    <title>B2B Marketing Agency | Fastex Media</title>
+    <meta name="description" content="Fastex Media is a premier B2B marketing agency. We help brands build predictable, highly-scalable lead generation systems on autopilot, scaling MRR up to 10X.">
+    
+    <!-- SEO & Indexing -->
+    <link rel="canonical" href="https://fastexmedia.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fastexmedia.com/">
+    <meta property="og:title" content="B2B Marketing Agency | Fastex Media">
+    <meta property="og:description" content="Fastex Media is a premier B2B marketing agency. We help brands build predictable, highly-scalable lead generation systems on autopilot, scaling MRR up to 10X.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fastexmedia.com/">
+    <meta property="twitter:title" content="B2B Marketing Agency | Fastex Media">
+    <meta property="twitter:description" content="Fastex Media is a premier B2B marketing agency. We help brands build predictable, highly-scalable lead generation systems on autopilot, scaling MRR up to 10X.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +29,14 @@
     <!-- Phosphor Icons (for sleek UI icons) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
-
+    <div class="site-wrapper">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/logo.png" alt="Fastex Media Logo">
                 <span class="logo-text">Fastex <span class="text-orange">Media</span></span>
             </a>
@@ -29,9 +44,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#partner">Partnership</a></li>
+                <li><a href="#" class="partner-modal-btn">Partnership</a></li>
             </ul>
-            <a href="https://cal.id/aagam-digital/discovery-call" target="_blank" class="btn btn-primary">Book a Call</a>
+            <a href="#" class="btn btn-primary book-call-btn">Book a Call</a>
             <button class="mobile-menu-btn"><i class="ph ph-list"></i></button>
         </div>
     </nav>
@@ -39,21 +54,22 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg">
-            <img src="assets/hero-bg.png" alt="Abstract Background">
             <div class="overlay"></div>
         </div>
         <div class="container hero-content">
             <div class="hero-text reveal">
-                <div class="badge">B2B Marketing Agency</div>
-                <h1>We are your <span class="text-orange">Growth Partner</span></h1>
-                <p>We help 20+ Brands build their Lead generation systems on <strong>Autopilot</strong>. Our system works as your 24/7 sales person.</p>
+                <div class="badge"><span class="text-orange" style="font-weight: 800;">B2B</span> Marketing Agency</div>
+                <h1>Grow your Revenue up to <span class="text-orange">10X</span></h1>
+                <p>We help 50+ Brands build their Lead generation systems on <strong>Autopilot</strong> to grow their revenue up to 10X. Our system works as your 24/7 sales person.</p>
                 <div class="hero-btns">
-                    <a href="#services" class="btn btn-primary btn-large">Explore Services</a>
-                    <a href="#contact" class="btn btn-outline btn-large">Let's Talk</a>
+                    <a href="#services" class="btn btn-outline btn-large">Explore Services</a>
+                    <a href="#" class="btn btn-primary btn-large book-call-btn">Book a Call</a>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Clients / Target Audience Section -->
     <section class="metrics-bar">
@@ -149,6 +165,30 @@
         </div>
     </section>
 
+    <!-- 10X Revenue Section -->
+    <section class="revenue-section section-padding">
+        <div class="container revenue-container">
+            <div class="revenue-content reveal">
+                <h2>Scale Your MRR & Achieve <span class="text-orange">Up to 10X Revenue</span></h2>
+                <p>Our bespoke outbound infrastructure doesn't just deliver leads—it builds predictable, scalable sales pipelines. By targeting the top 1% of your total addressable market, we compound your revenue growth safely and systematically.</p>
+                <ul class="features-list">
+                    <li><i class="ph-fill ph-check-circle text-orange"></i> Predictable Sales Pipeline</li>
+                    <li><i class="ph-fill ph-check-circle text-orange"></i> High-converting B2B Appointments</li>
+                    <li><i class="ph-fill ph-check-circle text-orange"></i> Accelerated Revenue Scaling</li>
+                </ul>
+            </div>
+            <div class="revenue-visual reveal">
+                <div class="revenue-card">
+                    <div class="stat">10X</div>
+                    <div class="stat-label">Potential Revenue Growth</div>
+                    <div class="growth-bar-container">
+                        <div class="growth-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Visual / About Section -->
     <section id="about" class="about section-padding">
         <div class="container about-container">
@@ -182,7 +222,7 @@
             <div class="partner-content reveal">
                 <h2>Long-Term <span class="text-orange">Partnership</span></h2>
                 <p>We believe in long-term relationships. Fastex Media acts as your dedicated growth partner, deeply understanding your business model to deliver premium, sustainable, and scalable results.</p>
-                <a href="#contact" class="btn btn-primary mt-4">Become a Partner</a>
+                <a href="#" class="btn btn-primary mt-4 partner-modal-btn">Become a Partner</a>
             </div>
         </div>
     </section>
@@ -192,9 +232,9 @@
         <div class="container reveal">
             <div class="cta-box">
                 <h2>Ready to <span class="text-orange">Scale?</span></h2>
-                <p>Join the 20+ brands that have built their lead generation systems on autopilot.</p>
+                <p>Join the 50+ brands that have built their lead generation systems on autopilot to grow their revenue up to 10X.</p>
                 <div class="mt-4">
-                    <a href="https://cal.id/aagam-digital/discovery-call" target="_blank" class="btn btn-primary btn-large">Book Your Strategy Session</a>
+                    <button class="btn btn-primary btn-large book-call-btn">Book Your Strategy Session</button>
                 </div>
             </div>
         </div>
@@ -204,17 +244,18 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-brand">
-                <a href="#" class="logo">
+                <a href="/" class="logo">
                     <img src="assets/logo.png" alt="Fastex Media Logo">
                     <span class="logo-text">Fastex <span class="text-orange">Media</span></span>
                 </a>
-                <p>B2B Marketing Agency.</p>
+                <p style="font-weight: 500;"><span class="text-orange" style="font-weight: 800;">B2B</span> Marketing Agency.</p>
             </div>
             <div class="footer-links">
                 <div class="link-group">
                     <h4>Contact</h4>
                     <a href="mailto:aagam@fastexmedia.com">aagam@fastexmedia.com</a>
                     <a href="tel:+919328680929">+91 9328680929</a>
+                    <a href="https://maps.google.com/?q=10th%20floor%20The%20Junomoneta%20Tower%2C%20Besides%20Rajhans%20Cinema%2C%20Opposite%20PAL%20RTO%2C%20Adajan%2C%20Hazira%20Rd%2C%20Pal%20Gam%2C%20Surat%2C%20Gujarat%20394510" target="_blank" rel="noopener noreferrer">Address -<br>10th floor The Junomoneta Tower,<br>Besides Rajhans Cinema, Opposite PAL RTO,<br>Adajan, Hazira Rd, Pal Gam,<br>Surat, Gujarat 394510</a>
                     <a href="https://www.linkedin.com/company/fastex-media/" target="_blank">LinkedIn</a>
                     <a href="https://www.instagram.com/fastexmedia_/" target="_blank">Instagram</a>
                 </div>
@@ -222,7 +263,7 @@
                     <h4>Company</h4>
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
-                    <a href="#partner">Partnership</a>
+                    <a href="#" class="partner-modal-btn">Partnership</a>
                 </div>
                 <div class="link-group">
                     <h4>Services</h4>
@@ -236,9 +277,57 @@
             <p>&copy; <span id="year"></span> Fastex Media. All rights reserved.</p>
         </div>
     </footer>
+    </div>
 
+    <!-- Partnership Modal -->
+    <div id="partner-modal" class="modal-overlay">
+        <div class="modal-content partner-form-content">
+            <button id="close-partner-modal" class="close-btn"><i class="ph ph-x"></i></button>
+            <div class="form-container">
+                <h2>Become a <span class="text-orange">Partner</span></h2>
+                <form id="partnership-form" class="partner-form">
+                    <div class="form-group">
+                        <label for="partner-name">Name *</label>
+                        <input type="text" id="partner-name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="partner-role">Role *</label>
+                        <input type="text" id="partner-role" name="role" required placeholder="e.g. Performance Marketer, Video Editor">
+                    </div>
+                    <div class="form-group">
+                        <label for="partner-ask">What would you like to do? *</label>
+                        <div class="select-wrapper">
+                            <select id="partner-ask" name="ask" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Join Team">Join Team</option>
+                                <option value="Become White label Partner">Become White label Partner</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="partner-whatsapp">WhatsApp Number *</label>
+                        <input type="tel" id="partner-whatsapp" name="whatsapp" required placeholder="+91 1234567890">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit-partner" id="partner-submit-btn">Submit</button>
+                </form>
+                <div id="partner-success-msg" class="success-message" style="display: none;">
+                    <h3><i class="ph-fill ph-check-circle text-orange" style="font-size: 2rem; margin-bottom: 10px;"></i><br>Thanks! Our team will reach you soon.</h3>
+                    <p style="margin-top: 10px;">For more info you can reach us on <br><a href="tel:+919328680929" class="text-orange" style="font-weight: 600; text-decoration: none;">+91 9328680929</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Cal.com Modal -->
+    <div id="cal-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i class="ph ph-x"></i></button>
+            <div class="iframe-container">
+                <iframe data-src="https://cal.id/aagam-digital/discovery-call" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>
