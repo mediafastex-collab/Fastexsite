@@ -35,9 +35,9 @@ export const metadata = {
     template: "%s",
   },
   description: DESCRIPTION,
-  metadataBase: new URL("https://fastexmedia.com/"),
+  metadataBase: new URL("https://www.fastexmedia.com/"),
   applicationName: "Fastex Media",
-  authors: [{ name: "Fastex Media", url: "https://fastexmedia.com" }],
+  authors: [{ name: "Fastex Media", url: "https://www.fastexmedia.com" }],
   creator: "Fastex Media",
   publisher: "Fastex Media",
   category: "Business",
@@ -49,7 +49,7 @@ export const metadata = {
   openGraph: {
     title: "B2B Lead Generation Agency | Fastex Media",
     description: DESCRIPTION,
-    url: "https://fastexmedia.com/",
+    url: "https://www.fastexmedia.com/",
     siteName: "Fastex Media",
     type: "website",
     locale: "en",
@@ -93,7 +93,7 @@ export const viewport = {
   initialScale: 1,
 };
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 /**
  * Site-wide graph. Organization and WebSite carry stable @id values so the

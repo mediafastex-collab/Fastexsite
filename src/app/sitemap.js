@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 // Required by `output: "export"` — emits a static sitemap.xml at build time.
 export const dynamic = "force-static";
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 /**
  * `trailingSlash: true` means every page is served at a path ending in "/".

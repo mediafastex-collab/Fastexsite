@@ -29,7 +29,7 @@ const cardCopy = {
     "Channel partners, corporate tenants and investors — direct pipelines instead of shared portal leads.",
 };
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 const listSchema = {
   "@context": "https://schema.org",

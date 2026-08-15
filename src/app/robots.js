@@ -1,7 +1,7 @@
 // Required by `output: "export"` — emits a static robots.txt at build time.
 export const dynamic = "force-static";
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 /**
  * AI and answer-engine crawlers, listed explicitly.

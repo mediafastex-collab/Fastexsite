@@ -1,0 +1,31 @@
+# Cloudflare Pages redirects. First match wins.
+#
+# Purpose: carry every URL Google already has indexed on the old site over to
+# the new one with a 301, so ranking signals transfer instead of hitting a 404.
+
+# --- Apex to www -----------------------------------------------------------
+# The old site canonicalised to www and that is what is indexed, so www stays
+# the primary hostname. Without this both hosts serve 200 and split signals.
+https://fastexmedia.com/*  https://www.fastexmedia.com/:splat  301
+
+# --- Old blog ---------------------------------------------------------------
+# These three posts are indexed. Until the blog is ported, send each to the
+# closest matching page rather than dropping them.
+# REMOVE these lines once the blog exists at /blog/ again.
+/blog/whatsapp-marketing-for-b2b-guide  /services/whatsapp-marketing/  301
+/blog/cold-email-vs-linkedin-outreach   /services/email-marketing/     301
+/blog/b2b-lead-generation-strategies    /services/                     301
+/blog/                                  /services/                     301
+/blog                                   /services/                     301
+
+# --- Legacy paths from the older static site --------------------------------
+/index.html    /              301
+/contact.html  /contact/      301
+/pricing.html  /pricing/      301
+/services.html /services/     301
+/work.html     /work/         301
+/about.html    /about/        301
+
+# --- Removed page -----------------------------------------------------------
+/partnership   /contact/      301
+/partnership/  /contact/      301

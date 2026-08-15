@@ -4,7 +4,7 @@ import { industries, engagement } from "@/data/industries";
 import { services } from "@/data/services";
 import { portfolioStats } from "@/data/caseStudies";
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 export const metadata = {
   title: "About Fastex Media | Global B2B Lead Generation Agency",

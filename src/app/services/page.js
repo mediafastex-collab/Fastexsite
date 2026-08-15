@@ -17,7 +17,7 @@ export const metadata = {
   },
 };
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 const listSchema = {
   "@context": "https://schema.org",

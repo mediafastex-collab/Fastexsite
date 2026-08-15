@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { industries, industryBySlug, engagement } from "@/data/industries";
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 export function generateStaticParams() {
   return industries.map((industry) => ({ slug: industry.slug }));

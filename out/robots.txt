@@ -61,5 +61,5 @@ Allow: /
 User-Agent: MistralAI-User
 Allow: /
 
-Host: https://fastexmedia.com
-Sitemap: https://fastexmedia.com/sitemap.xml
+Host: https://www.fastexmedia.com
+Sitemap: https://www.fastexmedia.com/sitemap.xml

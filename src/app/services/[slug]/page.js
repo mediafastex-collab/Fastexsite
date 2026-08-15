@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { services, serviceBySlug } from "@/data/services";
 import { industries, engagement } from "@/data/industries";
 
-const SITE = "https://fastexmedia.com";
+const SITE = "https://www.fastexmedia.com";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));

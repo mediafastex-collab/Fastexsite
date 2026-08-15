@@ -10,29 +10,29 @@ Contact: hello@fastexmedia.com · +91 9328680929
 
 ## Services
 
-- [Performance Marketing](https://fastexmedia.com/services/performance-marketing/): Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline — not clicks, impressions or vanity leads.
-- [LinkedIn Lead Generation](https://fastexmedia.com/services/linkedin-marketing/): Outbound to named decision-makers — researched, sequenced and booked straight into your sales calendar.
-- [Social Media Marketing](https://fastexmedia.com/services/social-media-marketing/): Organic presence that makes your company the obvious choice when a business buyer finally starts shortlisting vendors.
-- [WhatsApp Marketing](https://fastexmedia.com/services/whatsapp-marketing/): Official WhatsApp Business API journeys for B2B enquiry response, distributor networks and pipeline follow-up.
-- [Cold Email Marketing](https://fastexmedia.com/services/email-marketing/): Cold outbound infrastructure and lifecycle email that reaches the inbox and earns replies from senior buyers.
+- [Performance Marketing](https://www.fastexmedia.com/services/performance-marketing/): Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline — not clicks, impressions or vanity leads.
+- [LinkedIn Lead Generation](https://www.fastexmedia.com/services/linkedin-marketing/): Outbound to named decision-makers — researched, sequenced and booked straight into your sales calendar.
+- [Social Media Marketing](https://www.fastexmedia.com/services/social-media-marketing/): Organic presence that makes your company the obvious choice when a business buyer finally starts shortlisting vendors.
+- [WhatsApp Marketing](https://www.fastexmedia.com/services/whatsapp-marketing/): Official WhatsApp Business API journeys for B2B enquiry response, distributor networks and pipeline follow-up.
+- [Cold Email Marketing](https://www.fastexmedia.com/services/email-marketing/): Cold outbound infrastructure and lifecycle email that reaches the inbox and earns replies from senior buyers.
 
 ## Industries
 
-- [IT & Software](https://fastexmedia.com/industries/it-software/): B2B lead generation for IT and software companies. We book qualified meetings with CTOs, IT directors and technical buyers through cold email, LinkedIn and paid demand.
-- [Solar & Renewable Energy](https://fastexmedia.com/industries/solar-renewable/): Commercial solar lead generation for EPCs and renewable energy providers. We book meetings with facility managers, plant heads and CFOs for high-ticket C&I projects.
-- [Manufacturing](https://fastexmedia.com/industries/manufacturing/): B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors — beyond trade shows and referrals.
-- [Educational Institutes](https://fastexmedia.com/industries/education/): B2B marketing for universities, school groups and EdTech companies. We build corporate partnerships, institutional tie-ups and qualified admission enquiry systems.
-- [Real Estate](https://fastexmedia.com/industries/real-estate/): B2B lead generation for commercial real estate. We reach corporate tenants, channel partners and investors for developers and brokerages — beyond portal leads.
+- [IT & Software](https://www.fastexmedia.com/industries/it-software/): B2B lead generation for IT and software companies. We book qualified meetings with CTOs, IT directors and technical buyers through cold email, LinkedIn and paid demand.
+- [Solar & Renewable Energy](https://www.fastexmedia.com/industries/solar-renewable/): Commercial solar lead generation for EPCs and renewable energy providers. We book meetings with facility managers, plant heads and CFOs for high-ticket C&I projects.
+- [Manufacturing](https://www.fastexmedia.com/industries/manufacturing/): B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors — beyond trade shows and referrals.
+- [Educational Institutes](https://www.fastexmedia.com/industries/education/): B2B marketing for universities, school groups and EdTech companies. We build corporate partnerships, institutional tie-ups and qualified admission enquiry systems.
+- [Real Estate](https://www.fastexmedia.com/industries/real-estate/): B2B lead generation for commercial real estate. We reach corporate tenants, channel partners and investors for developers and brokerages — beyond portal leads.
 
 ## Company
 
-- [Home](https://fastexmedia.com/): B2B lead generation systems that book qualified meetings.
-- [About Us](https://fastexmedia.com/about/): Founded June 2025. Team, approach and operating principles.
-- [Case Studies](https://fastexmedia.com/work/): Client results across solar, SaaS, real estate, education and manufacturing.
-- [Pricing](https://fastexmedia.com/pricing/): Engagement models and what they include.
-- [Contact](https://fastexmedia.com/contact/): Book a free strategy call.
+- [Home](https://www.fastexmedia.com/): B2B lead generation systems that book qualified meetings.
+- [About Us](https://www.fastexmedia.com/about/): Founded June 2025. Team, approach and operating principles.
+- [Case Studies](https://www.fastexmedia.com/work/): Client results across solar, SaaS, real estate, education and manufacturing.
+- [Pricing](https://www.fastexmedia.com/pricing/): Engagement models and what they include.
+- [Contact](https://www.fastexmedia.com/contact/): Book a free strategy call.
 
 ## Optional
 
-- [Full site content](https://fastexmedia.com/llms-full.txt): Every page's prose in one file.
-- [Sitemap](https://fastexmedia.com/sitemap.xml)
+- [Full site content](https://www.fastexmedia.com/llms-full.txt): Every page's prose in one file.
+- [Sitemap](https://www.fastexmedia.com/sitemap.xml)

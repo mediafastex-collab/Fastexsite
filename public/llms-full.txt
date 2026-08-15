@@ -2,7 +2,7 @@
 
 > Fastex Media is a B2B-only lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for business-to-business companies worldwide.
 
-Website: https://fastexmedia.com
+Website: https://www.fastexmedia.com
 Founded: June 2025
 Founder: Aagam Shah, Founder (https://www.linkedin.com/in/shahaagam/)
 Contact: hello@fastexmedia.com · +91 9328680929
@@ -36,7 +36,7 @@ Every reply is tracked. We double down on the channels and segments producing pi
 
 ## Performance Marketing
 
-URL: https://fastexmedia.com/services/performance-marketing/
+URL: https://www.fastexmedia.com/services/performance-marketing/
 
 Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline — not clicks, impressions or vanity leads.
 
@@ -83,7 +83,7 @@ A: Expect four to six weeks of learning before cost per meeting settles, and lon
 
 ## LinkedIn Lead Generation
 
-URL: https://fastexmedia.com/services/linkedin-marketing/
+URL: https://www.fastexmedia.com/services/linkedin-marketing/
 
 Outbound to named decision-makers — researched, sequenced and booked straight into your sales calendar.
 
@@ -131,7 +131,7 @@ A: On a well-researched list with a genuine trigger, healthy is 15–25% reply a
 
 ## Social Media Marketing
 
-URL: https://fastexmedia.com/services/social-media-marketing/
+URL: https://www.fastexmedia.com/services/social-media-marketing/
 
 Organic presence that makes your company the obvious choice when a business buyer finally starts shortlisting vendors.
 
@@ -179,7 +179,7 @@ A: You do, in about an hour a month. We run structured sessions with your techni
 
 ## WhatsApp Marketing
 
-URL: https://fastexmedia.com/services/whatsapp-marketing/
+URL: https://www.fastexmedia.com/services/whatsapp-marketing/
 
 Official WhatsApp Business API journeys for B2B enquiry response, distributor networks and pipeline follow-up.
 
@@ -227,7 +227,7 @@ A: No. It gets you answering in minutes instead of days, keeps quotations and sa
 
 ## Cold Email Marketing
 
-URL: https://fastexmedia.com/services/email-marketing/
+URL: https://www.fastexmedia.com/services/email-marketing/
 
 Cold outbound infrastructure and lifecycle email that reaches the inbox and earns replies from senior buyers.
 
@@ -277,7 +277,7 @@ A: B2B cold email to a business address is permitted in most markets, with condi
 
 ## IT & Software
 
-URL: https://fastexmedia.com/industries/it-software/
+URL: https://www.fastexmedia.com/industries/it-software/
 
 SaaS, IT services and technology firms. Technical buyers ignore generic outreach. We build the research, messaging and multi-channel sequences that get your founders in front of CTOs, IT directors and heads of engineering — with meetings on the calendar, not impressions on a dashboard.
 
@@ -337,7 +337,7 @@ A: No. We fill the calendar; your team runs the calls and closes. Most clients p
 
 ## Solar & Renewable Energy
 
-URL: https://fastexmedia.com/industries/solar-renewable/
+URL: https://www.fastexmedia.com/industries/solar-renewable/
 
 EPCs, developers and commercial solar providers. Commercial and industrial solar is a long, high-ticket, trust-heavy sale. We build the outbound engine that puts your team in front of facility managers, plant heads and CFOs who control the roof and the capex budget.
 
@@ -397,7 +397,7 @@ A: Your sales engineers. We qualify for roof or land availability, electricity s
 
 ## Manufacturing
 
-URL: https://fastexmedia.com/industries/manufacturing/
+URL: https://www.fastexmedia.com/industries/manufacturing/
 
 OEMs, suppliers and industrial exporters. Trade shows and referrals are not a pipeline — they are a calendar. We build the outbound system that reaches procurement heads, sourcing managers and distributors between exhibitions, in the markets you want to grow into.
 
@@ -457,7 +457,7 @@ A: It makes it work harder. Exhibitions are excellent for meeting buyers and ter
 
 ## Educational Institutes
 
-URL: https://fastexmedia.com/industries/education/
+URL: https://www.fastexmedia.com/industries/education/
 
 Universities, school groups and EdTech. Whether you are a university building corporate partnerships, a school group expanding through franchise, or an EdTech company selling into institutions — the buyer is an organisation, not a walk-in. We build the system that reaches them.
 
@@ -517,7 +517,7 @@ A: Yes, and it is one of our stronger fits. The sale involves multiple stakehold
 
 ## Real Estate
 
-URL: https://fastexmedia.com/industries/real-estate/
+URL: https://www.fastexmedia.com/industries/real-estate/
 
 Commercial developers, brokerages and investors. Portal leads are shared, cold and mostly unqualified. We build direct pipelines to the people who actually transact at scale — corporate tenants, channel partners, institutional investors and bulk buyers.
 

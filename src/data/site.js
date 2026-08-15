@@ -1,6 +1,6 @@
 export const site = {
   name: "Fastex Media",
-  url: "https://fastexmedia.com",
+  url: "https://www.fastexmedia.com",
   email: "hello@fastexmedia.com",
   phone: "+91 9328680929",
   phoneHref: "tel:+919328680929",
