@@ -5,7 +5,10 @@ node_modules
 
 # next.js
 .next/
-out/
+
+# NOTE: out/ is intentionally committed.
+# Cloudflare Pages has no build command set, so it uploads out/ directly.
+# Once the build command is set to `npm run build`, re-add `out/` here.
 build
 
 # production
