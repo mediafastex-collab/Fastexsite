@@ -11,9 +11,9 @@ export default function Pricing() {
       <section className="pricing section-padding" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
         <div className="container">
           <div className="section-header reveal">
-            <h2>
+            <h1>
               Transparent & <span className="text-orange">Tailored</span> Pricing
-            </h2>
+            </h1>
             <p>We build custom solutions scaled exactly to your revenue goals. No cookie-cutter packages.</p>
           </div>
 

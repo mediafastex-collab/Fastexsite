@@ -1,0 +1,618 @@
+# Fastex Media — Full Site Content
+
+> Fastex Media is a B2B-only lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for business-to-business companies worldwide.
+
+Website: https://fastexmedia.com
+Founded: June 2025
+Founder: Aagam Shah, Founder (https://www.linkedin.com/in/shahaagam/)
+Contact: hello@fastexmedia.com · +91 9328680929
+Registered address: 10th Floor, The Junomoneta Tower, Besides Rajhans Cinema, Adajan, Hazira Road, Surat, Gujarat 394510
+Area served: Worldwide
+
+## Results to date
+
+- 13+ — Active Brands
+- 3X — Average Lead Growth
+- 60% — Avg. CPL Reduction
+- 4.9★ — Client Satisfaction
+
+## How we work
+
+### 01. Map the market
+
+We define the accounts worth winning in your sector, then build a verified data set of the people who actually sign — with the buying signals that say who is worth approaching now.
+
+### 02. Build the system
+
+Sending infrastructure, deliverability, multi-channel sequences and deep personalisation — assembled as one machine and tested before it carries your name at volume.
+
+### 03. Scale what converts
+
+Every reply is tracked. We double down on the channels and segments producing pipeline, cut the ones that don't, and report on meetings booked rather than impressions served.
+
+---
+
+# Services
+
+## Performance Marketing
+
+URL: https://fastexmedia.com/services/performance-marketing/
+
+Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline — not clicks, impressions or vanity leads.
+
+B2B buying cycles are long, committee-driven and rarely close on first touch. We structure paid media around that reality: demand capture for in-market accounts, demand generation for the 95% that aren't ready yet, and retargeting that stays present across the whole evaluation window.
+
+### The problem
+
+Most B2B ad budgets are optimised for the wrong number.
+
+Platforms optimise for what they can see — clicks, form fills, cost per lead. None of those pay salaries. When the reporting stops at lead volume, spend drifts towards the cheapest audiences, which are almost never the accounts worth winning.
+
+- Cost per lead falling while cost per closed deal quietly rises
+- Budget spent on job titles that cannot approve a purchase
+- Landing pages written for consumers, sent to a buying committee
+- No feedback loop from CRM, so the algorithm never learns what a good lead looks like
+
+### What's included
+
+- ICP, firmographic and job-title targeting maps
+- LinkedIn Ads, Google Search and Meta campaign builds
+- Offer and landing page architecture for B2B intent
+- Lead-quality scoring fed back into ad optimisation
+- Pipeline and cost-per-qualified-meeting reporting
+
+### Frequently asked questions
+
+**Q: What budget do we need to start?**
+
+A: Enough to gather signal inside a reasonable window. Below roughly $2,000–2,500 a month in LinkedIn ad spend, data comes in too slowly to optimise against and you are better off putting that money into outbound first. We will tell you which of the two we would spend it on.
+
+**Q: Why report on meetings instead of leads?**
+
+A: Because lead count is the number easiest to make look good. Doubling form fills while halving meeting quality is a straightforward thing to do accidentally. We wire your CRM back into campaign reporting so the optimisation target is a booked, qualified meeting.
+
+**Q: Do you run the ads on our accounts or yours?**
+
+A: Yours. You own the ad accounts, the pixel data and the audience lists. If the engagement ends, none of it leaves with us — a policy we hold because the opposite is common enough to be worth stating.
+
+**Q: How long before performance stabilises?**
+
+A: Expect four to six weeks of learning before cost per meeting settles, and longer in categories with small addressable audiences. Anyone quoting a stable cost per acquisition in week one is describing a spreadsheet, not a campaign.
+
+---
+
+## LinkedIn Lead Generation
+
+URL: https://fastexmedia.com/services/linkedin-marketing/
+
+Outbound to named decision-makers — researched, sequenced and booked straight into your sales calendar.
+
+We treat LinkedIn as a database, not a feed. Accounts are defined, contacts are verified, and conversations are opened by a human-sounding sequence built on a relevant reason to reach out. Alongside it, we build founder authority — because in B2B, people buy from the person before they buy from the company.
+
+### The problem
+
+Connection requests are not a pipeline.
+
+The default LinkedIn playbook is to connect with everyone, pitch on acceptance and measure success in connection count. Senior buyers have seen that message several hundred times. It gets ignored, and it costs you the account for the next twelve months.
+
+- Automated pitches sent within seconds of a connection being accepted
+- Lists built on job title alone, with no trigger or reason to reach out now
+- A founder profile that reads like a CV instead of a point of view
+- Replies arriving with nobody assigned to answer them the same day
+
+### What's included
+
+- Account and contact list building from your ICP
+- Sales Navigator research and trigger-based segmentation
+- Connection, conversation and follow-up sequences
+- Founder profile positioning and ghostwritten posts
+- Objection handling and qualification framework
+- Appointment setting and CRM handover
+
+### Frequently asked questions
+
+**Q: Do you post from our founder's profile or a company page?**
+
+A: Both, with different jobs. The founder profile carries point of view and earns the reach — personal profiles consistently out-perform company pages. The company page carries proof, case studies and product substance for the buyer who checks you out afterwards.
+
+**Q: Is automated outreach against LinkedIn's terms?**
+
+A: Aggressive automation risks restriction, so we work within human-rate limits from warmed profiles rather than blasting from tools that trip detection. Volume is deliberately capped. The trade-off is fewer touches at meaningfully higher reply rates.
+
+**Q: Who writes the founder's posts?**
+
+A: We do, from structured interviews with your founder, and it stays in their voice. Nothing publishes without approval. The raw material is what they already know — the posts that work are the opinions they have on a Tuesday, written down properly.
+
+**Q: What reply rate should we expect?**
+
+A: On a well-researched list with a genuine trigger, healthy is 15–25% reply and roughly a third of those converting to a conversation. Anyone quoting far above that is either counting auto-replies or working a very small, very warm list.
+
+---
+
+## Social Media Marketing
+
+URL: https://fastexmedia.com/services/social-media-marketing/
+
+Organic presence that makes your company the obvious choice when a business buyer finally starts shortlisting vendors.
+
+Before a B2B deal starts, the buying committee has already read your LinkedIn page, checked your last twelve posts and formed an opinion. We build the content engine that shapes that opinion — proof, point of view and category education, published consistently.
+
+### The problem
+
+Your buyer checks you out long before they contact you.
+
+By the time an enquiry arrives, the committee has already looked you up. If the last post is four months old and the feed is festival greetings, you have answered a question they were quietly asking. Most B2B social accounts publish often and say nothing.
+
+- Festival posts and office photos where category expertise should be
+- No proof: no case studies, no numbers, no client outcomes published
+- A feed that goes quiet for months whenever delivery gets busy
+- Content written for peers and competitors rather than for buyers
+
+### What's included
+
+- Company page positioning and content pillars
+- Weekly content calendar across LinkedIn, X and YouTube
+- Case study, proof and product-education formats
+- Design system for carousels, clips and static posts
+- Engagement routines that reach target accounts
+- Monthly reporting on reach, profile visits and inbound conversations
+
+### Frequently asked questions
+
+**Q: How long before organic content produces enquiries?**
+
+A: Three to six months before it contributes meaningfully, and it compounds after that. Organic is the slowest channel we run and the cheapest one over time. If you need meetings this quarter, pair it with outbound rather than waiting on it.
+
+**Q: How do you measure something this indirect?**
+
+A: Imperfectly, and we say so. We track reach, profile visits, follower quality and inbound conversations that cite content — plus a question on your discovery calls asking how they found you. Anyone claiming precise revenue attribution for organic social is guessing with more confidence than the data supports.
+
+**Q: Do we need to be on every platform?**
+
+A: No, and trying is how most B2B teams end up posting nothing well. For almost every B2B client, LinkedIn carries the weight. We add a second channel only when your buyers demonstrably spend time there.
+
+**Q: Who supplies the subject-matter expertise?**
+
+A: You do, in about an hour a month. We run structured sessions with your technical or delivery people and turn that into a content bank. Without that input the output reads generic, and generic is what your buyer is already scrolling past.
+
+---
+
+## WhatsApp Marketing
+
+URL: https://fastexmedia.com/services/whatsapp-marketing/
+
+Official WhatsApp Business API journeys for B2B enquiry response, distributor networks and pipeline follow-up.
+
+In most B2B markets — manufacturing, industrial, logistics, real estate, professional services — WhatsApp is where the deal actually moves. We set it up properly: verified business account, approved templates, and automated follow-up that never lets an enquiry go cold.
+
+### The problem
+
+The enquiry came in on WhatsApp and nobody followed up.
+
+Most B2B teams already run WhatsApp — from personal numbers, with no templates, no routing and no record. Deals sit unanswered over a weekend, follow-up depends on whether a salesperson remembers, and when someone leaves, the conversation history leaves with them.
+
+- Enquiries landing on personal numbers with no visibility for the team
+- Response times measured in days, when the buyer expected minutes
+- No structured follow-up after a catalogue or quotation is sent
+- Conversation history walking out of the door with a salesperson
+
+### What's included
+
+- Business verification and API onboarding
+- Approved message templates for B2B use cases
+- Instant enquiry response and lead-capture flows
+- Dealer, distributor and partner broadcast systems
+- CRM sync and reply routing to your sales team
+- Opt-in management and compliance controls
+
+### Frequently asked questions
+
+**Q: Is this compliant, or is it spam?**
+
+A: It runs on the official WhatsApp Business API with opt-in contacts, approved templates and clear opt-outs. We do not scrape numbers or buy lists. Sending unsolicited bulk messages gets the number banned, which is a good reason not to do it beyond the obvious one.
+
+**Q: What does WhatsApp itself charge?**
+
+A: Meta bills per conversation, and rates vary by country and category. It is billed to your account at cost — we do not mark it up. For most B2B clients it is a small line next to the value of one recovered deal.
+
+**Q: Can it connect to our CRM?**
+
+A: Yes. Conversations sync so your team sees history against the contact record, and replies route to the right owner. If you have no CRM, we will say so plainly — this works far better with one, and we can help you pick a simple one.
+
+**Q: Will this replace our sales calls?**
+
+A: No. It gets you answering in minutes instead of days, keeps quotations and samples moving, and stops enquiries dying between calls. The call still closes the deal.
+
+---
+
+## Cold Email Marketing
+
+URL: https://fastexmedia.com/services/email-marketing/
+
+Cold outbound infrastructure and lifecycle email that reaches the inbox and earns replies from senior buyers.
+
+Deliverability is the whole game. We build the sending infrastructure first — domains, authentication, warm-up, volume discipline — then layer in research-led copy that reads like it was written for one company, because it was.
+
+### The problem
+
+Your email is not being ignored. It is not being delivered.
+
+Most failed cold email is a deliverability problem wearing a copywriting costume. Teams send high volume from the primary domain, skip authentication, buy an unverified list, and conclude that email is dead. The messages went to spam, and the domain reputation went with them.
+
+- Volume sent from the company's main domain, putting normal mail at risk
+- SPF, DKIM and DMARC missing or misconfigured
+- Unverified lists producing bounce rates that trigger filtering
+- The same message to a CFO and a plant head, personalised with a first name
+
+### What's included
+
+- Domain, SPF/DKIM/DMARC and inbox warm-up setup
+- Verified data sourcing and list hygiene
+- Segmented sequences with account-level personalisation
+- Nurture tracks for long B2B evaluation cycles
+- Reply, meeting and deliverability reporting
+- Ongoing inbox placement monitoring
+
+### Frequently asked questions
+
+**Q: Will this put our main domain at risk?**
+
+A: Not if it is done properly. We never send volume from your primary domain — we buy and configure separate sending domains, authenticate them, warm them gradually and cap daily volume per mailbox. Your corporate domain keeps its reputation for the mail your team actually sends.
+
+**Q: How soon can sending start?**
+
+A: Infrastructure and warm-up take two to three weeks before meaningful volume. That wait is the thing that makes the channel work — sending hard from a cold domain lands you in spam permanently, and no copy recovers from that.
+
+**Q: Where does the data come from?**
+
+A: Licensed data providers, verified and cleaned before sending, then re-verified on a rolling basis. We do not scrape. Bounce rate is the fastest way to destroy deliverability, so list hygiene is a continuous job rather than a one-off purchase.
+
+**Q: Is cold email legal?**
+
+A: B2B cold email to a business address is permitted in most markets, with conditions. GDPR (EU/UK), CAN-SPAM (US), CASL (Canada) and the Australian Spam Act all require clear sender identification, a real physical address and a working opt-out — we include all three, and we segment sending by jurisdiction. CASL in particular needs consent for most Canadian recipients, so we scope that separately. Tell us which markets you sell into and we will confirm what applies.
+
+---
+
+# Industries
+
+## IT & Software
+
+URL: https://fastexmedia.com/industries/it-software/
+
+SaaS, IT services and technology firms. Technical buyers ignore generic outreach. We build the research, messaging and multi-channel sequences that get your founders in front of CTOs, IT directors and heads of engineering — with meetings on the calendar, not impressions on a dashboard.
+
+### The problem
+
+Founder-led sales stops scaling long before the pipeline does.
+
+Most software companies hit the same wall. The founder closes well, referrals dry up, and the team starts spraying generic sequences at a list bought from a database. Technical buyers spot it immediately. The result is a pipeline that looks busy and a calendar that stays empty.
+
+- Lists built from job titles alone, with no read on tech stack, funding stage or hiring signals
+- Messaging written for a marketing persona, sent to an engineer who wants specifics
+- Domains burned by volume sending, so even the good messages never reach the inbox
+- No follow-up system, so a warm reply dies because nobody chased it on the third channel
+
+### What we run for this sector
+
+**Cold Email That Reaches Technical Buyers** — We build your ICP from tech stack, headcount growth, funding and hiring signals — not job titles alone. Dedicated sending domains, warmed inboxes and per-segment copy keep deliverability high while the message stays specific enough for a CTO to reply to.
+
+**LinkedIn Authority for Founders & CTOs** — Your founder's profile becomes the top of the funnel. We ghostwrite technical posts that earn trust with engineering leaders, then run targeted connection and conversation sequences into the accounts already reading them.
+
+**WhatsApp Follow-Up & No-Show Recovery** — Demos get booked and then forgotten. We run structured WhatsApp follow-up to confirm meetings, recover no-shows and keep deals moving between calls — the highest-reply channel in markets where business runs on messaging apps.
+
+**Paid Demand & Account Retargeting** — LinkedIn and search campaigns aimed at the accounts already in your sequences, so outbound and paid reinforce each other. We retarget demo-page visitors and pricing-page drop-offs, and we cut spend on anything that does not produce a booked call.
+
+### What you get
+
+- Verified ICP and account list segmented by tech stack and buying signal
+- Dedicated domains, inbox warm-up and deliverability monitoring
+- Multi-channel sequences across email, LinkedIn and WhatsApp
+- Ghostwritten founder content calendar
+- Weekly reporting on replies, meetings booked and pipeline value
+- CRM hygiene so every conversation is logged and followed up
+
+### Frequently asked questions
+
+**Q: Do you work with early-stage SaaS companies?**
+
+A: Yes. We work best with software companies that have found product-market fit and closed at least a handful of customers, because we need real win stories to build messaging from. If you are pre-revenue and still testing the problem, outbound will amplify a message you have not validated yet — we will tell you that on the call rather than take the engagement.
+
+**Q: How long before we see the first qualified meeting?**
+
+A: Weeks one and two go to ICP research, domain setup and inbox warm-up — sending hard before that burns the domain. Sequences typically go live in week three, with first replies in the same week and consistent meeting flow by weeks six to eight. Anyone promising meetings in week one is sending from a domain they are willing to lose.
+
+**Q: How do you keep our main domain safe?**
+
+A: We never send volume from your primary domain. We buy and configure separate sending domains with SPF, DKIM and DMARC, warm the inboxes gradually, and cap daily volume per mailbox. Your corporate domain keeps its reputation for the mail your team actually sends.
+
+**Q: Can you sell a technical product without knowing the technology?**
+
+A: We do not pretend to be engineers. We run structured onboarding with your technical team and your best sales calls, and we write from the specifics that come out of that — the integration that saves three weeks, the compliance requirement you already clear. Vague benefit language is what gets ignored by this audience.
+
+**Q: Do you replace our sales team?**
+
+A: No. We fill the calendar; your team runs the calls and closes. Most clients pair us with one or two account executives. If you have nobody to take the meetings, more meetings will not help you.
+
+---
+
+## Solar & Renewable Energy
+
+URL: https://fastexmedia.com/industries/solar-renewable/
+
+EPCs, developers and commercial solar providers. Commercial and industrial solar is a long, high-ticket, trust-heavy sale. We build the outbound engine that puts your team in front of facility managers, plant heads and CFOs who control the roof and the capex budget.
+
+### The problem
+
+Residential tactics do not work on a commercial capex decision.
+
+Most solar marketing is built for homeowners — form fills, price comparisons, quick quotes. A C&I project runs into seven figures, involves three or four stakeholders, and takes months. Buying the same lead lists as everyone else produces enquiries your team wastes weeks disqualifying.
+
+- Shared aggregator leads that three competitors are calling the same morning
+- Enquiries from tenants and office managers with no authority over the roof or the budget
+- No material that answers the questions a CFO actually asks about payback and financing
+- Deals that stall after the site survey because nothing kept the conversation warm
+
+### What we run for this sector
+
+**WhatsApp Outreach to Plant & Facility Heads** — The highest-reply channel in industrial B2B markets where business runs on messaging apps. We run compliant, permission-based WhatsApp sequences that share site photos, generation data and payback numbers where decision-makers actually read them — then hand a warm conversation to your sales engineer.
+
+**Targeted Email to Commercial Property Owners** — We build lists by industrial estate, rooftop area, sanctioned load and electricity spend, then write to the specific economics of that site. Segmented sequences for factory owners, warehouse operators, hospitals and educational campuses — each with the payback case that matters to them.
+
+**LinkedIn Access to CXOs & EPC Procurement** — For larger projects the decision sits with a CFO, a sustainability head or a procurement lead. We position your leadership as credible operators through project case content, then open direct conversations with the executives who sign off on capex and ESG commitments.
+
+**Geo-Targeted Performance Campaigns** — Search and social campaigns aimed at commercial rooftop intent in your service geography — filtered hard against residential traffic. Every rupee is tracked to site surveys booked, not clicks, so budget moves to the industrial belts that actually convert.
+
+### What you get
+
+- Account list segmented by industrial estate, rooftop area and electricity spend
+- Compliant WhatsApp sequences with project proof and payback assets
+- Email infrastructure with dedicated domains and deliverability monitoring
+- LinkedIn positioning for founders and project heads
+- Geo-targeted paid campaigns filtered against residential enquiries
+- Weekly reporting on site surveys booked and pipeline value
+
+### Frequently asked questions
+
+**Q: Do you generate residential solar leads?**
+
+A: No. We work only on commercial and industrial projects. Residential solar is a volume game won on price and speed of quotation; C&I is a relationship sale to a facility or finance decision-maker. Those need opposite systems, and we are built for the second.
+
+**Q: Our sales cycle is six to nine months. Does outbound still make sense?**
+
+A: It makes more sense, not less. Long cycles punish inconsistent prospecting — a quiet quarter of outreach becomes a dead quarter of revenue three quarters later. We keep the top of the funnel filled continuously so your pipeline stays predictable across the cycle.
+
+**Q: Is WhatsApp outreach compliant?**
+
+A: We run permission-based sequences through approved business messaging with clear opt-outs, and we do not scrape numbers or blast unverified lists. The goal is a warm conversation with a decision-maker, and that only happens when the first message is relevant and welcome.
+
+**Q: Can you handle multiple states or service regions?**
+
+A: Yes. We segment lists and campaigns by geography so each region gets messaging matched to its tariff structure, incentive regime and industrial mix. Reporting is broken down the same way, so you can see which belts are worth expanding into.
+
+**Q: Who takes the meetings you book?**
+
+A: Your sales engineers. We qualify for roof or land availability, electricity spend and decision authority before a meeting is confirmed, so your technical team spends time on sites worth surveying rather than on enquiries that were never viable.
+
+---
+
+## Manufacturing
+
+URL: https://fastexmedia.com/industries/manufacturing/
+
+OEMs, suppliers and industrial exporters. Trade shows and referrals are not a pipeline — they are a calendar. We build the outbound system that reaches procurement heads, sourcing managers and distributors between exhibitions, in the markets you want to grow into.
+
+### The problem
+
+Two good exhibitions a year is not a growth plan.
+
+Most manufacturers we meet have a strong product, a healthy order book from a handful of long-standing buyers, and no way to add new ones on purpose. Growth depends on trade shows, agents and word of mouth — all of which are outside your control, and all of which go quiet at exactly the wrong time.
+
+- Revenue concentrated in a few buyers, with real exposure if one leaves
+- Enquiries from traders and intermediaries rather than the actual sourcing decision-maker
+- No structured follow-up on the business cards collected at the last exhibition
+- Export ambitions with no route to buyers in the target market
+
+### What we run for this sector
+
+**Buyer Discovery for Domestic & Export Markets** — We build verified lists of the companies that actually buy your category — by product line, import history, plant location and company size — and identify the sourcing manager or procurement head by name, so outreach lands with the person who raises the RFQ.
+
+**RFQ-Driven Email Sequences** — Written for procurement, not for marketing. Certifications, capacity, lead times, MOQ and unit economics stated plainly, with the specification sheet one click away. Segmented by buyer type so an OEM, a distributor and a trading house each get the case that applies to them.
+
+**LinkedIn Outreach to Procurement & Supply Chain** — Direct conversations with sourcing, supply chain and category managers at target accounts, supported by content that shows plant capability, quality systems and export credentials. This is how you get considered before the RFQ goes out, not after.
+
+**WhatsApp Catalogue & Sample Follow-Up** — Catalogues get sent and then go quiet. We run structured follow-up that shares product media, tracks sample dispatch and keeps the buyer engaged through the evaluation period — the stage where most manufacturer deals quietly die.
+
+### What you get
+
+- Verified buyer list by product category, market and import behaviour
+- Named procurement and sourcing contacts at target accounts
+- Email infrastructure with dedicated domains and deliverability monitoring
+- Specification-led sequences segmented by buyer type
+- WhatsApp follow-up for catalogues, samples and quotations
+- Weekly reporting on enquiries, RFQs and quoted value
+
+### Frequently asked questions
+
+**Q: We sell through distributors. Can you help us recruit more?**
+
+A: Yes, and it is one of the highest-return campaigns we run for manufacturers. Recruiting channel partners is a B2B sale like any other — we build the list of distributors and dealers active in your category and territory, and run sequences built around margin, territory protection and support rather than product features.
+
+**Q: Can you reach international buyers?**
+
+A: Yes. We build export buyer lists using import data and company filings in the target market, and adapt messaging and sending schedules to that region. We are direct about where this is harder — some markets are relationship-gated and outbound opens the door rather than closing the deal.
+
+**Q: Our product is highly technical. Will generic outreach work?**
+
+A: It will not, which is why we do not send it. Onboarding covers your specifications, tolerances, certifications and the objections your sales team hears most, and the sequences are written from that. For technical categories, specificity is the thing that earns the reply.
+
+**Q: How do you handle enquiries from traders and middlemen?**
+
+A: We qualify before a meeting is confirmed — end use, volume, decision authority and whether they are buying for themselves or brokering. You can also tell us to exclude intermediaries entirely, and we will filter the list accordingly.
+
+**Q: Does this replace our trade show spend?**
+
+A: It makes it work harder. Exhibitions are excellent for meeting buyers and terrible for following up with them. We run pre-show sequences to book meetings at your stand and post-show sequences so the cards you collect turn into quotations instead of a stack in a drawer.
+
+---
+
+## Educational Institutes
+
+URL: https://fastexmedia.com/industries/education/
+
+Universities, school groups and EdTech. Whether you are a university building corporate partnerships, a school group expanding through franchise, or an EdTech company selling into institutions — the buyer is an organisation, not a walk-in. We build the system that reaches them.
+
+### The problem
+
+Admissions marketing and institutional growth are different jobs.
+
+Most institutes run one marketing function aimed at students and parents, then wonder why corporate tie-ups, placement partnerships and franchise expansion never move. Those are B2B sales into organisations with committees, procurement and budget cycles — and they need their own system.
+
+- Placement and partnership targets owned by someone with no pipeline to work from
+- EdTech products pitched to teachers when the budget sits with a trustee or director
+- Franchise and campus expansion dependent on inbound enquiries and personal networks
+- Admission enquiries arriving in volume but unqualified, burning the counselling team
+
+### What we run for this sector
+
+**Corporate Partnership & Placement Outreach** — We build the list of employers hiring in your students' disciplines and geography, then open conversations with HR heads, campus recruitment leads and L&D managers. The output is signed MoUs, recruitment drives and corporate training mandates — not a longer contact list.
+
+**Institutional Sales for EdTech** — Selling a platform into schools and universities means reaching trustees, directors, deans and IT heads, each with a different concern. We segment by institution type, board and size, and run sequences that speak to outcomes, implementation effort and budget cycle timing.
+
+**Franchise & Campus Expansion Pipeline** — Expansion is a B2B sale to an investor-operator. We identify education entrepreneurs and existing operators in target cities, and run sequences built around unit economics, brand support and territory — so your expansion team talks to serious candidates.
+
+**Qualified Admission Enquiry Systems** — Where you do want student volume, we build campaigns that qualify before the counsellor picks up the phone — programme, eligibility, intake and budget captured up front, with WhatsApp follow-up through the decision window when most enquiries otherwise go cold.
+
+### What you get
+
+- Segmented lists of employers, institutions or franchise candidates
+- Named decision-makers: HR heads, directors, trustees, deans
+- Email infrastructure with dedicated domains and deliverability monitoring
+- Sequences mapped to academic and budget cycles
+- WhatsApp follow-up through the enquiry and decision window
+- Weekly reporting on meetings, MoUs and enrolled or signed outcomes
+
+### Frequently asked questions
+
+**Q: We are a college, not a company. Does B2B outbound apply to us?**
+
+A: It applies to everything you sell to an organisation rather than to a student — corporate placement partnerships, training mandates, research collaborations, campus recruitment drives and franchise expansion. Those are institutional sales with committees and approval cycles, and they respond to structured outreach.
+
+**Q: Can you help with student admissions directly?**
+
+A: We help with the system around it: qualified enquiry generation, and WhatsApp follow-up through the decision window. We are not a substitute for your counselling team, and we will not promise enrolment numbers — the counsellor conversation decides that, and we do not run it.
+
+**Q: Our budget cycle is tied to the academic year. How do you plan around it?**
+
+A: We map sequences backwards from your buyers' cycles. For institutional sales that means reaching decision-makers before budgets are locked, typically one to two quarters ahead. For placement partnerships it means engaging recruiters well ahead of hiring season rather than during it.
+
+**Q: Will outreach damage our institutional reputation?**
+
+A: It would, if it were volume spam — which is why we do not run that. Sequences go out from properly configured domains, in low daily volumes, written as a specific and relevant approach from your institution. Your name is the asset being used, and protecting it is a constraint we design around.
+
+**Q: Do you work with EdTech companies selling to institutes?**
+
+A: Yes, and it is one of our stronger fits. The sale involves multiple stakeholders, a real implementation question and a budget cycle — exactly the conditions where structured multi-channel outbound outperforms paid advertising.
+
+---
+
+## Real Estate
+
+URL: https://fastexmedia.com/industries/real-estate/
+
+Commercial developers, brokerages and investors. Portal leads are shared, cold and mostly unqualified. We build direct pipelines to the people who actually transact at scale — corporate tenants, channel partners, institutional investors and bulk buyers.
+
+### The problem
+
+You are renting your pipeline from a portal, and paying by the lead.
+
+Most developers and brokerages depend on listing portals and a network of brokers. The same enquiry goes to four competitors, the cost per lead rises every year, and nobody owns the relationship with the corporate tenant or investor who could transact ten times over.
+
+- Shared portal enquiries with no exclusivity and falling conversion
+- Channel partner networks built by chance rather than recruited on purpose
+- No direct line to corporate real estate and admin heads taking leasing decisions
+- Overseas and institutional investor interest handled ad hoc, with no follow-up through a long decision cycle
+
+### What we run for this sector
+
+**Channel Partner & Broker Recruitment** — Your distribution is your growth ceiling. We identify active brokers and channel partners by micro-market and ticket size, then run WhatsApp and email sequences built around commission structure, inventory access and co-marketing support — so your partner network grows deliberately.
+
+**Corporate Leasing & Tenant Outreach** — For office, warehousing and retail space, the decision sits with a corporate real estate head, an admin director or a COO. We build lists by company size, current location and expansion signals such as hiring and funding, then open conversations before the requirement reaches an IPC.
+
+**Investor & Bulk Buyer Campaigns** — High-net-worth, overseas and institutional buyers evaluate on yield, exit and track record — not on a brochure. We run LinkedIn and email campaigns that lead with rental yield, appreciation history and project delivery record, then nurture through a decision cycle measured in months.
+
+**Project Performance Campaigns** — Paid campaigns aimed at commercial and investment intent in your micro-markets, filtered hard against casual residential browsing. Every enquiry is tracked through to site visit and booking, so spend concentrates on the channels producing actual transactions.
+
+### What you get
+
+- Channel partner and broker lists by micro-market and ticket size
+- Corporate tenant lists with expansion and hiring signals
+- Email infrastructure with dedicated domains and deliverability monitoring
+- WhatsApp sequences for partner activation and site-visit follow-up
+- Investor campaigns built on yield and delivery track record
+- Weekly reporting on site visits, partner sign-ups and pipeline value
+
+### Frequently asked questions
+
+**Q: Do you generate residential home-buyer leads?**
+
+A: Only where the sale is genuinely B2B or high-ticket investment — bulk buyers, investor syndicates, overseas investor portfolios, channel partners. Mass residential lead generation is a volume-and-price game run through portals, and other agencies do it more cheaply than we would.
+
+**Q: How is this different from buying portal leads?**
+
+A: Portal leads are shared, inbound and priced per enquiry — you compete with three others on response speed. Outbound gives you exclusive conversations with buyers and partners who were not shopping that morning, and the relationship belongs to you rather than to the platform.
+
+**Q: Can you help us recruit channel partners in a new city?**
+
+A: Yes, and it is usually the fastest way into a new micro-market. We map active brokers and partners in the territory, verify they transact in your ticket range, and run sequences around commission, inventory access and support. Your team then handles the onboarding conversation.
+
+**Q: Our sales cycle runs six months or more. How do you keep leads warm?**
+
+A: With structured multi-touch follow-up rather than hope. Prospects move into WhatsApp and email nurture sequences with construction updates, comparable transactions and yield data, so when the decision window opens your project is the one still in the conversation.
+
+**Q: Who handles the site visits?**
+
+A: Your sales team. We qualify on requirement, budget, timeline and decision authority before confirming a meeting, so your team spends its time on visits with a genuine transaction behind them.
+
+---
+
+# Case Studies
+
+## Heaven Green Energy Ltd — Renewable Energy
+
+LinkedIn Personal Branding · Founder Authority
+
+**Challenge:** The founder needed stronger positioning and visibility on LinkedIn to attract the right industry connections.
+
+**Solution:** Created a consistent content strategy, refined personal positioning, and built a value-led posting framework.
+
+**Outcome:** Increased reach, improved engagement, and attracted high-quality industry connections — strengthening both founder & brand authority.
+
+Metrics: ↑ 5x Revenue B2B, Daily Campaigns, High Authority
+
+## Linkziy — SaaS
+
+End-to-End SaaS Consultancy · Full Stack
+
+**Challenge:** A SaaS brand needed unified growth across operations, marketing, distribution, and product — without a fragmented agency stack.
+
+**Solution:** Took complete ownership — operations, marketing, distribution channels, product testing, and content management — under one system.
+
+**Outcome:** Built a unified, repeatable growth motion that scales with the product — turning isolated efforts into a single revenue engine.
+
+Metrics: 360° GTM Coverage, Unified Operations, Scaled Distribution
+
+## Other active projects
+
+- **Macj** (Real Estate) — Meta Ads lead generation — targeted campaigns, refined messaging, and streamlined lead-flow for faster homebuyer follow-ups. [↓ 60% CPL, ↑ 3x Volume, Daily Pipeline]
+- **Institute of Design Technology** (Education) — Official WhatsApp marketing automation — sequences, personalised reply flows, structured nurturing for admissions. [Instant Response, ↑ Engagement, ↑ Admissions]
+- **QuickEst CRM** (SaaS / CRM) — LinkedIn outreach engine with refined ICP messaging and follow-up sequences — high-intent qualified pipeline. [↑ Reply Rates, Qualified Pipeline]
+- **Shilpkala** (D2C / Retail) — WhatsApp workflow automation — order-update sequences, offer broadcasting, customer retention flows for D2C buyers. [Order Updates, Offer Broadcasts, Retention Flows]
+- **Tatvamasi Labs** (ERP) — Email + WhatsApp marketing automation, daily campaigns, content & copywriting. [Qualified Leads, Demo Meetings, Sales Revenue]
+- **Qbits Inverter** (Solar Industry) — B2B targeting Solar EPC for inverters. Email & WhatsApp automation with daily campaigns + creative engine. [High-Quality Leads, Solar EPC Pipeline]
+- **QuickEst** (SaaS / CRM) — Webinar automations, Email & WhatsApp setup, daily campaigns, content + copy + video scripts. [Meetings Booked, Automated Webinars]
+- **Heaven Designs** (Solar Industry) — Daily Email & WhatsApp campaigns with full content stack — high-quality solar lead generation. [High-Quality Leads, Daily Campaigns]
+- **Astronuts** (B2B Services) — LinkedIn lead generation, target-audience outreach, meeting bookings, content & copywriting. [Meetings Booked, Targeted Outreach]
+- **The Creative Co** (Creative Agency) — LinkedIn outreach engine, ICP targeting, meetings booked through high-quality conversations. [Meetings Booked, ICP Outreach]
+- **11za** (WhatsApp BSP) — WhatsApp marketing, templates, workflows + automation, sales, demo meetings, and Meta Ads. [Demo Meetings, Meta Ads, Sales]
+- **The Bio Cutlery** (Sustainability) — Performance marketing engine — high-quality lead generation for eco-cutlery distribution. [High-Quality Leads, ROAS Optimised]
+- **Eva Bluee** (Real Estate) — Performance marketing — Meta & Google ad campaigns built for real-estate lead generation at scale. [High-Quality Leads, Scaled Spend]

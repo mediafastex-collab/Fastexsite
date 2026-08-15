@@ -56,7 +56,7 @@ export const industries = [
       {
         index: "03",
         title: "WhatsApp Follow-Up & No-Show Recovery",
-        copy: "Demos get booked and then forgotten. We run structured WhatsApp follow-up to confirm meetings, recover no-shows and keep deals moving between calls — the channel with the highest reply rate in Indian and Middle-East B2B.",
+        copy: "Demos get booked and then forgotten. We run structured WhatsApp follow-up to confirm meetings, recover no-shows and keep deals moving between calls — the highest-reply channel in markets where business runs on messaging apps.",
       },
       {
         index: "04",
@@ -123,7 +123,7 @@ export const industries = [
     problem: {
       label: "The problem",
       heading: "Residential tactics do not work on a commercial capex decision.",
-      body: "Most solar marketing is built for homeowners — form fills, price comparisons, quick quotes. A C&I project runs into crores, involves three or four stakeholders, and takes months. Buying the same lead lists as everyone else produces enquiries your team wastes weeks disqualifying.",
+      body: "Most solar marketing is built for homeowners — form fills, price comparisons, quick quotes. A C&I project runs into seven figures, involves three or four stakeholders, and takes months. Buying the same lead lists as everyone else produces enquiries your team wastes weeks disqualifying.",
       points: [
         "Shared aggregator leads that three competitors are calling the same morning",
         "Enquiries from tenants and office managers with no authority over the roof or the budget",
@@ -135,7 +135,7 @@ export const industries = [
       {
         index: "01",
         title: "WhatsApp Outreach to Plant & Facility Heads",
-        copy: "The highest-reply channel for Indian industrial B2B. We run compliant, permission-based WhatsApp sequences that share site photos, generation data and payback numbers where decision-makers actually read them — then hand a warm conversation to your sales engineer.",
+        copy: "The highest-reply channel in industrial B2B markets where business runs on messaging apps. We run compliant, permission-based WhatsApp sequences that share site photos, generation data and payback numbers where decision-makers actually read them — then hand a warm conversation to your sales engineer.",
       },
       {
         index: "02",
@@ -176,7 +176,7 @@ export const industries = [
       },
       {
         q: "Can you handle multiple states or service regions?",
-        a: "Yes. We segment lists and campaigns by geography so each region gets messaging matched to its tariff structure, subsidy position and industrial mix. Reporting is broken down the same way, so you can see which belts are worth expanding into.",
+        a: "Yes. We segment lists and campaigns by geography so each region gets messaging matched to its tariff structure, incentive regime and industrial mix. Reporting is broken down the same way, so you can see which belts are worth expanding into.",
       },
       {
         q: "Who takes the meetings you book?",
@@ -395,7 +395,7 @@ export const industries = [
         "Shared portal enquiries with no exclusivity and falling conversion",
         "Channel partner networks built by chance rather than recruited on purpose",
         "No direct line to corporate real estate and admin heads taking leasing decisions",
-        "Investor and NRI interest handled ad hoc, with no follow-up through a long decision cycle",
+        "Overseas and institutional investor interest handled ad hoc, with no follow-up through a long decision cycle",
       ],
     },
     services: [
@@ -412,7 +412,7 @@ export const industries = [
       {
         index: "03",
         title: "Investor & Bulk Buyer Campaigns",
-        copy: "HNI, NRI and institutional buyers evaluate on yield, exit and track record — not on a brochure. We run LinkedIn and email campaigns that lead with rental yield, appreciation history and project delivery record, then nurture through a decision cycle measured in months.",
+        copy: "High-net-worth, overseas and institutional buyers evaluate on yield, exit and track record — not on a brochure. We run LinkedIn and email campaigns that lead with rental yield, appreciation history and project delivery record, then nurture through a decision cycle measured in months.",
       },
       {
         index: "04",
@@ -431,7 +431,7 @@ export const industries = [
     faqs: [
       {
         q: "Do you generate residential home-buyer leads?",
-        a: "Only where the sale is genuinely B2B or high-ticket investment — bulk buyers, investor syndicates, NRI portfolios, channel partners. Mass residential lead generation is a volume-and-price game run through portals, and other agencies do it more cheaply than we would.",
+        a: "Only where the sale is genuinely B2B or high-ticket investment — bulk buyers, investor syndicates, overseas investor portfolios, channel partners. Mass residential lead generation is a volume-and-price game run through portals, and other agencies do it more cheaply than we would.",
       },
       {
         q: "How is this different from buying portal leads?",

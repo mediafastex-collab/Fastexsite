@@ -26,12 +26,13 @@ export async function generateMetadata({ params }) {
       description: industry.metaDescription,
       url,
       type: "website",
+      images: ["/og-image.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: industry.metaTitle,
       description: industry.metaDescription,
-    },
+      images: ["/og-image.jpg"],    },
   };
 }
 
@@ -72,7 +73,7 @@ export default async function IndustryPage({ params }) {
           name: "Fastex Media",
           url: SITE,
         },
-        areaServed: "IN",
+        areaServed: { "@type": "Place", name: "Worldwide" },
       },
       {
         "@type": "FAQPage",

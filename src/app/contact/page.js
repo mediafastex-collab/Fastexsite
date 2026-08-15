@@ -9,9 +9,9 @@ export default function Contact() {
       <section className="contact section-padding" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
         <div className="container" style={{ maxWidth: "1000px" }}>
           <div className="section-header reveal">
-            <h2>
+            <h1>
               Book Your <span className="text-orange">Strategy Session</span>
-            </h2>
+            </h1>
             <p>Select a time below to speak with our growth experts.</p>
           </div>
 

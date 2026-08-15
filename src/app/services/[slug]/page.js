@@ -27,12 +27,13 @@ export async function generateMetadata({ params }) {
       description: service.metaDescription,
       url,
       type: "website",
+      images: ["/og-image.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: service.metaTitle,
       description: service.metaDescription,
-    },
+      images: ["/og-image.jpg"],    },
   };
 }
 
@@ -73,7 +74,7 @@ export default async function ServicePage({ params }) {
           name: "Fastex Media",
           url: SITE,
         },
-        areaServed: "IN",
+        areaServed: { "@type": "Place", name: "Worldwide" },
       },
       {
         "@type": "FAQPage",

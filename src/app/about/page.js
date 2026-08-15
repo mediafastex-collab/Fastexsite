@@ -7,13 +7,13 @@ import { portfolioStats } from "@/data/caseStudies";
 const SITE = "https://fastexmedia.com";
 
 export const metadata = {
-  title: "About Fastex Media | B2B Lead Generation Agency in Surat",
+  title: "About Fastex Media | Global B2B Lead Generation Agency",
   description:
-    "Fastex Media is a B2B lead generation agency founded in June 2025 in Surat, India. We build outbound systems that book qualified meetings for B2B companies across five sectors.",
+    "Fastex Media is a B2B lead generation agency founded in June 2025, working with clients worldwide. We build outbound systems that book qualified meetings for B2B companies across five sectors.",
   keywords: [
     "b2b lead generation agency",
-    "b2b marketing agency india",
-    "b2b marketing agency surat",
+    "global b2b marketing agency",
+    "international b2b lead generation",
     "about fastex media",
     "aagam shah fastex media",
   ],
@@ -24,6 +24,7 @@ export const metadata = {
       "Founded June 2025. A B2B-only lead generation agency building outbound systems that book qualified meetings.",
     url: "/about",
     type: "website",
+      images: ["/og-image.jpg"],
   },
 };
 
@@ -141,13 +142,14 @@ export default function About() {
               <div className="section-label">Our story</div>
             </div>
             <div className="split-body">
-              <h2>Founded in June 2025, in Surat.</h2>
+              <h2>Founded in June 2025. Working worldwide.</h2>
               <p>
                 Fastex Media was founded in June 2025 by {founder.name} after
-                watching the same pattern repeat across B2B companies: a good
-                product, a capable sales team, and no reliable way to get in
-                front of the people who actually sign. Growth depended on
-                referrals, trade shows and whoever the founder happened to know.
+                watching the same pattern repeat across B2B companies on several
+                continents: a good product, a capable sales team, and no reliable
+                way to get in front of the people who actually sign. Growth
+                depended on referrals, trade shows and whoever the founder
+                happened to know.
               </p>
               <p>
                 We built the agency around the part nobody wanted to own — the
@@ -162,7 +164,10 @@ export default function About() {
                 WhatsApp and cold email as a single system for B2B companies in
                 five sectors — IT and software, solar and renewable energy,
                 manufacturing, educational institutes and commercial real
-                estate.
+                estate. We work with clients across North America, Europe, the
+                Middle East, Asia-Pacific and India, and we run campaigns in the
+                buyer&apos;s market, time zone and compliance regime rather than
+                ours.
               </p>
             </div>
           </div>

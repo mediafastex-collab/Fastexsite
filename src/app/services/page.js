@@ -13,12 +13,35 @@ export const metadata = {
       "Five B2B channels run as one system: performance marketing, LinkedIn, social media, WhatsApp and cold email.",
     url: "/services",
     type: "website",
+      images: ["/og-image.jpg"],
   },
+};
+
+const SITE = "https://fastexmedia.com";
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "B2B Marketing Services",
+  description:
+    "Five B2B marketing channels run as one lead generation system.",
+  numberOfItems: services.length,
+  itemListElement: services.map((service, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: service.title,
+    description: service.summary,
+    url: `${SITE}/services/${service.slug}/`,
+  })),
 };
 
 export default function Services() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+      />
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">

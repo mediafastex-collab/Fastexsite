@@ -18,6 +18,7 @@ export const metadata = {
       "Real B2B campaigns and outcomes across solar, SaaS, real estate, education and manufacturing.",
     url: "/work",
     type: "website",
+      images: ["/og-image.jpg"],
   },
 };
 

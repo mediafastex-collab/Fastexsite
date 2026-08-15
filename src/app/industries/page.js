@@ -12,6 +12,7 @@ export const metadata = {
       "B2B outbound systems built for IT & software, solar & renewable, manufacturing, education and commercial real estate.",
     url: "/industries",
     type: "website",
+      images: ["/og-image.jpg"],
   },
 };
 
@@ -28,9 +29,31 @@ const cardCopy = {
     "Channel partners, corporate tenants and investors — direct pipelines instead of shared portal leads.",
 };
 
+const SITE = "https://fastexmedia.com";
+
+const listSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Industries We Serve",
+  description:
+    "B2B sectors Fastex Media builds lead generation systems for.",
+  numberOfItems: industries.length,
+  itemListElement: industries.map((industry, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: industry.name,
+    description: industry.metaDescription,
+    url: `${SITE}/industries/${industry.slug}/`,
+  })),
+};
+
 export default function Industries() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+      />
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">

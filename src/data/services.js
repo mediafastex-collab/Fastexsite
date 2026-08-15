@@ -44,7 +44,7 @@ export const services = [
     faqs: [
       {
         q: "What budget do we need to start?",
-        a: "Enough to gather signal inside a reasonable window. Below roughly ₹1.5–2 lakh a month in ad spend on LinkedIn, data comes in too slowly to optimise against and you are better off putting that money into outbound first. We will tell you which of the two we would spend it on.",
+        a: "Enough to gather signal inside a reasonable window. Below roughly $2,000–2,500 a month in LinkedIn ad spend, data comes in too slowly to optimise against and you are better off putting that money into outbound first. We will tell you which of the two we would spend it on.",
       },
       {
         q: "Why report on meetings instead of leads?",
@@ -288,7 +288,7 @@ export const services = [
       },
       {
         q: "Is cold email legal?",
-        a: "B2B cold email to a business address is permitted in India and, with conditions, under GDPR and CAN-SPAM — identification, a real physical address and a working opt-out are required, and we include them. If you sell into regulated markets, tell us on the call and we will scope accordingly.",
+        a: "B2B cold email to a business address is permitted in most markets, with conditions. GDPR (EU/UK), CAN-SPAM (US), CASL (Canada) and the Australian Spam Act all require clear sender identification, a real physical address and a working opt-out — we include all three, and we segment sending by jurisdiction. CASL in particular needs consent for most Canadian recipients, so we scope that separately. Tell us which markets you sell into and we will confirm what applies.",
       },
     ],
   },
