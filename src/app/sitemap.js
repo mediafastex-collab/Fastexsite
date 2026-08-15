@@ -1,6 +1,9 @@
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 
+// Required by `output: "export"` — emits a static sitemap.xml at build time.
+export const dynamic = "force-static";
+
 const SITE = "https://fastexmedia.com";
 
 export default function sitemap() {
