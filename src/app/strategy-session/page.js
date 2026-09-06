@@ -152,8 +152,7 @@ export default function StrategySession() {
 
       {/* ---------- WHAT HAPPENS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -178,8 +177,7 @@ export default function StrategySession() {
 
       {/* ---------- TAKEAWAYS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -209,8 +207,7 @@ export default function StrategySession() {
 
       {/* ---------- WHO THIS IS FOR ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -240,8 +237,7 @@ export default function StrategySession() {
       {/* ---------- BOOKING ---------- */}
       <section
         id="book"
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">

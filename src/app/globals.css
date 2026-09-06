@@ -155,33 +155,16 @@ ul {
   padding-block: var(--section-y);
 }
 
-/* =========================================
-   NAVIGATION (PIXARIO STYLE)
-========================================= */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--nav-height);
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  border-bottom: 1px solid transparent;
-  transition: var(--transition);
-  background: transparent;
+/* The hairline that separates stacked sections. Was repeated as an inline
+   style on 31 sections before this existed. */
+.section-padding--ruled {
+  border-top: 1px solid var(--border-color);
 }
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-}
-
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
@@ -200,57 +183,15 @@ ul {
   width: auto;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2.1rem;
-}
-
 @media (min-width: 1250px) {
   .nav-links {
     gap: 2.75rem;
   }
 }
 
-.nav-links li a {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.nav-links li a:hover {
-  color: var(--text-main);
-}
-
-/* Brand-orange underline wipes in under the hovered / open nav item */
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -7px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    var(--accent-color),
-    rgba(255, 107, 0, 0.15)
-  );
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.45s var(--ease-out);
-}
-
 .nav-links li a:hover::after,
 .nav-item.is-open > .nav-row a::after {
   transform: scaleX(1);
-}
-
-.nav-links li a {
-  position: relative;
 }
 
 .nav-links li a:hover .nav-number,
@@ -259,56 +200,9 @@ ul {
   opacity: 1;
 }
 
-.nav-number {
-  font-size: 0.7rem;
-  opacity: 0.5;
-  margin-right: 2px;
-  transition: var(--transition);
-}
-
-/* =========================================
-   NAV DROPDOWN
-========================================= */
-.nav-item {
-  position: relative;
-}
-
-.nav-row {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.nav-caret {
-  display: none; /* desktop opens on hover; this is the mobile/keyboard control */
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0.25rem;
-  transition: var(--transition);
-}
-
 .nav-item.is-open > .nav-row .nav-caret {
   transform: rotate(45deg);
   color: var(--accent-color);
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: -1.5rem;
-  z-index: 20;
-  padding-top: 1.4rem;
-  min-width: 310px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-8px);
-  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out),
-    visibility 0.35s;
-  pointer-events: none;
 }
 
 .nav-item.is-open .dropdown,
@@ -319,117 +213,15 @@ ul {
   pointer-events: auto;
 }
 
-.dropdown-inner {
-  /* Solid, not translucent: this panel sits over hero type and has to stay legible */
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-  padding: 0.6rem;
-}
-
-.dropdown-link {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.85rem 1rem;
-  font-size: 0.85rem;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--text-muted);
-  border-bottom: 1px solid transparent;
-  transition: var(--transition);
-}
-
-.dropdown-link:hover {
-  background: var(--tint-2);
-  color: var(--text-main);
-}
-
-/* Accent rail that grows down the left edge of the hovered row */
-.dropdown-link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 12%;
-  bottom: 12%;
-  width: 2px;
-  background: var(--accent-color);
-  transform: scaleY(0);
-  transition: transform 0.35s var(--ease-out);
-}
-
-.dropdown-link:hover::before {
-  transform: scaleY(1);
-}
-
-.dropdown-link {
-  position: relative;
-}
-
 /* Rows fan in one after another when the panel opens */
 .nav-item.is-open .dropdown-link,
 .nav-item:focus-within .dropdown-link {
   animation: drop-in 0.5s var(--ease-out) both;
 }
 
-.nav-item .dropdown-link:nth-child(1) { animation-delay: 0.02s; }
-.nav-item .dropdown-link:nth-child(2) { animation-delay: 0.06s; }
-.nav-item .dropdown-link:nth-child(3) { animation-delay: 0.1s; }
-.nav-item .dropdown-link:nth-child(4) { animation-delay: 0.14s; }
-.nav-item .dropdown-link:nth-child(5) { animation-delay: 0.18s; }
-
 @keyframes drop-in {
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: none; }
-}
-
-.dropdown-num {
-  font-family: var(--font-heading);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  opacity: 0.45;
-  flex-shrink: 0;
-}
-
-.dropdown-label {
-  flex: 1;
-}
-
-.dropdown-arrow {
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: var(--transition);
-  flex-shrink: 0;
-}
-
-.dropdown-link:hover .dropdown-arrow {
-  opacity: 1;
-  transform: translateX(0);
-  color: var(--accent-color);
-}
-
-.dropdown-all {
-  display: block;
-  margin-top: 0.4rem;
-  padding: 0.85rem 1rem;
-  border-top: 1px solid var(--border-color);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-}
-
-.dropdown-all:hover {
-  color: var(--text-main);
-}
-
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text-main);
-  font-size: 2rem;
-  cursor: pointer;
 }
 
 /* =========================================
@@ -520,17 +312,6 @@ ul {
   pointer-events: none;
 }
 
-/* Soft brand glow anchored behind the headline */
-/* .hero::after removed: the radial glow existed to lift a dark canvas and
-   has no purpose on a light one. */
-
-.hero-content {
-  max-width: 1100px;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
 .hero h1 {
   font-size: clamp(3rem, 8vw, 7rem);
   line-height: 0.98;
@@ -588,17 +369,6 @@ ul {
   animation: pulse-dot 2.6s ease-out infinite;
 }
 
-/* --- Hero stat strip --- */
-.hero-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.75rem;
-  margin-top: 4.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border-color);
-  max-width: 920px;
-}
-
 .hero-stats .stat-value {
   font-family: var(--font-heading);
   font-size: clamp(1.9rem, 3vw, 2.6rem);
@@ -614,49 +384,6 @@ ul {
   color: var(--text-muted);
   margin-top: 0.7rem;
 }
-
-/* =========================================
-   HERO NOTIFICATION CARDS
-   Drifting "result" cards that show what the service produces.
-========================================= */
-/* One tidy right-hand column — same width, same right edge, even spacing.
-   Reads as a live activity feed rather than scattered stickers. */
-.hero-cards {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 0.9rem;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  width: 300px;
-  padding: 1rem 1.25rem;
-  background: rgba(12, 12, 12, 0.82);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-  animation: card-in 1s var(--ease-out) both,
-    card-float 7s ease-in-out infinite;
-}
-
-/* Staggered entrance and drift only — alignment stays uniform */
-.hero-card:nth-child(1) { animation-delay: 0.70s, 1.7s; animation-duration: 1s, 7.0s; }
-.hero-card:nth-child(2) { animation-delay: 0.82s, 2.4s; animation-duration: 1s, 8.5s; }
-.hero-card:nth-child(3) { animation-delay: 0.94s, 2.0s; animation-duration: 1s, 7.8s; }
-.hero-card:nth-child(4) { animation-delay: 1.06s, 2.9s; animation-duration: 1s, 9.2s; }
-.hero-card:nth-child(5) { animation-delay: 1.18s, 1.4s; animation-duration: 1s, 8.0s; }
-.hero-card:nth-child(6) { animation-delay: 1.30s, 3.3s; animation-duration: 1s, 7.4s; }
 
 .hero-card .card-icon {
   flex-shrink: 0;
@@ -737,16 +464,6 @@ ul {
   }
 }
 
-/* --- Hero entrance --- */
-.hero-anim > * {
-  animation: rise-in 1s var(--ease-out) both;
-}
-.hero-anim > *:nth-child(1) { animation-delay: 0.05s; }
-.hero-anim > *:nth-child(2) { animation-delay: 0.15s; }
-.hero-anim > *:nth-child(3) { animation-delay: 0.3s; }
-.hero-anim > *:nth-child(4) { animation-delay: 0.42s; }
-.hero-anim > *:nth-child(5) { animation-delay: 0.54s; }
-
 @keyframes rise-in {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: none; }
@@ -786,41 +503,6 @@ ul {
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 34s linear infinite;
-}
-
-.marquee-group {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.marquee-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 2.5rem;
-  padding-right: 2.5rem;
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.marquee-item::after {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  opacity: 0.7;
-  flex-shrink: 0;
 }
 
 @keyframes marquee {
@@ -866,11 +548,12 @@ ul {
 }
 
 .split-body h2 {
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  font-weight: 400;
-  line-height: 1.18;
-  margin-bottom: 2.5rem;
-  max-width: 22ch;
+  font-size: var(--fs-display-3);
+  font-weight: var(--fw-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display-3);
+  margin-bottom: var(--space-4);
+  max-width: 24ch;
 }
 
 .split-body p {
@@ -1079,11 +762,12 @@ ul {
 }
 
 .page-hero h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.04;
-  max-width: 18ch;
-  margin-bottom: 1.75rem;
+  font-size: var(--fs-display-1);
+  font-weight: var(--fw-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display-1);
+  max-width: 20ch;
+  margin-bottom: var(--space-3);
 }
 
 .page-hero .page-lede {
@@ -1403,23 +1087,8 @@ ul {
   color: var(--text-main);
 }
 
-/* =========================================
-   BRAND STATEMENT
-========================================= */
-.brand-band {
-  text-align: center;
-}
-
 .brand-band .section-label {
   justify-content: center;
-}
-
-.brand-wordmark {
-  font-size: clamp(3rem, 9vw, 7.5rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin: 0.5rem 0 2rem;
 }
 
 /* Marker-pen highlight that wipes in when the block scrolls into view */
@@ -1457,14 +1126,6 @@ html:not(.js-reveal) .brand-wordmark .mark {
 
 html:not(.js-reveal) .brand-wordmark .mark::before {
   transform: scaleX(1);
-}
-
-.brand-line {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  font-weight: 300;
-  max-width: 58ch;
-  margin: 0 auto;
 }
 
 /* =========================================
@@ -1793,82 +1454,6 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 /* =========================================
-   TESTIMONIALS
-========================================= */
-.quote-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2px;
-  background: var(--border-color);
-  border: 1px solid var(--border-color);
-}
-
-.quote-card {
-  background: var(--bg-color);
-  padding: 3rem 2.5rem;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.quote-card:hover {
-  background: var(--tint-1);
-}
-
-.quote-stars {
-  color: var(--accent-color);
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
-}
-
-.quote-card blockquote {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  margin: 0 0 2.5rem;
-}
-
-.quote-card figcaption {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  margin-top: auto;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.quote-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
-  background: var(--tint-2);
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-}
-
-.quote-name {
-  display: block;
-  font-size: 0.95rem;
-}
-
-.quote-role {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  margin-top: 0.15rem;
-}
-
-/* =========================================
    FOOTER SOCIAL ICONS
 ========================================= */
 .footer-logo {
@@ -1947,12 +1532,6 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 
 .service-card:hover, .pricing-card:hover {
   background: var(--tint-1);
-}
-
-.icon-wrapper {
-  font-size: 2.5rem;
-  color: var(--text-main);
-  margin-bottom: 2rem;
 }
 
 .service-card h3, .pricing-card h3 {
@@ -2525,11 +2104,11 @@ a.system-row:hover .go {
 }
 
 .article-inner h1 {
-  font-size: clamp(2rem, 4.2vw, 3.1rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin: 1rem 0 1.25rem;
+  font-size: var(--fs-display-2);
+  font-weight: var(--fw-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--tracking-display-2);
+  margin: var(--space-2) 0 var(--space-3);
 }
 
 .article-meta {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialIcon from "@/components/SocialIcon";
 import Cta from "@/components/Cta";
 import { site, founder } from "@/data/site";
 import { systems } from "@/data/services";
@@ -123,8 +124,7 @@ export default function About() {
 
       {/* ---------- PHILOSOPHY ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -153,8 +153,7 @@ export default function About() {
 
       {/* ---------- PRINCIPLES ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -179,8 +178,7 @@ export default function About() {
 
       {/* ---------- FOUNDER ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="founder-block reveal">
@@ -224,7 +222,7 @@ export default function About() {
                 className="founder-social"
                 aria-label={`${founder.name} on LinkedIn`}
               >
-                <i className="ph ph-linkedin-logo" aria-hidden="true"></i>
+                <SocialIcon name="LinkedIn" />
                 <span>Connect on LinkedIn</span>
               </a>
             </div>
@@ -234,8 +232,7 @@ export default function About() {
 
       {/* ---------- WHAT WE BUILD ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -264,8 +261,7 @@ export default function About() {
 
       {/* ---------- PROOF ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">

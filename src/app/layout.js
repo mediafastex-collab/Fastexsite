@@ -195,7 +195,6 @@ export default function RootLayout({ children }) {
               "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window&&document.visibilityState!=='hidden'){document.documentElement.classList.add('js-reveal')}}catch(e){}",
           }}
         />
-        <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

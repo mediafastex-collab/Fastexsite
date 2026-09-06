@@ -106,8 +106,7 @@ export default function Industries() {
       </section>
 
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -137,8 +136,7 @@ export default function Industries() {
       </section>
 
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">

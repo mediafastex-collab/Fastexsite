@@ -34,26 +34,22 @@ export const founder = {
   x: "https://x.com/shahaagamn",
 };
 
-/** Phosphor icon names are used for the footer social row. */
+/** Social links. Marks are drawn inline by <SocialIcon>. */
 export const socials = [
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/fastex-media-agency/",
-    icon: "ph-linkedin-logo",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/fastexmedia_/",
-    icon: "ph-instagram-logo",
   },
   {
     label: "X (Twitter)",
     href: "https://x.com/shahaagamn",
-    icon: "ph-x-logo",
   },
   {
     label: "WhatsApp",
     href: "https://api.whatsapp.com/send/?phone=919328680929&text&type=phone_number&app_absent=0",
-    icon: "ph-whatsapp-logo",
   },
 ];

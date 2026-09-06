@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialIcon from "@/components/SocialIcon";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { tiers } from "@/data/tiers";
@@ -33,7 +34,7 @@ export default function Footer() {
                 aria-label={social.label}
                 title={social.label}
               >
-                <i className={`ph ${social.icon}`} aria-hidden="true"></i>
+                <SocialIcon name={social.label} />
               </a>
             ))}
           </div>

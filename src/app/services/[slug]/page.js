@@ -155,8 +155,7 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- APPROACH ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -173,8 +172,7 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- DELIVERABLES ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -195,8 +193,7 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- PROCESS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -221,8 +218,7 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- FAQ ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -247,8 +243,7 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- CROSS LINKS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-label">Other services</div>

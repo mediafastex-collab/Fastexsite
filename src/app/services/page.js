@@ -120,7 +120,11 @@ export default function Services() {
             const items = servicesBySystem(system.key);
 
             return (
-              <div className="system-block reveal" key={system.key}>
+              <div
+                className="system-block reveal"
+                key={system.key}
+                id={system.key}
+              >
                 <div className="system-head">
                   <div>
                     <div className="system-name">{system.name}</div>
@@ -162,8 +166,7 @@ export default function Services() {
 
       {/* ---------- CONSULTING ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -205,8 +208,7 @@ export default function Services() {
 
       {/* ---------- HOW WE ENGAGE ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -236,8 +238,7 @@ export default function Services() {
 
       {/* ---------- WHO WE WORK WITH ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">

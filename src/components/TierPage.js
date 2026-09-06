@@ -2,6 +2,7 @@ import Link from "next/link";
 import Faq, { faqSchema } from "@/components/Faq";
 import AnswerBlock from "@/components/AnswerBlock";
 import Cta from "@/components/Cta";
+import HeroProof from "@/components/HeroProof";
 import { caseForTier } from "@/data/caseStudies";
 import { cta, site } from "@/data/site";
 
@@ -64,13 +65,16 @@ export default function TierPage({ tier }) {
               See Revenue Impact Stories
             </Link>
           </div>
+
+          {/* Proof in the first screen, same as the homepage, narrowed to
+              this audience where we have engagements for it. */}
+          <HeroProof tier={tier.key} limit={6} />
         </div>
       </section>
 
       {/* ---------- SIGNALS / THE PROBLEM ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -98,8 +102,7 @@ export default function TierPage({ tier }) {
 
       {/* ---------- MISTAKES (founders) or DIAGNOSIS (builders, enterprises) ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -134,8 +137,7 @@ export default function TierPage({ tier }) {
 
       {/* ---------- WHAT WE BUILD ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -161,10 +163,7 @@ export default function TierPage({ tier }) {
 
       {/* ---------- CASE STUDY ---------- */}
       {study && (
-        <section
-          className="section-padding"
-          style={{ borderTop: "1px solid var(--border-color)" }}
-        >
+        <section className="section-padding section-padding--ruled">
           <div className="container">
             <div className="section-header reveal">
               <div className="section-label">Proof</div>
@@ -212,8 +211,7 @@ export default function TierPage({ tier }) {
 
       {/* ---------- SERVICES FOR THIS TIER ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">

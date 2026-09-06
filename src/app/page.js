@@ -4,15 +4,11 @@ import AnswerBlock from "@/components/AnswerBlock";
 import Cta from "@/components/Cta";
 import Lines from "@/components/Lines";
 import CountUp from "@/components/CountUp";
+import HeroProof from "@/components/HeroProof";
 import SystemFlow from "@/components/SystemFlow";
 import { systems, servicesBySystem } from "@/data/services";
 import { tiers } from "@/data/tiers";
-import {
-  outcomeMetrics,
-  portfolioStats,
-  featuredCases,
-  projects,
-} from "@/data/caseStudies";
+import { outcomeMetrics } from "@/data/caseStudies";
 import { posts } from "@/data/posts";
 import { industries } from "@/data/industries";
 import { cta, site } from "@/data/site";
@@ -106,20 +102,6 @@ const schema = {
   "@graph": [faqSchema(faqs)],
 };
 
-/** Clients shown in the hero. Those with a published study link to it. */
-const heroClients = [
-  ...featuredCases.map((c) => ({
-    name: c.client.replace(/ Ltd$/, ""),
-    sector: c.sector,
-    study: true,
-  })),
-  ...projects.slice(0, 4).map((p) => ({
-    name: p.client,
-    sector: p.sector,
-    study: false,
-  })),
-];
-
 export default function Home() {
   const latestPosts = posts.slice(0, 2);
 
@@ -162,27 +144,7 @@ export default function Home() {
           </div>
 
           {/* Scale line and client proof, side by side, still above the fold. */}
-          <div className="hero-v2__proof" data-reveal="up">
-            <p className="hero-v2__scale">
-              Running growth systems for {portfolioStats[0].value} active B2B
-              brands across SaaS, energy, ERP and manufacturing.
-            </p>
-
-            <ul className="hero-v2__clients">
-              {heroClients.map((client) => (
-                <li key={client.name} className="hero-v2__client">
-                  <span className="hero-v2__clientName">{client.name}</span>
-                  {client.study ? (
-                    <Link href="/case-studies" className="hero-v2__caseLink">
-                      Case study
-                    </Link>
-                  ) : (
-                    <span className="hero-v2__sector">{client.sector}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <HeroProof />
         </div>
       </section>
 

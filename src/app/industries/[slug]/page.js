@@ -153,8 +153,7 @@ export default async function IndustryPage({ params }) {
 
       {/* ---------- SERVICES FOR THIS SECTOR ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -187,8 +186,7 @@ export default async function IndustryPage({ params }) {
 
       {/* ---------- DELIVERABLES ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="split reveal">
@@ -209,8 +207,7 @@ export default async function IndustryPage({ params }) {
 
       {/* ---------- PROCESS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -235,8 +232,7 @@ export default async function IndustryPage({ params }) {
 
       {/* ---------- FAQ ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-header reveal">
@@ -261,8 +257,7 @@ export default async function IndustryPage({ params }) {
 
       {/* ---------- OTHER SECTORS ---------- */}
       <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+        className="section-padding section-padding--ruled"
       >
         <div className="container">
           <div className="section-label">Other sectors</div>

@@ -11,9 +11,12 @@ import styles from "./Header.module.css";
  * discover, so the whole menu is laid out at once instead. Order groups the
  * pipeline services first, then authority, then performance.
  *
- * Declared here rather than derived from `@/data/services` because the brief
- * lists four capabilities that do not have pages yet, and these descriptions
- * are menu copy rather than the page summaries.
+ * Declared here rather than derived from `@/data/services` because the
+ * descriptions are menu copy rather than the page summaries.
+ *
+ * Four entries are capabilities delivered inside a system rather than
+ * standalone services. They link to that system on /services, where they are
+ * listed, instead of to a page that does not exist.
  */
 const SERVICES = [
   {
@@ -38,7 +41,7 @@ const SERVICES = [
   },
   {
     name: "Lead Generation",
-    href: "/services/lead-generation",
+    href: "/services#pipeline",
     description: "Multi-channel outbound engine.",
   },
   {
@@ -48,7 +51,7 @@ const SERVICES = [
   },
   {
     name: "Social Media",
-    href: "/services/social-media",
+    href: "/services/social-media-marketing",
     description: "Content that builds buyers.",
   },
   {
@@ -58,7 +61,7 @@ const SERVICES = [
   },
   {
     name: "LinkedIn Branding",
-    href: "/services/linkedin-branding",
+    href: "/services#authority",
     description: "Own your LinkedIn presence completely.",
   },
   {
@@ -68,12 +71,12 @@ const SERVICES = [
   },
   {
     name: "Video Ads",
-    href: "/services/video-ads",
+    href: "/services#performance",
     description: "Creatives that stop the scroll.",
   },
   {
     name: "Conversion Optimisation",
-    href: "/services/conversion-optimisation",
+    href: "/services#performance",
     description: "Fix leaks between traffic and revenue.",
   },
 ];
