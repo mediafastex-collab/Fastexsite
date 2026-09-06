@@ -1,0 +1,347 @@
+/* ═══════════════════════════════════════════════════
+   Fastex Media — navigation header.
+
+   Self-contained on purpose. The component owns its tokens and never
+   borrows from globals.css, so the site-wide nav rules (which uppercase
+   their links) cannot leak in here.
+   ═══════════════════════════════════════════════════ */
+
+.root {
+  /* Light canvas. The structure of the nav brief is unchanged, only the
+     surfaces are inverted so it sits on a white page. */
+  --nav-surface: #ffffff;
+  --dropdown-surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.11);
+  --hover-surface: rgba(0, 0, 0, 0.045);
+  --orange: #ff6b00;
+  --ink: #0a0a0a;
+  --dim: #56565a;
+  --muted: #8a8a90;
+  --service-name: #2c2c2e;
+
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--nav-surface);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ── Bar ─────────────────────────────────────────── */
+.bar {
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 36px;
+  background: var(--nav-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Centre column. True centring against the bar, independent of the width
+   of the logo on the left or the action on the right. */
+.navGroup {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.barEnd {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+/* The dropdown carries the border while it is open, so the two do not
+   stack into a double rule. */
+.barOpen {
+  border-bottom-color: transparent;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.logoMark {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.navItem {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--dim);
+  text-decoration: none;
+  padding: 8px 16px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.navItem:hover {
+  color: var(--ink);
+}
+
+.servicesButton {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.servicesButtonOpen {
+  color: var(--ink);
+}
+
+.chevronDown {
+  transition: transform 0.2s;
+}
+
+.chevronUp {
+  transform: rotate(180deg);
+}
+
+.cta {
+  background: var(--orange);
+  color: #0a0a0a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  padding: 8px 20px;
+  border-radius: 7px;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* ── Dropdown ────────────────────────────────────── */
+.dropdown {
+  position: absolute;
+  top: 64px;
+  /* Sits flush under the bar so the pointer never crosses dead space on its
+     way into the panel, which would close it mid-travel. */
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--dropdown-surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
+  transform-origin: top center;
+  animation: panel-in 0.24s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.dropdownInner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 36px 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px 24px;
+}
+
+/* ── Left column, categories ─────────────────────── */
+/* ── Right column, services ──────────────────────── */
+.services {
+  padding-left: 32px;
+  padding-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+  align-content: start;
+}
+
+.service {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.18s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* Staggered entrance, index supplied per item. */
+  animation: service-in 0.42s cubic-bezier(0.075, 0.82, 0.165, 1) both;
+  animation-delay: calc(var(--i, 0) * 22ms);
+}
+
+@keyframes service-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.service:hover {
+  background: var(--hover-surface);
+}
+
+.service:hover .serviceName {
+  color: var(--ink);
+}
+
+.serviceName {
+  display: block;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  margin-bottom: 3px;
+  font-weight: 400;
+  color: var(--service-name);
+  transition: color 0.1s;
+}
+
+.serviceDescription {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── Bottom strip ────────────────────────────────── */
+/* ── Mobile ──────────────────────────────────────── */
+.hamburger {
+  display: none;
+  width: 22px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background: var(--text-main, #0a0a0a);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--nav-surface);
+  overflow-y: auto;
+  padding: 0 0 40px;
+}
+
+.overlayTop {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.close {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  color: var(--dim);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.accordionButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+}
+
+.mobileService {
+  display: block;
+  font-size: 14px;
+  color: var(--dim);
+  padding: 10px 20px 10px 48px;
+  text-decoration: none;
+}
+
+.mobileLink {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 16px 20px;
+  text-decoration: none;
+}
+
+.mobileDivider {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 20px;
+}
+
+.mobileCta {
+  display: block;
+  margin: 16px 20px 0;
+  padding: 14px 20px;
+  background: var(--orange);
+  color: #0a0a0a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  text-align: center;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .bar {
+    grid-template-columns: 1fr auto;
+    padding: 0 20px;
+  }
+
+  .navGroup,
+  .cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    display: none;
+  }
+}

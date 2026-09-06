@@ -1,91 +1,94 @@
 import Link from "next/link";
+import Cta from "@/components/Cta";
 import { site, founder } from "@/data/site";
-import { industries, engagement } from "@/data/industries";
-import { services } from "@/data/services";
-import { portfolioStats } from "@/data/caseStudies";
+import { systems } from "@/data/services";
+import { outcomeMetrics } from "@/data/caseStudies";
 
-const SITE = "https://www.fastexmedia.com";
+const SITE = site.url;
 
 export const metadata = {
-  title: "About Fastex Media | Global B2B Lead Generation Agency",
+  title: "About Fastex Media — The Architects of Revenue Growth",
   description:
-    "Fastex Media is a B2B lead generation agency founded in June 2025, working with clients worldwide. We build outbound systems that book qualified meetings for B2B companies across five sectors.",
+    "Fastex Media is a marketing consulting firm built on one belief: strategy without execution is theory, and execution without strategy is waste.",
   keywords: [
-    "b2b lead generation agency",
-    "global b2b marketing agency",
-    "international b2b lead generation",
+    "marketing consulting firm",
+    "revenue architecture",
     "about fastex media",
     "aagam shah fastex media",
+    "b2b marketing partner",
   ],
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Fastex Media | B2B Lead Generation Agency",
+    title: "About Fastex Media — The Architects of Revenue Growth",
     description:
-      "Founded June 2025. A B2B-only lead generation agency building outbound systems that book qualified meetings.",
+      "A marketing consulting firm built on one belief: strategy without execution is theory, and execution without strategy is waste.",
     url: "/about",
     type: "website",
-      images: ["/og-image.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 
-const beliefs = [
+const principles = [
   {
     num: "01",
-    title: "B2B only",
-    copy: "We do not run D2C campaigns, and we do not pretend the same playbook works for both. Every system we build assumes a buying committee, a long cycle and a decision that has to be justified internally.",
+    title: "System before tactics",
+    copy: "A tactic is only as good as the structure it sits inside. We will not run a channel until we can say what it is for, who it reaches and how we will know whether it worked. That is why our engagements start with a diagnosis rather than a campaign calendar.",
   },
   {
     num: "02",
-    title: "Meetings, not metrics",
-    copy: "Impressions, clicks and lead counts are easy to inflate. We report on qualified meetings booked and pipeline created, because those are the numbers that decide whether the engagement was worth it.",
+    title: "Outcomes before deliverables",
+    copy: "It is entirely possible to deliver everything promised and produce nothing. We would rather report on pipeline created and be held to it than hand over a folder of assets and call the month a success.",
   },
   {
     num: "03",
-    title: "Honest about fit",
-    copy: "If outbound is the wrong move for you right now, we will say so on the first call. Taking an engagement we cannot win costs you a quarter and costs us a reference.",
+    title: "Honest before impressive",
+    copy: "We tell clients when a channel is failing before they find it in the numbers, and we decline work we do not think will succeed. It costs us revenue occasionally. It is also the only reason anyone should trust the reporting we do send.",
   },
 ];
 
-export default function About() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "About Us",
-            item: `${SITE}/about`,
-          },
-        ],
-      },
-      {
-        "@type": "Organization",
-        name: site.name,
-        url: SITE,
-        foundingDate: "2025-06",
-        email: site.email,
-        telephone: "+91-9328680929",
-        description:
-          "B2B lead generation agency building outbound systems that book qualified meetings.",
-        founder: {
-          "@type": "Person",
-          name: founder.name,
-          jobTitle: founder.role,
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About",
+          item: `${SITE}/about/`,
         },
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Surat",
-          addressRegion: "Gujarat",
-          addressCountry: "IN",
-        },
-      },
-    ],
-  };
+      ],
+    },
+    {
+      "@type": "AboutPage",
+      name: "About Fastex Media",
+      description:
+        "A marketing consulting firm that designs, builds and runs revenue systems for B2B companies.",
+      url: `${SITE}/about/`,
+      mainEntity: { "@id": `${SITE}/#organization` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE}/#founder`,
+      name: founder.name,
+      jobTitle: "Founder",
+      worksFor: { "@id": `${SITE}/#organization` },
+      url: founder.linkedin,
+      sameAs: [founder.linkedin, founder.x],
+      knowsAbout: [
+        "B2B revenue architecture",
+        "Go-to-market strategy",
+        "LinkedIn outreach",
+        "Cold email deliverability",
+        "B2B performance marketing",
+      ],
+    },
+  ],
+};
 
+export default function About() {
   return (
     <>
       <script
@@ -99,77 +102,77 @@ export default function About() {
           <div className="breadcrumb">
             <Link href="/">Home</Link>
             <span className="sep">/</span>
-            <span className="current">About Us</span>
+            <span className="current">The Architects</span>
           </div>
-          <div className="section-label">About us</div>
-          <h1>A B2B lead generation agency, built for one job.</h1>
+          <h1>We are Marketing Architects.</h1>
           <p className="page-lede">
-            Fastex Media started in June 2025 with a narrow remit: build the
-            outbound systems that put qualified B2B meetings in a sales
-            calendar, every week, on purpose. No retainers for activity. No
-            dashboards full of numbers nobody acts on.
+            We do not run campaigns and report on clicks. We design the revenue
+            system first, then we build and run it. That is the difference
+            between a vendor and a partner.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
+            <Link href="/strategy-session" className="btn btn-primary">
+              Work With Us
             </Link>
-            <Link href="/work" className="btn btn-outline">
-              See Case Studies
+            <Link href="/case-studies" className="btn btn-outline">
+              See Revenue Impact Stories
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ---------- STATS ---------- */}
-      <section style={{ paddingBottom: "2rem" }}>
-        <div className="container">
-          <div className="proof-band">
-            {portfolioStats.map((stat) => (
-              <div key={stat.label}>
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- STORY ---------- */}
-      <section className="section-padding">
+      {/* ---------- PHILOSOPHY ---------- */}
+      <section
+        className="section-padding"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
         <div className="container">
           <div className="split reveal">
             <div className="split-aside">
-              <div className="section-label">Our story</div>
+              <div className="section-label">The belief</div>
             </div>
             <div className="split-body">
-              <h2>Founded in June 2025. Working worldwide.</h2>
+              <h2>Strategy Without Execution Is Theory.</h2>
               <p>
-                Fastex Media was founded in June 2025 by {founder.name} after
-                watching the same pattern repeat across B2B companies on several
-                continents: a good product, a capable sales team, and no reliable
-                way to get in front of the people who actually sign. Growth
-                depended on referrals, trade shows and whoever the founder
-                happened to know.
+                Execution without strategy is waste. Almost every marketing
+                problem we are asked to fix sits in the gap between those two
+                sentences. Someone was sold a strategy that arrived as a
+                document and was never built, or a team was hired to execute
+                against a direction nobody had actually decided.
               </p>
               <p>
-                We built the agency around the part nobody wanted to own — the
-                unglamorous infrastructure. Verified data, sending domains,
-                deliverability, multi-channel sequencing and follow-up
-                discipline. Done properly, that machinery produces qualified
-                meetings predictably. Done badly, it burns your domain and your
-                reputation, which is why most companies quietly give up on it.
-              </p>
-              <p>
-                Today we run performance marketing, LinkedIn, social media,
-                WhatsApp and cold email as a single system for B2B companies in
-                five sectors — IT and software, solar and renewable energy,
-                manufacturing, educational institutes and commercial real
-                estate. We work with clients across North America, Europe, the
-                Middle East, Asia-Pacific and India, and we run campaigns in the
-                buyer&apos;s market, time zone and compliance regime rather than
-                ours.
+                Architecture is the word we use for closing that gap. It means
+                the people who decide what should happen are the same people who
+                build it, run it and report on whether it worked. There is no
+                handover, because the handover is where the thinking gets lost.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- PRINCIPLES ---------- */}
+      <section
+        className="section-padding"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">How we operate</div>
+            <h2>Three Principles We Hold To.</h2>
+          </div>
+          <div className="process-list">
+            {principles.map((item, i) => (
+              <div
+                key={item.num}
+                className="process-row reveal"
+                style={{ transitionDelay: `${i * 0.08}s` }}
+              >
+                <div className="process-num">{item.num}</div>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -191,20 +194,27 @@ export default function About() {
             </div>
 
             <div className="founder-body">
-              <div className="section-label">Leadership</div>
               <h2>{founder.name}</h2>
               <div className="founder-role">{founder.role}</div>
               <p>
-                Aagam leads strategy and client delivery at Fastex Media. He
-                works directly on every engagement — the ICP research, the
-                messaging and the first sequences all get his hands on them
-                before anything goes out under your name.
+                &ldquo;I kept meeting companies with a good product and no way to
+                reach the people who needed it. Not a messaging problem, not a
+                budget problem. Nobody had ever decided how the business was
+                supposed to acquire customers, so every quarter became a
+                different experiment run by whoever was loudest that month.
               </p>
               <p>
-                If you book a strategy call, it is Aagam you will be speaking
-                to. He will tell you plainly whether outbound is the right move
-                for your business right now, and what it will realistically
-                take.
+                What struck me is that the agencies they hired made it worse.
+                Each one optimised its own channel, reported its own metric, and
+                nobody owned the total. The client ended up coordinating four
+                vendors and still could not answer the only question their board
+                was asking.
+              </p>
+              <p>
+                So we built the opposite. One team that decides the
+                architecture, builds it, runs it, and puts its name on the
+                number. If a channel is not working, you hear it from us
+                first.&rdquo;
               </p>
 
               <a
@@ -222,125 +232,62 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------- BELIEFS ---------- */}
+      {/* ---------- WHAT WE BUILD ---------- */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
           <div className="section-header reveal">
-            <div className="section-label">How we operate</div>
-            <h2>Three things we hold to.</h2>
+            <div className="section-label">What we build</div>
+            <h2>Three Systems, One Architecture.</h2>
           </div>
-
-          <div className="process-list">
-            {beliefs.map((belief, i) => (
-              <div
-                key={belief.num}
-                className="process-row reveal"
-                style={{ transitionDelay: `${i * 0.08}s` }}
-              >
-                <div className="process-num">{belief.num}</div>
-                <h3>{belief.title}</h3>
-                <p>{belief.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- WHAT WE DO ---------- */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="section-label">What we do</div>
-            <h2>Five channels, five sectors.</h2>
-          </div>
-
-          <div className="section-label">Services</div>
-          <div className="pill-row">
-            {services.map((service) => (
+          <div className="industry-grid">
+            {systems.map((system, i) => (
               <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="pill"
+                key={system.key}
+                href="/services"
+                className="industry-card reveal"
+                style={{ transitionDelay: `${i * 0.06}s` }}
               >
-                {service.navLabel}
-              </Link>
-            ))}
-          </div>
-
-          <div className="section-label" style={{ marginTop: "3.5rem" }}>
-            Industries
-          </div>
-          <div className="pill-row">
-            {industries.map((industry) => (
-              <Link
-                key={industry.slug}
-                href={`/industries/${industry.slug}`}
-                className="pill"
-              >
-                <span aria-hidden="true">{industry.icon}</span> {industry.name}
+                <div className="card-index">{system.name}</div>
+                <h3>{system.tagline}</h3>
+                <p className="card-copy">{system.copy}</p>
+                <span className="card-link">
+                  Read more <span aria-hidden="true">→</span>
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ---------- PROCESS ---------- */}
+      {/* ---------- PROOF ---------- */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
           <div className="section-header reveal">
-            <div className="section-label">How we work</div>
-            <h2>Three moves. One machine.</h2>
+            <div className="section-label">Proof</div>
+            <h2>Measured, Not Claimed.</h2>
           </div>
-          <div className="process-list">
-            {engagement.map((step, i) => (
-              <div
-                key={step.num}
-                className="process-row reveal"
-                style={{ transitionDelay: `${i * 0.08}s` }}
-              >
-                <div className="process-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
+          <div className="metric-row reveal">
+            {outcomeMetrics.map((metric) => (
+              <div className="metric" key={metric.label}>
+                <b>{metric.value}</b>
+                <span>{metric.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ---------- CTA ---------- */}
-      <section
-        className="section-padding cta"
-        style={{
-          borderTop: "1px solid var(--border-color)",
-          paddingBottom: "10rem",
-        }}
-      >
-        <div className="container">
-          <div className="cta-inner reveal">
-            <h2>Let&apos;s talk pipeline.</h2>
-            <p className="cta-sub">
-              Tell us where you want the pipeline to be in ninety days. We&apos;ll
-              build the system that gets you there.
-            </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
-            <div className="cta-contacts">
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-              <a href={site.phoneHref}>{site.phone}</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Cta
+        heading="Work with us."
+        copy="Every engagement starts with a strategy session. Thirty minutes, no pitch, and a straight answer on whether we are the right partner for you."
+        label="Work With Us"
+      />
     </>
   );
 }

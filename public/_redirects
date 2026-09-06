@@ -2,30 +2,42 @@
 #
 # Purpose: carry every URL Google already has indexed on the old site over to
 # the new one with a 301, so ranking signals transfer instead of hitting a 404.
+# Every target below is a final destination, never another redirect, so no
+# request pays for two hops.
 
 # --- Apex to www -----------------------------------------------------------
 # The old site canonicalised to www and that is what is indexed, so www stays
 # the primary hostname. Without this both hosts serve 200 and split signals.
 https://fastexmedia.com/*  https://www.fastexmedia.com/:splat  301
 
-# --- Old blog ---------------------------------------------------------------
-# These three posts are indexed. Until the blog is ported, send each to the
-# closest matching page rather than dropping them.
-# REMOVE these lines once the blog exists at /blog/ again.
-/blog/whatsapp-marketing-for-b2b-guide  /services/whatsapp-marketing/  301
-/blog/cold-email-vs-linkedin-outreach   /services/email-marketing/     301
-/blog/b2b-lead-generation-strategies    /services/                     301
-/blog/                                  /services/                     301
-/blog                                   /services/                     301
+# --- Blog ------------------------------------------------------------------
+# The blog now lives at /blog/ as The Architecture Brief, with the four B2B
+# posts ported. No redirects needed for those; they keep their slugs.
+#
+# The retail post was not ported (B2B-only positioning), so it points at the
+# closest relevant service.
+/blog/social-media-management-for-retails  /services/social-media-marketing/  301
+/blog/how-email-marketing-is-not-dead-for-your-d2c-brand  /services/email-marketing/  301
+/blog/performancre-makreitng-for-saas-is-lead-enegine  /blog/performance-marketing-for-saas/  301
 
-# --- Legacy paths from the older static site --------------------------------
-/index.html    /              301
-/contact.html  /contact/      301
-/pricing.html  /pricing/      301
-/services.html /services/     301
-/work.html     /work/         301
-/about.html    /about/        301
+# --- Renamed and retired pages ---------------------------------------------
+# /work became /case-studies. /pricing is gone: engagement shapes now live on
+# /services with no prices. /contact is replaced by the single site CTA.
+/work        /case-studies/      301
+/work/       /case-studies/      301
+/pricing     /services/          301
+/pricing/    /services/          301
+/contact     /strategy-session/  301
+/contact/    /strategy-session/  301
+/partnership   /strategy-session/  301
+/partnership/  /strategy-session/  301
 
-# --- Removed page -----------------------------------------------------------
-/partnership   /contact/      301
-/partnership/  /contact/      301
+# --- Legacy .html paths from the original static site ----------------------
+# Pointed straight at the final destination rather than through the rules
+# above, so an indexed .html URL never chains through two redirects.
+/index.html    /                   301
+/contact.html  /strategy-session/  301
+/pricing.html  /services/          301
+/services.html /services/          301
+/work.html     /case-studies/      301
+/about.html    /about/             301

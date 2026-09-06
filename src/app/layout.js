@@ -1,5 +1,5 @@
 import { Inter, Outfit } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import "./globals.css";
@@ -19,19 +19,19 @@ const outfit = Outfit({
 });
 
 const DESCRIPTION =
-  "Fastex Media is a global B2B lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for B2B companies worldwide.";
+  "Fastex Media is a marketing consulting firm for B2B companies, startups and growth-stage businesses. We architect the revenue systems that generate demand and book qualified meetings.";
 
 const OG_IMAGE = {
   url: "/og-image.jpg",
   width: 1200,
   height: 630,
-  alt: "Fastex Media — B2B lead generation that books meetings",
+  alt: "Fastex Media, revenue systems architected for B2B growth",
   type: "image/jpeg",
 };
 
 export const metadata = {
   title: {
-    default: "B2B Lead Generation Agency | Fastex Media",
+    default: "Fastex Media — B2B Marketing Consulting & Revenue Growth Partner",
     template: "%s",
   },
   description: DESCRIPTION,
@@ -47,7 +47,7 @@ export const metadata = {
     languages: { "x-default": "/", en: "/" },
   },
   openGraph: {
-    title: "B2B Lead Generation Agency | Fastex Media",
+    title: "Fastex Media — B2B Marketing Consulting & Revenue Growth Partner",
     description: DESCRIPTION,
     url: "https://www.fastexmedia.com/",
     siteName: "Fastex Media",
@@ -57,7 +57,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "B2B Lead Generation Agency | Fastex Media",
+    title: "Fastex Media — B2B Marketing Consulting & Revenue Growth Partner",
     description: DESCRIPTION,
     site: "@shahaagamn",
     creator: "@shahaagamn",
@@ -87,8 +87,8 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#050505",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
 };
@@ -107,7 +107,7 @@ const siteSchema = {
       "@type": ["Organization", "ProfessionalService"],
       "@id": `${SITE}/#organization`,
       name: "Fastex Media",
-      alternateName: "Fastex Media Agency",
+      alternateName: "Fastex Media Consulting",
       url: SITE,
       logo: {
         "@type": "ImageObject",
@@ -117,8 +117,8 @@ const siteSchema = {
       },
       image: `${SITE}/og-image.jpg`,
       description:
-        "Global B2B lead generation agency building predictable outbound systems for IT & software, solar & renewable energy, manufacturing, education and commercial real estate. Working with clients worldwide.",
-      slogan: "Design. Scale. Dominate.",
+        "A marketing consulting firm that architects revenue systems for B2B companies, startups and growth-stage businesses. Working with ambitious businesses worldwide.",
+      slogan: "We architect revenue systems.",
       foundingDate: "2025-06",
       founder: {
         "@type": "Person",
@@ -139,7 +139,8 @@ const siteSchema = {
       },
       areaServed: { "@type": "Place", name: "Worldwide" },
       knowsAbout: [
-        "B2B lead generation",
+        "B2B revenue architecture",
+        "Marketing consulting",
         "Performance marketing",
         "LinkedIn lead generation",
         "Cold email outreach",
@@ -168,7 +169,7 @@ const siteSchema = {
       url: SITE,
       name: "Fastex Media",
       description:
-        "Global B2B lead generation agency. Outbound systems that book qualified sales meetings.",
+        "A marketing consulting firm. Revenue systems that generate demand and book qualified meetings.",
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en",
     },
@@ -179,6 +180,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        {/*
+          Arms the scroll-reveal starting state before first paint.
+
+          The hidden state lives behind `.js-reveal`, so without this the
+          browser paints the page fully visible and the class lands a frame
+          later, which reads as a flash. Running it inline and blocking means
+          the first painted frame is already correct. Reveal.js removes the
+          class again if motion is reduced or the observer cannot run.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window&&document.visibilityState!=='hidden'){document.documentElement.classList.add('js-reveal')}}catch(e){}",
+          }}
+        />
         <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
         <script
           type="application/ld+json"
@@ -189,7 +205,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <div className="site-wrapper">
-          <Navbar />
+          <Header />
           <main>{children}</main>
           <Footer />
         </div>

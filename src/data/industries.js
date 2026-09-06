@@ -2,7 +2,7 @@
  * Industry content. One entry per sector we specialise in.
  *
  * Each entry carries its own copy so the pages read as genuinely different
- * documents rather than one template with the sector name swapped in — that
+ * documents rather than one template with the sector name swapped in, that
  * matters both for the reader and for search.
  */
 
@@ -25,7 +25,7 @@ export const industries = [
     ],
     h1: "B2B marketing for IT & software companies.",
     heroSub:
-      "Technical buyers ignore generic outreach. We build the research, messaging and multi-channel sequences that get your founders in front of CTOs, IT directors and heads of engineering — with meetings on the calendar, not impressions on a dashboard.",
+      "Technical buyers ignore generic outreach. We build the research, messaging and multi-channel sequences that get your founders in front of CTOs, IT directors and heads of engineering, with meetings on the calendar, not impressions on a dashboard.",
     stats: [
       { value: "10X", label: "MRR Growth" },
       { value: "45–90", label: "Day Sales Cycle" },
@@ -46,7 +46,7 @@ export const industries = [
       {
         index: "01",
         title: "Cold Email That Reaches Technical Buyers",
-        copy: "We build your ICP from tech stack, headcount growth, funding and hiring signals — not job titles alone. Dedicated sending domains, warmed inboxes and per-segment copy keep deliverability high while the message stays specific enough for a CTO to reply to.",
+        copy: "We build your ICP from tech stack, headcount growth, funding and hiring signals, not job titles alone. Dedicated sending domains, warmed inboxes and per-segment copy keep deliverability high while the message stays specific enough for a CTO to reply to.",
       },
       {
         index: "02",
@@ -56,7 +56,7 @@ export const industries = [
       {
         index: "03",
         title: "WhatsApp Follow-Up & No-Show Recovery",
-        copy: "Demos get booked and then forgotten. We run structured WhatsApp follow-up to confirm meetings, recover no-shows and keep deals moving between calls — the highest-reply channel in markets where business runs on messaging apps.",
+        copy: "Demos get booked and then forgotten. We run structured WhatsApp follow-up to confirm meetings, recover no-shows and keep deals moving between calls, the highest-reply channel in markets where business runs on messaging apps.",
       },
       {
         index: "04",
@@ -75,11 +75,11 @@ export const industries = [
     faqs: [
       {
         q: "Do you work with early-stage SaaS companies?",
-        a: "Yes. We work best with software companies that have found product-market fit and closed at least a handful of customers, because we need real win stories to build messaging from. If you are pre-revenue and still testing the problem, outbound will amplify a message you have not validated yet — we will tell you that on the call rather than take the engagement.",
+        a: "Yes. We work best with software companies that have found product-market fit and closed at least a handful of customers, because we need real win stories to build messaging from. If you are pre-revenue and still testing the problem, outbound will amplify a message you have not validated yet, we will tell you that on the call rather than take the engagement.",
       },
       {
         q: "How long before we see the first qualified meeting?",
-        a: "Weeks one and two go to ICP research, domain setup and inbox warm-up — sending hard before that burns the domain. Sequences typically go live in week three, with first replies in the same week and consistent meeting flow by weeks six to eight. Anyone promising meetings in week one is sending from a domain they are willing to lose.",
+        a: "Weeks one and two go to ICP research, domain setup and inbox warm-up, sending hard before that burns the domain. Sequences typically go live in week three, with first replies in the same week and consistent meeting flow by weeks six to eight. Anyone promising meetings in week one is sending from a domain they are willing to lose.",
       },
       {
         q: "How do you keep our main domain safe?",
@@ -87,7 +87,7 @@ export const industries = [
       },
       {
         q: "Can you sell a technical product without knowing the technology?",
-        a: "We do not pretend to be engineers. We run structured onboarding with your technical team and your best sales calls, and we write from the specifics that come out of that — the integration that saves three weeks, the compliance requirement you already clear. Vague benefit language is what gets ignored by this audience.",
+        a: "We do not pretend to be engineers. We run structured onboarding with your technical team and your best sales calls, and we write from the specifics that come out of that, the integration that saves three weeks, the compliance requirement you already clear. Vague benefit language is what gets ignored by this audience.",
       },
       {
         q: "Do you replace our sales team?",
@@ -123,7 +123,7 @@ export const industries = [
     problem: {
       label: "The problem",
       heading: "Residential tactics do not work on a commercial capex decision.",
-      body: "Most solar marketing is built for homeowners — form fills, price comparisons, quick quotes. A C&I project runs into seven figures, involves three or four stakeholders, and takes months. Buying the same lead lists as everyone else produces enquiries your team wastes weeks disqualifying.",
+      body: "Most solar marketing is built for homeowners, form fills, price comparisons, quick quotes. A C&I project runs into seven figures, involves three or four stakeholders, and takes months. Buying the same lead lists as everyone else produces enquiries your team wastes weeks disqualifying.",
       points: [
         "Shared aggregator leads that three competitors are calling the same morning",
         "Enquiries from tenants and office managers with no authority over the roof or the budget",
@@ -135,12 +135,12 @@ export const industries = [
       {
         index: "01",
         title: "WhatsApp Outreach to Plant & Facility Heads",
-        copy: "The highest-reply channel in industrial B2B markets where business runs on messaging apps. We run compliant, permission-based WhatsApp sequences that share site photos, generation data and payback numbers where decision-makers actually read them — then hand a warm conversation to your sales engineer.",
+        copy: "The highest-reply channel in industrial B2B markets where business runs on messaging apps. We run compliant, permission-based WhatsApp sequences that share site photos, generation data and payback numbers where decision-makers actually read them, then hand a warm conversation to your sales engineer.",
       },
       {
         index: "02",
         title: "Targeted Email to Commercial Property Owners",
-        copy: "We build lists by industrial estate, rooftop area, sanctioned load and electricity spend, then write to the specific economics of that site. Segmented sequences for factory owners, warehouse operators, hospitals and educational campuses — each with the payback case that matters to them.",
+        copy: "We build lists by industrial estate, rooftop area, sanctioned load and electricity spend, then write to the specific economics of that site. Segmented sequences for factory owners, warehouse operators, hospitals and educational campuses, each with the payback case that matters to them.",
       },
       {
         index: "03",
@@ -150,7 +150,7 @@ export const industries = [
       {
         index: "04",
         title: "Geo-Targeted Performance Campaigns",
-        copy: "Search and social campaigns aimed at commercial rooftop intent in your service geography — filtered hard against residential traffic. Every rupee is tracked to site surveys booked, not clicks, so budget moves to the industrial belts that actually convert.",
+        copy: "Search and social campaigns aimed at commercial rooftop intent in your service geography, filtered hard against residential traffic. Every rupee is tracked to site surveys booked, not clicks, so budget moves to the industrial belts that actually convert.",
       },
     ],
     deliverables: [
@@ -168,7 +168,7 @@ export const industries = [
       },
       {
         q: "Our sales cycle is six to nine months. Does outbound still make sense?",
-        a: "It makes more sense, not less. Long cycles punish inconsistent prospecting — a quiet quarter of outreach becomes a dead quarter of revenue three quarters later. We keep the top of the funnel filled continuously so your pipeline stays predictable across the cycle.",
+        a: "It makes more sense, not less. Long cycles punish inconsistent prospecting, a quiet quarter of outreach becomes a dead quarter of revenue three quarters later. We keep the top of the funnel filled continuously so your pipeline stays predictable across the cycle.",
       },
       {
         q: "Is WhatsApp outreach compliant?",
@@ -193,7 +193,7 @@ export const industries = [
     tagline: "OEMs, suppliers and industrial exporters",
     metaTitle: "B2B Marketing Agency for Manufacturers & Exporters | Fastex Media",
     metaDescription:
-      "B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors — beyond trade shows and referrals.",
+      "B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors, beyond trade shows and referrals.",
     keywords: [
       "b2b marketing for manufacturers",
       "manufacturing lead generation",
@@ -203,7 +203,7 @@ export const industries = [
     ],
     h1: "B2B marketing for manufacturers & exporters.",
     heroSub:
-      "Trade shows and referrals are not a pipeline — they are a calendar. We build the outbound system that reaches procurement heads, sourcing managers and distributors between exhibitions, in the markets you want to grow into.",
+      "Trade shows and referrals are not a pipeline, they are a calendar. We build the outbound system that reaches procurement heads, sourcing managers and distributors between exhibitions, in the markets you want to grow into.",
     stats: [
       { value: "120+", label: "Qualified Leads" },
       { value: "90 Days", label: "To Full Pipeline" },
@@ -212,7 +212,7 @@ export const industries = [
     problem: {
       label: "The problem",
       heading: "Two good exhibitions a year is not a growth plan.",
-      body: "Most manufacturers we meet have a strong product, a healthy order book from a handful of long-standing buyers, and no way to add new ones on purpose. Growth depends on trade shows, agents and word of mouth — all of which are outside your control, and all of which go quiet at exactly the wrong time.",
+      body: "Most manufacturers we meet have a strong product, a healthy order book from a handful of long-standing buyers, and no way to add new ones on purpose. Growth depends on trade shows, agents and word of mouth, all of which are outside your control, and all of which go quiet at exactly the wrong time.",
       points: [
         "Revenue concentrated in a few buyers, with real exposure if one leaves",
         "Enquiries from traders and intermediaries rather than the actual sourcing decision-maker",
@@ -224,7 +224,7 @@ export const industries = [
       {
         index: "01",
         title: "Buyer Discovery for Domestic & Export Markets",
-        copy: "We build verified lists of the companies that actually buy your category — by product line, import history, plant location and company size — and identify the sourcing manager or procurement head by name, so outreach lands with the person who raises the RFQ.",
+        copy: "We build verified lists of the companies that actually buy your category, by product line, import history, plant location and company size, and identify the sourcing manager or procurement head by name, so outreach lands with the person who raises the RFQ.",
       },
       {
         index: "02",
@@ -239,7 +239,7 @@ export const industries = [
       {
         index: "04",
         title: "WhatsApp Catalogue & Sample Follow-Up",
-        copy: "Catalogues get sent and then go quiet. We run structured follow-up that shares product media, tracks sample dispatch and keeps the buyer engaged through the evaluation period — the stage where most manufacturer deals quietly die.",
+        copy: "Catalogues get sent and then go quiet. We run structured follow-up that shares product media, tracks sample dispatch and keeps the buyer engaged through the evaluation period, the stage where most manufacturer deals quietly die.",
       },
     ],
     deliverables: [
@@ -253,11 +253,11 @@ export const industries = [
     faqs: [
       {
         q: "We sell through distributors. Can you help us recruit more?",
-        a: "Yes, and it is one of the highest-return campaigns we run for manufacturers. Recruiting channel partners is a B2B sale like any other — we build the list of distributors and dealers active in your category and territory, and run sequences built around margin, territory protection and support rather than product features.",
+        a: "Yes, and it is one of the highest-return campaigns we run for manufacturers. Recruiting channel partners is a B2B sale like any other, we build the list of distributors and dealers active in your category and territory, and run sequences built around margin, territory protection and support rather than product features.",
       },
       {
         q: "Can you reach international buyers?",
-        a: "Yes. We build export buyer lists using import data and company filings in the target market, and adapt messaging and sending schedules to that region. We are direct about where this is harder — some markets are relationship-gated and outbound opens the door rather than closing the deal.",
+        a: "Yes. We build export buyer lists using import data and company filings in the target market, and adapt messaging and sending schedules to that region. We are direct about where this is harder, some markets are relationship-gated and outbound opens the door rather than closing the deal.",
       },
       {
         q: "Our product is highly technical. Will generic outreach work?",
@@ -265,7 +265,7 @@ export const industries = [
       },
       {
         q: "How do you handle enquiries from traders and middlemen?",
-        a: "We qualify before a meeting is confirmed — end use, volume, decision authority and whether they are buying for themselves or brokering. You can also tell us to exclude intermediaries entirely, and we will filter the list accordingly.",
+        a: "We qualify before a meeting is confirmed, end use, volume, decision authority and whether they are buying for themselves or brokering. You can also tell us to exclude intermediaries entirely, and we will filter the list accordingly.",
       },
       {
         q: "Does this replace our trade show spend?",
@@ -292,7 +292,7 @@ export const industries = [
     ],
     h1: "B2B marketing for educational institutes.",
     heroSub:
-      "Whether you are a university building corporate partnerships, a school group expanding through franchise, or an EdTech company selling into institutions — the buyer is an organisation, not a walk-in. We build the system that reaches them.",
+      "Whether you are a university building corporate partnerships, a school group expanding through franchise, or an EdTech company selling into institutions, the buyer is an organisation, not a walk-in. We build the system that reaches them.",
     stats: [
       { value: "120+", label: "Qualified Leads" },
       { value: "90 Days", label: "To Full Pipeline" },
@@ -301,7 +301,7 @@ export const industries = [
     problem: {
       label: "The problem",
       heading: "Admissions marketing and institutional growth are different jobs.",
-      body: "Most institutes run one marketing function aimed at students and parents, then wonder why corporate tie-ups, placement partnerships and franchise expansion never move. Those are B2B sales into organisations with committees, procurement and budget cycles — and they need their own system.",
+      body: "Most institutes run one marketing function aimed at students and parents, then wonder why corporate tie-ups, placement partnerships and franchise expansion never move. Those are B2B sales into organisations with committees, procurement and budget cycles, and they need their own system.",
       points: [
         "Placement and partnership targets owned by someone with no pipeline to work from",
         "EdTech products pitched to teachers when the budget sits with a trustee or director",
@@ -313,7 +313,7 @@ export const industries = [
       {
         index: "01",
         title: "Corporate Partnership & Placement Outreach",
-        copy: "We build the list of employers hiring in your students' disciplines and geography, then open conversations with HR heads, campus recruitment leads and L&D managers. The output is signed MoUs, recruitment drives and corporate training mandates — not a longer contact list.",
+        copy: "We build the list of employers hiring in your students' disciplines and geography, then open conversations with HR heads, campus recruitment leads and L&D managers. The output is signed MoUs, recruitment drives and corporate training mandates, not a longer contact list.",
       },
       {
         index: "02",
@@ -323,12 +323,12 @@ export const industries = [
       {
         index: "03",
         title: "Franchise & Campus Expansion Pipeline",
-        copy: "Expansion is a B2B sale to an investor-operator. We identify education entrepreneurs and existing operators in target cities, and run sequences built around unit economics, brand support and territory — so your expansion team talks to serious candidates.",
+        copy: "Expansion is a B2B sale to an investor-operator. We identify education entrepreneurs and existing operators in target cities, and run sequences built around unit economics, brand support and territory, so your expansion team talks to serious candidates.",
       },
       {
         index: "04",
         title: "Qualified Admission Enquiry Systems",
-        copy: "Where you do want student volume, we build campaigns that qualify before the counsellor picks up the phone — programme, eligibility, intake and budget captured up front, with WhatsApp follow-up through the decision window when most enquiries otherwise go cold.",
+        copy: "Where you do want student volume, we build campaigns that qualify before the counsellor picks up the phone, programme, eligibility, intake and budget captured up front, with WhatsApp follow-up through the decision window when most enquiries otherwise go cold.",
       },
     ],
     deliverables: [
@@ -342,11 +342,11 @@ export const industries = [
     faqs: [
       {
         q: "We are a college, not a company. Does B2B outbound apply to us?",
-        a: "It applies to everything you sell to an organisation rather than to a student — corporate placement partnerships, training mandates, research collaborations, campus recruitment drives and franchise expansion. Those are institutional sales with committees and approval cycles, and they respond to structured outreach.",
+        a: "It applies to everything you sell to an organisation rather than to a student, corporate placement partnerships, training mandates, research collaborations, campus recruitment drives and franchise expansion. Those are institutional sales with committees and approval cycles, and they respond to structured outreach.",
       },
       {
         q: "Can you help with student admissions directly?",
-        a: "We help with the system around it: qualified enquiry generation, and WhatsApp follow-up through the decision window. We are not a substitute for your counselling team, and we will not promise enrolment numbers — the counsellor conversation decides that, and we do not run it.",
+        a: "We help with the system around it: qualified enquiry generation, and WhatsApp follow-up through the decision window. We are not a substitute for your counselling team, and we will not promise enrolment numbers, the counsellor conversation decides that, and we do not run it.",
       },
       {
         q: "Our budget cycle is tied to the academic year. How do you plan around it?",
@@ -354,11 +354,11 @@ export const industries = [
       },
       {
         q: "Will outreach damage our institutional reputation?",
-        a: "It would, if it were volume spam — which is why we do not run that. Sequences go out from properly configured domains, in low daily volumes, written as a specific and relevant approach from your institution. Your name is the asset being used, and protecting it is a constraint we design around.",
+        a: "It would, if it were volume spam, which is why we do not run that. Sequences go out from properly configured domains, in low daily volumes, written as a specific and relevant approach from your institution. Your name is the asset being used, and protecting it is a constraint we design around.",
       },
       {
         q: "Do you work with EdTech companies selling to institutes?",
-        a: "Yes, and it is one of our stronger fits. The sale involves multiple stakeholders, a real implementation question and a budget cycle — exactly the conditions where structured multi-channel outbound outperforms paid advertising.",
+        a: "Yes, and it is one of our stronger fits. The sale involves multiple stakeholders, a real implementation question and a budget cycle, exactly the conditions where structured multi-channel outbound outperforms paid advertising.",
       },
     ],
   },
@@ -371,7 +371,7 @@ export const industries = [
     tagline: "Commercial developers, brokerages and investors",
     metaTitle: "B2B Marketing Agency for Real Estate & Developers | Fastex Media",
     metaDescription:
-      "B2B lead generation for commercial real estate. We reach corporate tenants, channel partners and investors for developers and brokerages — beyond portal leads.",
+      "B2B lead generation for commercial real estate. We reach corporate tenants, channel partners and investors for developers and brokerages, beyond portal leads.",
     keywords: [
       "b2b real estate marketing agency",
       "commercial real estate lead generation",
@@ -381,7 +381,7 @@ export const industries = [
     ],
     h1: "B2B marketing for commercial real estate.",
     heroSub:
-      "Portal leads are shared, cold and mostly unqualified. We build direct pipelines to the people who actually transact at scale — corporate tenants, channel partners, institutional investors and bulk buyers.",
+      "Portal leads are shared, cold and mostly unqualified. We build direct pipelines to the people who actually transact at scale, corporate tenants, channel partners, institutional investors and bulk buyers.",
     stats: [
       { value: "$2.5M", label: "Pipeline Value" },
       { value: "120+", label: "Qualified Leads" },
@@ -402,7 +402,7 @@ export const industries = [
       {
         index: "01",
         title: "Channel Partner & Broker Recruitment",
-        copy: "Your distribution is your growth ceiling. We identify active brokers and channel partners by micro-market and ticket size, then run WhatsApp and email sequences built around commission structure, inventory access and co-marketing support — so your partner network grows deliberately.",
+        copy: "Your distribution is your growth ceiling. We identify active brokers and channel partners by micro-market and ticket size, then run WhatsApp and email sequences built around commission structure, inventory access and co-marketing support, so your partner network grows deliberately.",
       },
       {
         index: "02",
@@ -412,7 +412,7 @@ export const industries = [
       {
         index: "03",
         title: "Investor & Bulk Buyer Campaigns",
-        copy: "High-net-worth, overseas and institutional buyers evaluate on yield, exit and track record — not on a brochure. We run LinkedIn and email campaigns that lead with rental yield, appreciation history and project delivery record, then nurture through a decision cycle measured in months.",
+        copy: "High-net-worth, overseas and institutional buyers evaluate on yield, exit and track record, not on a brochure. We run LinkedIn and email campaigns that lead with rental yield, appreciation history and project delivery record, then nurture through a decision cycle measured in months.",
       },
       {
         index: "04",
@@ -431,11 +431,11 @@ export const industries = [
     faqs: [
       {
         q: "Do you generate residential home-buyer leads?",
-        a: "Only where the sale is genuinely B2B or high-ticket investment — bulk buyers, investor syndicates, overseas investor portfolios, channel partners. Mass residential lead generation is a volume-and-price game run through portals, and other agencies do it more cheaply than we would.",
+        a: "Only where the sale is genuinely B2B or high-ticket investment, bulk buyers, investor syndicates, overseas investor portfolios, channel partners. Mass residential lead generation is a volume-and-price game run through portals, and other agencies do it more cheaply than we would.",
       },
       {
         q: "How is this different from buying portal leads?",
-        a: "Portal leads are shared, inbound and priced per enquiry — you compete with three others on response speed. Outbound gives you exclusive conversations with buyers and partners who were not shopping that morning, and the relationship belongs to you rather than to the platform.",
+        a: "Portal leads are shared, inbound and priced per enquiry, you compete with three others on response speed. Outbound gives you exclusive conversations with buyers and partners who were not shopping that morning, and the relationship belongs to you rather than to the platform.",
       },
       {
         q: "Can you help us recruit channel partners in a new city?",
@@ -456,17 +456,17 @@ export const industries = [
 export const industryBySlug = (slug) =>
   industries.find((industry) => industry.slug === slug);
 
-/** Shared engagement steps — the same process runs across every sector. */
+/** Shared engagement steps, the same process runs across every sector. */
 export const engagement = [
   {
     num: "01",
     title: "Map the market",
-    copy: "We define the accounts worth winning in your sector, then build a verified data set of the people who actually sign — with the buying signals that say who is worth approaching now.",
+    copy: "We define the accounts worth winning in your sector, then build a verified data set of the people who actually sign, with the buying signals that say who is worth approaching now.",
   },
   {
     num: "02",
     title: "Build the system",
-    copy: "Sending infrastructure, deliverability, multi-channel sequences and deep personalisation — assembled as one machine and tested before it carries your name at volume.",
+    copy: "Sending infrastructure, deliverability, multi-channel sequences and deep personalisation, assembled as one machine and tested before it carries your name at volume.",
   },
   {
     num: "03",

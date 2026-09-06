@@ -107,11 +107,11 @@ export default async function IndustryPage({ params }) {
           <h1>{industry.h1}</h1>
           <p className="page-lede">{industry.heroSub}</p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
+            <Link href="/strategy-session" className="btn btn-primary">
+              Book a Strategy Session
             </Link>
-            <Link href="/work" className="btn btn-outline">
-              See Case Studies
+            <Link href="/case-studies" className="btn btn-outline">
+              See Revenue Impact Stories
             </Link>
           </div>
         </div>
@@ -297,8 +297,8 @@ export default async function IndustryPage({ params }) {
               Tell us where you want the pipeline to be in ninety days. We&apos;ll
               build the system that gets you there.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
+            <Link href="/strategy-session" className="btn btn-primary">
+              Book a Strategy Session
             </Link>
             <div className="cta-contacts">
               <a href="mailto:hello@fastexmedia.com">hello@fastexmedia.com</a>

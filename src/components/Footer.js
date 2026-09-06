@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
-import { site, socials } from "@/data/site";
+import { tiers } from "@/data/tiers";
+import { cta, site, socials } from "@/data/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,8 +15,11 @@ export default function Footer() {
             Fastex Media.
           </Link>
           <p className="footer-blurb">
-            A B2B lead generation agency. We build the outbound systems that put
-            qualified meetings in your sales calendar.
+            A marketing consulting firm. We architect the revenue systems that
+            put qualified meetings in your sales calendar.
+          </p>
+          <p className="footer-blurb" style={{ marginTop: "1rem" }}>
+            {site.tagline}
           </p>
 
           <div className="social-row">
@@ -55,33 +59,31 @@ export default function Footer() {
           </div>
 
           <div className="link-group">
-            <h4>Company</h4>
-            <Link href="/work">Case Studies</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/about">About Us</Link>
-            <Link href="/contact">Book a Call</Link>
+            <h4>Who We Work With</h4>
+            {tiers.map((tier) => (
+              <Link key={tier.slug} href={`/${tier.slug}`}>
+                {tier.name}
+              </Link>
+            ))}
+            <Link href="/case-studies">Case Studies</Link>
+            <Link href="/blog">The Architecture Brief</Link>
           </div>
 
           <div className="link-group">
-            <h4>Contact</h4>
+            <h4>Company</h4>
+            <Link href="/about">The Architects</Link>
+            <Link href="/industries">Industries</Link>
+            <Link href={cta.href}>{cta.label}</Link>
             <a href={`mailto:${site.email}`}>{site.email}</a>
             <a href={site.phoneHref}>{site.phone}</a>
-            <a
-              href={site.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ marginTop: "1rem" }}
-            >
-              Surat, Gujarat, India
-            </a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>
-          Copyright &copy; {currentYear} Fastex Media. All rights reserved.
-          Engineered for B2B scale.
+          Copyright &copy; {currentYear} Fastex Media. All rights reserved.{" "}
+          {site.tagline}
         </p>
       </div>
     </footer>
