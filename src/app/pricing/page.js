@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScopeBuilder from "@/components/ScopeBuilder";
 import {
   plans,
   tiers,
@@ -14,12 +15,12 @@ import {
 export const metadata = {
   title: "Pricing | Fastex Media",
   description:
-    "Seven B2B marketing services, each across four tiers. Social media from $600, performance marketing from $500, WhatsApp from $350, email from $500 and LinkedIn from $400 a month.",
+    "Build your scope: choose the B2B marketing services you need and the level you need them at, then see your starting fee. Seven services, four tiers, fees agreed in writing.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Pricing | Fastex Media",
     description:
-      "Seven services across three growth pillars, each priced across four tiers. Starting fees published, scope agreed in writing.",
+      "Choose your services and your level, then see your starting fee. Seven services across three growth pillars.",
     url: "/pricing",
     type: "website",
     images: ["/og-image.jpg"],
@@ -52,7 +53,7 @@ const offerSchema = {
   })),
 };
 
-/** Renders one tier-comparison table. Scrolls horizontally on narrow screens. */
+/** One tier-comparison table. Scrolls horizontally inside its own container. */
 function TierTable({ groups, caption }) {
   return (
     <div className="pl-tablewrap">
@@ -114,7 +115,7 @@ export default function Pricing() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
       />
 
-      {/* ── Hero ─────────────────────────────────────────────── */}
+      {/* ── Hero. No figures. ────────────────────────────────── */}
       <section className="page-hero">
         <div className="container">
           <div className="breadcrumb">
@@ -123,21 +124,13 @@ export default function Pricing() {
             <span className="current">Pricing</span>
           </div>
           <div className="section-label">Plans</div>
-          <h1>Built around your growth.</h1>
+          <h1>Build your scope.</h1>
           <p className="page-lede">
-            Seven services across three growth pillars. Take one on its own, or
-            connect several into a coordinated system. Every service runs across
-            four tiers, so the volume and the support move with you rather than
-            forcing you into a package that never quite fit.
+            Seven services across three growth pillars. Tell us what you need
+            and at what level, and the fee follows from that, not from a package
+            someone else designed. Everything is agreed in writing before work
+            begins.
           </p>
-          <div className="hero-btns" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Scoping Call
-            </Link>
-            <Link href="/services" className="btn btn-outline">
-              See the Services
-            </Link>
-          </div>
           <div className="pill-row">
             {pillars.map((pillar) => (
               <span className="pill" key={pillar.name}>
@@ -148,46 +141,17 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── Starting prices at a glance ───────────────────────── */}
+      {/* ── The configurator: selection first, price last. ───── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">Starting from</div>
-            <h2>Published starting fees.</h2>
-            <p>
-              Each figure is the Starter tier, monthly, in USD. Growth, Scale
-              and Enterprise scale the volume from there.
-            </p>
-          </div>
-
-          <div className="pl-rates">
-            {plans.map((plan, i) => (
-              <a
-                href={`#${plan.slug}`}
-                key={plan.slug}
-                className="pl-rate reveal"
-                style={{ transitionDelay: `${i * 0.05}s` }}
-              >
-                <span className="pl-rate-pillar">{plan.pillar}</span>
-                <span className="pl-rate-name">{plan.name}</span>
-                <span className="pl-rate-price">
-                  <span className="pl-rate-cur">$</span>
-                  {plan.from}
-                  <span className="pl-rate-per">/mo</span>
-                </span>
-                <span className="pl-rate-arrow" aria-hidden="true">
-                  ↓
-                </span>
-              </a>
-            ))}
-          </div>
+          <ScopeBuilder />
         </div>
       </section>
 
-      {/* ── The three pillars ─────────────────────────────────── */}
+      {/* ── Three pillars ────────────────────────────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -218,7 +182,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── The four tiers + shared engagement ────────────────── */}
+      {/* ── Shared engagement across every tier ──────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -226,28 +190,11 @@ export default function Pricing() {
         <div className="container">
           <div className="section-header reveal">
             <div className="eyebrow">Your engagement</div>
-            <h2>The right level of support.</h2>
+            <h2>The same input at every level.</h2>
             <p>
-              The same strategic input at every tier, with delivery volume and
-              account support matched to your needs.
+              Whichever level you choose, the thinking is the same. Delivery
+              volume and account support are what move.
             </p>
-          </div>
-
-          <div className="pl-tiers">
-            {tiers.map((tier, i) => (
-              <div
-                key={tier.name}
-                className={`pl-tier reveal${tier.recommended ? " is-rec" : ""}`}
-                style={{ transitionDelay: `${i * 0.07}s` }}
-              >
-                <div className="pl-tier-top">
-                  <span className="pl-tier-num">{`0${i + 1}`}</span>
-                  {tier.recommended ? <span className="pl-rec">Recommended</span> : null}
-                </div>
-                <h3>{tier.name}</h3>
-                <p>{tier.blurb}</p>
-              </div>
-            ))}
           </div>
 
           <div className="pl-shared reveal">
@@ -256,17 +203,10 @@ export default function Pricing() {
               caption="Shared tier benefits and support across all services"
             />
           </div>
-
-          <p className="pl-note reveal">
-            Volumes are monthly unless stated otherwise. Starting prices cover
-            Starter plans in USD. Final fees depend on the agreed scope;
-            Enterprise is custom-priced. Add-ons are billed separately unless
-            included in your scope of work.
-          </p>
         </div>
       </section>
 
-      {/* ── Per-service tier tables ───────────────────────────── */}
+      {/* ── Per-service detail ───────────────────────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -274,7 +214,7 @@ export default function Pricing() {
         <div className="container">
           <div className="section-header reveal">
             <div className="eyebrow">Service detail</div>
-            <h2>What each tier includes.</h2>
+            <h2>What each level includes.</h2>
             <p>Open a service to see the deliverables at every tier.</p>
           </div>
 
@@ -292,9 +232,6 @@ export default function Pricing() {
                     <span className="pl-service-name">{plan.name}</span>
                   </span>
                   <span className="pl-service-meta">
-                    <span className="pl-service-price">
-                      from <strong>${plan.from}</strong>/mo
-                    </span>
                     <span className="sign" aria-hidden="true">
                       +
                     </span>
@@ -314,7 +251,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── Add-ons ───────────────────────────────────────────── */}
+      {/* ── Add-ons ──────────────────────────────────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -349,7 +286,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── Direct costs + ownership ──────────────────────────── */}
+      {/* ── Costs + ownership ────────────────────────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -368,7 +305,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── How we start ──────────────────────────────────────── */}
+      {/* ── How we start ─────────────────────────────────────── */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -412,7 +349,58 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────────────── */}
+      {/* ── All starting fees. Deliberately the last thing. ───── */}
+      <section
+        className="section-padding"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="eyebrow">For reference</div>
+            <h2>Every starting fee.</h2>
+            <p>
+              Each figure is the Starter tier, monthly, in USD. Growth, Scale
+              and Enterprise scale the volume from there and are quoted on
+              scope.
+            </p>
+          </div>
+
+          <div className="pl-tablewrap reveal">
+            <table className="pl-table pl-table--fees">
+              <caption className="pl-sr">Starting fee for each service</caption>
+              <thead>
+                <tr>
+                  <th scope="col" className="pl-th-label">
+                    Service
+                  </th>
+                  <th scope="col" className="pl-th pl-th--left">
+                    <span className="pl-th-name">Pillar</span>
+                  </th>
+                  <th scope="col" className="pl-th pl-th--right">
+                    <span className="pl-th-name">From / month</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {plans.map((plan) => (
+                  <tr key={plan.slug}>
+                    <th scope="row" className="pl-td-label">
+                      <a href={`#${plan.slug}`}>{plan.name}</a>
+                    </th>
+                    <td className="pl-td pl-td--left">{plan.pillar}</td>
+                    <td className="pl-td pl-td--right pl-fee">
+                      <span className="pl-fee-cur">$</span>
+                      {plan.from}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ──────────────────────────────────────────────── */}
       <section
         className="section-padding cta"
         style={{
@@ -426,7 +414,7 @@ export default function Pricing() {
             <p className="cta-sub">
               Work begins once the scope is signed and platform access is
               granted. Start with a scoping call and we&apos;ll tell you which
-              tier actually fits.
+              level actually fits.
             </p>
             <Link href="/contact" className="btn btn-primary">
               Book a Scoping Call

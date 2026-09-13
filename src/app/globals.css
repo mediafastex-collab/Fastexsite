@@ -2190,86 +2190,6 @@ footer {
   border: 0;
 }
 
-/* ── Starting fees grid ─────────────────────────────────── */
-.pl-rates {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1px;
-  background: var(--border-color);
-  border: 1px solid var(--border-color);
-}
-
-.pl-rate {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 2.5rem 2rem;
-  background: var(--bg-color);
-  transition: var(--transition);
-}
-
-.pl-rate:hover {
-  background: rgba(255, 255, 255, 0.025);
-}
-
-.pl-rate-pillar {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--text-muted);
-}
-
-.pl-rate-name {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 400;
-  line-height: 1.25;
-  color: var(--text-main);
-  margin-bottom: 1.25rem;
-  max-width: 16ch;
-}
-
-.pl-rate-price {
-  font-family: var(--font-heading);
-  font-size: clamp(2.1rem, 3.2vw, 2.6rem);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--text-main);
-  margin-top: auto;
-}
-
-.pl-rate-cur {
-  color: var(--accent-color);
-  margin-right: 0.08em;
-}
-
-.pl-rate-per {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 300;
-  letter-spacing: 0;
-  color: var(--text-muted);
-  margin-left: 0.35rem;
-}
-
-.pl-rate-arrow {
-  position: absolute;
-  top: 2.5rem;
-  right: 2rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: var(--transition);
-}
-
-.pl-rate:hover .pl-rate-arrow {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ── Pillars ────────────────────────────────────────────── */
 .pl-pillars {
   border-top: 1px solid var(--border-color);
@@ -2666,10 +2586,6 @@ footer {
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .pl-rate {
-    padding: 2rem 1.5rem;
-  }
-
   .pl-service summary {
     flex-direction: column;
     align-items: flex-start;
@@ -2709,5 +2625,477 @@ footer {
   .pl-terms {
     margin-top: 3.5rem;
     padding-top: 3rem;
+  }
+}
+
+/* =========================================
+   SCOPE BUILDER — selection first, price last
+   Prefix: .sb-
+========================================= */
+
+.sb {
+  border-top: 1px solid var(--border-color);
+}
+
+/* Every numeral on this page shares one advance width, so figures stack
+   into clean columns instead of shifting by glyph. */
+.sb,
+.pl-table {
+  font-variant-numeric: tabular-nums;
+}
+
+.sb-step {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sb-step--last {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Fixed number column keeps all three step headings on one left edge. */
+.sb-step-head {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.sb-step-num {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  padding-top: 0.55rem;
+}
+
+.sb-step-head h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.sb-step-head p {
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 56ch;
+}
+
+.sb-step.is-waiting {
+  opacity: 0.45;
+  transition: opacity 0.5s var(--ease-out);
+}
+
+/* ── Step 01 · service rows ─────────────────────────────── */
+/* Rows, not a grid: seven items can never leave an orphan cell. */
+.sb-services {
+  border-top: 1px solid var(--border-color);
+}
+
+.sb-services li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sb-service {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 0 1.5rem;
+  width: 100%;
+  padding: 1.6rem 1rem 1.6rem 0;
+  background: none;
+  border: 0;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sb-service:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.sb-service:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: -1px;
+}
+
+.sb-check {
+  justify-self: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 0.3rem;
+  border: 1px solid var(--text-muted);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.sb-service.is-on .sb-check {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  box-shadow: inset 0 0 0 3px var(--bg-color);
+}
+
+.sb-service-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sb-service-pillar {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.sb-service-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.sb-service.is-on .sb-service-name,
+.sb-service:hover .sb-service-name {
+  color: var(--text-main);
+}
+
+.sb-service-summary {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 300;
+  max-width: 76ch;
+}
+
+/* ── Step 02 · level cards ──────────────────────────────── */
+/* Exactly four, so every breakpoint divides evenly: 4 / 2 / 1. */
+.sb-tiers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.sb-tier {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 2rem 1.75rem;
+  background: var(--bg-color);
+  border: 0;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sb-tier:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.sb-tier:focus-visible {
+  outline: 1px solid var(--accent-color);
+  outline-offset: -1px;
+}
+
+.sb-tier.is-on {
+  background: rgba(255, 102, 0, 0.045);
+  box-shadow: inset 0 2px 0 0 var(--accent-color);
+}
+
+/* Reserved height keeps the four cards identical whether or not the
+   Recommended flag is present. */
+.sb-tier-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 1.3rem;
+}
+
+.sb-tier-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.sb-tier-blurb {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ── Step 03 · the reveal ───────────────────────────────── */
+.sb-empty {
+  padding: 3rem 0 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.sb-empty p {
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 46ch;
+}
+
+.sb-result-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.sb-result-tier {
+  color: var(--accent-color);
+}
+
+.sb-result-sep {
+  opacity: 0.4;
+}
+
+.sb-lines {
+  border-top: 1px solid var(--border-color);
+}
+
+.sb-line {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sb-line-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.1rem;
+}
+
+.sb-line-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.sb-line-from {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sb-line-from strong {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.sb-line-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.sb-spec {
+  padding: 1rem 1.1rem;
+  background: var(--bg-color);
+}
+
+.sb-spec dt {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.sb-spec dd {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+/* ── The number. Last thing on the way down. ────────────── */
+.sb-total {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem 4rem;
+  align-items: end;
+  padding-top: 3rem;
+}
+
+.sb-total-figure {
+  grid-column: 1;
+}
+
+.sb-total-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.sb-total-amount {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.sb-total-cur {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--accent-color);
+  margin-right: 0.1em;
+}
+
+.sb-total-num {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: var(--text-main);
+}
+
+.sb-total-per {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  margin-left: 0.6rem;
+}
+
+.sb-total-custom {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.sb-total-note {
+  grid-column: 1;
+  grid-row: 2;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.sb-total-cta {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.sb-total-micro {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* ── Reference fee table alignment ──────────────────────── */
+.pl-table--fees {
+  min-width: 520px;
+}
+
+.pl-th--left,
+.pl-td--left {
+  text-align: left;
+}
+
+.pl-th--right,
+.pl-td--right {
+  text-align: right;
+  padding-right: 1.75rem;
+}
+
+.pl-td-label a:hover {
+  color: var(--accent-color);
+}
+
+/* Currency mark sits outside the figure so every amount shares a right
+   edge regardless of digit count. */
+.pl-fee {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.pl-fee-cur {
+  color: var(--accent-color);
+  margin-right: 0.12em;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .sb-tiers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sb-total {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .sb-total-cta {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sb-total-note {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .sb-step {
+    padding: 3.25rem 0;
+  }
+
+  .sb-step-head,
+  .sb-service {
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0 1rem;
+  }
+
+  .sb-step-head {
+    margin-bottom: 2.25rem;
+  }
+
+  .sb-check {
+    justify-self: start;
+  }
+
+  .sb-tiers {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-line-head {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .sb-line-specs {
+    grid-template-columns: 1fr;
   }
 }
