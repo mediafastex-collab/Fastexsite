@@ -69,7 +69,9 @@ export default function Navbar() {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="container nav-content">
         <Link href="/" className="logo">
-          <img src="/assets/logo.png" alt="Fastex Media Logo" />
+          {/* Transparent-plate mark: the original logo.png carries its own
+              white square, which would show as a block on the light ground. */}
+          <img src="/assets/logo-mark.png" alt="Fastex Media Logo" />
           <span className="logo-text">Fastex Media</span>
         </Link>
 

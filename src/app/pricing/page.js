@@ -5,12 +5,12 @@ import { plans, engagement, addOns, process, terms, directCosts, ownership } fro
 export const metadata = {
   title: "Pricing | Fastex Media",
   description:
-    "Pick a service, see its four plans. B2B marketing from $350 a month: social media, performance marketing, WhatsApp, email and LinkedIn. Fees agreed in writing before work begins.",
+    "Pick a service, see its four plans. Social media, performance marketing, WhatsApp, email and LinkedIn, each across Starter, Growth, Scale and Enterprise. Fees quoted on your scope and agreed in writing.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Pricing | Fastex Media",
     description:
-      "Pick a service, see its four plans. Seven B2B marketing services, fees agreed in writing.",
+      "Pick a service, see its four plans. Seven B2B marketing services, fees quoted on your scope.",
     url: "/pricing",
     type: "website",
     images: ["/og-image.jpg"],
@@ -25,20 +25,16 @@ const offerSchema = {
   name: "Fastex Media Service Plans",
   url: `${SITE}/pricing/`,
   numberOfItems: plans.length,
+  // No priceSpecification: fees are not published on the page, and declaring
+  // one here would assert a price a visitor cannot see.
   itemListElement: plans.map((plan, i) => ({
     "@type": "Offer",
     position: i + 1,
     name: plan.name,
     description: plan.summary,
-    priceSpecification: {
-      "@type": "UnitPriceSpecification",
-      price: plan.from,
-      priceCurrency: "USD",
-      unitCode: "MON",
-      valueAddedTaxIncluded: false,
-    },
-    availability: "https://schema.org/InStock",
     category: plan.pillar,
+    availability: "https://schema.org/InStock",
+    eligibleCustomerType: "https://schema.org/Business",
     seller: { "@type": "Organization", name: "Fastex Media" },
   })),
 };

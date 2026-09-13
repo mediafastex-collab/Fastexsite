@@ -1,9 +1,16 @@
 :root {
-  --bg-color: #050505;
-  --text-main: #ffffff;
-  --text-muted: #888888;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --accent-color: #ff6600; /* Keeping a subtle orange for brand continuity, but using sparingly */
+  /* Light theme. Contrast ratios against --bg-color are noted so the palette
+     stays accessible if a value is ever nudged:
+       --text-main   18.6:1   --text-muted  5.7:1   --accent-color 4.5:1
+     #888888 muted and #ff6600 accent both fail on a light ground (3.4:1 and
+     2.8:1), which is why they are darkened here rather than reused. */
+  --bg-color: #fbfaf8;
+  --bg-raised: #ffffff;
+  --text-main: #0d0d0d;
+  --text-muted: #63636b;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --accent-color: #c94a00; /* passes for small labels; use sparingly */
+  --accent-bright: #ff6600; /* brand orange, for fills and large marks only */
 
   --font-heading: var(--font-outfit), sans-serif;
   --font-body: var(--font-inter), sans-serif;
@@ -27,10 +34,17 @@
   box-sizing: border-box;
 }
 
+/* Root bumped from the 16px default so the whole rem-based scale grows
+   together and the layout keeps its proportions. */
+html {
+  font-size: 17px;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-body);
+  font-size: 1.0625rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -83,7 +97,7 @@ ul {
 }
 
 .navbar.scrolled {
-  background: rgba(5, 5, 5, 0.9);
+  background: rgba(251, 250, 248, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
 }
@@ -231,9 +245,9 @@ ul {
 
 .dropdown-inner {
   /* Solid, not translucent: this panel sits over hero type and has to stay legible */
-  background: #0a0a0a;
+  background: var(--bg-raised);
   border: 1px solid var(--border-color);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.13);
   padding: 0.6rem;
 }
 
@@ -251,7 +265,7 @@ ul {
 }
 
 .dropdown-link:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--text-main);
 }
 
@@ -401,7 +415,7 @@ ul {
   inset: 0;
   background-image: linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.045) 1px,
+    rgba(0, 0, 0, 0.055) 1px,
     transparent 1px
   );
   background-size: 12.5% 100%;
@@ -546,11 +560,11 @@ ul {
   gap: 0.85rem;
   width: 300px;
   padding: 1rem 1.25rem;
-  background: rgba(12, 12, 12, 0.82);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
   animation: card-in 1s var(--ease-out) both,
     card-float 7s ease-in-out infinite;
 }
@@ -1097,7 +1111,7 @@ ul {
 }
 
 .industry-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.028);
 }
 
 .industry-card::before {
@@ -1365,7 +1379,7 @@ ul {
   content: "";
   position: absolute;
   inset: 0.1em 0 0.12em;
-  background: var(--accent-color);
+  background: var(--accent-bright);
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -1537,7 +1551,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .case-item:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.028);
 }
 
 .case-head {
@@ -1639,7 +1653,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .project-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.24);
   transform: translateY(-3px);
 }
 
@@ -1661,7 +1675,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .project-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.028);
 }
 
 .project-top {
@@ -1680,7 +1694,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.038);
   font-family: var(--font-heading);
   font-size: 0.8rem;
   letter-spacing: 0.05em;
@@ -1743,7 +1757,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .quote-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.028);
 }
 
 .quote-stars {
@@ -1780,7 +1794,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.038);
   font-family: var(--font-heading);
   font-size: 0.78rem;
   letter-spacing: 0.05em;
@@ -1872,7 +1886,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .service-card:hover, .pricing-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.028);
 }
 
 .icon-wrapper {
@@ -2353,7 +2367,7 @@ footer {
 
 .pl-grouprow th {
   padding: 1.1rem 1.75rem;
-  background: rgba(255, 255, 255, 0.022);
+  background: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid var(--border-color);
   text-align: left;
   font-size: 0.68rem;
@@ -2511,7 +2525,7 @@ footer {
 }
 
 .pl-addon:hover {
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(0, 0, 0, 0.032);
 }
 
 .pl-addon h3 {
@@ -2635,7 +2649,6 @@ footer {
 ========================================= */
 
 .pk,
-.pk-card-price,
 .pk-included {
   font-variant-numeric: tabular-nums;
 }
@@ -2766,50 +2779,20 @@ footer {
   font-weight: 400;
 }
 
-/* Fixed height, inner row anchored to the bottom, so the divider under the
-   price lands on the same line across all four cards no matter whether the
-   card shows a large figure or a short "Quoted on scope". */
-.pk-card-price {
+/* Sits where the price used to. Fixed height so all four cards keep one
+   divider line, one list start and one CTA baseline regardless of how long
+   the positioning line runs. */
+.pk-card-blurb {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 5rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  align-items: flex-start;
+  height: 4.6rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--border-color);
-  font-family: var(--font-heading);
-  font-weight: 300;
-  line-height: 1;
-}
-
-.pk-price-row {
-  display: flex;
-  align-items: baseline;
-}
-
-.pk-price-cur {
-  font-size: 1.3rem;
-  color: var(--accent-color);
-  margin-right: 0.1em;
-}
-
-.pk-price-num {
-  font-size: 2.6rem;
-  letter-spacing: -0.03em;
-}
-
-.pk-price-per {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-left: 0.4rem;
-}
-
-.pk-price-scope {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 300;
-  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 .pk-card-list {
@@ -2822,7 +2805,7 @@ footer {
   flex-direction: column;
   gap: 0.15rem;
   padding: 0.7rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .pk-card-list li:last-child {
@@ -3006,8 +2989,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .pk-card-price {
-    min-height: 0;
+  .pk-card-blurb {
+    height: auto;
   }
 
   .pk-included li {

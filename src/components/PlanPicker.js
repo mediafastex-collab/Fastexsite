@@ -8,14 +8,14 @@ import { plans, tiers } from "@/data/plans";
  * Pick one service, see its four plans.
  *
  * One mental model for the whole page. The service tabs answer "which of
- * these am I buying", the four cards answer "what do I get and what does it
- * cost". Nothing is priced until a service is chosen.
+ * these am I buying", the four cards answer "what do I actually get".
  *
  * Cards replace the old four-column comparison tables: at this width a table
  * had to scroll sideways, whereas cards simply stack on a phone.
  *
- * Only Starter fees are published in the plans deck, so Growth and Scale read
- * "Quoted on scope" and Enterprise reads "Custom". No figure is invented.
+ * No fees appear on this page. Volumes and deliverables are public; the number
+ * is quoted in the scoping call, which also avoids publishing a Starter figure
+ * as if it were the price of an engagement.
  */
 
 /** Add-on rows live in their own page section, not on a plan card. */
@@ -62,7 +62,7 @@ export default function PlanPicker() {
       {/* ── Nothing chosen yet ─────────────────────────────── */}
       {!plan ? (
         <p className="pk-prompt">
-          Choose a service to see its four plans and starting fee.
+          Choose a service to see its four plans and what each one delivers.
         </p>
       ) : (
         <div className="pk-panel" role="tabpanel">
@@ -90,21 +90,10 @@ export default function PlanPicker() {
                     ) : null}
                   </div>
 
-                  <div className="pk-card-price">
-                    <span className="pk-price-row">
-                      {i === 0 ? (
-                        <>
-                          <span className="pk-price-cur">$</span>
-                          <span className="pk-price-num">{plan.from}</span>
-                          <span className="pk-price-per">/mo</span>
-                        </>
-                      ) : (
-                        <span className="pk-price-scope">
-                          {i === tiers.length - 1 ? "Custom" : "Quoted on scope"}
-                        </span>
-                      )}
-                    </span>
-                  </div>
+                  {/* No figure here by design. The tier's positioning line
+                      does the work a price used to, and fees are quoted in
+                      the scoping call instead. */}
+                  <p className="pk-card-blurb">{tier.blurb}</p>
 
                   <ul className="pk-card-list">
                     {rows.map((r) => (
@@ -127,9 +116,9 @@ export default function PlanPicker() {
           </div>
 
           <p className="pk-note">
-            Only Starter fees are published. Growth and Scale are quoted from
-            the volumes you agree; Enterprise is fully custom. Billed monthly in
-            USD.
+            Fees depend on the service, the plan and the volumes you agree. We
+            quote them in the scoping call and confirm them in writing before
+            any work begins.
           </p>
 
           <p className="pk-excludes">
