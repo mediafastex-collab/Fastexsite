@@ -2172,3 +2172,542 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================
+   PRICING / PLANS
+   Prefix: .pl-  (avoids the legacy .pricing-card rules above)
+========================================= */
+
+.pl-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Starting fees grid ─────────────────────────────────── */
+.pl-rates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.pl-rate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2.5rem 2rem;
+  background: var(--bg-color);
+  transition: var(--transition);
+}
+
+.pl-rate:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.pl-rate-pillar {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.pl-rate-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  max-width: 16ch;
+}
+
+.pl-rate-price {
+  font-family: var(--font-heading);
+  font-size: clamp(2.1rem, 3.2vw, 2.6rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin-top: auto;
+}
+
+.pl-rate-cur {
+  color: var(--accent-color);
+  margin-right: 0.08em;
+}
+
+.pl-rate-per {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  margin-left: 0.35rem;
+}
+
+.pl-rate-arrow {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: var(--transition);
+}
+
+.pl-rate:hover .pl-rate-arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Pillars ────────────────────────────────────────────── */
+.pl-pillars {
+  border-top: 1px solid var(--border-color);
+}
+
+.pl-pillar {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pl-pillar h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.pl-pillar p {
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 62ch;
+}
+
+/* ── Four tiers ─────────────────────────────────────────── */
+.pl-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+}
+
+.pl-tier {
+  background: var(--bg-color);
+  padding: 2.5rem 2rem;
+  transition: var(--transition);
+}
+
+.pl-tier.is-rec {
+  background: rgba(255, 102, 0, 0.035);
+  box-shadow: inset 0 2px 0 0 var(--accent-color);
+}
+
+.pl-tier-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pl-tier-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.pl-tier h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.pl-tier p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.pl-rec {
+  flex-shrink: 0;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+/* ── Tier comparison tables ─────────────────────────────── */
+.pl-tablewrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
+}
+
+.pl-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.pl-table thead th {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: bottom;
+  text-align: center;
+  font-weight: 400;
+}
+
+.pl-th-name {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.pl-th .pl-rec {
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.pl-th.is-rec {
+  background: rgba(255, 102, 0, 0.035);
+  box-shadow: inset 0 2px 0 0 var(--accent-color);
+}
+
+.pl-th-label,
+.pl-td-label {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 200px;
+  max-width: 240px;
+  padding: 1.15rem 1.5rem 1.15rem 1.75rem;
+  background: var(--bg-color);
+  text-align: left;
+  font-weight: 300;
+  color: var(--text-muted);
+  border-right: 1px solid var(--border-color);
+}
+
+.pl-th-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.pl-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pl-table tbody tr:last-child {
+  border-bottom: 0;
+}
+
+.pl-td {
+  padding: 1.15rem 1.25rem;
+  text-align: center;
+  color: var(--text-main);
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+.pl-td.is-rec {
+  background: rgba(255, 102, 0, 0.035);
+  color: var(--text-main);
+}
+
+.pl-grouprow th {
+  padding: 1.1rem 1.75rem;
+  background: rgba(255, 255, 255, 0.022);
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.pl-shared {
+  margin-bottom: 2rem;
+}
+
+.pl-note {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 300;
+  max-width: 80ch;
+  line-height: 1.7;
+}
+
+/* ── Per-service accordions ─────────────────────────────── */
+.pl-services {
+  border-top: 1px solid var(--border-color);
+}
+
+.pl-service {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pl-service summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  list-style: none;
+  transition: var(--transition);
+}
+
+.pl-service summary::-webkit-details-marker {
+  display: none;
+}
+
+.pl-service summary:hover .pl-service-name {
+  color: var(--text-muted);
+}
+
+.pl-service-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pl-service-pillar {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.pl-service-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.1vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+}
+
+.pl-service-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1.75rem;
+  flex-shrink: 0;
+}
+
+.pl-service-price {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.pl-service-price strong {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+.pl-service summary .sign {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.pl-service[open] summary .sign {
+  transform: rotate(45deg);
+  color: var(--accent-color);
+}
+
+.pl-service-body {
+  padding-bottom: 3rem;
+}
+
+.pl-service-summary {
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 72ch;
+  margin: -0.5rem 0 2rem;
+}
+
+.pl-excludes {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.pl-excludes-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.pl-excludes p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 300;
+  max-width: 80ch;
+}
+
+/* ── Add-ons ────────────────────────────────────────────── */
+.pl-addons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.pl-addon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--bg-color);
+  transition: var(--transition);
+}
+
+.pl-addon:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.pl-addon h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.pl-addon-copy {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+.pl-addon-applies {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.72;
+  line-height: 1.5;
+}
+
+.pl-addon-basis {
+  flex-shrink: 0;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Facts + terms ──────────────────────────────────────── */
+.pl-facts,
+.pl-terms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem 4rem;
+}
+
+.pl-terms {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.pl-fact h3,
+.pl-term h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.pl-fact p,
+.pl-term p {
+  color: var(--text-muted);
+  font-weight: 300;
+  max-width: 62ch;
+}
+
+.pl-fact p {
+  font-size: 1rem;
+}
+
+.pl-term p {
+  font-size: 0.95rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pl-rate {
+    padding: 2rem 1.5rem;
+  }
+
+  .pl-service summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pl-service-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pl-excludes {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .pl-addon {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.75rem;
+  }
+
+  .pl-th-label,
+  .pl-td-label {
+    min-width: 150px;
+    max-width: 160px;
+    padding-left: 1.25rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .pl-table {
+    min-width: 620px;
+    font-size: 0.85rem;
+  }
+
+  .pl-terms {
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+  }
+}
