@@ -3,7 +3,7 @@ import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { portfolioStats, testimonials } from "@/data/caseStudies";
 import { site } from "@/data/site";
-import { pillars } from "@/data/plans";
+import HeroFlow from "@/components/HeroFlow";
 
 
 const process = [
@@ -65,23 +65,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Three pillars, as hairline rows. Replaces a stack of six faux
-            notification cards: they duplicated the stats row below, and a
-            CRM activity feed no longer matches a brand-led headline. */}
-        <div className="hero-pillars">
-          <span className="hero-pillars-label">How we help</span>
-          <ul>
-            {pillars.map((pillar, i) => (
-              <li key={pillar.name}>
-                <span className="hero-pillar-num">{`0${i + 1}`}</span>
-                <span className="hero-pillar-text">
-                  <span className="hero-pillar-name">{pillar.name}</span>
-                  <span className="hero-pillar-copy">{pillar.short}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <HeroFlow />
 
       </section>
 
