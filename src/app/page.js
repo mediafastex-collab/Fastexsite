@@ -3,41 +3,8 @@ import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { portfolioStats, testimonials } from "@/data/caseStudies";
 import { site } from "@/data/site";
+import { pillars } from "@/data/plans";
 
-/** Result cards drifting behind the hero — what the system actually produces. */
-const heroCards = [
-  {
-    icon: "✓",
-    head: "Meeting booked",
-    sub: "VP Engineering · Thu, 3:00 PM",
-  },
-  {
-    icon: "↗",
-    head: "42 qualified leads",
-    sub: "This month · 3 channels",
-    live: "Pipeline building",
-  },
-  {
-    icon: "✉",
-    head: "Reply received",
-    sub: "“Send me the pricing.”",
-  },
-  {
-    icon: "▶",
-    head: "Demo scheduled",
-    sub: "SaaS founder · 30 min",
-  },
-  {
-    icon: "☀",
-    head: "Site survey confirmed",
-    sub: "Plant head · Solar EPC",
-  },
-  {
-    icon: "↓",
-    head: "CPL down 60%",
-    sub: "Performance campaign",
-  },
-];
 
 const process = [
   {
@@ -98,17 +65,22 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cards" aria-hidden="true">
-          {heroCards.map((card) => (
-            <div className="hero-card" key={card.head}>
-              <span className="card-icon">{card.icon}</span>
-              <span className="card-body">
-                <span className="card-head">{card.head}</span>
-                <span className="card-sub">{card.sub}</span>
-                {card.live && <span className="card-live">{card.live}</span>}
-              </span>
-            </div>
-          ))}
+        {/* Three pillars, as hairline rows. Replaces a stack of six faux
+            notification cards: they duplicated the stats row below, and a
+            CRM activity feed no longer matches a brand-led headline. */}
+        <div className="hero-pillars">
+          <span className="hero-pillars-label">How we help</span>
+          <ul>
+            {pillars.map((pillar, i) => (
+              <li key={pillar.name}>
+                <span className="hero-pillar-num">{`0${i + 1}`}</span>
+                <span className="hero-pillar-text">
+                  <span className="hero-pillar-name">{pillar.name}</span>
+                  <span className="hero-pillar-copy">{pillar.short}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
 
       </section>

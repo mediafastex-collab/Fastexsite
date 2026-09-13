@@ -30,18 +30,24 @@ export const tiers = [
   },
 ];
 
-/** The three pillars services are grouped under. */
+/**
+ * The three pillars services are grouped under. `short` is the hero-length
+ * line; `copy` is the fuller version used on the pricing page.
+ */
 export const pillars = [
   {
     name: "Pipeline",
+    short: "Conversations with the right buyers.",
     copy: "Start conversations with the right buyers through targeted outreach and owned channels.",
   },
   {
     name: "Authority",
+    short: "Recognition before the first call.",
     copy: "Build recognition and credibility with the people you want to reach.",
   },
   {
     name: "Performance",
+    short: "Paid that answers to cost per lead.",
     copy: "Scale paid acquisition with a focus on cost per qualified lead.",
   },
 ];

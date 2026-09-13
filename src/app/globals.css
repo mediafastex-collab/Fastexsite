@@ -538,123 +538,11 @@ ul {
    HERO NOTIFICATION CARDS
    Drifting "result" cards that show what the service produces.
 ========================================= */
-/* One tidy right-hand column — same width, same right edge, even spacing.
-   Reads as a live activity feed rather than scattered stickers. */
-.hero-cards {
-  position: absolute;
-  top: 0;
-  right: 5%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 0.9rem;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  width: 300px;
-  padding: 1rem 1.25rem;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
-  animation: card-in 1s var(--ease-out) both,
-    card-float 7s ease-in-out infinite;
-}
-
-/* Staggered entrance and drift only — alignment stays uniform */
-.hero-card:nth-child(1) { animation-delay: 0.70s, 1.7s; animation-duration: 1s, 7.0s; }
-.hero-card:nth-child(2) { animation-delay: 0.82s, 2.4s; animation-duration: 1s, 8.5s; }
-.hero-card:nth-child(3) { animation-delay: 0.94s, 2.0s; animation-duration: 1s, 7.8s; }
-.hero-card:nth-child(4) { animation-delay: 1.06s, 2.9s; animation-duration: 1s, 9.2s; }
-.hero-card:nth-child(5) { animation-delay: 1.18s, 1.4s; animation-duration: 1s, 8.0s; }
-.hero-card:nth-child(6) { animation-delay: 1.30s, 3.3s; animation-duration: 1s, 7.4s; }
-
-.hero-card .card-icon {
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  background: rgba(255, 102, 0, 0.12);
-  color: var(--accent-color);
-  border: 1px solid rgba(255, 102, 0, 0.25);
-}
-
-.hero-card .card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.hero-card .card-head {
-  font-size: 0.88rem;
-  font-family: var(--font-heading);
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-
-.hero-card .card-sub {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
-}
-
-.hero-card .card-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--text-muted);
-  margin-top: 0.35rem;
-}
-
-.hero-card .card-live::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  animation: pulse-dot 2.6s ease-out infinite;
-}
-
-@keyframes card-in {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 /* Small amplitude: they sit in a spaced column now, so a big drift would
    make neighbouring cards look like they are colliding. */
-@keyframes card-float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
-}
-
 /* Below the split layout the hero text needs the full width */
 @media (max-width: 1150px) {
-  .hero-cards {
-    display: none;
   }
-}
 
 /* --- Hero entrance --- */
 .hero-anim > * {
@@ -2160,14 +2048,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .hero-anim > *,
   .hero h1 .accent::after,
-  .hero-card,
-  .hero-card .card-live::before,
-  .eyebrow::before,
-  .marquee-track,
-  .dropdown-link {
-    animation: none !important;
-  }
-
   .brand-wordmark .mark::before {
     transform: scaleX(1);
     transition: none;
@@ -3006,4 +2886,175 @@ footer {
     font-size: 0.8rem;
     padding: 0.6rem 1.1rem;
   }
+}
+
+/* =========================================
+   HERO PILLARS
+   Replaces the six faux notification cards. Hairline rows, matching the
+   row-based lists used on the pricing and service pages, so the hero reads
+   as part of the same system rather than as a floating widget.
+========================================= */
+
+.hero-pillars {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: min(360px, 32vw);
+  z-index: 1;
+  animation: pillars-in 1.1s var(--ease-out) 0.7s both;
+}
+
+.hero-pillars-label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.hero-pillars ul {
+  border-top: 1px solid var(--border-color);
+}
+
+.hero-pillars li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0 0.9rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-pillar-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--accent-color);
+  padding-top: 0.3rem;
+}
+
+.hero-pillar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-pillar-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.hero-pillar-copy {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+@keyframes pillars-in {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-50% + 14px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+/* Below the two-column threshold the rows drop into normal flow under the
+   stats rather than being hidden, so the content survives on a phone. */
+@media (max-width: 1150px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 0;
+    padding-top: calc(var(--nav-height) + 4.5rem);
+    padding-bottom: 4.5rem;
+  }
+
+  .hero-pillars {
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: 1400px;
+    margin: 3.5rem auto 0;
+    padding: 0 5%;
+    animation: none;
+  }
+}
+
+/* =========================================
+   ORANGE AS THE INTERACTION COLOUR
+   One rule to keep it from scattering: the brand orange marks things you
+   can act on. --accent-color (4.5:1) wherever it becomes text, and
+   --accent-bright for rules, borders and fills, where contrast minimums
+   do not apply.
+========================================= */
+
+::selection {
+  background: rgba(255, 102, 0, 0.22);
+  color: var(--text-main);
+}
+
+/* A single visible focus style, instead of one bespoke rule on the tabs. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Links: hovering should brighten toward the brand, never dim. Three rules
+   below previously faded to --text-muted on hover, which read as the link
+   going away. */
+.breadcrumb a:hover,
+.cta-contacts a:hover,
+.link-group a:hover,
+.footer-links a:hover,
+.faq-item summary:hover,
+.pl-service summary:hover .pl-service-name,
+.pl-service summary:hover,
+.pk-addon-name:hover {
+  color: var(--accent-color);
+}
+
+/* Outline button picks up the brand edge on hover. */
+.btn-outline:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-color);
+}
+
+/* Cards get a warm edge rather than a darker one. */
+.project-card:hover,
+.quote-card:hover,
+.case-item:hover {
+  border-color: rgba(255, 102, 0, 0.4);
+}
+
+.industry-card:hover,
+.pl-addon:hover,
+.pk-card:hover {
+  background: rgba(255, 102, 0, 0.035);
+}
+
+/* Pills and tabs. */
+.pill:hover,
+.pk-tab:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-color);
+}
+
+.social-btn:hover {
+  border-color: var(--accent-bright);
+  color: var(--accent-color);
+}
+
+/* The open state of a details block already rotates its sign; tint it too. */
+.pl-service[open] summary .pl-service-name {
+  color: var(--accent-color);
 }
