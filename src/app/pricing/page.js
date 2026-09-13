@@ -1,26 +1,16 @@
 import Link from "next/link";
-import ScopeBuilder from "@/components/ScopeBuilder";
-import {
-  plans,
-  tiers,
-  pillars,
-  engagement,
-  addOns,
-  process,
-  terms,
-  directCosts,
-  ownership,
-} from "@/data/plans";
+import PlanPicker from "@/components/PlanPicker";
+import { plans, engagement, addOns, process, terms, directCosts, ownership } from "@/data/plans";
 
 export const metadata = {
   title: "Pricing | Fastex Media",
   description:
-    "Build your scope: choose the B2B marketing services you need and the level you need them at, then see your starting fee. Seven services, four tiers, fees agreed in writing.",
+    "Pick a service, see its four plans. B2B marketing from $350 a month: social media, performance marketing, WhatsApp, email and LinkedIn. Fees agreed in writing before work begins.",
   alternates: { canonical: "/pricing" },
   openGraph: {
     title: "Pricing | Fastex Media",
     description:
-      "Choose your services and your level, then see your starting fee. Seven services across three growth pillars.",
+      "Pick a service, see its four plans. Seven B2B marketing services, fees agreed in writing.",
     url: "/pricing",
     type: "website",
     images: ["/og-image.jpg"],
@@ -53,60 +43,6 @@ const offerSchema = {
   })),
 };
 
-/** One tier-comparison table. Scrolls horizontally inside its own container. */
-function TierTable({ groups, caption }) {
-  return (
-    <div className="pl-tablewrap">
-      <table className="pl-table">
-        {caption ? <caption className="pl-sr">{caption}</caption> : null}
-        <thead>
-          <tr>
-            <th scope="col" className="pl-th-label">
-              Deliverables
-            </th>
-            {tiers.map((tier) => (
-              <th
-                scope="col"
-                key={tier.name}
-                className={tier.recommended ? "pl-th is-rec" : "pl-th"}
-              >
-                <span className="pl-th-name">{tier.name}</span>
-                {tier.recommended ? <span className="pl-rec">Recommended</span> : null}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        {groups.map((group, gi) => (
-          <tbody key={group.title || gi}>
-            {group.title ? (
-              <tr className="pl-grouprow">
-                <th scope="colgroup" colSpan={tiers.length + 1}>
-                  {group.title}
-                </th>
-              </tr>
-            ) : null}
-            {group.rows.map((row) => (
-              <tr key={row.label}>
-                <th scope="row" className="pl-td-label">
-                  {row.label}
-                </th>
-                {row.values.map((value, vi) => (
-                  <td
-                    key={tiers[vi].name}
-                    className={tiers[vi].recommended ? "pl-td is-rec" : "pl-td"}
-                  >
-                    {value}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        ))}
-      </table>
-    </div>
-  );
-}
-
 export default function Pricing() {
   return (
     <>
@@ -115,306 +51,161 @@ export default function Pricing() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
       />
 
-      {/* ── Hero. No figures. ────────────────────────────────── */}
-      <section className="page-hero">
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="page-hero pk-hero">
         <div className="container">
           <div className="breadcrumb">
             <Link href="/">Home</Link>
             <span className="sep">/</span>
             <span className="current">Pricing</span>
           </div>
-          <div className="section-label">Plans</div>
-          <h1>Build your scope.</h1>
+          <h1>Pick a service. See its plans.</h1>
           <p className="page-lede">
-            Seven services across three growth pillars. Tell us what you need
-            and at what level, and the fee follows from that, not from a package
-            someone else designed. Everything is agreed in writing before work
-            begins.
+            Four plans for every service. Start with one, add more when it
+            works. Fees are agreed in writing before anything begins.
           </p>
-          <div className="pill-row">
-            {pillars.map((pillar) => (
-              <span className="pill" key={pillar.name}>
-                {pillar.name}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* ── The configurator: selection first, price last. ───── */}
+      {/* ── The one thing this page does ─────────────────────── */}
       <section
-        className="section-padding"
+        className="pk-section"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
-          <ScopeBuilder />
+          <PlanPicker />
         </div>
       </section>
 
-      {/* ── Three pillars ────────────────────────────────────── */}
+      {/* ── Same at every level ──────────────────────────────── */}
       <section
-        className="section-padding"
+        className="pk-section"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
-          <div className="split">
-            <div className="split-aside reveal">
-              <div className="section-label">Approach</div>
-              <h2 style={{ fontSize: "clamp(2rem, 3.4vw, 2.8rem)", fontWeight: 400 }}>
-                Three pillars.
-              </h2>
-            </div>
-            <div className="split-body">
-              <div className="pl-pillars">
-                {pillars.map((pillar, i) => (
-                  <div
-                    className="pl-pillar reveal"
-                    key={pillar.name}
-                    style={{ transitionDelay: `${i * 0.08}s` }}
-                  >
-                    <h3>{pillar.name}</h3>
-                    <p>{pillar.copy}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Shared engagement across every tier ──────────────── */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">Your engagement</div>
-            <h2>The same input at every level.</h2>
-            <p>
-              Whichever level you choose, the thinking is the same. Delivery
-              volume and account support are what move.
-            </p>
-          </div>
-
-          <div className="pl-shared reveal">
-            <TierTable
-              groups={[{ rows: engagement }]}
-              caption="Shared tier benefits and support across all services"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Per-service detail ───────────────────────────────── */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">Service detail</div>
-            <h2>What each level includes.</h2>
-            <p>Open a service to see the deliverables at every tier.</p>
-          </div>
-
-          <div className="pl-services">
-            {plans.map((plan, i) => (
-              <details
-                className="pl-service reveal"
-                key={plan.slug}
-                id={plan.slug}
-                open={i === 0}
-              >
-                <summary>
-                  <span className="pl-service-head">
-                    <span className="pl-service-pillar">{plan.pillar}</span>
-                    <span className="pl-service-name">{plan.name}</span>
-                  </span>
-                  <span className="pl-service-meta">
-                    <span className="sign" aria-hidden="true">
-                      +
-                    </span>
-                  </span>
-                </summary>
-                <div className="pl-service-body">
-                  <p className="pl-service-summary">{plan.summary}</p>
-                  <TierTable groups={plan.groups} caption={`${plan.name} tiers`} />
-                  <div className="pl-excludes">
-                    <span className="pl-excludes-label">Outside the service fee</span>
-                    <p>{plan.excludes}</p>
-                  </div>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Add-ons ──────────────────────────────────────────── */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">Additional services</div>
-            <h2>Extend your scope.</h2>
-            <p>
-              Add capacity as your needs grow. Enterprise inclusions are
-              tailored to your agreed scope; other tiers can add these
-              separately.
-            </p>
-          </div>
-
-          <ul className="pl-addons">
-            {addOns.map((addOn, i) => (
-              <li
-                className="pl-addon reveal"
-                key={addOn.name}
-                style={{ transitionDelay: `${(i % 4) * 0.06}s` }}
-              >
-                <div className="pl-addon-main">
-                  <h3>{addOn.name}</h3>
-                  <p className="pl-addon-copy">{addOn.copy}</p>
-                  <p className="pl-addon-applies">{addOn.applies}</p>
-                </div>
-                <span className="pl-addon-basis">{addOn.basis}</span>
+          <h2 className="pk-h2">Included at every level.</h2>
+          <ul className="pk-included">
+            {engagement.map((row) => (
+              <li key={row.label}>
+                <span className="pk-inc-label">{row.label}</span>
+                <span className="pk-inc-value">
+                  {row.values[0] === row.values[1]
+                    ? row.values[0]
+                    : `${row.values[0]} → ${row.values[3]}`}
+                </span>
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* ── Costs + ownership ────────────────────────────────── */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="pl-facts">
-            <div className="pl-fact reveal">
-              <h3>Costs paid directly to providers</h3>
-              <p>{directCosts}</p>
-            </div>
-            <div className="pl-fact reveal" style={{ transitionDelay: "0.08s" }}>
-              <h3>Your accounts stay yours</h3>
-              <p>{ownership}</p>
-            </div>
-          </div>
+          <p className="pk-sub">
+            The strategic input is the same whichever plan you choose. Volume
+            and account support are what change.
+          </p>
         </div>
       </section>
 
       {/* ── How we start ─────────────────────────────────────── */}
       <section
-        className="section-padding"
+        className="pk-section"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">Working together</div>
-            <h2>A clear start. A clear scope.</h2>
-            <p>
-              Each engagement begins with an agreed scope of work covering
-              services, tiers, volumes and fees.
-            </p>
-          </div>
-
-          <div className="process-list">
-            {process.map((step, i) => (
-              <div
-                key={step.num}
-                className="process-row reveal"
-                style={{ transitionDelay: `${i * 0.08}s` }}
-              >
-                <div className="process-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
-              </div>
+          <h2 className="pk-h2">How we start.</h2>
+          <ol className="pk-steps">
+            {process.map((step) => (
+              <li key={step.num}>
+                <span className="pk-step-num">{step.num}</span>
+                <span className="pk-step-title">{step.title}</span>
+                <span className="pk-step-copy">{step.copy}</span>
+              </li>
             ))}
-          </div>
-
-          <div className="pl-terms">
-            {terms.map((term, i) => (
-              <div
-                className="pl-term reveal"
-                key={term.title}
-                style={{ transitionDelay: `${(i % 2) * 0.08}s` }}
-              >
-                <h3>{term.title}</h3>
-                <p>{term.copy}</p>
-              </div>
-            ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* ── All starting fees. Deliberately the last thing. ───── */}
+      {/* ── Detail, folded away until asked for ──────────────── */}
       <section
-        className="section-padding"
+        className="pk-section"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
-          <div className="section-header reveal">
-            <div className="eyebrow">For reference</div>
-            <h2>Every starting fee.</h2>
-            <p>
-              Each figure is the Starter tier, monthly, in USD. Growth, Scale
-              and Enterprise scale the volume from there and are quoted on
-              scope.
-            </p>
-          </div>
+          <h2 className="pk-h2">The details.</h2>
 
-          <div className="pl-tablewrap reveal">
-            <table className="pl-table pl-table--fees">
-              <caption className="pl-sr">Starting fee for each service</caption>
-              <thead>
-                <tr>
-                  <th scope="col" className="pl-th-label">
-                    Service
-                  </th>
-                  <th scope="col" className="pl-th pl-th--left">
-                    <span className="pl-th-name">Pillar</span>
-                  </th>
-                  <th scope="col" className="pl-th pl-th--right">
-                    <span className="pl-th-name">From / month</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {plans.map((plan) => (
-                  <tr key={plan.slug}>
-                    <th scope="row" className="pl-td-label">
-                      <a href={`#${plan.slug}`}>{plan.name}</a>
-                    </th>
-                    <td className="pl-td pl-td--left">{plan.pillar}</td>
-                    <td className="pl-td pl-td--right pl-fee">
-                      <span className="pl-fee-cur">$</span>
-                      {plan.from}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="pk-details">
+            <details className="pl-service">
+              <summary>
+                <span className="pl-service-name">Add-ons you can bolt on</span>
+                <span className="pl-service-meta">
+                  <span className="sign" aria-hidden="true">
+                    +
+                  </span>
+                </span>
+              </summary>
+              <div className="pk-details-body">
+                <ul className="pk-addons">
+                  {addOns.map((a) => (
+                    <li key={a.name}>
+                      <span className="pk-addon-name">{a.name}</span>
+                      <span className="pk-addon-copy">{a.copy}</span>
+                      <span className="pk-addon-basis">{a.basis}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+
+            <details className="pl-service">
+              <summary>
+                <span className="pl-service-name">Costs and ownership</span>
+                <span className="pl-service-meta">
+                  <span className="sign" aria-hidden="true">
+                    +
+                  </span>
+                </span>
+              </summary>
+              <div className="pk-details-body">
+                <p className="pk-detail-p">{directCosts}</p>
+                <p className="pk-detail-p">{ownership}</p>
+              </div>
+            </details>
+
+            <details className="pl-service">
+              <summary>
+                <span className="pl-service-name">Terms</span>
+                <span className="pl-service-meta">
+                  <span className="sign" aria-hidden="true">
+                    +
+                  </span>
+                </span>
+              </summary>
+              <div className="pk-details-body">
+                <ul className="pk-terms">
+                  {terms.map((t) => (
+                    <li key={t.title}>
+                      <span className="pk-term-title">{t.title}</span>
+                      <span className="pk-term-copy">{t.copy}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
           </div>
         </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section
-        className="section-padding cta"
+        className="pk-section cta"
         style={{
           borderTop: "1px solid var(--border-color)",
-          paddingBottom: "10rem",
+          paddingBottom: "8rem",
         }}
       >
         <div className="container">
-          <div className="cta-inner reveal">
-            <h2>Let&apos;s build your next stage of growth.</h2>
+          <div className="cta-inner">
+            <h2>Not sure which plan fits?</h2>
             <p className="cta-sub">
-              Work begins once the scope is signed and platform access is
-              granted. Start with a scoping call and we&apos;ll tell you which
-              level actually fits.
+              Tell us what you are trying to grow. We will tell you which
+              service and which level, and what it costs.
             </p>
             <Link href="/contact" className="btn btn-primary">
               Book a Scoping Call

@@ -49,13 +49,16 @@ export const pillars = [
 /**
  * The seven services, in deck order.
  *
- * `from` is the Starter monthly fee in USD. `groups` splits the deliverables
+ * `short` is the terse label used by the pricing tabs, so seven services fit
+ * without wrapping into a stack of pills on a phone. `from` is the Starter
+ * monthly fee in USD. `groups` splits the deliverables
  * table where the deck did (only the Growth System needs two).
  */
 export const plans = [
   {
     slug: "social-media-management",
     name: "Social Media Management",
+    short: "Social Media",
     pillar: "Authority",
     from: 600,
     summary:
@@ -89,6 +92,7 @@ export const plans = [
   {
     slug: "performance-marketing",
     name: "Performance Marketing",
+    short: "Performance",
     pillar: "Performance",
     from: 500,
     summary:
@@ -130,6 +134,7 @@ export const plans = [
   {
     slug: "whatsapp-marketing",
     name: "WhatsApp Marketing",
+    short: "WhatsApp",
     pillar: "Pipeline",
     from: 350,
     summary:
@@ -165,6 +170,7 @@ export const plans = [
   {
     slug: "email-marketing",
     name: "Email Marketing",
+    short: "Email",
     pillar: "Pipeline",
     from: 500,
     summary:
@@ -197,6 +203,7 @@ export const plans = [
   {
     slug: "linkedin-lead-generation",
     name: "LinkedIn Lead Generation",
+    short: "LinkedIn Leads",
     pillar: "Pipeline",
     from: 400,
     summary:
@@ -225,6 +232,7 @@ export const plans = [
   {
     slug: "linkedin-personal-branding",
     name: "LinkedIn Personal Branding",
+    short: "Personal Branding",
     pillar: "Authority",
     from: 500,
     summary:
@@ -259,6 +267,7 @@ export const plans = [
   {
     slug: "linkedin-growth-system",
     name: "LinkedIn Growth System",
+    short: "Growth System",
     pillar: "Pipeline + Authority",
     from: 800,
     summary:
