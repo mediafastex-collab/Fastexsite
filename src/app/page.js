@@ -74,11 +74,11 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-content hero-anim">
           <h1>
-            We engineer <span className="accent">predictable</span> B2B revenue.
+            Your brand. Your <span className="accent">next chapter</span>.
           </h1>
           <p>
-            Your 24/7 outbound sales infrastructure — filling the pipeline with
-            qualified appointments and scaling MRR systematically.
+            You&apos;ve put a lot into building your business. Let&apos;s help
+            more people discover it, trust it, and choose it.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <Link href="/contact" className="btn btn-primary">
