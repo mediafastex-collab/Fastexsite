@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { industries, engagement } from "@/data/industries";
+import { breadcrumb, webPage, graph } from "@/lib/schema";
 
 export const metadata = {
   title: "Industries We Specialise In | B2B Marketing | Fastex Media",
@@ -31,8 +32,8 @@ const cardCopy = {
 
 const SITE = "https://www.fastexmedia.com";
 
+// No @context here: nested as a node inside the page @graph below.
 const listSchema = {
-  "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Industries We Serve",
   description:
@@ -47,12 +48,27 @@ const listSchema = {
   })),
 };
 
+const pageSchema = graph(
+  webPage({
+    path: "/industries",
+    type: "CollectionPage",
+    name: "B2B Marketing by Industry | Fastex Media",
+    description:
+      "Sector-specific B2B lead generation for IT and software, solar and renewables, manufacturing, education and real estate.",
+  }),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Industries", path: "/industries" },
+  ]),
+  listSchema
+);
+
 export default function Industries() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+        dangerouslySetInnerHTML={{ __html: pageSchema }}
       />
       <section className="page-hero">
         <div className="container">

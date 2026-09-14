@@ -3,13 +3,14 @@ import { site, founder } from "@/data/site";
 import { industries, engagement } from "@/data/industries";
 import { services } from "@/data/services";
 import { portfolioStats } from "@/data/caseStudies";
+import SocialIcon from "@/components/SocialIcon";
 
 const SITE = "https://www.fastexmedia.com";
 
 export const metadata = {
   title: "About Fastex Media | Global B2B Lead Generation Agency",
   description:
-    "Fastex Media is a B2B lead generation agency founded in June 2025, working with clients worldwide. We build outbound systems that book qualified meetings for B2B companies across five sectors.",
+    "Fastex Media is a B2B lead generation agency founded in June 2025, working with clients worldwide. Our approach, our principles and who we build for.",
   keywords: [
     "b2b lead generation agency",
     "global b2b marketing agency",
@@ -214,7 +215,7 @@ export default function About() {
                 className="founder-social"
                 aria-label={`${founder.name} on LinkedIn`}
               >
-                <i className="ph ph-linkedin-logo" aria-hidden="true"></i>
+                <SocialIcon name="linkedin" />
                 <span>Connect on LinkedIn</span>
               </a>
             </div>

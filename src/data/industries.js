@@ -13,9 +13,9 @@ export const industries = [
     name: "IT & Software",
     short: "IT & Software",
     tagline: "SaaS, IT services and technology firms",
-    metaTitle: "B2B Marketing Agency for IT & Software Companies | Fastex Media",
+    metaTitle: "B2B Marketing for IT & Software Firms | Fastex Media",
     metaDescription:
-      "B2B lead generation for IT and software companies. We book qualified meetings with CTOs, IT directors and technical buyers through cold email, LinkedIn and paid demand.",
+      "B2B lead generation for IT and software firms. We book qualified meetings with CTOs, IT directors and technical buyers via cold email, LinkedIn and paid demand.",
     keywords: [
       "b2b marketing agency for software companies",
       "saas lead generation",
@@ -102,9 +102,9 @@ export const industries = [
     name: "Solar & Renewable Energy",
     short: "Solar & Renewable",
     tagline: "EPCs, developers and commercial solar providers",
-    metaTitle: "B2B Marketing Agency for Solar & Renewable Energy | Fastex Media",
+    metaTitle: "B2B Marketing for Solar & Renewables | Fastex Media",
     metaDescription:
-      "Commercial solar lead generation for EPCs and renewable energy providers. We book meetings with facility managers, plant heads and CFOs for high-ticket C&I projects.",
+      "Commercial solar lead generation for EPCs and renewable providers. We book meetings with facility managers, plant heads and CFOs for high-ticket C&I projects.",
     keywords: [
       "solar lead generation",
       "commercial solar marketing agency",
@@ -191,9 +191,9 @@ export const industries = [
     name: "Manufacturing",
     short: "Manufacturing",
     tagline: "OEMs, suppliers and industrial exporters",
-    metaTitle: "B2B Marketing Agency for Manufacturers & Exporters | Fastex Media",
+    metaTitle: "B2B Marketing for Manufacturers | Fastex Media",
     metaDescription:
-      "B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors — beyond trade shows and referrals.",
+      "B2B lead generation for manufacturers and exporters. We open conversations with procurement heads, sourcing managers and distributors, beyond trade shows.",
     keywords: [
       "b2b marketing for manufacturers",
       "manufacturing lead generation",
@@ -280,9 +280,9 @@ export const industries = [
     name: "Educational Institutes",
     short: "Education",
     tagline: "Universities, school groups and EdTech",
-    metaTitle: "B2B Marketing Agency for Educational Institutes | Fastex Media",
+    metaTitle: "B2B Marketing for Education & EdTech | Fastex Media",
     metaDescription:
-      "B2B marketing for universities, school groups and EdTech companies. We build corporate partnerships, institutional tie-ups and qualified admission enquiry systems.",
+      "B2B marketing for universities, school groups and EdTech. We build corporate partnerships, institutional tie-ups and qualified admission enquiry systems.",
     keywords: [
       "b2b marketing for educational institutes",
       "education lead generation agency",
@@ -369,7 +369,7 @@ export const industries = [
     name: "Real Estate",
     short: "Real Estate",
     tagline: "Commercial developers, brokerages and investors",
-    metaTitle: "B2B Marketing Agency for Real Estate & Developers | Fastex Media",
+    metaTitle: "B2B Marketing for Real Estate | Fastex Media",
     metaDescription:
       "B2B lead generation for commercial real estate. We reach corporate tenants, channel partners and investors for developers and brokerages — beyond portal leads.",
     keywords: [

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { services } from "@/data/services";
 import { engagement } from "@/data/industries";
+import { breadcrumb, webPage, graph } from "@/lib/schema";
 
 export const metadata = {
   title: "B2B Marketing Services | Fastex Media",
@@ -19,8 +20,9 @@ export const metadata = {
 
 const SITE = "https://www.fastexmedia.com";
 
+// No @context here: this is nested as a node inside the page @graph, which
+// carries the context once at the top.
 const listSchema = {
-  "@context": "https://schema.org",
   "@type": "ItemList",
   name: "B2B Marketing Services",
   description:
@@ -35,12 +37,27 @@ const listSchema = {
   })),
 };
 
+const pageSchema = graph(
+  webPage({
+    path: "/services",
+    type: "CollectionPage",
+    name: "B2B Marketing Services | Fastex Media",
+    description:
+      "Five B2B marketing channels run as one system: performance marketing, LinkedIn, social media, WhatsApp and cold email.",
+  }),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+  ]),
+  listSchema
+);
+
 export default function Services() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+        dangerouslySetInnerHTML={{ __html: pageSchema }}
       />
       <section className="page-hero">
         <div className="container">

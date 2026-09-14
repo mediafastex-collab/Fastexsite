@@ -4,19 +4,38 @@
 # the new one with a 301, so ranking signals transfer instead of hitting a 404.
 
 # --- Apex to www -----------------------------------------------------------
-# The old site canonicalised to www and that is what is indexed, so www stays
-# the primary hostname. Without this both hosts serve 200 and split signals.
+# NOTE: this line does not work and is kept only to document the intent.
+# Cloudflare Pages matches _redirects on the PATH; it does not switch on the
+# request hostname, so an apex request never matches and both hosts answer
+# 200. The working fix is a zone-level Single Redirect in the Cloudflare
+# dashboard (Rules > Redirect Rules): when hostname equals fastexmedia.com,
+# 301 to https://www.fastexmedia.com plus the path. Until that exists the
+# canonical tag is the only thing keeping the two hosts from splitting.
 https://fastexmedia.com/*  https://www.fastexmedia.com/:splat  301
 
 # --- Old blog ---------------------------------------------------------------
-# These three posts are indexed. Until the blog is ported, send each to the
-# closest matching page rather than dropping them.
+# Five posts were indexed on the previous site. Each goes to the closest
+# surviving page. Two of them (performance-marketing-for-saas and
+# social-media-management-for-retails) were missing from this list and had
+# been answering 404 since the migration.
 # REMOVE these lines once the blog exists at /blog/ again.
-/blog/whatsapp-marketing-for-b2b-guide  /services/whatsapp-marketing/  301
-/blog/cold-email-vs-linkedin-outreach   /services/email-marketing/     301
-/blog/b2b-lead-generation-strategies    /services/                     301
-/blog/                                  /services/                     301
-/blog                                   /services/                     301
+/blog/whatsapp-marketing-for-b2b-guide           /services/whatsapp-marketing/      301
+/blog/cold-email-vs-linkedin-outreach            /services/email-marketing/         301
+/blog/b2b-lead-generation-strategies             /services/linkedin-marketing/      301
+/blog/performance-marketing-for-saas             /services/performance-marketing/   301
+/blog/social-media-management-for-retails        /services/social-media-marketing/  301
+/blog/how-email-marketing-is-not-dead-for-your-d2c-brand  /services/email-marketing/ 301
+/blog/performancre-makreitng-for-saas-is-lead-enegine     /services/performance-marketing/ 301
+
+# The same posts were also indexed with a .html suffix on the original static
+# site, and with a trailing slash. Both shapes are sent straight to the final
+# destination so no request pays for two hops.
+/blog/whatsapp-marketing-for-b2b-guide.html      /services/whatsapp-marketing/      301
+/blog/cold-email-vs-linkedin-outreach.html       /services/email-marketing/         301
+/blog/b2b-lead-generation-strategies.html        /services/linkedin-marketing/      301
+/blog/index.html                                 /services/                         301
+/blog/                                           /services/                         301
+/blog                                            /services/                         301
 
 # --- Legacy paths from the older static site --------------------------------
 /index.html    /              301
@@ -29,3 +48,9 @@ https://fastexmedia.com/*  https://www.fastexmedia.com/:splat  301
 # --- Removed page -----------------------------------------------------------
 /partnership   /contact/      301
 /partnership/  /contact/      301
+
+# --- Old admin surface ------------------------------------------------------
+# The previous site exposed /admin on the main domain. It is gone here, and
+# these paths should not linger as soft 404s in the index.
+/admin      /    301
+/admin/*    /    301

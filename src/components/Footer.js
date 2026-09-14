@@ -2,6 +2,7 @@ import Link from "next/link";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
 import { site, socials } from "@/data/site";
+import SocialIcon from "@/components/SocialIcon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,7 +30,7 @@ export default function Footer() {
                 aria-label={social.label}
                 title={social.label}
               >
-                <i className={`ph ${social.icon}`} aria-hidden="true"></i>
+                <SocialIcon name={social.icon} />
               </a>
             ))}
           </div>

@@ -6,11 +6,12 @@ import {
   testimonials,
 } from "@/data/caseStudies";
 import { site } from "@/data/site";
+import { breadcrumb, webPage, graph } from "@/lib/schema";
 
 export const metadata = {
   title: "Case Studies & Client Results | Fastex Media",
   description:
-    "Real B2B campaigns and outcomes — solar, SaaS, real estate, education and manufacturing clients. See the lead generation systems we've built and what they produced.",
+    "Real B2B campaigns and outcomes across solar, SaaS, real estate, education and manufacturing. The lead generation systems we built and what they produced.",
   alternates: { canonical: "/work" },
   openGraph: {
     title: "Case Studies & Client Results | Fastex Media",
@@ -22,9 +23,38 @@ export const metadata = {
   },
 };
 
+const pageSchema = graph(
+  webPage({
+    path: "/work",
+    type: "CollectionPage",
+    name: "Case Studies & Client Results | Fastex Media",
+    description:
+      "B2B campaigns and outcomes across solar, SaaS, real estate, education and manufacturing.",
+  }),
+  breadcrumb([
+    { name: "Home", path: "/" },
+    { name: "Case Studies", path: "/work" },
+  ]),
+  {
+    "@type": "ItemList",
+    name: "Client Case Studies",
+    numberOfItems: featuredCases.length,
+    itemListElement: featuredCases.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.title || c.client || `Case study ${i + 1}`,
+    })),
+  }
+);
+
 export default function Work() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: pageSchema }}
+      />
+
       {/* ---------- HERO ---------- */}
       <section className="page-hero">
         <div className="container">

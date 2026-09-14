@@ -144,7 +144,33 @@ export default function Navbar() {
           aria-expanded={isMobileMenuOpen}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <i className={isMobileMenuOpen ? "ph ph-x" : "ph ph-list"}></i>
+          {/* Inline, not an icon font: this control is the only way to reach
+              navigation on a phone, so it must not depend on a third-party
+              stylesheet arriving. */}
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            {isMobileMenuOpen ? (
+              <>
+                <line x1="5" y1="5" x2="19" y2="19" />
+                <line x1="19" y1="5" x2="5" y2="19" />
+              </>
+            ) : (
+              <>
+                <line x1="3" y1="7" x2="21" y2="7" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="17" x2="21" y2="17" />
+              </>
+            )}
+          </svg>
         </button>
       </div>
     </nav>

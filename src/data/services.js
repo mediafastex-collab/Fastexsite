@@ -67,9 +67,9 @@ export const services = [
     navLabel: "LinkedIn Marketing",
     title: "LinkedIn Lead Generation",
     h1: "LinkedIn marketing that opens conversations with named buyers.",
-    metaTitle: "B2B LinkedIn Marketing & Lead Generation Agency | Fastex Media",
+    metaTitle: "B2B LinkedIn Lead Generation Agency | Fastex Media",
     metaDescription:
-      "LinkedIn lead generation for B2B. Researched account lists, human-sounding outreach sequences and founder authority content that books meetings with decision-makers.",
+      "LinkedIn lead generation for B2B. Researched account lists, human outreach sequences and reply handling that book meetings with senior buyers.",
     keywords: [
       "linkedin lead generation agency",
       "b2b linkedin marketing",
@@ -183,7 +183,7 @@ export const services = [
     navLabel: "WhatsApp Marketing",
     title: "WhatsApp Marketing",
     h1: "WhatsApp marketing where B2B deals actually move.",
-    metaTitle: "WhatsApp Marketing & Business API Agency for B2B | Fastex Media",
+    metaTitle: "B2B WhatsApp Business API Marketing | Fastex Media",
     metaDescription:
       "Official WhatsApp Business API marketing for B2B. Instant enquiry response, distributor broadcasts and follow-up journeys that stop leads going cold.",
     keywords: [

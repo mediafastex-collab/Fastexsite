@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 const DESCRIPTION =
-  "Fastex Media is a global B2B lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for B2B companies worldwide.";
+  "Global B2B lead generation agency. Multi-channel outbound systems across performance marketing, LinkedIn, WhatsApp and cold email that book qualified meetings.";
 
 const OG_IMAGE = {
   url: "/og-image.jpg",
@@ -117,7 +117,7 @@ const siteSchema = {
       },
       image: `${SITE}/og-image.jpg`,
       description:
-        "Global B2B lead generation agency building predictable outbound systems for IT & software, solar & renewable energy, manufacturing, education and commercial real estate. Working with clients worldwide.",
+        "Global B2B lead generation agency. Outbound systems for IT and software, solar, manufacturing, education and real estate that book qualified meetings.",
       slogan: "Design. Scale. Dominate.",
       foundingDate: "2025-06",
       founder: {
@@ -179,7 +179,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
