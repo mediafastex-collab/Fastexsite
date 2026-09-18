@@ -31,6 +31,14 @@ Contact: hello@fastexmedia.com · +91 9328680929
 - [Case Studies](https://www.fastexmedia.com/work/): Client results across solar, SaaS, real estate, education and manufacturing.
 - [Pricing](https://www.fastexmedia.com/pricing/): Engagement models and what they include.
 - [Contact](https://www.fastexmedia.com/contact/): Book a free strategy call.
+- [Blog](https://www.fastexmedia.com/blog/): Practical writing on the channels we run.
+
+## Articles
+
+- [Performance Marketing for SaaS: Building a Predictable Lead Engine](https://www.fastexmedia.com/blog/performance-marketing-for-saas/): How B2B SaaS companies use performance marketing to book qualified demos, not just collect clicks. Channel mix, creative testing and the metrics that matter.
+- [Cold Email vs LinkedIn Outreach: Which Generates Better B2B Leads?](https://www.fastexmedia.com/blog/cold-email-vs-linkedin-outreach/): Honest data from running both channels daily: reply rates, real costs, scaling limits, and why prospects touched on both channels reply at twice the rate.
+- [B2B Lead Generation in 2026: 7 Strategies That Actually Fill Pipelines](https://www.fastexmedia.com/blog/b2b-lead-generation-strategies/): The 7 highest-ROI B2B lead generation strategies we run daily: multi-channel outbound, LinkedIn authority, WhatsApp outreach and how to stack them.
+- [WhatsApp Marketing for B2B: The Complete 2026 Guide](https://www.fastexmedia.com/blog/whatsapp-marketing-for-b2b-guide/): WhatsApp gets 90%+ open rates while B2B emails sit unread. The system we use to book meetings: API setup, broadcasts, automation and real results.
 
 ## Optional
 

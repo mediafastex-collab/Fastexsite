@@ -16,6 +16,7 @@ import { services } from "../src/data/services.js";
 import { industries, engagement } from "../src/data/industries.js";
 import { site, founder } from "../src/data/site.js";
 import { portfolioStats, featuredCases, projects } from "../src/data/caseStudies.js";
+import { posts } from "../src/data/posts.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(__dirname, "..", "public");
@@ -63,6 +64,15 @@ ${industries
 - [Case Studies](${SITE}/work/): Client results across solar, SaaS, real estate, education and manufacturing.
 - [Pricing](${SITE}/pricing/): Engagement models and what they include.
 - [Contact](${SITE}/contact/): Book a free strategy call.
+- [Blog](${SITE}/blog/): Practical writing on the channels we run.
+
+## Articles
+
+${posts
+  .slice()
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .map((p) => `- [${p.title}](${SITE}/blog/${p.slug}/): ${p.description}`)
+  .join("\n")}
 
 ## Optional
 

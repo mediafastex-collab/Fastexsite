@@ -29,7 +29,8 @@ const navItems = [
     })),
   },
   { num: "04", label: "Pricing", href: "/pricing" },
-  { num: "05", label: "About Us", href: "/about" },
+  { num: "05", label: "Blog", href: "/blog" },
+  { num: "06", label: "About Us", href: "/about" },
 ];
 
 export default function Navbar() {

@@ -1,5 +1,6 @@
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
+import { posts } from "@/data/posts";
 
 // Required by `output: "export"` — emits a static sitemap.xml at build time.
 export const dynamic = "force-static";
@@ -24,6 +25,7 @@ export default function sitemap() {
     { path: "/about", priority: 0.8, changeFrequency: "monthly" },
     { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
   ];
 
   return [
@@ -44,6 +46,14 @@ export default function sitemap() {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
+    })),
+    // Articles carry their own publish date rather than the build date, so
+    // crawlers are not told every post changed on every deploy.
+    ...posts.map((post) => ({
+      url: url(`/blog/${post.slug}`),
+      lastModified: new Date(`${post.date}T00:00:00Z`),
+      changeFrequency: "yearly",
+      priority: 0.7,
     })),
   ];
 }
