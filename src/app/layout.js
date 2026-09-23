@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Inter, Outfit } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -94,6 +95,19 @@ export const viewport = {
 };
 
 const SITE = "https://www.fastexmedia.com";
+
+/**
+ * Google Analytics 4.
+ *
+ * This property was only ever tagged on the previous static site, which now
+ * lives on at fastex-media-june.pages.dev and gets almost no traffic. The
+ * live site carried no tag at all, which is why GA4 reported a single user
+ * against the old site's page title while Cloudflare counted real visits.
+ *
+ * `afterInteractive` is the documented default: loaded client-side once
+ * hydration has started, so it never blocks first paint.
+ */
+const GA_ID = "G-94FNJYMMZD";
 
 /**
  * Site-wide graph. Organization and WebSite carry stable @id values so the
@@ -193,6 +207,17 @@ export default function RootLayout({ children }) {
           <Footer />
         </div>
         <Reveal />
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );
