@@ -2,18 +2,17 @@
  * Content and settings for the IT and AI services landing page
  * (/it-ai-lead-generation/).
  *
- * PLACEHOLDERS — replace before sending paid traffic:
- *   calendarUrl       null keeps every "Book your call" button pointed at the
- *                     on-page enquiry form. Set it to a booking link (for
- *                     example the cal.id link used on /contact/) to send those
- *                     buttons to the calendar instead.
+ * Settings (privacyPolicyUrl and proof are still placeholders):
+ *   calendarUrl       every "BOOK YOUR CALL NOW" button opens this booking
+ *                     link. Set it to null to point them at the on-page
+ *                     enquiry form instead.
  *   privacyPolicyUrl  no privacy policy page exists on the site yet.
  *   proof             approved case studies or testimonials only. Leave empty
  *                     and the section shows a neutral placeholder.
  */
 export const landing = {
   path: "/it-ai-lead-generation/",
-  calendarUrl: null,
+  calendarUrl: "https://cal.id/fastexmedia/lead-generation-strategy-call-fastex-media",
   privacyPolicyUrl: "/privacy-policy/",
   enquiryEndpoint: "/api/enquiry",
   proof: [],
