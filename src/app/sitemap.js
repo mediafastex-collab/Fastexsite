@@ -26,6 +26,7 @@ export default function sitemap() {
     { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.9, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/it-ai-lead-generation", priority: 0.8, changeFrequency: "monthly" },
   ];
 
   return [

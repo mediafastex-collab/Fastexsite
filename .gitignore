@@ -40,3 +40,6 @@ next-env.d.ts
 
 # stray nested repo of the previous static site
 Site/
+
+# Cloudflare Pages Functions local secrets
+.dev.vars

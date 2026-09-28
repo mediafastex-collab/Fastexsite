@@ -1,8 +1,5 @@
 import Script from "next/script";
 import { Inter, Outfit } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Reveal from "@/components/Reveal";
 import "./globals.css";
 
 const inter = Inter({
@@ -201,12 +198,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <div className="site-wrapper">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
-        <Reveal />
+        {/* Site chrome (nav, footer, scroll reveals) lives in (site)/layout.js
+            so campaign landing pages in (landing) can render without it. */}
+        {children}
 
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
