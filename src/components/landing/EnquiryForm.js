@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { landing, serviceTypes } from "@/data/landing";
-import { track } from "@/lib/track";
+import { metaTrack, newEventId, track } from "@/lib/track";
 import styles from "./landing.module.css";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -70,6 +70,8 @@ export default function EnquiryForm({ id, heading }) {
 
     setStatus("sending");
     setFailMessage("");
+    // Shared with the server-side Conversions API event for deduplication.
+    const metaEventId = newEventId();
     try {
       const res = await fetch(landing.enquiryEndpoint, {
         method: "POST",
@@ -80,6 +82,7 @@ export default function EnquiryForm({ id, heading }) {
           url2: formRef.current?.elements.url2?.value || "",
           page: typeof window !== "undefined" ? window.location.href : "",
           formLocation: id,
+          metaEventId,
         }),
       });
       const data = await res.json().catch(() => ({}));
@@ -91,6 +94,7 @@ export default function EnquiryForm({ id, heading }) {
         form_location: id,
         service_type: values.serviceType,
       });
+      metaTrack("Lead", { eventId: metaEventId });
       requestAnimationFrame(() => resultRef.current?.focus());
     } catch {
       setStatus("failed");
@@ -126,7 +130,10 @@ export default function EnquiryForm({ id, heading }) {
               href={landing.calendarUrl}
               target="_blank"
               rel="noopener"
-              onClick={() => track("calendar_click", { cta_location: id })}
+              onClick={() => {
+              track("calendar_click", { cta_location: id });
+              metaTrack("Contact", { server: true });
+            }}
             >
               Open the calendar
             </a>
@@ -310,7 +317,10 @@ export default function EnquiryForm({ id, heading }) {
             href={landing.calendarUrl}
             target="_blank"
             rel="noopener"
-            onClick={() => track("calendar_click", { cta_location: id })}
+            onClick={() => {
+              track("calendar_click", { cta_location: id });
+              metaTrack("Contact", { server: true });
+            }}
           >
             Open the calendar
           </a>

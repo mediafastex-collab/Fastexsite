@@ -19,6 +19,8 @@
  * form tells the visitor their enquiry was NOT sent.
  */
 
+import { sendMetaEvent } from "../../server/metaCapi.js";
+
 const DEFAULT_TO = "hello@fastexmedia.com";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -41,6 +43,7 @@ const LIMITS = {
   challenge: 2000,
   page: 500,
   formLocation: 40,
+  metaEventId: 64,
 };
 
 const json = (body, status = 200) =>
@@ -58,7 +61,7 @@ const escapeHtml = (s) =>
 // Strip anything that could break an email header.
 const oneLine = (s) => s.replace(/[\r\n]+/g, " ").trim();
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost({ request, env, waitUntil }) {
   // Only accept posts from our own pages.
   const origin = request.headers.get("Origin");
   if (origin) {
@@ -152,6 +155,22 @@ ${rows
   if (!res.ok) {
     console.error("Enquiry not sent: Resend returned", res.status, await res.text());
     return json({ ok: false, error: "Could not send" }, 502);
+  }
+
+  // Server-side half of the Meta "Lead" event. Only reached once the email
+  // has gone, so ad reporting never counts an enquiry that was lost.
+  if (/^[A-Za-z0-9-]{8,64}$/.test(f.metaEventId)) {
+    waitUntil(
+      sendMetaEvent({
+        request,
+        env,
+        eventName: "Lead",
+        eventId: f.metaEventId,
+        sourceUrl: f.page,
+        email: f.email,
+        customData: { content_name: f.serviceType },
+      })
+    );
   }
 
   return json({ ok: true });

@@ -15,6 +15,9 @@ export const landing = {
   calendarUrl: "https://cal.id/fastexmedia/lead-generation-strategy-call-fastex-media",
   privacyPolicyUrl: "/privacy-policy/",
   enquiryEndpoint: "/api/enquiry",
+  // Meta pixel IDs are public. The Conversions API token is not, and lives
+  // only in Cloudflare as META_CAPI_TOKEN (see server/metaCapi.js).
+  metaPixelId: "2238203073389220",
   proof: [],
 };
 

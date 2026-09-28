@@ -67,3 +67,23 @@ Placeholders to fill in `src/data/landing.js` before sending paid traffic:
 Conversion events sent to GA4 and `dataLayer`: `cta_click`, `form_start`,
 `generate_lead` (successful submission only), `form_error`, `calendar_click`.
 Mark `generate_lead` as a key event in GA4.
+
+### Meta pixel and Conversions API
+
+The landing page (only) loads Meta pixel `2238203073389220` and sends:
+
+| Event | When | Browser | Server (Conversions API) |
+|---|---|---|---|
+| PageView | page load | yes | no |
+| Contact | a BOOK YOUR CALL NOW button or calendar link is clicked | yes | `/api/meta-event` |
+| Lead | an enquiry email is actually sent | yes | `/api/enquiry` |
+
+Browser and server copies share an `event_id`, so Meta counts each once.
+Server events include the IP, user agent, `_fbp`/`_fbc` cookies, and hashed
+email (Lead only), city and country.
+
+To switch on the server side, add `META_CAPI_TOKEN` as a **Secret** in
+Cloudflare (same place as the Resend variables) and redeploy. To check
+events, temporarily add `META_TEST_EVENT_CODE` with the code from
+Events Manager → Test events, then remove it. The code lives in
+`server/metaCapi.js`.

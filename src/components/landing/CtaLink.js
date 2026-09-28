@@ -1,7 +1,7 @@
 "use client";
 
 import { landing } from "@/data/landing";
-import { track } from "@/lib/track";
+import { metaTrack, track } from "@/lib/track";
 import styles from "./landing.module.css";
 
 /**
@@ -14,6 +14,7 @@ export default function CtaLink({ location, fallback, large = false }) {
 
   function onClick(e) {
     track("cta_click", { cta_location: location, destination: external ? "calendar" : "form" });
+    if (external) metaTrack("Contact", { server: true });
     if (external) return;
     const target = document.getElementById(fallback);
     if (!target) return;
