@@ -2,6 +2,7 @@ import Link from "next/link";
 import PlanPicker from "@/components/PlanPicker";
 import { plans, engagement, addOns, process, terms, directCosts, ownership } from "@/data/plans";
 import { SITE, abs, breadcrumb, faqPage, webPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export const metadata = {
   title: "Pricing | Fastex Media",
@@ -275,9 +276,7 @@ export default function Pricing() {
               Tell us what you are trying to grow. We will tell you which
               service and which level, and what it costs.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Scoping Call
-            </Link>
+            <BookCall>Book a Scoping Call</BookCall>
             <div className="cta-contacts">
               <a href="mailto:hello@fastexmedia.com">hello@fastexmedia.com</a>
               <a href="tel:+919328680929">+91 9328680929</a>

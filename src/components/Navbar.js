@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { services } from "@/data/services";
 import { industries } from "@/data/industries";
+import BookCall from "@/components/BookCall";
 
 const navItems = [
   {
@@ -135,9 +136,9 @@ export default function Navbar() {
           })}
         </ul>
 
-        <Link href="/contact" className="btn btn-outline book-call-btn">
+        <BookCall variant="outline" className="book-call-btn">
           Book a Call
-        </Link>
+        </BookCall>
 
         <button
           className="mobile-menu-btn"

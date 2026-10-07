@@ -61,7 +61,7 @@ export default function Footer() {
             <Link href="/blog">Blog</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/contact">Book a Call</Link>
+            <Link href="/contact">Contact</Link>
           </div>
 
           <div className="link-group">

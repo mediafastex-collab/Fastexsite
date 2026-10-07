@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts, postBySlug } from "@/data/posts";
 import { SITE, abs, breadcrumb, faqPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -199,9 +200,7 @@ export default async function Article({ params }) {
               Tell us what you are trying to grow. We will tell you which
               channels fit and what it takes.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Strategy Call
-            </Link>
+            <BookCall>Book a Strategy Call</BookCall>
           </div>
         </div>
       </section>

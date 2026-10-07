@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { industries, engagement } from "@/data/industries";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export const metadata = {
   title: "Industries We Specialise In | B2B Marketing | Fastex Media",
@@ -86,9 +87,7 @@ export default function Industries() {
             the first sequence goes out.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
               See Case Studies
             </Link>
@@ -144,9 +143,7 @@ export default function Industries() {
                 We would rather decline an engagement than spend three months
                 learning a market on your budget.
               </p>
-              <Link href="/contact" className="btn btn-outline">
-                Book a Free Strategy Call
-              </Link>
+              <BookCall variant="outline">Book a Free Strategy Call</BookCall>
             </div>
           </div>
         </div>
@@ -191,9 +188,7 @@ export default function Industries() {
               Tell us what you sell and who signs the cheque. If we are the
               wrong agency for it, we will say so on the call.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href="mailto:hello@fastexmedia.com">hello@fastexmedia.com</a>
               <a href="tel:+919328680929">+91 9328680929</a>

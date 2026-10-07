@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { industries, industryBySlug, engagement } from "@/data/industries";
+import BookCall from "@/components/BookCall";
 
 const SITE = "https://www.fastexmedia.com";
 
@@ -107,9 +108,7 @@ export default async function IndustryPage({ params }) {
           <h1>{industry.h1}</h1>
           <p className="page-lede">{industry.heroSub}</p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
               See Case Studies
             </Link>
@@ -297,9 +296,7 @@ export default async function IndustryPage({ params }) {
               Tell us where you want the pipeline to be in ninety days. We&apos;ll
               build the system that gets you there.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href="mailto:hello@fastexmedia.com">hello@fastexmedia.com</a>
               <a href="tel:+919328680929">+91 9328680929</a>

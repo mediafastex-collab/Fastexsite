@@ -4,6 +4,7 @@ import { services } from "@/data/services";
 import { portfolioStats, testimonials } from "@/data/caseStudies";
 import { site } from "@/data/site";
 import HeroFlow from "@/components/HeroFlow";
+import BookCall from "@/components/BookCall";
 
 
 const process = [
@@ -48,9 +49,7 @@ export default function Home() {
             more people discover it, trust it, and choose it.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
               See Case Studies
             </Link>
@@ -252,9 +251,7 @@ export default function Home() {
               Tell us where you want the pipeline to be in ninety days. We&apos;ll
               build the system that gets you there.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <a href={site.phoneHref}>{site.phone}</a>

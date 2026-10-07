@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { plans, tiers } from "@/data/plans";
+import BookCall from "@/components/BookCall";
 
 /**
  * Pick one service, see its four plans.
@@ -104,12 +105,12 @@ export default function PlanPicker() {
                     ))}
                   </ul>
 
-                  <Link
-                    href="/contact"
-                    className={`btn ${tier.recommended ? "btn-primary" : "btn-outline"} pk-card-cta`}
+                  <BookCall
+                    variant={tier.recommended ? "primary" : "outline"}
+                    className="pk-card-cta"
                   >
                     Book a Call
-                  </Link>
+                  </BookCall>
                 </div>
               );
             })}

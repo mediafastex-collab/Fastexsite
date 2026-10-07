@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { posts } from "@/data/posts";
 import { abs, breadcrumb, webPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export const metadata = {
   title: "B2B Marketing Blog | Fastex Media",
@@ -168,9 +169,7 @@ export default function Blog() {
               Tell us what you are trying to grow. We will tell you which
               channels fit and what it takes.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Strategy Call
-            </Link>
+            <BookCall>Book a Strategy Call</BookCall>
           </div>
         </div>
       </section>

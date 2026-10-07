@@ -2,6 +2,7 @@ import Link from "next/link";
 import { services } from "@/data/services";
 import { engagement } from "@/data/industries";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export const metadata = {
   title: "B2B Marketing Services | Fastex Media",
@@ -75,9 +76,7 @@ export default function Services() {
             on the only number that matters — qualified meetings booked.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/pricing" className="btn btn-outline">
               View Pricing
             </Link>
@@ -146,9 +145,7 @@ export default function Services() {
               Tell us where you want the pipeline to be in ninety days. We&apos;ll
               build the system that gets you there.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href="mailto:hello@fastexmedia.com">hello@fastexmedia.com</a>
               <a href="tel:+919328680929">+91 9328680929</a>

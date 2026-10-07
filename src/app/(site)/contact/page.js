@@ -107,7 +107,7 @@ export default function Contact() {
             }}
           >
             <iframe
-              src="https://cal.id/aagam-digital/discovery-call"
+              src={site.booking}
               title="Book a discovery call with Fastex Media"
               frameBorder="0"
               allowFullScreen

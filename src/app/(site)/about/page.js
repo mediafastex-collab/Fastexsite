@@ -4,6 +4,7 @@ import { industries, engagement } from "@/data/industries";
 import { services } from "@/data/services";
 import { portfolioStats } from "@/data/caseStudies";
 import SocialIcon from "@/components/SocialIcon";
+import BookCall from "@/components/BookCall";
 
 const SITE = "https://www.fastexmedia.com";
 
@@ -111,9 +112,7 @@ export default function About() {
             dashboards full of numbers nobody acts on.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
               See Case Studies
             </Link>
@@ -332,9 +331,7 @@ export default function About() {
               Tell us where you want the pipeline to be in ninety days. We&apos;ll
               build the system that gets you there.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <a href={site.phoneHref}>{site.phone}</a>

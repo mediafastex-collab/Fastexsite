@@ -7,6 +7,7 @@ import {
 } from "@/data/caseStudies";
 import { site } from "@/data/site";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
+import BookCall from "@/components/BookCall";
 
 export const metadata = {
   title: "Case Studies & Client Results | Fastex Media",
@@ -70,9 +71,7 @@ export default function Work() {
             brands like yours.
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/pricing" className="btn btn-outline">
               View Pricing
             </Link>
@@ -238,9 +237,7 @@ export default function Work() {
               Let&apos;s build a lead machine for your business. Book a free
               strategy call today.
             </p>
-            <Link href="/contact" className="btn btn-primary">
-              Book a Free Strategy Call
-            </Link>
+            <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">
               <a href={`mailto:${site.email}`}>{site.email}</a>
               <a href={site.phoneHref}>{site.phone}</a>

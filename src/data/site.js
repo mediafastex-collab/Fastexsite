@@ -4,6 +4,15 @@ export const site = {
   email: "hello@fastexmedia.com",
   phone: "+91 9328680929",
   phoneHref: "tel:+919328680929",
+
+  /**
+   * The booking calendar every "Book a Call" button opens.
+   *
+   * Single source of truth: change it here and every CTA on the site
+   * follows. The IT/AI landing page deliberately keeps its own campaign
+   * calendar in landing.js, so it is not driven by this value.
+   */
+  booking: "https://cal.id/fastexmedia/discovery-call-with-aagam",
   founded: "June 2025",
   address:
     "10th Floor, The Junomoneta Tower, Besides Rajhans Cinema, Adajan, Hazira Road, Surat, Gujarat 394510",
