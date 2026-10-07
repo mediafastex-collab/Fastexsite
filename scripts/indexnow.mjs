@@ -15,7 +15,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const KEY = "";
+const KEY = "5c7fca63230fd9d33ead89663b0a31d0";
 const HOST = "www.fastexmedia.com";
 
 const sitemap = readFileSync(join(__dirname, "..", "out", "sitemap.xml"), "utf8");
