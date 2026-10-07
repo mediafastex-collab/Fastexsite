@@ -16,7 +16,7 @@ import { services } from "../src/data/services.js";
 import { industries, engagement } from "../src/data/industries.js";
 import { site, founder } from "../src/data/site.js";
 import { portfolioStats, featuredCases, projects } from "../src/data/caseStudies.js";
-import { posts } from "../src/data/posts.js";
+import { publishedPosts } from "../src/data/posts.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(__dirname, "..", "public");
@@ -90,9 +90,7 @@ ${industries
 
 ## Articles
 
-${posts
-  .slice()
-  .sort((a, b) => b.date.localeCompare(a.date))
+${publishedPosts()
   .map((p) => `- [${p.title}](${SITE}/blog/${p.slug}/): ${p.description}`)
   .join("\n")}
 
@@ -227,9 +225,7 @@ ${projects
 Written by ${founder.name}, ${founder.role} of Fastex Media, from campaigns run
 for client accounts. Figures quoted come from those campaigns.
 
-${posts
-  .slice()
-  .sort((a, b) => b.date.localeCompare(a.date))
+${publishedPosts()
   .map(
     (post) => `## ${post.title}
 

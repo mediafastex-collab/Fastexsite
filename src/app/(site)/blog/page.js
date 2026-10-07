@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { posts } from "@/data/posts";
+import { publishedPosts } from "@/data/posts";
 import { abs, breadcrumb, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
 
@@ -33,8 +33,8 @@ const pageSchema = graph(
   {
     "@type": "ItemList",
     name: "Articles",
-    numberOfItems: posts.length,
-    itemListElement: posts.map((post, i) => ({
+    numberOfItems: publishedPosts().length,
+    itemListElement: publishedPosts().map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: post.title,
@@ -52,8 +52,8 @@ const longDate = (iso) =>
   });
 
 export default function Blog() {
-  // Newest first, without mutating the exported array.
-  const ordered = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+  // Already filtered to live posts and sorted newest first.
+  const ordered = publishedPosts();
 
   return (
     <>

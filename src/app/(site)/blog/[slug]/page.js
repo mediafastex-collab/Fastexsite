@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { posts, postBySlug } from "@/data/posts";
+import { publishedPosts, postBySlug } from "@/data/posts";
 import { SITE, abs, breadcrumb, faqPage, graph } from "@/lib/schema";
 import { founder } from "@/data/site";
 import BookCall from "@/components/BookCall";
 
 export function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  // Scheduled posts get no page, so nothing can link to or index them early.
+  return publishedPosts().map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }) {
@@ -112,7 +113,9 @@ export default async function Article({ params }) {
     faqs.length ? faqPage(faqs) : null
   );
 
-  const others = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const others = publishedPosts()
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 3);
 
   return (
     <>

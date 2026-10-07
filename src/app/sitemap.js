@@ -1,6 +1,6 @@
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
-import { posts } from "@/data/posts";
+import { publishedPosts } from "@/data/posts";
 
 // Required by `output: "export"` — emits a static sitemap.xml at build time.
 export const dynamic = "force-static";
@@ -50,7 +50,7 @@ export default function sitemap() {
     })),
     // Articles carry their own publish date rather than the build date, so
     // crawlers are not told every post changed on every deploy.
-    ...posts.map((post) => ({
+    ...publishedPosts().map((post) => ({
       url: url(`/blog/${post.slug}`),
       lastModified: new Date(`${post.date}T00:00:00Z`),
       changeFrequency: "yearly",
