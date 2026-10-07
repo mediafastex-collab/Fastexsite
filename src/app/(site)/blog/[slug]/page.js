@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts, postBySlug } from "@/data/posts";
 import { SITE, abs, breadcrumb, faqPage, graph } from "@/lib/schema";
+import { founder } from "@/data/site";
 import BookCall from "@/components/BookCall";
 
 export function generateStaticParams() {
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
       url,
       type: "article",
       publishedTime: post.date,
-      authors: ["Fastex Media"],
+      authors: ["Aagam Shah"],
       images: ["/og-image.jpg"],
     },
     twitter: {
@@ -95,7 +96,10 @@ export default async function Article({ params }) {
       image: image.startsWith("http") ? image : `${SITE}${image}`,
       articleSection: post.pillar,
       keywords: post.keywords,
-      author: { "@id": `${SITE}/#organization` },
+      // Authored by a named person, not the company: answer engines weight
+      // identifiable authorship, and the Person node carries verifiable
+      // profiles via sameAs.
+      author: { "@id": `${SITE}/#aagam-shah` },
       publisher: { "@id": `${SITE}/#organization` },
       isPartOf: { "@id": `${SITE}/#website` },
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -129,6 +133,12 @@ export default async function Article({ params }) {
           <h1>{post.title}</h1>
           <p className="page-lede">{post.description}</p>
           <div className="article-meta">
+            {/* Visible byline. The BlogPosting author points at the Person
+                node, and schema should describe what is on the page. */}
+            <span className="article-author">By {founder.name}</span>
+            <span className="post-dot" aria-hidden="true">
+              ·
+            </span>
             <span className="post-pillar">{post.pillar}</span>
             <span className="post-dot" aria-hidden="true">
               ·

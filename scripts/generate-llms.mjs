@@ -22,6 +22,28 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(__dirname, "..", "public");
 const SITE = site.url;
 
+
+/**
+ * Article bodies are HTML. Answer engines want prose, so this flattens the
+ * tags to markdown-ish text: headings keep their level, list items become
+ * bullets, and everything else collapses to paragraphs. Images and link
+ * chrome are dropped — they carry no meaning in a plain-text feed.
+ */
+function articleText(html) {
+  return html
+    .replace(/<img[^>]*>/gi, "")
+    .replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, "\n### $1\n")
+    .replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, "\n#### $1\n")
+    .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, "- $1\n")
+    .replace(/<\/p>/gi, "\n\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 const summary =
   "Fastex Media is a B2B-only lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for business-to-business companies worldwide.";
 
@@ -197,6 +219,28 @@ Metrics: ${c.metrics.map((m) => `${m.value} ${m.label}`).join(", ")}`
 ${projects
   .map((p) => `- **${p.client}** (${p.sector}) — ${p.copy} [${p.tags.join(", ")}]`)
   .join("\n")}
+
+---
+
+# Articles
+
+Written by ${founder.name}, ${founder.role} of Fastex Media, from campaigns run
+for client accounts. Figures quoted come from those campaigns.
+
+${posts
+  .slice()
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .map(
+    (post) => `## ${post.title}
+
+${SITE}/blog/${post.slug}/
+Published ${post.date} · ${post.read} · ${post.pillar}
+
+${post.description}
+
+${articleText(post.body)}`
+  )
+  .join("\n\n---\n\n")}
 `;
 
 mkdirSync(publicDir, { recursive: true });

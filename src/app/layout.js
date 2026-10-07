@@ -1,5 +1,6 @@
 import Script from "next/script";
 import { Inter, Outfit } from "next/font/google";
+import { founder } from "@/data/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -131,12 +132,7 @@ const siteSchema = {
         "Global B2B lead generation agency. Outbound systems for IT and software, solar, manufacturing, education and real estate that book qualified meetings.",
       slogan: "Design. Scale. Dominate.",
       foundingDate: "2025-06",
-      founder: {
-        "@type": "Person",
-        name: "Aagam Shah",
-        jobTitle: "Founder",
-        url: "https://www.linkedin.com/in/shahaagam/",
-      },
+      founder: { "@id": `${SITE}/#aagam-shah` },
       email: "hello@fastexmedia.com",
       telephone: "+91-9328680929",
       address: {
@@ -172,6 +168,39 @@ const siteSchema = {
         "https://www.instagram.com/fastexmedia_/",
         "https://x.com/shahaagamn",
       ],
+    },
+    {
+      /**
+       * A named author the engines can resolve.
+       *
+       * Answer engines weight content that has an identifiable person behind
+       * it, and the articles cite this @id rather than the company, so the
+       * writing attaches to a human with a verifiable profile.
+       *
+       * No SearchAction on the WebSite node below: the site has no search
+       * page, and declaring one would advertise a capability that does not
+       * exist.
+       */
+      "@type": "Person",
+      "@id": `${SITE}/#aagam-shah`,
+      name: founder.name,
+      givenName: "Aagam",
+      familyName: "Shah",
+      jobTitle: founder.role,
+      description:
+        "Founder of Fastex Media. Builds multi-channel B2B outbound systems across performance marketing, LinkedIn, WhatsApp and cold email.",
+      image: `${SITE}${founder.photo}`,
+      url: `${SITE}/about/`,
+      worksFor: { "@id": `${SITE}/#organization` },
+      knowsAbout: [
+        "B2B lead generation",
+        "Cold email deliverability",
+        "LinkedIn outbound",
+        "WhatsApp Business API marketing",
+        "Performance marketing",
+        "Appointment setting",
+      ],
+      sameAs: [founder.linkedin, founder.x],
     },
     {
       "@type": "WebSite",

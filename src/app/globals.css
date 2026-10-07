@@ -3353,3 +3353,8 @@ summary:focus-visible,
     letter-spacing: 0.6px;
   }
 }
+
+/* Byline on an article. Sits in .article-meta with the date and read time. */
+.article-author {
+  color: var(--text-main);
+}
