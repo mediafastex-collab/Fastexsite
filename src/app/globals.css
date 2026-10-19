@@ -3909,7 +3909,7 @@ summary:focus-visible,
   overflow: hidden;
   flex: none;
   width: 14.5rem;
-  height: 13.5rem;
+  height: 10.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4134,7 +4134,7 @@ summary:focus-visible,
 
   .cm-card {
     width: 12.5rem;
-    height: 13.5rem;
+    height: 10rem;
   }
 
   .cm-practices {
@@ -4376,8 +4376,7 @@ p mark.hl {
   }
 }
 
-/* ── Client tags: what we did, on every client card ─────── */
-.cm-tags,
+/* ── Client tags: what we did (/work, service and industry pages) ── */
 .cs-tags {
   display: flex;
   flex-wrap: wrap;
@@ -4387,7 +4386,6 @@ p mark.hl {
   padding-top: 0.7rem;
 }
 
-.cm-tag,
 .cs-tag {
   padding: 0.2rem 0.55rem;
   font-size: 0.66rem;
@@ -4401,7 +4399,6 @@ p mark.hl {
   transition: border-color 0.35s var(--ease-out), color 0.35s var(--ease-out);
 }
 
-.cm-card:hover .cm-tag,
 .cs-card:hover .cs-tag {
   color: var(--accent-color);
   border-color: rgba(255, 102, 0, 0.35);

@@ -39,13 +39,6 @@ function Card({ client, index }) {
       <span className="cm-meta">
         {client.kind === "founder" ? "Founder brand" : client.industry}
       </span>
-      <span className="cm-tags">
-        {client.tags.slice(0, 2).map((t) => (
-          <span key={t} className="cm-tag">
-            {t}
-          </span>
-        ))}
-      </span>
     </li>
   );
 }
