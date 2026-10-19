@@ -29,6 +29,13 @@ export default function ClientShowcase({ clients, label, heading, intro }) {
               </div>
               <span className="cs-name">{c.name}</span>
               <span className="cs-meta">{c.industry}</span>
+              <span className="cs-tags">
+                {c.tags.map((t) => (
+                  <span key={t} className="cs-tag">
+                    {t}
+                  </span>
+                ))}
+              </span>
             </li>
           ))}
         </ul>

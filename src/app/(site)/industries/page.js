@@ -21,15 +21,15 @@ export const metadata = {
 
 const cardCopy = {
   "it-software":
-    "Meetings with CTOs, IT directors and technical buyers — built on tech-stack research, not job titles.",
+    "Meetings with CTOs, IT directors and technical buyers, built on tech-stack research, not job titles.",
   "solar-renewable":
     "Commercial and industrial projects. Facility heads, plant managers and the CFOs who sign the capex.",
   manufacturing:
-    "Procurement heads, sourcing managers and distributors — in the markets you want to grow into.",
+    "Procurement heads, sourcing managers and distributors, in the markets you want to grow into.",
   education:
     "Corporate partnerships, institutional sales and franchise expansion for education organisations.",
   "real-estate":
-    "Channel partners, corporate tenants and investors — direct pipelines instead of shared portal leads.",
+    "Channel partners, corporate tenants and investors: direct pipelines instead of shared portal leads.",
 };
 
 const SITE = "https://www.fastexmedia.com";
@@ -83,7 +83,7 @@ export default function Industries() {
           <h1>Industries we work in.</h1>
           <p className="page-lede">
             <Hl terms={["we already know"]}>
-              {"A generalist agency has to relearn your market on your budget. We work in a small number of B2B sectors, which means we already know who signs, what they object to and how long the cycle runs — before the first sequence goes out."}
+              {"A generalist agency has to relearn your market on your budget. We work in a small number of B2B sectors, which means we already know who signs, what they object to and how long the cycle runs, before the first sequence goes out."}
             </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
@@ -132,7 +132,7 @@ export default function Industries() {
             <div className="split-body">
               <h2>Specialisation is the difference between outreach and noise.</h2>
               <p>
-                The reason most outbound fails is not the channel — it is that
+                The reason most outbound fails is not the channel. It is that
                 the message could have been sent to anybody. When we already
                 know that a plant head cares about sanctioned load, or that a
                 procurement manager wants your certifications before your

@@ -22,7 +22,7 @@ const OG_IMAGE = {
   url: "/og-image.jpg",
   width: 1200,
   height: 630,
-  alt: "Fastex Media — B2B lead generation that books meetings",
+  alt: "Fastex Media: B2B lead generation that books meetings",
   type: "image/jpeg",
 };
 

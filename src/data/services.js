@@ -18,7 +18,7 @@ export const services = [
     h1: "Performance marketing measured in pipeline, not impressions.",
     metaTitle: "B2B Performance Marketing Agency | Fastex Media",
     metaDescription:
-      "B2B performance marketing on LinkedIn, Google and Meta. Campaigns built around qualified pipeline and cost per booked meeting — not clicks or vanity leads.",
+      "B2B performance marketing on LinkedIn, Google and Meta. Campaigns built around qualified pipeline and cost per booked meeting, not clicks or vanity leads.",
     keywords: [
       "b2b performance marketing agency",
       "linkedin ads agency",
@@ -27,12 +27,12 @@ export const services = [
       "b2b ppc agency",
     ],
     summary:
-      "Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline — not clicks, impressions or vanity leads.",
+      "Paid acquisition on LinkedIn, Google and Meta built around qualified B2B pipeline, not clicks, impressions or vanity leads.",
     detail:
       "B2B buying cycles are long, committee-driven and rarely close on first touch. We structure paid media around that reality: demand capture for in-market accounts, demand generation for the 95% that aren't ready yet, and retargeting that stays present across the whole evaluation window.",
     problem: {
       heading: "Most B2B ad budgets are optimised for the wrong number.",
-      body: "Platforms optimise for what they can see — clicks, form fills, cost per lead. None of those pay salaries. When the reporting stops at lead volume, spend drifts towards the cheapest audiences, which are almost never the accounts worth winning.",
+      body: "Platforms optimise for what they can see: clicks, form fills, cost per lead. None of those pay salaries. When the reporting stops at lead volume, spend drifts towards the cheapest audiences, which are almost never the accounts worth winning.",
       points: [
         "Cost per lead falling while cost per closed deal quietly rises",
         "Budget spent on job titles that cannot approve a purchase",
@@ -50,7 +50,7 @@ export const services = [
     faqs: [
       {
         q: "What budget do we need to start?",
-        a: "Enough to gather signal inside a reasonable window. Below roughly $2,000–2,500 a month in LinkedIn ad spend, data comes in too slowly to optimise against and you are better off putting that money into outbound first. We will tell you which of the two we would spend it on.",
+        a: "Enough to gather signal inside a reasonable window. Below roughly $2,000 to $2,500 a month in LinkedIn ad spend, data comes in too slowly to optimise against and you are better off putting that money into outbound first. We will tell you which of the two we would spend it on.",
       },
       {
         q: "Why report on meetings instead of leads?",
@@ -58,7 +58,7 @@ export const services = [
       },
       {
         q: "Do you run the ads on our accounts or yours?",
-        a: "Yours. You own the ad accounts, the pixel data and the audience lists. If the engagement ends, none of it leaves with us — a policy we hold because the opposite is common enough to be worth stating.",
+        a: "Yours. You own the ad accounts, the pixel data and the audience lists. If the engagement ends, none of it leaves with us, a policy we hold because the opposite is common enough to be worth stating.",
       },
       {
         q: "How long before performance stabilises?",
@@ -90,9 +90,9 @@ export const services = [
       "linkedin personal branding for founders",
     ],
     summary:
-      "Outbound to named decision-makers — researched, sequenced and booked straight into your sales calendar.",
+      "Outbound to named decision-makers, researched, sequenced and booked straight into your sales calendar.",
     detail:
-      "We treat LinkedIn as a database, not a feed. Accounts are defined, contacts are verified, and conversations are opened by a human-sounding sequence built on a relevant reason to reach out. Alongside it, we build founder authority — because in B2B, people buy from the person before they buy from the company.",
+      "We treat LinkedIn as a database, not a feed. Accounts are defined, contacts are verified, and conversations are opened by a human-sounding sequence built on a relevant reason to reach out. Alongside it, we build founder authority, because in B2B, people buy from the person before they buy from the company.",
     problem: {
       heading: "Connection requests are not a pipeline.",
       body: "The default LinkedIn playbook is to connect with everyone, pitch on acceptance and measure success in connection count. Senior buyers have seen that message several hundred times. It gets ignored, and it costs you the account for the next twelve months.",
@@ -114,7 +114,7 @@ export const services = [
     faqs: [
       {
         q: "Do you post from our founder's profile or a company page?",
-        a: "Both, with different jobs. The founder profile carries point of view and earns the reach — personal profiles consistently out-perform company pages. The company page carries proof, case studies and product substance for the buyer who checks you out afterwards.",
+        a: "Both, with different jobs. The founder profile carries point of view and earns the reach. Personal profiles consistently out-perform company pages. The company page carries proof, case studies and product substance for the buyer who checks you out afterwards.",
       },
       {
         q: "Is automated outreach against LinkedIn's terms?",
@@ -122,11 +122,11 @@ export const services = [
       },
       {
         q: "Who writes the founder's posts?",
-        a: "We do, from structured interviews with your founder, and it stays in their voice. Nothing publishes without approval. The raw material is what they already know — the posts that work are the opinions they have on a Tuesday, written down properly.",
+        a: "We do, from structured interviews with your founder, and it stays in their voice. Nothing publishes without approval. The raw material is what they already know: the posts that work are the opinions they have on a Tuesday, written down properly.",
       },
       {
         q: "What reply rate should we expect?",
-        a: "On a well-researched list with a genuine trigger, healthy is 15–25% reply and roughly a third of those converting to a conversation. Anyone quoting far above that is either counting auto-replies or working a very small, very warm list.",
+        a: "On a well-researched list with a genuine trigger, healthy is 15 to 25% reply and roughly a third of those converting to a conversation. Anyone quoting far above that is either counting auto-replies or working a very small, very warm list.",
       },
     ],
   },
@@ -155,7 +155,7 @@ export const services = [
     summary:
       "Organic presence that makes your company the obvious choice when a business buyer finally starts shortlisting vendors.",
     detail:
-      "Before a B2B deal starts, the buying committee has already read your LinkedIn page, checked your last twelve posts and formed an opinion. We build the content engine that shapes that opinion — proof, point of view and category education, published consistently.",
+      "Before a B2B deal starts, the buying committee has already read your LinkedIn page, checked your last twelve posts and formed an opinion. We build the content engine that shapes that opinion: proof, point of view and category education, published consistently.",
     problem: {
       heading: "Your buyer checks you out long before they contact you.",
       body: "By the time an enquiry arrives, the committee has already looked you up. If the last post is four months old and the feed is festival greetings, you have answered a question they were quietly asking. Most B2B social accounts publish often and say nothing.",
@@ -181,7 +181,7 @@ export const services = [
       },
       {
         q: "How do you measure something this indirect?",
-        a: "Imperfectly, and we say so. We track reach, profile visits, follower quality and inbound conversations that cite content — plus a question on your discovery calls asking how they found you. Anyone claiming precise revenue attribution for organic social is guessing with more confidence than the data supports.",
+        a: "Imperfectly, and we say so. We track reach, profile visits, follower quality and inbound conversations that cite content, plus a question on your discovery calls asking how they found you. Anyone claiming precise revenue attribution for organic social is guessing with more confidence than the data supports.",
       },
       {
         q: "Do we need to be on every platform?",
@@ -218,10 +218,10 @@ export const services = [
     summary:
       "Official WhatsApp Business API journeys for B2B enquiry response, distributor networks and pipeline follow-up.",
     detail:
-      "In most B2B markets — manufacturing, industrial, logistics, real estate, professional services — WhatsApp is where the deal actually moves. We set it up properly: verified business account, approved templates, and automated follow-up that never lets an enquiry go cold.",
+      "In most B2B markets (manufacturing, industrial, logistics, real estate, professional services), WhatsApp is where the deal actually moves. We set it up properly: verified business account, approved templates, and automated follow-up that never lets an enquiry go cold.",
     problem: {
       heading: "The enquiry came in on WhatsApp and nobody followed up.",
-      body: "Most B2B teams already run WhatsApp — from personal numbers, with no templates, no routing and no record. Deals sit unanswered over a weekend, follow-up depends on whether a salesperson remembers, and when someone leaves, the conversation history leaves with them.",
+      body: "Most B2B teams already run WhatsApp, from personal numbers, with no templates, no routing and no record. Deals sit unanswered over a weekend, follow-up depends on whether a salesperson remembers, and when someone leaves, the conversation history leaves with them.",
       points: [
         "Enquiries landing on personal numbers with no visibility for the team",
         "Response times measured in days, when the buyer expected minutes",
@@ -244,11 +244,11 @@ export const services = [
       },
       {
         q: "What does WhatsApp itself charge?",
-        a: "Meta bills per conversation, and rates vary by country and category. It is billed to your account at cost — we do not mark it up. For most B2B clients it is a small line next to the value of one recovered deal.",
+        a: "Meta bills per conversation, and rates vary by country and category. It is billed to your account at cost. We do not mark it up. For most B2B clients it is a small line next to the value of one recovered deal.",
       },
       {
         q: "Can it connect to our CRM?",
-        a: "Yes. Conversations sync so your team sees history against the contact record, and replies route to the right owner. If you have no CRM, we will say so plainly — this works far better with one, and we can help you pick a simple one.",
+        a: "Yes. Conversations sync so your team sees history against the contact record, and replies route to the right owner. If you have no CRM, we will say so plainly: this works far better with one, and we can help you pick a simple one.",
       },
       {
         q: "Will this replace our sales calls?",
@@ -282,7 +282,7 @@ export const services = [
     summary:
       "Cold outbound infrastructure and lifecycle email that reaches the inbox and earns replies from senior buyers.",
     detail:
-      "Deliverability is the whole game. We build the sending infrastructure first — domains, authentication, warm-up, volume discipline — then layer in research-led copy that reads like it was written for one company, because it was.",
+      "Deliverability is the whole game. We build the sending infrastructure first (domains, authentication, warm-up, volume discipline), then layer in research-led copy that reads like it was written for one company, because it was.",
     problem: {
       heading: "Your email is not being ignored. It is not being delivered.",
       body: "Most failed cold email is a deliverability problem wearing a copywriting costume. Teams send high volume from the primary domain, skip authentication, buy an unverified list, and conclude that email is dead. The messages went to spam, and the domain reputation went with them.",
@@ -304,11 +304,11 @@ export const services = [
     faqs: [
       {
         q: "Will this put our main domain at risk?",
-        a: "Not if it is done properly. We never send volume from your primary domain — we buy and configure separate sending domains, authenticate them, warm them gradually and cap daily volume per mailbox. Your corporate domain keeps its reputation for the mail your team actually sends.",
+        a: "Not if it is done properly. We never send volume from your primary domain. We buy and configure separate sending domains, authenticate them, warm them gradually and cap daily volume per mailbox. Your corporate domain keeps its reputation for the mail your team actually sends.",
       },
       {
         q: "How soon can sending start?",
-        a: "Infrastructure and warm-up take two to three weeks before meaningful volume. That wait is the thing that makes the channel work — sending hard from a cold domain lands you in spam permanently, and no copy recovers from that.",
+        a: "Infrastructure and warm-up take two to three weeks before meaningful volume. That wait is the thing that makes the channel work: sending hard from a cold domain lands you in spam permanently, and no copy recovers from that.",
       },
       {
         q: "Where does the data come from?",
@@ -316,7 +316,7 @@ export const services = [
       },
       {
         q: "Is cold email legal?",
-        a: "B2B cold email to a business address is permitted in most markets, with conditions. GDPR (EU/UK), CAN-SPAM (US), CASL (Canada) and the Australian Spam Act all require clear sender identification, a real physical address and a working opt-out — we include all three, and we segment sending by jurisdiction. CASL in particular needs consent for most Canadian recipients, so we scope that separately. Tell us which markets you sell into and we will confirm what applies.",
+        a: "B2B cold email to a business address is permitted in most markets, with conditions. GDPR (EU/UK), CAN-SPAM (US), CASL (Canada) and the Australian Spam Act all require clear sender identification, a real physical address and a working opt-out. We include all three, and we segment sending by jurisdiction. CASL in particular needs consent for most Canadian recipients, so we scope that separately. Tell us which markets you sell into and we will confirm what applies.",
       },
     ],
   },

@@ -46,7 +46,7 @@ function articleText(html) {
 }
 
 const summary =
-  "Fastex Media is a B2B-only lead generation agency. We build multi-channel outbound systems — performance marketing, LinkedIn, social media, WhatsApp and cold email — that book qualified sales meetings for business-to-business companies worldwide.";
+  "Fastex Media is a B2B-only lead generation agency. We build multi-channel outbound systems: performance marketing, LinkedIn, social media, WhatsApp and cold email: that book qualified sales meetings for business-to-business companies worldwide.";
 
 /* ------------------------------------------------------------------ */
 /* llms.txt — concise index                                            */
@@ -56,7 +56,7 @@ const llms = `# Fastex Media
 
 > ${summary}
 
-Founded ${site.founded} by ${founder.name} (${founder.role}). B2B only — we do
+Founded ${site.founded} by ${founder.name} (${founder.role}). B2B only: we do
 not run direct-to-consumer campaigns. We work with clients worldwide and report
 on qualified meetings booked rather than impressions or lead counts.
 
@@ -108,7 +108,7 @@ ${publishedPosts()
 const faqBlock = (faqs) =>
   faqs.map((f) => `**Q: ${f.q}**\n\nA: ${f.a}`).join("\n\n");
 
-const full = `# Fastex Media — Full Site Content
+const full = `# Fastex Media: Full Site Content
 
 > ${summary}
 
@@ -121,7 +121,7 @@ Area served: Worldwide
 
 ## Results to date
 
-${portfolioStats.map((s) => `- ${s.value} — ${s.label}`).join("\n")}
+${portfolioStats.map((s) => `- ${s.value}: ${s.label}`).join("\n")}
 
 ## How we work
 
@@ -181,7 +181,7 @@ ${i.problem.points.map((p) => `- ${p}`).join("\n")}
 
 ### What we run for this sector
 
-${i.services.map((s) => `**${s.title}** — ${s.copy}`).join("\n\n")}
+${i.services.map((s) => `**${s.title}**: ${s.copy}`).join("\n\n")}
 
 ### What you get
 
@@ -199,7 +199,7 @@ ${faqBlock(i.faqs)}`
 
 ${featuredCases
   .map(
-    (c) => `## ${c.client} — ${c.sector}
+    (c) => `## ${c.client}: ${c.sector}
 
 ${c.service}
 
@@ -218,7 +218,7 @@ Metrics: ${c.metrics.map((m) => `${m.value} ${m.label}`).join(", ")}`
 ${clients
   .map(
     (c) =>
-      `- **${c.name}**${c.detail ? ` (${c.detail})` : ""} — ${c.industry} · ${c.services
+      `- **${c.name}**${c.detail ? ` (${c.detail})` : ""}: ${c.industry} · ${c.services
         .map((k) => clientServices[k])
         .join(" + ")}. ${c.summary}${c.tags ? ` [${c.tags.join(", ")}]` : ""}`
   )

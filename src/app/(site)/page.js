@@ -19,7 +19,7 @@ const process = [
   {
     num: "02",
     title: "Build the system",
-    copy: "Multi-channel sequences, deliverability infrastructure and deep personalization — assembled as one machine.",
+    copy: "Multi-channel sequences, deliverability infrastructure and deep personalization, assembled as one machine.",
     highlights: ["assembled as one machine"],
   },
   {
@@ -96,7 +96,7 @@ export default function Home() {
             </h2>
             <p className="about-statement">
               <Hl terms={["qualified meetings"]}>
-                {"A B2B lead generation agency. We build the outbound systems that put qualified meetings in your sales calendar — every week, on purpose, in the sectors we know."}
+                {"A B2B lead generation agency. We build the outbound systems that put qualified meetings in your sales calendar, every week, on purpose, in the sectors we know."}
               </Hl>
             </p>
             <p className="about-also">

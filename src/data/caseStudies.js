@@ -28,7 +28,7 @@ export const featuredCases = [
     solution:
       "Created a consistent content strategy, refined personal positioning, and built a value-led posting framework.",
     outcome:
-      "Increased reach, improved engagement, and attracted high-quality industry connections — strengthening both founder & brand authority.",
+      "Increased reach, improved engagement, and attracted high-quality industry connections, strengthening both founder & brand authority.",
     metrics: [
       { value: "↑ 5x", label: "Revenue B2B" },
       { value: "Daily", label: "Campaigns" },

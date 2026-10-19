@@ -9,7 +9,10 @@ import ClientMark from "@/components/ClientMark";
  * opposite directions.
  *
  * Motion is driven here rather than by a CSS loop so it can feel physical:
- *  - hovering a row eases it to a stop (and back), instead of freezing it;
+ *  - a lens: each card grows to full size as it passes the centre of the
+ *    screen and eases back down towards the edges, so the eye has a focus;
+ *  - hovering a row eases it to a stop (and back), instead of freezing it,
+ *    and a soft glow follows the pointer across the card;
  *  - scrolling the page gives both rows a brief push in their own direction,
  *    which settles back to cruising speed;
  *  - nothing runs while the band is off screen.
@@ -35,6 +38,13 @@ function Card({ client, index }) {
       <span className="cm-name">{client.name}</span>
       <span className="cm-meta">
         {client.kind === "founder" ? "Founder brand" : client.industry}
+      </span>
+      <span className="cm-tags">
+        {client.tags.slice(0, 2).map((t) => (
+          <span key={t} className="cm-tag">
+            {t}
+          </span>
+        ))}
       </span>
     </li>
   );
@@ -76,9 +86,16 @@ export default function ClientMarquee() {
       width: 0,
     }));
 
+    // Card centres within their row, measured once (and on resize) so the
+    // lens never has to read layout during a frame.
     const measure = () => {
       rows.forEach((r) => {
         r.width = r.el.firstElementChild.getBoundingClientRect().width;
+        r.cards = [...r.el.querySelectorAll(".cm-card")].map((card) => ({
+          card,
+          mid: card.offsetLeft + card.offsetWidth / 2,
+          s: -1,
+        }));
         // A row moving right starts one copy to the left, so it never shows
         // an empty edge.
         if (r.dir === 1 && r.x === 0) r.x = -r.width;
@@ -95,6 +112,16 @@ export default function ClientMarquee() {
       r.el.addEventListener("pointerleave", off);
       return [on, off];
     });
+
+    // Pointer glow: the card under the cursor gets the pointer position.
+    const onMove = (e) => {
+      const card = e.target.closest(".cm-card");
+      if (!card) return;
+      const b = card.getBoundingClientRect();
+      card.style.setProperty("--mx", `${e.clientX - b.left}px`);
+      card.style.setProperty("--my", `${e.clientY - b.top}px`);
+    };
+    root.addEventListener("pointermove", onMove);
 
     let boost = 0;
     let lastY = window.scrollY;
@@ -120,6 +147,18 @@ export default function ClientMarquee() {
         if (r.x <= -r.width) r.x += r.width;
         if (r.x > 0) r.x -= r.width;
         r.el.style.transform = `translate3d(${r.x.toFixed(2)}px,0,0)`;
+
+        // Lens. Distance from the viewport centre, 0 at the middle and 1 at
+        // the edges, eased so the middle third stays at full size.
+        const half = window.innerWidth / 2;
+        r.cards.forEach((c) => {
+          const d = Math.min(Math.abs(c.mid + r.x - half) / half, 1.2);
+          const s = 1 - 0.09 * Math.min(d * d, 1);
+          if (Math.abs(s - c.s) > 0.001) {
+            c.s = s;
+            c.card.style.scale = s.toFixed(3);
+          }
+        });
       });
 
       raf = requestAnimationFrame(tick);
@@ -143,6 +182,7 @@ export default function ClientMarquee() {
       io.disconnect();
       ro.disconnect();
       window.removeEventListener("scroll", onScroll);
+      root.removeEventListener("pointermove", onMove);
       rows.forEach((r, i) => {
         r.el.removeEventListener("pointerenter", handlers[i][0]);
         r.el.removeEventListener("pointerleave", handlers[i][1]);

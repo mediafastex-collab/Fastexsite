@@ -8,7 +8,7 @@ import BookCall from "@/components/BookCall";
 export const metadata = {
   title: "B2B Marketing Services | Fastex Media",
   description:
-    "Performance marketing, LinkedIn lead generation, social media, WhatsApp and cold email — five B2B channels run as one system that books qualified meetings.",
+    "Performance marketing, LinkedIn lead generation, social media, WhatsApp and cold email: five B2B channels run as one system that books qualified meetings.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "B2B Marketing Services | Fastex Media",
@@ -72,7 +72,7 @@ export default function Services() {
           <h1>Six services. Run as one system.</h1>
           <p className="page-lede">
             <Hl terms={["one machine", "qualified meetings booked"]}>
-              {"Channels fail in isolation. A reply on LinkedIn that nobody follows up on WhatsApp is a lost deal; an ad budget with no outbound behind it is a rented audience. We run them as one machine, and report on the only number that matters — qualified meetings booked."}
+              {"Channels fail in isolation. A reply on LinkedIn that nobody follows up on WhatsApp is a lost deal; an ad budget with no outbound behind it is a rented audience. We run them as one machine, and report on the only number that matters: qualified meetings booked."}
             </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>

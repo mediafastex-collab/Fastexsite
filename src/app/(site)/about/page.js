@@ -152,7 +152,7 @@ export default function About() {
                 happened to know.
               </p>
               <p>
-                We built the agency around the part nobody wanted to own — the
+                We built the agency around the part nobody wanted to own: the
                 unglamorous infrastructure. Verified data, sending domains,
                 deliverability, multi-channel sequencing and follow-up
                 discipline. Done properly, that machinery produces qualified
@@ -162,7 +162,7 @@ export default function About() {
               <p>
                 Today we run performance marketing, LinkedIn, social media,
                 WhatsApp and cold email as a single system for B2B companies in
-                five sectors — IT and software, solar and renewable energy,
+                five sectors: IT and software, solar and renewable energy,
                 manufacturing, educational institutes and commercial real
                 estate. We work with clients across North America, Europe, the
                 Middle East, Asia-Pacific and India, and we run campaigns in the
@@ -196,7 +196,7 @@ export default function About() {
               <div className="founder-role">{founder.role}</div>
               <p>
                 Aagam leads strategy and client delivery at Fastex Media. He
-                works directly on every engagement — the ICP research, the
+                works directly on every engagement: the ICP research, the
                 messaging and the first sequences all get his hands on them
                 before anything goes out under your name.
               </p>

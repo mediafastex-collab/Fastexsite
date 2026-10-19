@@ -24,6 +24,9 @@
  * channel the work ran on; a lead generation client without it is shown on
  * /work but not claimed for any one channel.
  *
+ * Every client carries `tags`: the work we did, from the sheet's service and
+ * outcome columns. Clients already on /work keep the tags published there.
+ *
  * Summaries for clients already on /work keep their published copy; the rest
  * are written from the sheet's industry, service and outcome columns, with no
  * figures the sheet does not give.
@@ -49,6 +52,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a renewable energy brand, built to bring the cost per lead down.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "QuickEst",
@@ -65,7 +69,7 @@ export const clients = [
     tags: ["↑ Reply Rates", "Meetings Booked", "Automated Webinars"],
   },
   {
-    name: "Krupa",
+    name: "Krupa Dalal",
     channels: ["personal-branding"],
     logo: "krupa.webp",
     w: 320,
@@ -75,6 +79,7 @@ export const clients = [
     services: ["personal-branding"],
     summary:
       "A personal brand on LinkedIn that connects the founder with the right audience and sharpens their positioning.",
+    tags: ["LinkedIn Personal Brand", "Founder Positioning", "Right Audience"],
   },
   {
     name: "Tatvamasi Labs",
@@ -115,6 +120,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a SaaS company, built to keep the cost per lead low.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Jashom Technologies",
@@ -126,6 +132,7 @@ export const clients = [
     industry: "IT & SaaS",
     services: ["gtm"],
     summary: "Go-to-market planning and strategy for a technology company.",
+    tags: ["GTM Planning", "GTM Strategy"],
   },
   {
     name: "Kriya Doshi",
@@ -139,6 +146,7 @@ export const clients = [
     services: ["personal-branding"],
     summary:
       "A personal brand on LinkedIn for the founder of Thinkyoung, connecting them with the right audience.",
+    tags: ["LinkedIn Personal Brand", "Founder Positioning", "Right Audience"],
   },
   {
     name: "Carsbeat",
@@ -152,6 +160,7 @@ export const clients = [
     services: ["social"],
     summary:
       "A social presence for an automotive brand, with engagement driven through paid social.",
+    tags: ["Social Presence", "Paid Social", "Engagement"],
   },
   {
     name: "Macwin Solar",
@@ -164,6 +173,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a solar energy brand at a lower cost per lead.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Astronuts",
@@ -191,6 +201,7 @@ export const clients = [
     services: ["lead-generation", "social"],
     summary:
       "Lead generation at a lower cost per lead, alongside a social media presence built from the ground up.",
+    tags: ["Lead Generation", "Social Media", "Lower Cost per Lead"],
   },
   {
     name: "Institute of Design & Technology",
@@ -203,7 +214,7 @@ export const clients = [
     industry: "Education",
     services: ["lead-generation"],
     summary:
-      "Official WhatsApp marketing automation — sequences, personalised reply flows, structured nurturing for admissions.",
+      "Official WhatsApp marketing automation: sequences, personalised reply flows, structured nurturing for admissions.",
     tags: ["Instant Response", "↑ Engagement", "↑ Admissions"],
   },
   {
@@ -217,6 +228,7 @@ export const clients = [
     services: ["personal-branding"],
     summary:
       "A founder's personal brand on LinkedIn, positioned to reach and connect with the right audience.",
+    tags: ["LinkedIn Personal Brand", "Founder Positioning", "Right Audience"],
   },
   {
     name: "Urgent Cad",
@@ -229,6 +241,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A steady lead generation pipeline for a services business, built for quality at a lower cost.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "The Creative Co",
@@ -255,6 +268,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "Lead generation for an IT and multimedia agency, focused on lead quality at a lower cost.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Lifeplus Laboratory",
@@ -267,6 +281,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a pathology laboratory at a lower cost per lead.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Fastwhistle",
@@ -279,6 +294,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "Lead generation for a logistics company, built for a steady flow of quality leads at a lower cost.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Macj",
@@ -291,7 +307,7 @@ export const clients = [
     industry: "Real Estate",
     services: ["lead-generation"],
     summary:
-      "Meta Ads lead generation — targeted campaigns, refined messaging, and streamlined lead-flow for faster homebuyer follow-ups.",
+      "Meta Ads lead generation: targeted campaigns, refined messaging, and streamlined lead-flow for faster homebuyer follow-ups.",
     tags: ["↓ 60% CPL", "↑ 3x Volume", "Daily Pipeline"],
   },
   {
@@ -305,7 +321,7 @@ export const clients = [
     industry: "Sustainable Packaging",
     services: ["lead-generation"],
     summary:
-      "Performance marketing engine — high-quality lead generation for eco-cutlery distribution.",
+      "Performance marketing engine: high-quality lead generation for eco-cutlery distribution.",
     tags: ["High-Quality Leads", "ROAS Optimised"],
   },
   {
@@ -319,6 +335,7 @@ export const clients = [
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a real estate brand at a lower cost per lead.",
+    tags: ["Lead Pipeline", "Quality Leads", "Lower Cost per Lead"],
   },
   {
     name: "Heaven Designs",
@@ -331,7 +348,7 @@ export const clients = [
     industry: "Renewable Energy",
     services: ["lead-generation"],
     summary:
-      "Daily Email & WhatsApp campaigns with full content stack — high-quality solar lead generation.",
+      "Daily Email & WhatsApp campaigns with full content stack, high-quality solar lead generation.",
     tags: ["High-Quality Leads", "Daily Campaigns"],
   },
   {
@@ -346,6 +363,7 @@ export const clients = [
     services: ["lead-generation", "social"],
     summary:
       "Lead generation at a lower cost per lead, plus LinkedIn company page management that builds their presence.",
+    tags: ["Lead Generation", "LinkedIn Page Management", "Company Presence"],
   },
 ];
 

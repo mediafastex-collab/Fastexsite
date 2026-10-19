@@ -3876,6 +3876,7 @@ summary:focus-visible,
 }
 
 .cm-row {
+  position: relative; /* card offsets are measured against the row */
   display: flex;
   width: max-content;
   animation: cm-scroll 100s linear infinite;
@@ -3904,9 +3905,11 @@ summary:focus-visible,
 }
 
 .cm-card {
+  position: relative;
+  overflow: hidden;
   flex: none;
-  width: 13.5rem;
-  height: 10rem;
+  width: 14.5rem;
+  height: 13.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4130,8 +4133,8 @@ summary:focus-visible,
   }
 
   .cm-card {
-    width: 11.5rem;
-    height: 9.5rem;
+    width: 12.5rem;
+    height: 13.5rem;
   }
 
   .cm-practices {
@@ -4371,4 +4374,64 @@ p mark.hl {
     transition: none;
     background-size: 100% 0.38em;
   }
+}
+
+/* ── Client tags: what we did, on every client card ─────── */
+.cm-tags,
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.7rem;
+}
+
+.cm-tag,
+.cs-tag {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: var(--text-muted);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  transition: border-color 0.35s var(--ease-out), color 0.35s var(--ease-out);
+}
+
+.cm-card:hover .cm-tag,
+.cs-card:hover .cs-tag {
+  color: var(--accent-color);
+  border-color: rgba(255, 102, 0, 0.35);
+}
+
+/* ── Marquee: lens and pointer glow ─────────────────────── */
+/* `scale` is set per frame by ClientMarquee; easing it here would lag. */
+.cm-js .cm-card {
+  transform-origin: 50% 60%;
+}
+
+/* A soft brand-orange light that follows the pointer across the card. */
+.cm-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    14rem circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255, 102, 0, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out);
+  pointer-events: none;
+}
+
+.cm-card:hover::before {
+  opacity: 1;
+}
+
+.cm-card > * {
+  position: relative; /* above the glow */
 }

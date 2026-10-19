@@ -311,7 +311,7 @@ export const plans = [
           },
           {
             label: "Content-to-outreach topic alignment",
-            values: ["—", "Included", "Included", "Included"],
+            values: ["Not included", "Included", "Included", "Included"],
           },
           {
             label: "Engagement activity",
