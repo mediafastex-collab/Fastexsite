@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { services, serviceBySlug } from "@/data/services";
 import { industries, engagement } from "@/data/industries";
 import BookCall from "@/components/BookCall";
+import Hl from "@/components/Hl";
+import ClientShowcase from "@/components/ClientShowcase";
+import { clientsForService } from "@/data/clients";
 
 const SITE = "https://www.fastexmedia.com";
 
@@ -107,7 +110,9 @@ export default async function ServicePage({ params }) {
           </div>
           <div className="eyebrow">Service {service.num}</div>
           <h1>{service.h1}</h1>
-          <p className="page-lede">{service.summary}</p>
+          <p className="page-lede">
+            <Hl terms={service.highlights}>{service.summary}</Hl>
+          </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
@@ -126,7 +131,9 @@ export default async function ServicePage({ params }) {
             </div>
             <div className="split-body">
               <h2>{service.problem.heading}</h2>
-              <p>{service.problem.body}</p>
+              <p>
+                <Hl terms={service.highlights}>{service.problem.body}</Hl>
+              </p>
               <ul className="problem-list">
                 {service.problem.points.map((point) => (
                   <li key={point}>{point}</li>
@@ -149,7 +156,9 @@ export default async function ServicePage({ params }) {
             </div>
             <div className="split-body">
               <h2>How we run {service.title}.</h2>
-              <p>{service.detail}</p>
+              <p>
+                <Hl terms={service.highlights}>{service.detail}</Hl>
+              </p>
             </div>
           </div>
         </div>
@@ -176,6 +185,18 @@ export default async function ServicePage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* ---------- CLIENTS ----------
+          Only clients our published copy ties to this service. */}
+      <ClientShowcase
+        clients={clientsForService(service.slug)}
+        label="Brands we've worked with"
+        heading={
+          service.slug === "personal-branding"
+            ? "Founders we've built brands for."
+            : `Brands we've run ${service.title} for.`
+        }
+      />
 
       {/* ---------- PROCESS ---------- */}
       <section

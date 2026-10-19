@@ -9,6 +9,10 @@
 export const industries = [
   {
     slug: "it-software",
+    highlights: [
+      "CTOs, IT directors and heads of engineering",
+      "meetings on the calendar",
+    ],
     icon: "💻",
     name: "IT & Software",
     short: "IT & Software",
@@ -98,6 +102,9 @@ export const industries = [
 
   {
     slug: "solar-renewable",
+    highlights: [
+      "facility managers, plant heads and CFOs",
+    ],
     icon: "☀️",
     name: "Solar & Renewable Energy",
     short: "Solar & Renewable",
@@ -187,6 +194,9 @@ export const industries = [
 
   {
     slug: "manufacturing",
+    highlights: [
+      "procurement heads, sourcing managers and distributors",
+    ],
     icon: "🏭",
     name: "Manufacturing",
     short: "Manufacturing",
@@ -276,6 +286,9 @@ export const industries = [
 
   {
     slug: "education",
+    highlights: [
+      "the buyer is an organisation",
+    ],
     icon: "🎓",
     name: "Educational Institutes",
     short: "Education",
@@ -365,6 +378,10 @@ export const industries = [
 
   {
     slug: "real-estate",
+    highlights: [
+      "direct pipelines",
+      "corporate tenants, channel partners, institutional investors and bulk buyers",
+    ],
     icon: "🏢",
     name: "Real Estate",
     short: "Real Estate",

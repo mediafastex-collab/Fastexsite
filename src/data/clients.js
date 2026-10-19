@@ -19,6 +19,11 @@
  * how dark it is (measured from the files). It lets a bold, solid wordmark
  * and a fine, airy one come out looking the same size.
  *
+ * `channels` lists the service pages (src/data/services.js slugs) a client
+ * appears on. It is filled in only where our published copy says which
+ * channel the work ran on; a lead generation client without it is shown on
+ * /work but not claimed for any one channel.
+ *
  * Summaries for clients already on /work keep their published copy; the rest
  * are written from the sheet's industry, service and outcome columns, with no
  * figures the sheet does not give.
@@ -47,12 +52,13 @@ export const clients = [
   },
   {
     name: "QuickEst",
+    channels: ["linkedin-marketing", "email-marketing", "whatsapp-marketing"],
     logo: "quickest.webp",
     ink: 0.12,
     w: 416,
     h: 146,
     kind: "mark",
-    industry: "SaaS / IT",
+    industry: "IT & SaaS",
     services: ["lead-generation"],
     summary:
       "LinkedIn outreach engine with refined ICP messaging and follow-up sequences, plus webinar automations, Email & WhatsApp setup and daily campaigns.",
@@ -60,23 +66,25 @@ export const clients = [
   },
   {
     name: "Krupa",
+    channels: ["personal-branding"],
     logo: "krupa.webp",
     w: 320,
     h: 320,
     kind: "founder",
-    industry: "Founder",
+    industry: "Founder Brands",
     services: ["personal-branding"],
     summary:
       "A personal brand on LinkedIn that connects the founder with the right audience and sharpens their positioning.",
   },
   {
     name: "Tatvamasi Labs",
+    channels: ["email-marketing", "whatsapp-marketing"],
     logo: "tatvamasi-labs.webp",
     ink: 0.12,
     w: 480,
     h: 168,
     kind: "mark",
-    industry: "SaaS / IT",
+    industry: "IT & SaaS",
     services: ["lead-generation"],
     summary:
       "Email + WhatsApp marketing automation, daily campaigns, content & copywriting.",
@@ -84,6 +92,7 @@ export const clients = [
   },
   {
     name: "Qbits Energy",
+    channels: ["email-marketing", "whatsapp-marketing"],
     logo: "qbits.webp",
     ink: 0.31,
     w: 410,
@@ -102,7 +111,7 @@ export const clients = [
     w: 160,
     h: 32,
     kind: "mark",
-    industry: "SaaS / IT",
+    industry: "IT & SaaS",
     services: ["lead-generation"],
     summary:
       "A quality lead generation pipeline for a SaaS company, built to keep the cost per lead low.",
@@ -114,24 +123,26 @@ export const clients = [
     w: 465,
     h: 450,
     kind: "mark",
-    industry: "SaaS / IT",
+    industry: "IT & SaaS",
     services: ["gtm"],
     summary: "Go-to-market planning and strategy for a technology company.",
   },
   {
     name: "Kriya Doshi",
+    channels: ["personal-branding"],
     detail: "Thinkyoung",
     logo: "kriya-doshi.webp",
     w: 320,
     h: 320,
     kind: "founder",
-    industry: "Founder",
+    industry: "Founder Brands",
     services: ["personal-branding"],
     summary:
       "A personal brand on LinkedIn for the founder of Thinkyoung, connecting them with the right audience.",
   },
   {
     name: "Carsbeat",
+    channels: ["social-media-marketing"],
     logo: "carsbeat.webp",
     ink: 0.22,
     w: 315,
@@ -156,12 +167,13 @@ export const clients = [
   },
   {
     name: "Astronuts",
+    channels: ["linkedin-marketing"],
     logo: "astronuts.webp",
     ink: 0.14,
     w: 391,
     h: 176,
     kind: "mark",
-    industry: "B2B Services",
+    industry: "Agencies & Services",
     services: ["lead-generation"],
     summary:
       "LinkedIn lead generation, target-audience outreach, meeting bookings, content & copywriting.",
@@ -169,18 +181,20 @@ export const clients = [
   },
   {
     name: "Reformiqo",
+    channels: ["social-media-marketing"],
     logo: "reformiqo.webp",
     ink: 0.49,
     w: 175,
     h: 176,
     kind: "mark",
-    industry: "IT Services",
+    industry: "IT & SaaS",
     services: ["lead-generation", "social"],
     summary:
       "Lead generation at a lower cost per lead, alongside a social media presence built from the ground up.",
   },
   {
     name: "Institute of Design & Technology",
+    channels: ["whatsapp-marketing"],
     logo: "idt.webp",
     ink: 0.17,
     w: 288,
@@ -194,11 +208,12 @@ export const clients = [
   },
   {
     name: "Keyur Rakholiya",
+    channels: ["personal-branding"],
     logo: "keyur-rakholiya.webp",
     w: 320,
     h: 320,
     kind: "founder",
-    industry: "Founder",
+    industry: "Founder Brands",
     services: ["personal-branding"],
     summary:
       "A founder's personal brand on LinkedIn, positioned to reach and connect with the right audience.",
@@ -210,19 +225,20 @@ export const clients = [
     w: 78,
     h: 96,
     kind: "mark",
-    industry: "B2B Services",
+    industry: "Agencies & Services",
     services: ["lead-generation"],
     summary:
       "A steady lead generation pipeline for a services business, built for quality at a lower cost.",
   },
   {
     name: "The Creative Co",
+    channels: ["linkedin-marketing"],
     logo: "the-creative-co.webp",
     ink: 0.55,
     w: 176,
     h: 176,
     kind: "tile",
-    industry: "Marketing Agency",
+    industry: "Agencies & Services",
     services: ["lead-generation"],
     summary:
       "LinkedIn outreach engine, ICP targeting, meetings booked through high-quality conversations.",
@@ -235,7 +251,7 @@ export const clients = [
     w: 349,
     h: 92,
     kind: "mark",
-    industry: "Marketing Agency",
+    industry: "Agencies & Services",
     services: ["lead-generation"],
     summary:
       "Lead generation for an IT and multimedia agency, focused on lead quality at a lower cost.",
@@ -266,6 +282,7 @@ export const clients = [
   },
   {
     name: "Macj",
+    channels: ["performance-marketing"],
     logo: "macj.webp",
     ink: 0.15,
     w: 459,
@@ -279,6 +296,7 @@ export const clients = [
   },
   {
     name: "The Bio Cutlery",
+    channels: ["performance-marketing"],
     logo: "the-bio-cutlery.webp",
     ink: 0.35,
     w: 176,
@@ -304,6 +322,7 @@ export const clients = [
   },
   {
     name: "Heaven Designs",
+    channels: ["email-marketing", "whatsapp-marketing"],
     logo: "heaven-designs.webp",
     ink: 0.14,
     w: 305,
@@ -317,12 +336,13 @@ export const clients = [
   },
   {
     name: "Skandrix",
+    channels: ["social-media-marketing"],
     logo: "skandrix.webp",
     ink: 0.33,
     w: 220,
     h: 47,
     kind: "mark",
-    industry: "IT Services",
+    industry: "IT & SaaS",
     services: ["lead-generation", "social"],
     summary:
       "Lead generation at a lower cost per lead, plus LinkedIn company page management that builds their presence.",
@@ -331,6 +351,33 @@ export const clients = [
 
 export const founders = clients.filter((c) => c.kind === "founder");
 export const brands = clients.filter((c) => c.kind !== "founder");
+
+/** Industries for the /work filter, most clients first. */
+export const clientIndustries = [...new Set(clients.map((c) => c.industry))].sort(
+  (a, b) =>
+    clients.filter((c) => c.industry === b).length -
+    clients.filter((c) => c.industry === a).length
+);
+
+/** Which client industry each /industries page shows. */
+const industryPages = {
+  "it-software": "IT & SaaS",
+  "solar-renewable": "Renewable Energy",
+  "real-estate": "Real Estate",
+  education: "Education",
+};
+
+export const clientsForIndustry = (slug) =>
+  clients.filter((c) => c.industry === industryPages[slug]);
+
+export const clientsForService = (slug) =>
+  clients.filter((c) => c.channels?.includes(slug));
+
+/**
+ * Client counts said the way we say them: "20+", never "21". Rounds down to
+ * the nearest ten from ten upwards, so the claim stays true as the list grows.
+ */
+export const roughly = (n) => (n >= 10 ? `${Math.floor(n / 10) * 10}+` : `${n}+`);
 
 /**
  * Sizes every logo to the same visual weight inside the same box.

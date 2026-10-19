@@ -4,7 +4,8 @@ import {
   featuredCases,
   testimonials,
 } from "@/data/caseStudies";
-import { clients } from "@/data/clients";
+import { clients, roughly } from "@/data/clients";
+import Hl from "@/components/Hl";
 import ClientGrid from "@/components/ClientGrid";
 import ClientMark from "@/components/ClientMark";
 import { site } from "@/data/site";
@@ -69,8 +70,9 @@ export default function Work() {
           <div className="section-label">Featured portfolio</div>
           <h1>Results that speak.</h1>
           <p className="page-lede">
-            Real campaigns, real outcomes. Here&apos;s what we&apos;ve built for
-            brands like yours.
+            <Hl terms={["Real campaigns, real outcomes."]}>
+              {"Real campaigns, real outcomes. Here's what we've built for brands like yours."}
+            </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
@@ -162,8 +164,9 @@ export default function Work() {
             <div className="section-label">Portfolio</div>
             <h2>Brands we&apos;ve worked with.</h2>
             <p>
-              {clients.length} brands and founders across lead generation,
-              founder personal branding, social and go-to-market work.
+              {roughly(clients.length)} brands and founders across lead
+              generation, founder personal branding, social and go-to-market
+              work.
             </p>
           </div>
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { services, channels, brandingService } from "@/data/services";
-import { founders } from "@/data/clients";
-import ClientMark from "@/components/ClientMark";
+import { services } from "@/data/services";
+import Hl from "@/components/Hl";
 import { engagement } from "@/data/industries";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
@@ -70,12 +69,11 @@ export default function Services() {
             <span className="current">Services</span>
           </div>
           <div className="section-label">Capabilities</div>
-          <h1>Five channels. Run as one system.</h1>
+          <h1>Six services. Run as one system.</h1>
           <p className="page-lede">
-            Channels fail in isolation. A reply on LinkedIn that nobody follows
-            up on WhatsApp is a lost deal; an ad budget with no outbound behind
-            it is a rented audience. We run all five as one machine, and report
-            on the only number that matters — qualified meetings booked.
+            <Hl terms={["one machine", "qualified meetings booked"]}>
+              {"Channels fail in isolation. A reply on LinkedIn that nobody follows up on WhatsApp is a lost deal; an ad budget with no outbound behind it is a rented audience. We run them as one machine, and report on the only number that matters — qualified meetings booked."}
+            </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
@@ -88,8 +86,8 @@ export default function Services() {
 
       <section className="section-padding" style={{ paddingTop: "3rem" }}>
         <div className="container">
-          <div className="industry-grid">
-            {channels.map((service, i) => (
+          <div className="industry-grid industry-grid--even">
+            {services.map((service, i) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
@@ -98,39 +96,15 @@ export default function Services() {
               >
                 <div className="card-index">{service.num}</div>
                 <h3>{service.title}</h3>
-                <p className="card-copy">{service.summary}</p>
+                <p className="card-copy">
+                  <Hl terms={service.highlights}>{service.summary}</Hl>
+                </p>
                 <span className="card-link">
                   View service <span aria-hidden="true">→</span>
                 </span>
               </Link>
             ))}
           </div>
-
-          {/* Personal branding is a separate practice, not a sixth channel. */}
-          <Link
-            href={`/services/${brandingService.slug}`}
-            className="practice-panel reveal"
-          >
-            <div className="practice-copy">
-              <span className="practice-label">Also from Fastex · Practice 02</span>
-              <h2 className="practice-title">{brandingService.title}</h2>
-              <p className="practice-text">{brandingService.summary}</p>
-              <span className="svc-cta practice-cta">
-                Explore personal branding <span aria-hidden="true">→</span>
-              </span>
-            </div>
-            <ul className="practice-founders">
-              {founders.map((f, i) => (
-                <li key={f.name} style={{ "--i": i }}>
-                  <ClientMark client={f} />
-                  <span className="practice-founder-name">{f.name}</span>
-                  {f.detail ? (
-                    <span className="practice-founder-detail">{f.detail}</span>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-          </Link>
         </div>
       </section>
 

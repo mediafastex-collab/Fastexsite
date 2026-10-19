@@ -2,6 +2,7 @@ import Link from "next/link";
 import { industries, engagement } from "@/data/industries";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
+import Hl from "@/components/Hl";
 
 export const metadata = {
   title: "Industries We Specialise In | B2B Marketing | Fastex Media",
@@ -81,10 +82,9 @@ export default function Industries() {
           <div className="section-label">Specialisation</div>
           <h1>Industries we work in.</h1>
           <p className="page-lede">
-            A generalist agency has to relearn your market on your budget. We
-            work in a small number of B2B sectors, which means we already know
-            who signs, what they object to and how long the cycle runs — before
-            the first sequence goes out.
+            <Hl terms={["we already know"]}>
+              {"A generalist agency has to relearn your market on your budget. We work in a small number of B2B sectors, which means we already know who signs, what they object to and how long the cycle runs — before the first sequence goes out."}
+            </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>

@@ -7,6 +7,12 @@ export const services = [
   {
     num: "01",
     slug: "performance-marketing",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "qualified B2B pipeline",
+      "demand capture for in-market accounts",
+      "the accounts worth winning",
+    ],
     navLabel: "Performance Marketing",
     title: "Performance Marketing",
     h1: "Performance marketing measured in pipeline, not impressions.",
@@ -64,6 +70,12 @@ export const services = [
   {
     num: "02",
     slug: "linkedin-marketing",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "named decision-makers",
+      "booked straight into your sales calendar",
+      "founder authority",
+    ],
     navLabel: "LinkedIn Marketing",
     title: "LinkedIn Lead Generation",
     h1: "LinkedIn marketing that opens conversations with named buyers.",
@@ -122,6 +134,11 @@ export const services = [
   {
     num: "03",
     slug: "social-media-marketing",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "the obvious choice",
+      "proof, point of view and category education",
+    ],
     navLabel: "Social Media Marketing",
     title: "Social Media Marketing",
     h1: "B2B social media that gets you shortlisted before the enquiry.",
@@ -180,6 +197,11 @@ export const services = [
   {
     num: "04",
     slug: "whatsapp-marketing",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "Official WhatsApp Business API",
+      "never lets an enquiry go cold",
+    ],
     navLabel: "WhatsApp Marketing",
     title: "WhatsApp Marketing",
     h1: "WhatsApp marketing where B2B deals actually move.",
@@ -238,6 +260,12 @@ export const services = [
   {
     num: "05",
     slug: "email-marketing",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "reaches the inbox",
+      "replies from senior buyers",
+      "Deliverability is the whole game",
+    ],
     navLabel: "Email Marketing",
     title: "Cold Email Marketing",
     h1: "Cold email marketing that reaches the inbox and earns replies.",
@@ -295,7 +323,12 @@ export const services = [
   {
     num: "06",
     slug: "personal-branding",
-    practice: "branding",
+    // Phrases marked with <Hl> wherever this service's copy appears.
+    highlights: [
+      "the right audience",
+      "positions them clearly in their market",
+      "written in your voice",
+    ],
     navLabel: "Founder Personal Branding",
     title: "Founder Personal Branding",
     h1: "Founder personal branding that makes the right people know your name.",
@@ -351,14 +384,6 @@ export const services = [
     ],
   },
 ];
-
-/**
- * The five lead generation channels, and the separate founder branding
- * practice. Pages that say "five channels" list `channels`; nav, footer and
- * sitemap list every service.
- */
-export const channels = services.filter((s) => s.practice !== "branding");
-export const brandingService = services.find((s) => s.practice === "branding");
 
 export const serviceBySlug = (slug) =>
   services.find((service) => service.slug === slug);

@@ -1,14 +1,23 @@
-import { clients, brands, founders } from "@/data/clients";
+"use client";
+
+import { useEffect, useRef } from "react";
+import { clients, brands, founders, roughly } from "@/data/clients";
 import ClientMark from "@/components/ClientMark";
 
 /**
- * Homepage proof: every client, logo and name, in two slow rows drifting in
+ * Homepage proof: every client, logo and name, in two rows drifting in
  * opposite directions.
  *
- * Each row is rendered twice end to end and translated by exactly half its
- * width, so the loop has no visible seam. The second copy is hidden from
- * assistive tech, which reads every name once. Hover pauses a row; reduced
- * motion turns the rows into a static, wrapped grid (see globals.css).
+ * Motion is driven here rather than by a CSS loop so it can feel physical:
+ *  - hovering a row eases it to a stop (and back), instead of freezing it;
+ *  - scrolling the page gives both rows a brief push in their own direction,
+ *    which settles back to cruising speed;
+ *  - nothing runs while the band is off screen.
+ *
+ * Each row holds its cards twice, end to end, and wraps by exactly one copy's
+ * width, so the loop has no seam. The second copy is hidden from assistive
+ * tech. Without JavaScript the CSS loop in globals.css still runs; with
+ * reduced motion the rows become a still, wrapped grid.
  */
 
 // Alternate the two rows so neither one is all solar or all SaaS, and so the
@@ -16,9 +25,12 @@ import ClientMark from "@/components/ClientMark";
 const rowA = clients.filter((_, i) => i % 2 === 0);
 const rowB = clients.filter((_, i) => i % 2 === 1);
 
-function Card({ client }) {
+const CRUISE = 34; // px per second
+const MAX_BOOST = 260; // extra px per second at the peak of a scroll
+
+function Card({ client, index }) {
   return (
-    <li className="cm-card">
+    <li className="cm-card" style={{ "--k": Math.min(index, 9) }}>
       <ClientMark client={client} />
       <span className="cm-name">{client.name}</span>
       <span className="cm-meta">
@@ -28,20 +40,17 @@ function Card({ client }) {
   );
 }
 
-function Row({ items, reverse, duration }) {
+function Row({ items, reverse }) {
   return (
-    <div
-      className={`cm-row${reverse ? " cm-row--reverse" : ""}`}
-      style={{ "--cm-duration": `${duration}s` }}
-    >
+    <div className={`cm-row${reverse ? " cm-row--reverse" : ""}`}>
       <ul className="cm-track">
-        {items.map((c) => (
-          <Card key={c.name} client={c} />
+        {items.map((c, i) => (
+          <Card key={c.name} client={c} index={i} />
         ))}
       </ul>
       <ul className="cm-track" aria-hidden="true">
-        {items.map((c) => (
-          <Card key={c.name} client={c} />
+        {items.map((c, i) => (
+          <Card key={c.name} client={c} index={i} />
         ))}
       </ul>
     </div>
@@ -49,11 +58,106 @@ function Row({ items, reverse, duration }) {
 }
 
 export default function ClientMarquee() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    root.classList.add("cm-js"); // hands the motion over from the CSS loop
+
+    const rows = [...root.querySelectorAll(".cm-row")].map((el, i) => ({
+      el,
+      dir: i % 2 === 0 ? -1 : 1,
+      x: 0,
+      speed: CRUISE,
+      target: CRUISE,
+      width: 0,
+    }));
+
+    const measure = () => {
+      rows.forEach((r) => {
+        r.width = r.el.firstElementChild.getBoundingClientRect().width;
+        // A row moving right starts one copy to the left, so it never shows
+        // an empty edge.
+        if (r.dir === 1 && r.x === 0) r.x = -r.width;
+      });
+    };
+    measure();
+
+    const enter = (r) => () => (r.target = 0);
+    const leave = (r) => () => (r.target = CRUISE);
+    const handlers = rows.map((r) => {
+      const on = enter(r);
+      const off = leave(r);
+      r.el.addEventListener("pointerenter", on);
+      r.el.addEventListener("pointerleave", off);
+      return [on, off];
+    });
+
+    let boost = 0;
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const dy = Math.abs(window.scrollY - lastY);
+      lastY = window.scrollY;
+      boost = Math.min(boost + dy * 4, MAX_BOOST);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    let raf = 0;
+    let last = 0;
+    const tick = (t) => {
+      const dt = last ? Math.min((t - last) / 1000, 0.05) : 0;
+      last = t;
+      boost *= Math.exp(-dt * 2.5);
+
+      rows.forEach((r) => {
+        // Ease towards the target speed; a hovered row glides to a stop.
+        r.speed += (r.target - r.speed) * Math.min(dt * 5, 1);
+        const v = r.speed + (r.target ? boost : 0);
+        r.x += r.dir * v * dt;
+        if (r.x <= -r.width) r.x += r.width;
+        if (r.x > 0) r.x -= r.width;
+        r.el.style.transform = `translate3d(${r.x.toFixed(2)}px,0,0)`;
+      });
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    // Run only while the band is on screen.
+    const io = new IntersectionObserver(([entry]) => {
+      cancelAnimationFrame(raf);
+      if (entry.isIntersecting) {
+        last = 0;
+        raf = requestAnimationFrame(tick);
+      }
+    });
+    io.observe(root);
+
+    const ro = new ResizeObserver(measure);
+    rows.forEach((r) => ro.observe(r.el.firstElementChild));
+
+    return () => {
+      cancelAnimationFrame(raf);
+      io.disconnect();
+      ro.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      rows.forEach((r, i) => {
+        r.el.removeEventListener("pointerenter", handlers[i][0]);
+        r.el.removeEventListener("pointerleave", handlers[i][1]);
+        r.el.style.transform = "";
+      });
+      root.classList.remove("cm-js");
+    };
+  }, []);
+
   return (
-    <section className="client-marquee" aria-labelledby="cm-label">
+    <section ref={ref} className="client-marquee" aria-labelledby="cm-label">
       <div className="container cm-head reveal">
         <p id="cm-label" className="cm-label">
-          Trusted by {brands.length} brands and {founders.length} founders
+          Trusted by {roughly(brands.length)} brands and{" "}
+          {roughly(founders.length)} founders
         </p>
         <p className="cm-practices">
           <span>B2B Lead Generation</span>
@@ -64,9 +168,8 @@ export default function ClientMarquee() {
         </p>
       </div>
       <div className="cm-rows reveal">
-        {/* Durations scale with row length so both rows move at one speed. */}
-        <Row items={rowA} duration={rowA.length * 4.5} />
-        <Row items={rowB} duration={rowB.length * 4.5} reverse />
+        <Row items={rowA} />
+        <Row items={rowB} reverse />
       </div>
     </section>
   );

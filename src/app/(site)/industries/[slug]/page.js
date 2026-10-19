@@ -2,6 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { industries, industryBySlug, engagement } from "@/data/industries";
 import BookCall from "@/components/BookCall";
+import Hl from "@/components/Hl";
+import ClientShowcase from "@/components/ClientShowcase";
+import { clientsForIndustry } from "@/data/clients";
 
 const SITE = "https://www.fastexmedia.com";
 
@@ -106,7 +109,9 @@ export default async function IndustryPage({ params }) {
           </div>
           <div className="sector-badge"><span>{industry.tagline}</span></div>
           <h1>{industry.h1}</h1>
-          <p className="page-lede">{industry.heroSub}</p>
+          <p className="page-lede">
+            <Hl terms={industry.highlights}>{industry.heroSub}</Hl>
+          </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
             <Link href="/work" className="btn btn-outline">
@@ -139,7 +144,9 @@ export default async function IndustryPage({ params }) {
             </div>
             <div className="split-body">
               <h2>{industry.problem.heading}</h2>
-              <p>{industry.problem.body}</p>
+              <p>
+                <Hl terms={industry.highlights}>{industry.problem.body}</Hl>
+              </p>
               <ul className="problem-list">
                 {industry.problem.points.map((point) => (
                   <li key={point}>{point}</li>
@@ -183,6 +190,13 @@ export default async function IndustryPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* ---------- CLIENTS ---------- */}
+      <ClientShowcase
+        clients={clientsForIndustry(industry.slug)}
+        label="Brands we've worked with"
+        heading="Brands in this sector we've worked with."
+      />
 
       {/* ---------- DELIVERABLES ---------- */}
       <section

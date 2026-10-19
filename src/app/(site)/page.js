@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { industries } from "@/data/industries";
-import { channels, brandingService } from "@/data/services";
-import { portfolioStats, testimonials, featuredCases } from "@/data/caseStudies";
+import { services } from "@/data/services";
+import { portfolioStats, testimonials } from "@/data/caseStudies";
 import { site } from "@/data/site";
 import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
 import ClientMarquee from "@/components/ClientMarquee";
-import ClientMark from "@/components/ClientMark";
-import { founders } from "@/data/clients";
+import Hl from "@/components/Hl";
 
 
 const process = [
@@ -15,16 +14,19 @@ const process = [
     num: "01",
     title: "Map the market",
     copy: "We define the accounts worth winning, then build a verified data set of the people who actually sign.",
+    highlights: ["verified data set"],
   },
   {
     num: "02",
     title: "Build the system",
     copy: "Multi-channel sequences, deliverability infrastructure and deep personalization — assembled as one machine.",
+    highlights: ["assembled as one machine"],
   },
   {
     num: "03",
     title: "Scale what converts",
     copy: "Every reply is tracked. We double down on the channels producing pipeline and cut the ones that don't.",
+    highlights: ["Every reply is tracked"],
   },
 ];
 
@@ -53,8 +55,9 @@ export default function Home() {
             Your brand. Your <span className="accent">next chapter</span>.
           </h1>
           <p>
-            You&apos;ve put a lot into building your business. Let&apos;s help
-            more people discover it, trust it, and choose it.
+            <Hl terms={["discover it, trust it, and choose it"]}>
+              {"You've put a lot into building your business. Let's help more people discover it, trust it, and choose it."}
+            </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
@@ -92,22 +95,23 @@ export default function Home() {
               Fastex <span className="mark">Media</span>
             </h2>
             <p className="about-statement">
-              A B2B lead generation agency. We build the outbound systems that
-              put qualified meetings in your sales calendar — every week, on
-              purpose, in the sectors we know.
+              <Hl terms={["qualified meetings"]}>
+                {"A B2B lead generation agency. We build the outbound systems that put qualified meetings in your sales calendar — every week, on purpose, in the sectors we know."}
+              </Hl>
             </p>
             <p className="about-also">
-              And for founders, a personal brand on LinkedIn that the right
-              people find, follow and remember.
+              <Hl terms={["a personal brand on LinkedIn"]}>
+                {"And for founders, a personal brand on LinkedIn that the right people find, follow and remember."}
+              </Hl>
             </p>
           </div>
         </div>
       </section>
 
       {/* ---------- SERVICES ----------
-          A ruled list rather than a card grid: five items in three columns
-          always left an empty cell, and a list reads faster when the
-          differences between rows are the point. */}
+          A ruled list rather than a card grid: a list reads faster when the
+          differences between rows are the point. Founder personal branding
+          is one of the services, listed with the rest. */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -115,14 +119,15 @@ export default function Home() {
         <div className="container">
           <div className="section-header reveal">
             <div className="section-label">Capabilities</div>
-            <h2>Five channels. One system.</h2>
+            <h2>Six services. One system.</h2>
             <p>
-              Run together, reported on one number: qualified meetings booked.
+              Lead generation and founder brands, run together and reported on
+              what they produce: qualified conversations.
             </p>
           </div>
 
           <ul className="svc-list">
-            {channels.map((service, i) => (
+            {services.map((service, i) => (
               <li key={service.slug}>
                 <Link
                   href={`/services/${service.slug}`}
@@ -131,7 +136,9 @@ export default function Home() {
                 >
                   <span className="svc-num">{service.num}</span>
                   <h3 className="svc-title">{service.title}</h3>
-                  <p className="svc-copy">{service.summary}</p>
+                  <p className="svc-copy">
+                    <Hl terms={service.highlights}>{service.summary}</Hl>
+                  </p>
                   <span className="svc-cta">
                     View service <span aria-hidden="true">→</span>
                   </span>
@@ -139,78 +146,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-
-          {/* ---------- SECOND PRACTICE ----------
-              Personal branding is not a sixth lead generation channel, so
-              it sits under the list as its own practice, with the founders
-              we have built brands for. */}
-          <Link
-            href={`/services/${brandingService.slug}`}
-            className="practice-panel reveal"
-          >
-            <div className="practice-copy">
-              <span className="practice-label">Also from Fastex · Practice 02</span>
-              <h3 className="practice-title">{brandingService.title}</h3>
-              <p className="practice-text">{brandingService.summary}</p>
-              <span className="svc-cta practice-cta">
-                Explore personal branding <span aria-hidden="true">→</span>
-              </span>
-            </div>
-            <ul className="practice-founders">
-              {founders.map((f, i) => (
-                <li key={f.name} style={{ "--i": i }}>
-                  <ClientMark client={f} />
-                  <span className="practice-founder-name">{f.name}</span>
-                  {f.detail ? (
-                    <span className="practice-founder-detail">{f.detail}</span>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-          </Link>
-        </div>
-      </section>
-
-      {/* ---------- SELECTED WORK ----------
-          Proof with a story attached. These engagements were already on
-          /work; surfacing two of them here puts the evidence on the page
-          people land on. */}
-      <section
-        className="section-padding work-band"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="section-label">Selected work</div>
-            <h2>Results we can point to.</h2>
-          </div>
-
-          <div className="case-pair">
-            {featuredCases.map((c, i) => (
-              <Link
-                key={c.client}
-                href="/work"
-                className="case-tile reveal"
-                style={{ transitionDelay: `${i * 0.08}s` }}
-              >
-                {c.logo ? (
-                  <ClientMark client={c.logo} className="case-tile-logo" />
-                ) : null}
-                <span className="case-tile-meta">
-                  {c.sector} <span aria-hidden="true">·</span> {c.service}
-                </span>
-                <h3 className="case-tile-client">{c.client}</h3>
-                <div className="case-tile-metric">
-                  <span className="case-tile-value">{c.metrics[0].value}</span>
-                  <span className="case-tile-label">{c.metrics[0].label}</span>
-                </div>
-                <p className="case-tile-outcome">{c.outcome}</p>
-                <span className="case-tile-cta">
-                  Read the case study <span aria-hidden="true">→</span>
-                </span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -272,7 +207,9 @@ export default function Home() {
               >
                 <div className="process-num">{step.num}</div>
                 <h3>{step.title}</h3>
-                <p>{step.copy}</p>
+                <p>
+                  <Hl terms={step.highlights}>{step.copy}</Hl>
+                </p>
               </div>
             ))}
           </div>
@@ -343,8 +280,9 @@ export default function Home() {
           <div className="cta-inner reveal">
             <h2>Design. Scale. Dominate.</h2>
             <p className="cta-sub">
-              Tell us where you want the pipeline to be in ninety days. We&apos;ll
-              build the system that gets you there.
+              <Hl terms={["ninety days"]}>
+                {"Tell us where you want the pipeline to be in ninety days. We'll build the system that gets you there."}
+              </Hl>
             </p>
             <BookCall>Book a Free Strategy Call</BookCall>
             <div className="cta-contacts">

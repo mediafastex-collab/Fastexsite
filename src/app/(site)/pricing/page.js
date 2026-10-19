@@ -3,6 +3,7 @@ import PlanPicker from "@/components/PlanPicker";
 import { plans, engagement, addOns, process, terms, directCosts, ownership } from "@/data/plans";
 import { SITE, abs, breadcrumb, faqPage, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
+import Hl from "@/components/Hl";
 
 export const metadata = {
   title: "Pricing | Fastex Media",
@@ -106,8 +107,9 @@ export default function Pricing() {
           </div>
           <h1>Pick a service. See its plans.</h1>
           <p className="page-lede">
-            Four plans for every service. Start with one, add more when it
-            works. Fees are agreed in writing before anything begins.
+            <Hl terms={["agreed in writing"]}>
+              {"Four plans for every service. Start with one, add more when it works. Fees are agreed in writing before anything begins."}
+            </Hl>
           </p>
         </div>
       </section>

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { site, founder } from "@/data/site";
 import { industries, engagement } from "@/data/industries";
-import { channels, brandingService } from "@/data/services";
+import { services } from "@/data/services";
+import Hl from "@/components/Hl";
 import { portfolioStats } from "@/data/caseStudies";
 import SocialIcon from "@/components/SocialIcon";
 import BookCall from "@/components/BookCall";
@@ -106,10 +107,9 @@ export default function About() {
           <div className="section-label">About us</div>
           <h1>A B2B lead generation agency, built for one job.</h1>
           <p className="page-lede">
-            Fastex Media started in June 2025 with a narrow remit: build the
-            outbound systems that put qualified B2B meetings in a sales
-            calendar, every week, on purpose. No retainers for activity. No
-            dashboards full of numbers nobody acts on.
+            <Hl terms={["qualified B2B meetings"]}>
+              {"Fastex Media started in June 2025 with a narrow remit: build the outbound systems that put qualified B2B meetings in a sales calendar, every week, on purpose. No retainers for activity. No dashboards full of numbers nobody acts on."}
+            </Hl>
           </p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>
             <BookCall>Book a Free Strategy Call</BookCall>
@@ -257,12 +257,12 @@ export default function About() {
         <div className="container">
           <div className="section-header reveal">
             <div className="section-label">What we do</div>
-            <h2>Five channels, five sectors.</h2>
+            <h2>Six services, five sectors.</h2>
           </div>
 
           <div className="section-label">Services</div>
           <div className="pill-row">
-            {channels.map((service) => (
+            {services.map((service) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
@@ -271,18 +271,6 @@ export default function About() {
                 {service.navLabel}
               </Link>
             ))}
-          </div>
-
-          <div className="section-label" style={{ marginTop: "3.5rem" }}>
-            Founder practice
-          </div>
-          <div className="pill-row">
-            <Link
-              href={`/services/${brandingService.slug}`}
-              className="pill"
-            >
-              {brandingService.navLabel}
-            </Link>
           </div>
 
           <div className="section-label" style={{ marginTop: "3.5rem" }}>

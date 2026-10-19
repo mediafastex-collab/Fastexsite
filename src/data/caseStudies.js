@@ -1,4 +1,4 @@
-import { clients } from "./clients.js";
+import { clients, roughly } from "./clients.js";
 
 /**
  * Case studies, taken from the live fastexmedia.com/work page.
@@ -9,7 +9,7 @@ import { clients } from "./clients.js";
  */
 
 export const portfolioStats = [
-  { value: `${clients.length}+`, label: "Brands Served" },
+  { value: roughly(clients.length), label: "Brands Served" },
   { value: "3X", label: "Average Lead Growth" },
   { value: "60%", label: "Avg. CPL Reduction" },
   { value: "4.9★", label: "Client Satisfaction" },
