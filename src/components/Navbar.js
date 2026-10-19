@@ -19,8 +19,9 @@ const navItems = [
     })),
   },
   { num: "02", label: "Case Studies", href: "/work" },
+  { num: "03", label: "Founder Brands", href: "/founders" },
   {
-    num: "03",
+    num: "04",
     label: "Industries",
     href: "/industries",
     children: industries.map((industry, i) => ({
@@ -29,15 +30,16 @@ const navItems = [
       meta: String(i + 1).padStart(2, "0"),
     })),
   },
-  { num: "04", label: "Pricing", href: "/pricing" },
-  { num: "05", label: "Blog", href: "/blog" },
-  { num: "06", label: "About Us", href: "/about" },
+  { num: "05", label: "Pricing", href: "/pricing" },
+  { num: "06", label: "Blog", href: "/blog" },
+  { num: "07", label: "About Us", href: "/about" },
 ];
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const pathname = usePathname();
 
   // Close the menus when the route changes. Adjusting state during render is
@@ -50,9 +52,23 @@ export default function Navbar() {
     setOpenMenu(null);
   }
 
+  /*
+   * Past the hero the bar condenses into a floating pill. Scrolling down
+   * tucks it away so it never covers what is being read; the smallest scroll
+   * back up brings it straight back.
+   */
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
+    let lastY = window.scrollY;
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setIsScrolled(y > 50);
+      if (Math.abs(y - lastY) > 6) {
+        setIsHidden(y > lastY && y > 480);
+        lastY = y;
+      }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -68,7 +84,16 @@ export default function Navbar() {
   const toggleMobileMenu = () => setIsMobileMenuOpen((open) => !open);
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+    <nav
+      className={[
+        "navbar",
+        isScrolled && "scrolled",
+        isHidden && !isMobileMenuOpen && !openMenu && "is-tucked",
+        isMobileMenuOpen && "menu-open",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className="container nav-content">
         <Link href="/" className="logo">
           {/* Transparent-plate mark: the original logo.png carries its own
@@ -78,21 +103,27 @@ export default function Navbar() {
         </Link>
 
         <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
-          {navItems.map((item) => {
+          {navItems.map((item, index) => {
             const hasChildren = Boolean(item.children);
             const isOpen = openMenu === item.label;
+            const isCurrent =
+              pathname === item.href || pathname.startsWith(`${item.href}/`);
 
             return (
               <li
                 key={item.label}
                 className={`nav-item ${hasChildren ? "has-dropdown" : ""} ${
                   isOpen ? "is-open" : ""
-                }`}
+                } ${isCurrent ? "is-current" : ""}`}
+                style={{ "--n": index }}
                 onMouseEnter={() => hasChildren && setOpenMenu(item.label)}
                 onMouseLeave={() => hasChildren && setOpenMenu(null)}
               >
                 <span className="nav-row">
-                  <Link href={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={isCurrent ? "page" : undefined}
+                  >
                     <span className="nav-number">{item.num}</span>
                     {item.label}
                   </Link>
@@ -146,33 +177,14 @@ export default function Navbar() {
           aria-expanded={isMobileMenuOpen}
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {/* Inline, not an icon font: this control is the only way to reach
-              navigation on a phone, so it must not depend on a third-party
-              stylesheet arriving. */}
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            aria-hidden="true"
-            focusable="false"
-          >
-            {isMobileMenuOpen ? (
-              <>
-                <line x1="5" y1="5" x2="19" y2="19" />
-                <line x1="19" y1="5" x2="5" y2="19" />
-              </>
-            ) : (
-              <>
-                <line x1="3" y1="7" x2="21" y2="7" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="17" x2="21" y2="17" />
-              </>
-            )}
-          </svg>
+          {/* Pure CSS lines, not an icon font: this control is the only way to
+              reach navigation on a phone, so it must not depend on a
+              third-party stylesheet. The three lines fold into a cross. */}
+          <span className="burger" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
         </button>
       </div>
     </nav>

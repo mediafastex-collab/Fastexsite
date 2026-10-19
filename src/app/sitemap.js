@@ -22,6 +22,7 @@ export default function sitemap() {
     { path: "/services", priority: 0.9, changeFrequency: "monthly" },
     { path: "/industries", priority: 0.9, changeFrequency: "monthly" },
     { path: "/work", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/founders", priority: 0.8, changeFrequency: "monthly" },
     { path: "/about", priority: 0.8, changeFrequency: "monthly" },
     { path: "/pricing", priority: 0.8, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.9, changeFrequency: "monthly" },

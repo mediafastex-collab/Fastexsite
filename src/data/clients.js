@@ -14,7 +14,9 @@
  *   mark    a logo on a transparent ground
  *   tile    a logo that IS a coloured square (The Creative Co, Drishyam)
  *   founder a portrait, for personal branding clients; `photo` is the
- *           full, uncropped picture shown in the founders sections
+ *           full, uncropped picture shown in the founders sections, and
+ *           `story` is what /founders tells about them. Stories hold only
+ *           what the sheet says; add detail here as each founder signs it off
  *
  * `ink` is the share of the logo's box that is actually drawn, weighted by
  * how dark it is (measured from the files). It lets a bold, solid wordmark
@@ -71,6 +73,12 @@ export const clients = [
   },
   {
     name: "Krupa Dalal",
+    story: {
+      brief:
+        "Krupa Dalal came to us to build a personal brand on LinkedIn: one that reaches the right audience and shows clearly what Krupa stands for as a founder.",
+      outcome:
+        "A LinkedIn presence that connects Krupa with the right audience, and a clearer position as a founder.",
+    },
     photo: { file: "krupa-dalal.webp", w: 750, h: 1000 },
     channels: ["personal-branding"],
     logo: "krupa.webp",
@@ -138,6 +146,12 @@ export const clients = [
   },
   {
     name: "Kriya Doshi",
+    story: {
+      brief:
+        "Kriya Doshi, founder of Thinkyoung, wanted a LinkedIn presence that matches the work behind the company and reaches the people it is for.",
+      outcome:
+        "A personal brand that connects Kriya with the right audience and positions the founder of Thinkyoung clearly in the market.",
+    },
     photo: { file: "kriya-doshi.webp", w: 800, h: 800 },
     channels: ["personal-branding"],
     detail: "Thinkyoung",
@@ -222,6 +236,12 @@ export const clients = [
   },
   {
     name: "Keyur Rakholiya",
+    story: {
+      brief:
+        "Keyur Rakholiya wanted LinkedIn to do what a founder's profile should: carry a clear point of view and put it in front of the right people.",
+      outcome:
+        "A personal brand on LinkedIn that reaches the right audience and positions Keyur clearly as a founder.",
+    },
     photo: { file: "keyur-rakholiya.webp", w: 1000, h: 667 },
     channels: ["personal-branding"],
     logo: "keyur-rakholiya.webp",
