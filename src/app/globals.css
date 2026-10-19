@@ -1876,9 +1876,9 @@ footer {
 /* =========================================
    RESPONSIVE
 ========================================= */
-/* The full bar (logo, seven links, call button) needs ~1280px. Below that
+/* The full bar (logo, seven links, call button) needs ~1240px to breathe. Below that
    the links fold into the menu button rather than squeezing or overflowing. */
-@media (max-width: 1279px) {
+@media (max-width: 1239px) {
   .nav-links {
     position: fixed;
     top: var(--nav-height);
@@ -4703,7 +4703,7 @@ p mark.hl {
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1239px) {
   .navbar.scrolled .nav-content {
     width: calc(100% - 24px);
     height: 58px;
@@ -4946,5 +4946,107 @@ p mark.hl {
 @media (prefers-reduced-motion: reduce) {
   .fb-gallery > li {
     animation: none;
+  }
+}
+
+/* =========================================
+   HEADER, CALMER
+   Sentence-case links in one soft rounded track, a highlight that rests on
+   the current page and glides to the hovered link, a quieter wordmark and a
+   single filled call to action. Same seven links, far less noise.
+========================================= */
+.nav-indicator {
+  display: none;
+}
+
+@media (min-width: 1240px) {
+  .site-wrapper .navbar .logo {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-links,
+  .nav-links:is(*) {
+    position: relative;
+    gap: 2px;
+    padding: 4px;
+    background: rgba(13, 13, 13, 0.035);
+    border: 1px solid rgba(13, 13, 13, 0.06);
+    border-radius: 999px;
+  }
+
+  .nav-links li a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-muted);
+    border-radius: 999px;
+    transition: color 0.25s var(--ease-out);
+  }
+
+  .nav-links li a:hover,
+  .nav-item.is-open > .nav-row a,
+  .nav-item.is-current > .nav-row a {
+    color: var(--text-main);
+  }
+
+  /* The highlight replaces the underline. */
+  .nav-links li a::after {
+    display: none;
+  }
+
+  .nav-item {
+    z-index: 1;
+  }
+
+  .nav-indicator {
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    z-index: 0;
+    border-radius: 999px;
+    background: var(--bg-raised);
+    box-shadow: 0 1px 2px rgba(13, 13, 13, 0.06), 0 6px 14px -8px rgba(13, 13, 13, 0.25);
+    pointer-events: none;
+    animation: none;
+    transition: transform 0.45s var(--ease-out), width 0.45s var(--ease-out),
+      opacity 0.3s var(--ease-out);
+  }
+
+  /* Dropdowns hang from the track, not from the text. */
+  .dropdown {
+    padding-top: 0.85rem;
+  }
+
+  /* One clear action: a compact filled pill. */
+  .navbar .book-call-btn {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+    gap: 0.45rem;
+  }
+
+  .navbar .book-call-btn span {
+    transition: transform 0.35s var(--ease-out);
+  }
+
+  .navbar .book-call-btn:hover span {
+    transform: translateX(3px);
+  }
+
+  .navbar.scrolled .book-call-btn {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  /* Inside the floating pill the track goes clear; the highlight stays. */
+  .navbar.scrolled .nav-links {
+    background: transparent;
+    border-color: transparent;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { services } from "@/data/services";
@@ -40,7 +40,42 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+
   const pathname = usePathname();
+
+  /*
+   * One soft highlight sits behind the links: it rests on the current page
+   * and glides to whichever link the pointer is over, so the row reads as a
+   * single calm control rather than seven separate words.
+   */
+  const linksRef = useRef(null);
+  const [indicator, setIndicator] = useState({ x: 0, w: 0, show: false });
+
+  const moveIndicator = useCallback((row) => {
+    const list = linksRef.current;
+    if (!list || !row) {
+      setIndicator((i) => ({ ...i, show: false }));
+      return;
+    }
+    const l = list.getBoundingClientRect();
+    const r = row.getBoundingClientRect();
+    setIndicator({ x: r.left - l.left, w: r.width, show: true });
+  }, []);
+
+  const restIndicator = useCallback(() => {
+    moveIndicator(
+      linksRef.current?.querySelector(".nav-item.is-current > .nav-row") ?? null
+    );
+  }, [moveIndicator]);
+
+  useEffect(() => {
+    restIndicator();
+    // Re-measure once the web fonts have settled and whenever the bar resizes.
+    document.fonts?.ready.then(restIndicator);
+    const ro = new ResizeObserver(restIndicator);
+    if (linksRef.current) ro.observe(linksRef.current);
+    return () => ro.disconnect();
+  }, [pathname, restIndicator]);
 
   // Close the menus when the route changes. Adjusting state during render is
   // React's recommended pattern here — an effect would cause a second render
@@ -102,7 +137,20 @@ export default function Navbar() {
           <span className="logo-text">Fastex Media</span>
         </Link>
 
-        <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
+        <ul
+          ref={linksRef}
+          className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}
+          onMouseLeave={restIndicator}
+        >
+          <li
+            className="nav-indicator"
+            aria-hidden="true"
+            style={{
+              width: indicator.w,
+              transform: `translateX(${indicator.x}px)`,
+              opacity: indicator.show ? 1 : 0,
+            }}
+          />
           {navItems.map((item, index) => {
             const hasChildren = Boolean(item.children);
             const isOpen = openMenu === item.label;
@@ -116,7 +164,10 @@ export default function Navbar() {
                   isOpen ? "is-open" : ""
                 } ${isCurrent ? "is-current" : ""}`}
                 style={{ "--n": index }}
-                onMouseEnter={() => hasChildren && setOpenMenu(item.label)}
+                onMouseEnter={(e) => {
+                  moveIndicator(e.currentTarget.querySelector(".nav-row"));
+                  if (hasChildren) setOpenMenu(item.label);
+                }}
                 onMouseLeave={() => hasChildren && setOpenMenu(null)}
               >
                 <span className="nav-row">
@@ -167,8 +218,8 @@ export default function Navbar() {
           })}
         </ul>
 
-        <BookCall variant="outline" className="book-call-btn">
-          Book a Call
+        <BookCall className="book-call-btn">
+          Book a call <span aria-hidden="true">→</span>
         </BookCall>
 
         <button
