@@ -15,7 +15,8 @@ import { fileURLToPath } from "node:url";
 import { services } from "../src/data/services.js";
 import { industries, engagement } from "../src/data/industries.js";
 import { site, founder } from "../src/data/site.js";
-import { portfolioStats, featuredCases, projects } from "../src/data/caseStudies.js";
+import { portfolioStats, featuredCases } from "../src/data/caseStudies.js";
+import { clients, clientServices } from "../src/data/clients.js";
 import { publishedPosts } from "../src/data/posts.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -212,10 +213,15 @@ Metrics: ${c.metrics.map((m) => `${m.value} ${m.label}`).join(", ")}`
   )
   .join("\n\n")}
 
-## Other active projects
+## Clients
 
-${projects
-  .map((p) => `- **${p.client}** (${p.sector}) — ${p.copy} [${p.tags.join(", ")}]`)
+${clients
+  .map(
+    (c) =>
+      `- **${c.name}**${c.detail ? ` (${c.detail})` : ""} — ${c.industry} · ${c.services
+        .map((k) => clientServices[k])
+        .join(" + ")}. ${c.summary}${c.tags ? ` [${c.tags.join(", ")}]` : ""}`
+  )
   .join("\n")}
 
 ---

@@ -292,7 +292,73 @@ export const services = [
       },
     ],
   },
+  {
+    num: "06",
+    slug: "personal-branding",
+    practice: "branding",
+    navLabel: "Founder Personal Branding",
+    title: "Founder Personal Branding",
+    h1: "Founder personal branding that makes the right people know your name.",
+    metaTitle: "Founder Personal Branding on LinkedIn | Fastex Media",
+    metaDescription:
+      "Founder personal branding on LinkedIn. Positioning, a profile that reads like a point of view, and posts in your own voice that connect you with the right audience.",
+    keywords: [
+      "founder personal branding",
+      "linkedin personal branding agency",
+      "personal branding for founders",
+      "linkedin ghostwriting for founders",
+      "ceo thought leadership linkedin",
+    ],
+    summary:
+      "A LinkedIn presence for founders that connects them with the right audience and positions them clearly in their market.",
+    detail:
+      "In B2B, people buy from the person before they buy from the company, and most of them look the founder up first. We turn what you already know into a clear position, a profile that says it, and a steady stream of posts written in your voice, so the right people find you, follow you and start the conversation.",
+    problem: {
+      heading: "Your expertise is real. Online, nobody can see it.",
+      body: "Most founders know more about their market than anyone they compete with, and their LinkedIn shows a job title and a post from last spring. The people they want to reach, buyers, partners, hires and investors, look them up and find nothing worth remembering.",
+      points: [
+        "A profile that reads like a CV instead of a point of view",
+        "Posting in bursts, then going quiet for months when work gets busy",
+        "Generic content that could have come from any founder in any industry",
+        "Connections that grow in number but not in relevance",
+      ],
+    },
+    deliverables: [
+      "Positioning: what you stand for and who it is for",
+      "Profile rewrite, from headline and banner to featured section",
+      "Content pillars drawn from structured interviews with you",
+      "Posts written in your voice, approved by you before they go out",
+      "Engagement routines that put you in front of the right audience",
+      "Monthly review of reach, profile visits and conversations started",
+    ],
+    faqs: [
+      {
+        q: "Will the posts sound like me?",
+        a: "They should, and that is the point. Everything starts from interviews with you, so the opinions and the stories are yours. We do the writing and the discipline of publishing; you approve every post before it goes out.",
+      },
+      {
+        q: "How much of my time does it take?",
+        a: "Around an hour or two a month once it is running: an interview session, plus a few minutes approving posts. The first month asks a little more while we settle your positioning and rewrite the profile.",
+      },
+      {
+        q: "Is this the same as your LinkedIn lead generation?",
+        a: "No. Lead generation opens conversations with named buyers through outreach. Personal branding builds the reputation those buyers find when they look you up. They work well together, and they work on their own.",
+      },
+      {
+        q: "How long before it makes a difference?",
+        a: "Expect two to three months before the profile and the posting rhythm start drawing the right people in, and more after that. Personal brands compound; the founders who see the most from it are the ones who keep going.",
+      },
+    ],
+  },
 ];
+
+/**
+ * The five lead generation channels, and the separate founder branding
+ * practice. Pages that say "five channels" list `channels`; nav, footer and
+ * sitemap list every service.
+ */
+export const channels = services.filter((s) => s.practice !== "branding");
+export const brandingService = services.find((s) => s.practice === "branding");
 
 export const serviceBySlug = (slug) =>
   services.find((service) => service.slug === slug);

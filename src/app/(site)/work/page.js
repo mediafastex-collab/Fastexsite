@@ -2,9 +2,11 @@ import Link from "next/link";
 import {
   portfolioStats,
   featuredCases,
-  projects,
   testimonials,
 } from "@/data/caseStudies";
+import { clients } from "@/data/clients";
+import ClientGrid from "@/components/ClientGrid";
+import ClientMark from "@/components/ClientMark";
 import { site } from "@/data/site";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
@@ -98,7 +100,7 @@ export default function Work() {
         <div className="container">
           <div className="section-header reveal">
             <div className="section-label">In depth</div>
-            <h2>Two we can talk through.</h2>
+            <h2>A closer look.</h2>
           </div>
 
           <div className="case-list">
@@ -112,6 +114,9 @@ export default function Work() {
                   <span className="case-num">{item.num}</span>
                   <span className="case-sector">{item.sector}</span>
                 </div>
+                {item.logo ? (
+                  <ClientMark client={item.logo} className="case-logo" />
+                ) : null}
                 <h3>{item.client}</h3>
                 <div className="case-service">{item.service}</div>
 
@@ -144,7 +149,10 @@ export default function Work() {
         </div>
       </section>
 
-      {/* ---------- ACTIVE PROJECTS ---------- */}
+      {/* ---------- CLIENTS ----------
+          The full client list from src/data/clients.js, filterable by the
+          kind of work. It replaces the old project grid, so the names here
+          are the only client names on the page. */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -152,35 +160,14 @@ export default function Work() {
         <div className="container">
           <div className="section-header reveal">
             <div className="section-label">Portfolio</div>
-            <h2>Other active projects.</h2>
-            <p>Live engagements across sectors, channels and ticket sizes.</p>
+            <h2>Brands we&apos;ve worked with.</h2>
+            <p>
+              {clients.length} brands and founders across lead generation,
+              founder personal branding, social and go-to-market work.
+            </p>
           </div>
 
-          <div className="project-grid">
-            {projects.map((project, i) => (
-              <article
-                key={project.client + project.sector}
-                className="project-card reveal"
-                style={{ transitionDelay: `${(i % 3) * 0.06}s` }}
-              >
-                <div className="project-top">
-                  <span className="project-initials" aria-hidden="true">
-                    {project.initials}
-                  </span>
-                  <span className="project-sector">{project.sector}</span>
-                </div>
-                <h3>{project.client}</h3>
-                <p>{project.copy}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag) => (
-                    <span className="tag" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+          <ClientGrid />
         </div>
       </section>
 

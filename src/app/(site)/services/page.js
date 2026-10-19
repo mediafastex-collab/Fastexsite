@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { services } from "@/data/services";
+import { services, channels, brandingService } from "@/data/services";
+import { founders } from "@/data/clients";
+import ClientMark from "@/components/ClientMark";
 import { engagement } from "@/data/industries";
 import { breadcrumb, webPage, graph } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
@@ -27,7 +29,7 @@ const listSchema = {
   "@type": "ItemList",
   name: "B2B Marketing Services",
   description:
-    "Five B2B marketing channels run as one lead generation system.",
+    "Five B2B marketing channels run as one lead generation system, plus founder personal branding.",
   numberOfItems: services.length,
   itemListElement: services.map((service, i) => ({
     "@type": "ListItem",
@@ -87,7 +89,7 @@ export default function Services() {
       <section className="section-padding" style={{ paddingTop: "3rem" }}>
         <div className="container">
           <div className="industry-grid">
-            {services.map((service, i) => (
+            {channels.map((service, i) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
@@ -103,6 +105,32 @@ export default function Services() {
               </Link>
             ))}
           </div>
+
+          {/* Personal branding is a separate practice, not a sixth channel. */}
+          <Link
+            href={`/services/${brandingService.slug}`}
+            className="practice-panel reveal"
+          >
+            <div className="practice-copy">
+              <span className="practice-label">Also from Fastex · Practice 02</span>
+              <h2 className="practice-title">{brandingService.title}</h2>
+              <p className="practice-text">{brandingService.summary}</p>
+              <span className="svc-cta practice-cta">
+                Explore personal branding <span aria-hidden="true">→</span>
+              </span>
+            </div>
+            <ul className="practice-founders">
+              {founders.map((f, i) => (
+                <li key={f.name} style={{ "--i": i }}>
+                  <ClientMark client={f} />
+                  <span className="practice-founder-name">{f.name}</span>
+                  {f.detail ? (
+                    <span className="practice-founder-detail">{f.detail}</span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </Link>
         </div>
       </section>
 

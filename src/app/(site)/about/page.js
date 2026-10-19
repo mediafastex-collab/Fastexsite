@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { site, founder } from "@/data/site";
 import { industries, engagement } from "@/data/industries";
-import { services } from "@/data/services";
+import { channels, brandingService } from "@/data/services";
 import { portfolioStats } from "@/data/caseStudies";
 import SocialIcon from "@/components/SocialIcon";
 import BookCall from "@/components/BookCall";
@@ -262,7 +262,7 @@ export default function About() {
 
           <div className="section-label">Services</div>
           <div className="pill-row">
-            {services.map((service) => (
+            {channels.map((service) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
@@ -271,6 +271,18 @@ export default function About() {
                 {service.navLabel}
               </Link>
             ))}
+          </div>
+
+          <div className="section-label" style={{ marginTop: "3.5rem" }}>
+            Founder practice
+          </div>
+          <div className="pill-row">
+            <Link
+              href={`/services/${brandingService.slug}`}
+              className="pill"
+            >
+              {brandingService.navLabel}
+            </Link>
           </div>
 
           <div className="section-label" style={{ marginTop: "3.5rem" }}>

@@ -3445,56 +3445,6 @@ summary:focus-visible,
    testimonials, process, industries, capabilities ticker, call to action.
 ========================================= */
 
-/* ── Client logos ───────────────────────────────────────── */
-.logo-strip {
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  background: var(--bg-raised);
-}
-
-.logo-strip-inner {
-  display: grid;
-  grid-template-columns: 11rem 1fr;
-  align-items: center;
-  gap: 2.5rem;
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
-}
-
-.logo-strip-label {
-  font-size: var(--fs-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.logo-strip-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.75rem 2.5rem;
-}
-
-/* Width and height come from the component (area-normalised), so here
-   they only need to respect those attributes and scale down on phones. */
-.logo-strip-list img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  filter: grayscale(1) contrast(1.1);
-  mix-blend-mode: multiply;
-  opacity: 0.78;
-  transition: opacity 0.3s var(--ease-out), filter 0.3s var(--ease-out);
-}
-
-.logo-strip-list img:hover {
-  filter: none;
-  opacity: 1;
-}
-
 /* ── Who we are ─────────────────────────────────────────── */
 .about-grid {
   display: grid;
@@ -3781,14 +3731,9 @@ summary:focus-visible,
 }
 
 @media (max-width: 900px) {
-  .logo-strip-inner,
   .about-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-  }
-
-  .logo-strip-list {
-    justify-content: flex-start;
   }
 
   .case-pair {
@@ -3816,23 +3761,6 @@ summary:focus-visible,
 
   .svc-row:hover {
     padding-left: 0;
-  }
-
-  /* Seven logos: three, three, then the last centred beneath, so the strip
-     reads as a deliberate grid instead of a ragged wrap. */
-  .logo-strip-list {
-    justify-content: center;
-    gap: 1.75rem 0;
-  }
-
-  .logo-strip-list li {
-    flex: 0 0 33.333%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo-strip-list img {
-    max-width: 86%;
   }
 
   .case-tile {
@@ -3863,4 +3791,535 @@ summary:focus-visible,
 .ind-grid > * {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+/* =========================================
+   CLIENTS
+   One sizing rule for every client logo (src/data/clients.js: logoSize),
+   one fixed box to hold it, so no brand reads bigger than another. Used by
+   the homepage marquee, the practice panel and the /work client grid.
+========================================= */
+.client-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 160px;
+  height: 60px;
+}
+
+.client-mark img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Logos that are a coloured square keep their plate, softened at the corners. */
+.client-mark--tile img {
+  border-radius: 6px;
+}
+
+.client-mark--founder img {
+  width: 56px;
+  height: 56px;
+  /* A touch under the box height: a full circle reads larger than a
+     wordmark of the same height. */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--border-color);
+}
+
+/* ── Homepage: client marquee ───────────────────────────── */
+.client-marquee {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-raised);
+  padding: 2.75rem 0 3rem;
+  overflow: hidden;
+}
+
+.cm-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.cm-label {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.cm-practices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.6rem;
+  font-size: var(--fs-sm);
+  color: var(--text-main);
+}
+
+.cm-practices span[aria-hidden] {
+  color: var(--accent-bright);
+}
+
+.cm-rows {
+  display: grid;
+  gap: 1rem;
+  /* Cards fade in and out at the edges instead of being cut off. */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.cm-row {
+  display: flex;
+  width: max-content;
+  animation: cm-scroll var(--cm-duration, 60s) linear infinite;
+}
+
+.cm-row--reverse {
+  animation-direction: reverse;
+}
+
+.cm-row:hover {
+  animation-play-state: paused;
+}
+
+/* Trailing padding equal to the gap makes both copies the same width, so
+   moving by exactly half loops without a jump. */
+.cm-track {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+@keyframes cm-scroll {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.cm-card {
+  flex: none;
+  width: 13.5rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.35rem 1rem 1rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  text-align: center;
+  transition: border-color 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+
+.cm-card:hover {
+  border-color: rgba(255, 102, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.cm-card .client-mark {
+  margin-bottom: 0.85rem;
+}
+
+.cm-name {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-main);
+  text-wrap: balance;
+}
+
+.cm-meta {
+  margin-top: 0.2rem;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+/* ── Hero: both practices named above the headline ──────── */
+.hero-eyebrow {
+  margin-bottom: 1.75rem;
+}
+
+.about-also {
+  margin-top: 1.25rem;
+  max-width: 52ch;
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* ── Second practice: founder personal branding ─────────── */
+.practice-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 2.75rem 3rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.35s var(--ease-out);
+}
+
+/* A thin brand-orange rule that draws itself down the edge on reveal. */
+.practice-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--accent-bright);
+  transform-origin: top;
+}
+
+.js-reveal .practice-panel::before {
+  transform: scaleY(0);
+  transition: transform 1s var(--ease-out) 0.25s;
+}
+
+.js-reveal .practice-panel.is-visible::before {
+  transform: scaleY(1);
+}
+
+.practice-panel:hover {
+  border-color: rgba(255, 102, 0, 0.45);
+}
+
+.practice-label {
+  display: block;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-color);
+}
+
+.site-wrapper .practice-title {
+  font-size: var(--fs-h3);
+  margin: 0.85rem 0 1rem;
+}
+
+.practice-text {
+  max-width: 46ch;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.practice-panel:hover .practice-cta {
+  color: var(--accent-color);
+}
+
+.practice-founders {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.practice-founders li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.practice-founders .client-mark {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 0.65rem;
+}
+
+.practice-founders .client-mark--founder img {
+  width: 96px;
+  height: 96px;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.practice-panel:hover .client-mark--founder img {
+  transform: scale(1.04);
+}
+
+.practice-founder-name {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.practice-founder-detail {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+/* Founders rise in one after another once the panel is on screen. */
+.js-reveal .practice-founders li {
+  opacity: 0;
+  translate: 0 14px;
+  transition: opacity 0.7s var(--ease-out), translate 0.7s var(--ease-out);
+  transition-delay: calc(0.3s + var(--i, 0) * 0.12s);
+}
+
+.js-reveal .practice-panel.is-visible .practice-founders li {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ── Case studies: logos on the featured case ──────────── */
+.case-tile-logo,
+.case-logo {
+  justify-content: flex-start;
+}
+
+.case-tile-logo {
+  margin-bottom: 1.5rem;
+}
+
+.case-logo {
+  margin: 0.75rem 0 1.25rem;
+}
+
+/* One featured case: a single wide tile, story on the left, proof on the
+   right, instead of a half-width card beside an empty column. */
+@media (min-width: 901px) {
+  .case-tile:only-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 4rem;
+  }
+
+  .case-tile:only-child > .case-tile-logo { grid-area: 1 / 1; }
+  .case-tile:only-child > .case-tile-meta { grid-area: 2 / 1; min-height: 0; }
+  .case-tile:only-child > .case-tile-client { grid-area: 3 / 1; margin-bottom: 0; }
+  .case-tile:only-child > .case-tile-metric { grid-area: 1 / 2; margin-top: 0; }
+  .case-tile:only-child > .case-tile-outcome { grid-area: 2 / 2; }
+  .case-tile:only-child > .case-tile-cta { grid-area: 3 / 2; align-self: end; }
+}
+
+/* ── /work: client grid ─────────────────────────────────── */
+.cg-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.cg-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.05rem;
+  font: inherit;
+  font-size: var(--fs-sm);
+  color: var(--text-main);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease-out), background 0.25s var(--ease-out),
+    color 0.25s var(--ease-out);
+}
+
+.cg-filter:hover {
+  border-color: rgba(255, 102, 0, 0.45);
+}
+
+.cg-filter.is-on {
+  background: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-color);
+}
+
+.cg-filter:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+.cg-count {
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+
+.cg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.cg-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.25rem 1.6rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+  /* `translate`, not `transform`, so the entrance and the hover lift don't
+     fight over the same property. */
+  animation: cg-in 0.6s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+.cg-card[hidden] {
+  display: none;
+}
+
+.cg-card:hover {
+  border-color: rgba(255, 102, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+@keyframes cg-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Every logo sits in the same plate, so the grid lines up card to card. */
+.cg-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.5rem;
+  margin-bottom: 1.35rem;
+  background: var(--bg-color);
+  border-radius: 3px;
+}
+
+/* The grid cards are wider than the marquee cards, so the whole mark is
+   scaled as one; every logo keeps its size relative to the others. */
+.cg-mark .client-mark {
+  transform: scale(1.3);
+}
+
+/* Hold the entrance until the filter bar scrolls into view, so the stagger
+   plays where the visitor can see it rather than at page load. */
+.js-reveal .cg-filters:not(.is-visible) + .cg-grid .cg-card {
+  animation-play-state: paused;
+}
+
+.site-wrapper .cg-name {
+  font-size: var(--fs-lg);
+  line-height: 1.2;
+  padding: 0 0.35rem;
+}
+
+.cg-detail {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.cg-meta {
+  margin: 0.55rem 0 0.9rem;
+  padding: 0 0.35rem;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.cg-copy {
+  flex: 1;
+  padding: 0 0.35rem;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.cg-card .project-tags {
+  margin-top: 1.1rem;
+  padding: 0 0.35rem;
+}
+
+@media (max-width: 1000px) {
+  .cg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .practice-panel {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .practice-founders {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .client-marquee {
+    padding: 2.25rem 0 2.5rem;
+  }
+
+  .cm-card {
+    width: 11.5rem;
+    height: 9.5rem;
+  }
+
+  .cm-practices {
+    font-size: var(--fs-xs);
+  }
+
+  .cg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-founders {
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .practice-founders .client-mark,
+  .practice-founders .client-mark--founder img {
+    width: 76px;
+    height: 76px;
+  }
+}
+
+/* Motion off: the marquee becomes a still, centred grid of every client. */
+@media (prefers-reduced-motion: reduce) {
+  .cm-rows {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .cm-row {
+    width: auto;
+    animation: none;
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  .cm-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .cm-track[aria-hidden="true"] {
+    display: none;
+  }
+
+  .cg-card {
+    animation: none;
+  }
 }

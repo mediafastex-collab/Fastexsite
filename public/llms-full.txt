@@ -11,7 +11,7 @@ Area served: Worldwide
 
 ## Results to date
 
-- 13+ — Active Brands
+- 24+ — Brands Served
 - 3X — Average Lead Growth
 - 60% — Avg. CPL Reduction
 - 4.9★ — Client Satisfaction
@@ -270,6 +270,54 @@ A: Licensed data providers, verified and cleaned before sending, then re-verifie
 **Q: Is cold email legal?**
 
 A: B2B cold email to a business address is permitted in most markets, with conditions. GDPR (EU/UK), CAN-SPAM (US), CASL (Canada) and the Australian Spam Act all require clear sender identification, a real physical address and a working opt-out — we include all three, and we segment sending by jurisdiction. CASL in particular needs consent for most Canadian recipients, so we scope that separately. Tell us which markets you sell into and we will confirm what applies.
+
+---
+
+## Founder Personal Branding
+
+URL: https://www.fastexmedia.com/services/personal-branding/
+
+A LinkedIn presence for founders that connects them with the right audience and positions them clearly in their market.
+
+In B2B, people buy from the person before they buy from the company, and most of them look the founder up first. We turn what you already know into a clear position, a profile that says it, and a steady stream of posts written in your voice, so the right people find you, follow you and start the conversation.
+
+### The problem
+
+Your expertise is real. Online, nobody can see it.
+
+Most founders know more about their market than anyone they compete with, and their LinkedIn shows a job title and a post from last spring. The people they want to reach, buyers, partners, hires and investors, look them up and find nothing worth remembering.
+
+- A profile that reads like a CV instead of a point of view
+- Posting in bursts, then going quiet for months when work gets busy
+- Generic content that could have come from any founder in any industry
+- Connections that grow in number but not in relevance
+
+### What's included
+
+- Positioning: what you stand for and who it is for
+- Profile rewrite, from headline and banner to featured section
+- Content pillars drawn from structured interviews with you
+- Posts written in your voice, approved by you before they go out
+- Engagement routines that put you in front of the right audience
+- Monthly review of reach, profile visits and conversations started
+
+### Frequently asked questions
+
+**Q: Will the posts sound like me?**
+
+A: They should, and that is the point. Everything starts from interviews with you, so the opinions and the stories are yours. We do the writing and the discipline of publishing; you approve every post before it goes out.
+
+**Q: How much of my time does it take?**
+
+A: Around an hour or two a month once it is running: an interview session, plus a few minutes approving posts. The first month asks a little more while we settle your positioning and rewrite the profile.
+
+**Q: Is this the same as your LinkedIn lead generation?**
+
+A: No. Lead generation opens conversations with named buyers through outreach. Personal branding builds the reputation those buyers find when they look you up. They work well together, and they work on their own.
+
+**Q: How long before it makes a difference?**
+
+A: Expect two to three months before the profile and the posting rhythm start drawing the right people in, and more after that. Personal brands compound; the founders who see the most from it are the ones who keep going.
 
 ---
 
@@ -589,33 +637,32 @@ LinkedIn Personal Branding · Founder Authority
 
 Metrics: ↑ 5x Revenue B2B, Daily Campaigns, High Authority
 
-## Linkziy — SaaS
+## Clients
 
-End-to-End SaaS Consultancy · Full Stack
-
-**Challenge:** A SaaS brand needed unified growth across operations, marketing, distribution, and product — without a fragmented agency stack.
-
-**Solution:** Took complete ownership — operations, marketing, distribution channels, product testing, and content management — under one system.
-
-**Outcome:** Built a unified, repeatable growth motion that scales with the product — turning isolated efforts into a single revenue engine.
-
-Metrics: 360° GTM Coverage, Unified Operations, Scaled Distribution
-
-## Other active projects
-
-- **Macj** (Real Estate) — Meta Ads lead generation — targeted campaigns, refined messaging, and streamlined lead-flow for faster homebuyer follow-ups. [↓ 60% CPL, ↑ 3x Volume, Daily Pipeline]
-- **Institute of Design Technology** (Education) — Official WhatsApp marketing automation — sequences, personalised reply flows, structured nurturing for admissions. [Instant Response, ↑ Engagement, ↑ Admissions]
-- **QuickEst CRM** (SaaS / CRM) — LinkedIn outreach engine with refined ICP messaging and follow-up sequences — high-intent qualified pipeline. [↑ Reply Rates, Qualified Pipeline]
-- **Shilpkala** (D2C / Retail) — WhatsApp workflow automation — order-update sequences, offer broadcasting, customer retention flows for D2C buyers. [Order Updates, Offer Broadcasts, Retention Flows]
-- **Tatvamasi Labs** (ERP) — Email + WhatsApp marketing automation, daily campaigns, content & copywriting. [Qualified Leads, Demo Meetings, Sales Revenue]
-- **Qbits Inverter** (Solar Industry) — B2B targeting Solar EPC for inverters. Email & WhatsApp automation with daily campaigns + creative engine. [High-Quality Leads, Solar EPC Pipeline]
-- **QuickEst** (SaaS / CRM) — Webinar automations, Email & WhatsApp setup, daily campaigns, content + copy + video scripts. [Meetings Booked, Automated Webinars]
-- **Heaven Designs** (Solar Industry) — Daily Email & WhatsApp campaigns with full content stack — high-quality solar lead generation. [High-Quality Leads, Daily Campaigns]
-- **Astronuts** (B2B Services) — LinkedIn lead generation, target-audience outreach, meeting bookings, content & copywriting. [Meetings Booked, Targeted Outreach]
-- **The Creative Co** (Creative Agency) — LinkedIn outreach engine, ICP targeting, meetings booked through high-quality conversations. [Meetings Booked, ICP Outreach]
-- **11za** (WhatsApp BSP) — WhatsApp marketing, templates, workflows + automation, sales, demo meetings, and Meta Ads. [Demo Meetings, Meta Ads, Sales]
-- **The Bio Cutlery** (Sustainability) — Performance marketing engine — high-quality lead generation for eco-cutlery distribution. [High-Quality Leads, ROAS Optimised]
-- **Eva Bluee** (Real Estate) — Performance marketing — Meta & Google ad campaigns built for real-estate lead generation at scale. [High-Quality Leads, Scaled Spend]
+- **Heaven Green Energy** — Renewable Energy · Lead Generation. A quality lead generation pipeline for a renewable energy brand, built to bring the cost per lead down.
+- **QuickEst** — SaaS / IT · Lead Generation. LinkedIn outreach engine with refined ICP messaging and follow-up sequences, plus webinar automations, Email & WhatsApp setup and daily campaigns. [↑ Reply Rates, Meetings Booked, Automated Webinars]
+- **Krupa** — Founder · Founder Personal Branding. A personal brand on LinkedIn that connects the founder with the right audience and sharpens their positioning.
+- **Tatvamasi Labs** — SaaS / IT · Lead Generation. Email + WhatsApp marketing automation, daily campaigns, content & copywriting. [Qualified Leads, Demo Meetings, Sales Revenue]
+- **Qbits Energy** — Renewable Energy · Lead Generation. B2B targeting Solar EPC for inverters. Email & WhatsApp automation with daily campaigns + creative engine. [High-Quality Leads, Solar EPC Pipeline]
+- **SurgePV** — SaaS / IT · Lead Generation. A quality lead generation pipeline for a SaaS company, built to keep the cost per lead low.
+- **Jashom Technologies** — SaaS / IT · Go-to-Market. Go-to-market planning and strategy for a technology company.
+- **Kriya Doshi** (Thinkyoung) — Founder · Founder Personal Branding. A personal brand on LinkedIn for the founder of Thinkyoung, connecting them with the right audience.
+- **Carsbeat** — Automotive · Social & LinkedIn. A social presence for an automotive brand, with engagement driven through paid social.
+- **Macwin Solar** — Renewable Energy · Lead Generation. A quality lead generation pipeline for a solar energy brand at a lower cost per lead.
+- **Astronuts** — B2B Services · Lead Generation. LinkedIn lead generation, target-audience outreach, meeting bookings, content & copywriting. [Meetings Booked, Targeted Outreach]
+- **Reformiqo** — IT Services · Lead Generation + Social & LinkedIn. Lead generation at a lower cost per lead, alongside a social media presence built from the ground up.
+- **Institute of Design & Technology** — Education · Lead Generation. Official WhatsApp marketing automation — sequences, personalised reply flows, structured nurturing for admissions. [Instant Response, ↑ Engagement, ↑ Admissions]
+- **Keyur Rakholiya** — Founder · Founder Personal Branding. A founder's personal brand on LinkedIn, positioned to reach and connect with the right audience.
+- **Urgent Cad** — B2B Services · Lead Generation. A steady lead generation pipeline for a services business, built for quality at a lower cost.
+- **The Creative Co** — Marketing Agency · Lead Generation. LinkedIn outreach engine, ICP targeting, meetings booked through high-quality conversations. [Meetings Booked, ICP Outreach]
+- **VijayHo** — Marketing Agency · Lead Generation. Lead generation for an IT and multimedia agency, focused on lead quality at a lower cost.
+- **Lifeplus Laboratory** — Healthcare · Lead Generation. A quality lead generation pipeline for a pathology laboratory at a lower cost per lead.
+- **Fastwhistle** — Logistics · Lead Generation. Lead generation for a logistics company, built for a steady flow of quality leads at a lower cost.
+- **Macj** — Real Estate · Lead Generation. Meta Ads lead generation — targeted campaigns, refined messaging, and streamlined lead-flow for faster homebuyer follow-ups. [↓ 60% CPL, ↑ 3x Volume, Daily Pipeline]
+- **The Bio Cutlery** — Sustainable Packaging · Lead Generation. Performance marketing engine — high-quality lead generation for eco-cutlery distribution. [High-Quality Leads, ROAS Optimised]
+- **Drishyam Realty** — Real Estate · Lead Generation. A quality lead generation pipeline for a real estate brand at a lower cost per lead.
+- **Heaven Designs** — Renewable Energy · Lead Generation. Daily Email & WhatsApp campaigns with full content stack — high-quality solar lead generation. [High-Quality Leads, Daily Campaigns]
+- **Skandrix** — IT Services · Lead Generation + Social & LinkedIn. Lead generation at a lower cost per lead, plus LinkedIn company page management that builds their presence.
 
 ---
 
@@ -1085,7 +1132,7 @@ Auto replies, qualifying sequences and routing rules mean no lead waits hours fo
 
 #### 4. Retention and nurture
 
-WhatsApp is not only for cold outreach. Order updates, offer broadcasts and re-engagement flows keep existing customers buying. We built exactly this for D2C brand Shilpkala: automated order updates plus offer broadcasting that compounds repeat revenue.
+WhatsApp is not only for cold outreach. Order updates, offer broadcasts and re-engagement flows keep existing customers buying. We built exactly this for a D2C brand: automated order updates plus offer broadcasting that compounds repeat revenue.
 
 ### 5 Mistakes That Kill WhatsApp Campaigns
 

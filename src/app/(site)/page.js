@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { industries } from "@/data/industries";
-import { services } from "@/data/services";
+import { channels, brandingService } from "@/data/services";
 import { portfolioStats, testimonials, featuredCases } from "@/data/caseStudies";
 import { site } from "@/data/site";
 import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
-import ClientLogos from "@/components/ClientLogos";
+import ClientMarquee from "@/components/ClientMarquee";
+import ClientMark from "@/components/ClientMark";
+import { founders } from "@/data/clients";
 
 
 const process = [
@@ -42,6 +44,11 @@ export default function Home() {
       {/* ---------- HERO ---------- */}
       <section className="hero">
         <div className="container hero-content hero-anim">
+          {/* Names both practices before the headline, so a first-time
+              visitor knows what we do without scrolling. */}
+          <div className="eyebrow hero-eyebrow">
+            B2B Lead Generation &nbsp;·&nbsp; Founder Personal Branding
+          </div>
           <h1>
             Your brand. Your <span className="accent">next chapter</span>.
           </h1>
@@ -72,7 +79,7 @@ export default function Home() {
       {/* ---------- PROOF: CLIENTS ----------
           Directly under the hero, so a first-time visitor sees who already
           works with us before being asked to read about what we do. */}
-      <ClientLogos />
+      <ClientMarquee />
 
       {/* ---------- WHO WE ARE ----------
           Same heading and statement as before. The giant wordmark repeated
@@ -88,6 +95,10 @@ export default function Home() {
               A B2B lead generation agency. We build the outbound systems that
               put qualified meetings in your sales calendar — every week, on
               purpose, in the sectors we know.
+            </p>
+            <p className="about-also">
+              And for founders, a personal brand on LinkedIn that the right
+              people find, follow and remember.
             </p>
           </div>
         </div>
@@ -111,7 +122,7 @@ export default function Home() {
           </div>
 
           <ul className="svc-list">
-            {services.map((service, i) => (
+            {channels.map((service, i) => (
               <li key={service.slug}>
                 <Link
                   href={`/services/${service.slug}`}
@@ -128,6 +139,35 @@ export default function Home() {
               </li>
             ))}
           </ul>
+
+          {/* ---------- SECOND PRACTICE ----------
+              Personal branding is not a sixth lead generation channel, so
+              it sits under the list as its own practice, with the founders
+              we have built brands for. */}
+          <Link
+            href={`/services/${brandingService.slug}`}
+            className="practice-panel reveal"
+          >
+            <div className="practice-copy">
+              <span className="practice-label">Also from Fastex · Practice 02</span>
+              <h3 className="practice-title">{brandingService.title}</h3>
+              <p className="practice-text">{brandingService.summary}</p>
+              <span className="svc-cta practice-cta">
+                Explore personal branding <span aria-hidden="true">→</span>
+              </span>
+            </div>
+            <ul className="practice-founders">
+              {founders.map((f, i) => (
+                <li key={f.name} style={{ "--i": i }}>
+                  <ClientMark client={f} />
+                  <span className="practice-founder-name">{f.name}</span>
+                  {f.detail ? (
+                    <span className="practice-founder-detail">{f.detail}</span>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </Link>
         </div>
       </section>
 
@@ -153,6 +193,9 @@ export default function Home() {
                 className="case-tile reveal"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
+                {c.logo ? (
+                  <ClientMark client={c.logo} className="case-tile-logo" />
+                ) : null}
                 <span className="case-tile-meta">
                   {c.sector} <span aria-hidden="true">·</span> {c.service}
                 </span>
