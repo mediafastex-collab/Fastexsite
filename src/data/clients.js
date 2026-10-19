@@ -13,7 +13,8 @@
  * `kind` decides how a logo is framed:
  *   mark    a logo on a transparent ground
  *   tile    a logo that IS a coloured square (The Creative Co, Drishyam)
- *   founder a portrait, for personal branding clients
+ *   founder a portrait, for personal branding clients; `photo` is the
+ *           full, uncropped picture shown in the founders sections
  *
  * `ink` is the share of the logo's box that is actually drawn, weighted by
  * how dark it is (measured from the files). It lets a bold, solid wordmark
@@ -70,6 +71,7 @@ export const clients = [
   },
   {
     name: "Krupa Dalal",
+    photo: { file: "krupa-dalal.webp", w: 750, h: 1000 },
     channels: ["personal-branding"],
     logo: "krupa.webp",
     w: 320,
@@ -136,6 +138,7 @@ export const clients = [
   },
   {
     name: "Kriya Doshi",
+    photo: { file: "kriya-doshi.webp", w: 800, h: 800 },
     channels: ["personal-branding"],
     detail: "Thinkyoung",
     logo: "kriya-doshi.webp",
@@ -191,7 +194,7 @@ export const clients = [
   },
   {
     name: "Reformiqo",
-    channels: ["social-media-marketing"],
+    channels: ["social-media-marketing", "performance-marketing"],
     logo: "reformiqo.webp",
     ink: 0.49,
     w: 175,
@@ -219,6 +222,7 @@ export const clients = [
   },
   {
     name: "Keyur Rakholiya",
+    photo: { file: "keyur-rakholiya.webp", w: 1000, h: 667 },
     channels: ["personal-branding"],
     logo: "keyur-rakholiya.webp",
     w: 320,
@@ -285,6 +289,7 @@ export const clients = [
   },
   {
     name: "Fastwhistle",
+    channels: ["performance-marketing"],
     logo: "fastwhistle.webp",
     ink: 0.17,
     w: 374,
@@ -326,6 +331,7 @@ export const clients = [
   },
   {
     name: "Drishyam Realty",
+    channels: ["performance-marketing"],
     logo: "drishyam-realty.webp",
     ink: 0.89,
     w: 174,

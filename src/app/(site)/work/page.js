@@ -4,7 +4,8 @@ import {
   featuredCases,
   testimonials,
 } from "@/data/caseStudies";
-import { clients, roughly } from "@/data/clients";
+import { brands, founders, roughly } from "@/data/clients";
+import FounderShowcase from "@/components/FounderShowcase";
 import Hl from "@/components/Hl";
 import ClientGrid from "@/components/ClientGrid";
 import ClientMark from "@/components/ClientMark";
@@ -164,15 +165,24 @@ export default function Work() {
             <div className="section-label">Portfolio</div>
             <h2>Brands we&apos;ve worked with.</h2>
             <p>
-              {roughly(clients.length)} brands and founders across lead
-              generation, founder personal branding, social and go-to-market
-              work.
+              {roughly(brands.length)} brands across lead generation,
+              performance marketing, social and go-to-market work.
             </p>
           </div>
 
           <ClientGrid />
         </div>
       </section>
+
+      {/* ---------- FOUNDERS ----------
+          Personal branding clients are people, not companies: their own
+          section, with their full photographs. */}
+      <FounderShowcase
+        founders={founders}
+        label="Founder personal branding"
+        heading="Founders we've built brands for."
+        intro="Personal brands on LinkedIn that connect each founder with the right audience and position them clearly in their market."
+      />
 
       {/* ---------- TESTIMONIALS ---------- */}
       <section

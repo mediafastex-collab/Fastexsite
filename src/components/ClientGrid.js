@@ -1,19 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { clients, clientServices, clientIndustries } from "@/data/clients";
+import { brands, clientServices } from "@/data/clients";
 import ClientMark from "@/components/ClientMark";
 
 /**
- * Every client on /work, filterable by industry and by the kind of work we
- * did. The two filters combine: "Renewable Energy" + "Lead Generation" shows
- * only clients that are both.
+ * Every company client on /work, filterable by industry and by the kind of
+ * work we did. Founders have their own section on the page (FounderShowcase).
+ * The two filters combine: "Renewable Energy" + "Lead Generation" shows only
+ * clients that are both.
  *
  * All cards are in the static HTML whatever the filter, so search engines and
  * answer engines see the full list; the filters only hide cards. Changing one
  * replays a short staggered fade on the cards that remain.
  */
-const SERVICE_FILTERS = Object.entries(clientServices);
+
+// Only offer filters that match at least one brand.
+const SERVICE_FILTERS = Object.entries(clientServices).filter(([key]) =>
+  brands.some((c) => c.services.includes(key))
+);
+const INDUSTRIES = [...new Set(brands.map((c) => c.industry))].sort(
+  (a, b) =>
+    brands.filter((c) => c.industry === b).length -
+    brands.filter((c) => c.industry === a).length
+);
 
 function Chips({ label, options, value, onChange }) {
   return (
@@ -44,7 +54,7 @@ export default function ClientGrid() {
     (industry === "all" || c.industry === industry) &&
     (service === "all" || c.services.includes(service));
 
-  const anyShown = clients.some(matches);
+  const anyShown = brands.some(matches);
   let shown = 0;
 
   return (
@@ -52,7 +62,7 @@ export default function ClientGrid() {
       <div className="cg-filters reveal">
         <Chips
           label="Industry"
-          options={clientIndustries.map((i) => [i, i])}
+          options={INDUSTRIES.map((i) => [i, i])}
           value={industry}
           onChange={setIndustry}
         />
@@ -66,7 +76,7 @@ export default function ClientGrid() {
 
       {/* Keyed on the filters so the entrance animation replays on change. */}
       <ul className="cg-grid" key={`${industry}|${service}`}>
-        {clients.map((c) => {
+        {brands.map((c) => {
           const visible = matches(c);
           const order = visible ? shown++ : 0;
           return (

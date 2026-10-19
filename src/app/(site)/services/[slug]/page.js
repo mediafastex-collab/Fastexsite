@@ -5,7 +5,8 @@ import { industries, engagement } from "@/data/industries";
 import BookCall from "@/components/BookCall";
 import Hl from "@/components/Hl";
 import ClientShowcase from "@/components/ClientShowcase";
-import { clientsForService } from "@/data/clients";
+import { clientsForService, founders } from "@/data/clients";
+import FounderShowcase from "@/components/FounderShowcase";
 
 const SITE = "https://www.fastexmedia.com";
 
@@ -188,15 +189,19 @@ export default async function ServicePage({ params }) {
 
       {/* ---------- CLIENTS ----------
           Only clients our published copy ties to this service. */}
-      <ClientShowcase
-        clients={clientsForService(service.slug)}
-        label="Brands we've worked with"
-        heading={
-          service.slug === "personal-branding"
-            ? "Founders we've built brands for."
-            : `Brands we've run ${service.title} for.`
-        }
-      />
+      {service.slug === "personal-branding" ? (
+        <FounderShowcase
+          founders={founders}
+          label="Founders we've worked with"
+          heading="Founders we've built brands for."
+        />
+      ) : (
+        <ClientShowcase
+          clients={clientsForService(service.slug)}
+          label="Brands we've worked with"
+          heading={`Brands we've run ${service.title} for.`}
+        />
+      )}
 
       {/* ---------- PROCESS ---------- */}
       <section
