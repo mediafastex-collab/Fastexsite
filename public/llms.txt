@@ -35,6 +35,9 @@ Contact: hello@fastexmedia.com · +91 9328680929
 
 ## Articles
 
+- [How to Build an ICP Your Outbound Can Actually Use](https://www.fastexmedia.com/blog/build-an-icp-for-outbound/): Most ideal customer profiles are too vague to act on. Here is how to build one specific enough to filter a list, write a first line, and tell you when to walk away.
+- [WhatsApp Business API Setup for B2B: What Actually Takes the Time](https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/): Business verification, template approval and the mistakes that get numbers banned. A realistic walkthrough of what WhatsApp API setup involves and how long each stage really takes.
+- [How to Warm Up a Cold Email Domain (Without Burning It)](https://www.fastexmedia.com/blog/warm-up-cold-email-domain/): Most cold email fails before anyone reads it. Here is the domain warmup process we run before a single prospect gets contacted, and the mistakes that put campaigns in spam.
 - [Performance Marketing for SaaS: Building a Predictable Lead Engine](https://www.fastexmedia.com/blog/performance-marketing-for-saas/): How B2B SaaS companies use performance marketing to book qualified demos, not just collect clicks. Channel mix, creative testing and the metrics that matter.
 - [Cold Email vs LinkedIn Outreach: Which Generates Better B2B Leads?](https://www.fastexmedia.com/blog/cold-email-vs-linkedin-outreach/): Honest data from running both channels daily: reply rates, real costs, scaling limits, and why prospects touched on both channels reply at twice the rate.
 - [B2B Lead Generation in 2026: 7 Strategies That Actually Fill Pipelines](https://www.fastexmedia.com/blog/b2b-lead-generation-strategies/): The 7 highest-ROI B2B lead generation strategies we run daily: multi-channel outbound, LinkedIn authority, WhatsApp outreach and how to stack them.

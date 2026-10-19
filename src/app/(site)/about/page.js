@@ -283,7 +283,7 @@ export default function About() {
                 href={`/industries/${industry.slug}`}
                 className="pill"
               >
-                <span aria-hidden="true">{industry.icon}</span> {industry.name}
+                {industry.name}
               </Link>
             ))}
           </div>

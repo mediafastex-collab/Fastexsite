@@ -105,8 +105,8 @@ export default function Industries() {
                 className="industry-card reveal"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
-                <div className="card-emoji" aria-hidden="true">
-                  {industry.icon}
+                <div className="card-index">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3>{industry.name}</h3>
                 <div className="card-tagline">{industry.tagline}</div>

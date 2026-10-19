@@ -1,0 +1,77 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0-v0e~qz9hqbs.js","/_next/static/chunks/05a597fvke86d.js"],""]
+10:I[97367,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+11:"$Sreact.suspense"
+2:T9f5,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://www.fastexmedia.com/blog/warm-up-cold-email-domain/","headline":"How to Warm Up a Cold Email Domain (Without Burning It)","description":"Most cold email fails before anyone reads it. Here is the domain warmup process we run before a single prospect gets contacted, and the mistakes that put campaigns in spam.","url":"https://www.fastexmedia.com/blog/warm-up-cold-email-domain/","datePublished":"2026-10-09","dateModified":"2026-10-09","inLanguage":"en","image":"https://www.fastexmedia.com/og-image.jpg","articleSection":"Revenue Architecture","keywords":"cold email domain warmup, email deliverability, cold email setup, sending domain","author":{"@id":"https://www.fastexmedia.com/#aagam-shah"},"publisher":{"@id":"https://www.fastexmedia.com/#organization"},"isPartOf":{"@id":"https://www.fastexmedia.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.fastexmedia.com/blog/warm-up-cold-email-domain/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fastexmedia.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.fastexmedia.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Warm Up a Cold Email Domain (Without Burning It)","item":"https://www.fastexmedia.com/blog/warm-up-cold-email-domain/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does cold email domain warmup take?","acceptedAnswer":{"@type":"Answer","text":"Two to three weeks before you should send to real prospects at any meaningful volume. You can start mixing in genuine targets around week three, but the ramp continues for about a month before a mailbox settles at a steady 40 to 50 sends a day."}},{"@type":"Question","name":"Can I use my company domain for cold email?","acceptedAnswer":{"@type":"Answer","text":"No. If deliverability goes wrong you lose your normal business mail along with the campaign, and that damage takes months to undo. Use a separate sending domain that points at the same site, and keep your main domain for conversations with people who already know you."}},{"@type":"Question","name":"How many cold emails can I send per day?","acceptedAnswer":{"@type":"Answer","text":"Around 40 to 50 per warmed mailbox. To go beyond that, add more warmed mailboxes rather than raising the rate on one. Volume per mailbox is what providers watch, and a sudden climb on a single address is the clearest spam signal you can send."}}]}]}0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","section",null,{"className":"page-hero article-hero","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"breadcrumb","children":[["$","$L3",null,{"href":"/","children":"Home"}],["$","span",null,{"className":"sep","children":"/"}],["$","$L3",null,{"href":"/blog","children":"Blog"}],["$","span",null,{"className":"sep","children":"/"}],["$","span",null,{"className":"current","children":"Revenue Architecture"}]]}],["$","h1",null,{"children":"How to Warm Up a Cold Email Domain (Without Burning It)"}],["$","p",null,{"className":"page-lede","children":"Most cold email fails before anyone reads it. Here is the domain warmup process we run before a single prospect gets contacted, and the mistakes that put campaigns in spam."}],["$","div",null,{"className":"article-meta","children":["$L4","$L5","$L6","$L7","$L8","$L9","$La"]}]]}]}],"$Lb","$Lc","$Ld"],null,"$Le"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"wCaqZrNCHVykaet123QVz"}
+4:["$","span",null,{"className":"article-author","children":["By ","Aagam Shah"]}]
+5:["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}]
+6:["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}]
+7:["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}]
+8:["$","time",null,{"dateTime":"2026-10-09","children":"9 October 2026"}]
+9:["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}]
+a:["$","span",null,{"children":"6 min read"}]
+f:T138b,<p>Here is the uncomfortable truth about cold email. Most campaigns don't fail because the copy was weak. They fail because nobody ever read them. The messages landed in spam on day three and the sender never found out.</p>
+
+<p>Domain warmup is the boring part everyone skips. It's also the part that decides whether the rest of the work matters. So let's go through exactly how we do it.</p>
+
+<h2>Never send cold email from your main domain</h2>
+
+<p>This is the one rule you cannot bend. If you send cold outreach from yourcompany.com and the volume gets flagged, you don't just lose the campaign. You lose your invoices, your client threads and your internal mail.</p>
+
+<p>Buy a separate domain. Something close to your brand, like getyourcompany.com or yourcompany.co. Point it at the same website. Send cold outreach only from there. <strong>If the new domain gets burned, your business carries on as normal.</strong></p>
+
+<h2>Authenticate before you send anything</h2>
+
+<p>Three DNS records decide whether mailbox providers trust you at all. SPF says which servers may send on your behalf. DKIM signs each message so it can't be altered in transit. DMARC tells providers what to do when a message fails the first two.</p>
+
+<p>Set all three before the first send. Not after the first campaign underperforms. Providers form an opinion of a new domain quickly, and a domain that starts sending without authentication has already answered the only question they were asking.</p>
+
+<h2>The warmup schedule we actually use</h2>
+
+<p>A brand new domain has no sending history. Go from zero to two hundred emails on Monday and you have told every spam filter exactly what you are. Volume has to climb slowly enough to look like a person.</p>
+
+<ul>
+<li><strong>Week 1:</strong> 5 to 10 emails a day, mostly to inboxes that will reply.</li>
+<li><strong>Week 2:</strong> 15 to 20 a day. Replies still matter more than volume.</li>
+<li><strong>Week 3:</strong> 25 to 35 a day. Start mixing in real prospects.</li>
+<li><strong>Week 4 onward:</strong> climb toward 40 to 50 a day per mailbox and hold there.</li>
+</ul>
+
+<p>Two to three weeks is the honest answer to "how long does this take". Anyone promising a domain ready in three days is selling you a domain that will be dead in three weeks.</p>
+
+<h2>Why 40 to 50 a day is the ceiling</h2>
+
+<p>People ask why we cap a mailbox so low when the platform allows more. Because a human being with a real job does not send two hundred individual emails before lunch, and providers know the difference.</p>
+
+<p>Need more volume? Add mailboxes, not send rate. Three warmed mailboxes at 40 a day is 120 emails that land. One mailbox at 120 a day is 120 emails that mostly don't. <strong>Scale sideways, never upward.</strong></p>
+
+<h2>What quietly kills a warmed domain</h2>
+
+<p>Plenty of domains get warmed properly and then burned in week five. Usually by one of these.</p>
+
+<p><strong>Bad data.</strong> Every message to a dead address is a hard bounce, and a bounce rate above 3% tells providers you bought a list. Verify every address before it enters a sequence.</p>
+
+<p><strong>No reply path.</strong> If nobody ever replies, your domain looks like a broadcaster. Sequences that ask a genuine question earn replies, and replies are the strongest trust signal you have.</p>
+
+<p><strong>Link stuffing.</strong> Three links and a tracking pixel in a first touch reads like marketing. One link, or none, reads like a person.</p>
+
+<p>Ask yourself this. If this exact email arrived in your inbox from a stranger, would you reply, or would you archive it without thinking? That question has fixed more campaigns than any subject line test.</p>
+
+<h2>Where this fits in the bigger picture</h2>
+
+<p>At Fastex Media we treat the first two to three weeks of any email engagement as infrastructure, not campaigning. Domains, authentication, warmup and verified data get built before anyone writes a sequence. It feels slow at the start and it is the reason the programme still works in month six.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long does cold email domain warmup take?</h3>
+<p>Two to three weeks before you should send to real prospects at any meaningful volume. You can start mixing in genuine targets around week three, but the ramp continues for about a month before a mailbox settles at a steady 40 to 50 sends a day.</p>
+
+<h3>Can I use my company domain for cold email?</h3>
+<p>No. If deliverability goes wrong you lose your normal business mail along with the campaign, and that damage takes months to undo. Use a separate sending domain that points at the same site, and keep your main domain for conversations with people who already know you.</p>
+
+<h3>How many cold emails can I send per day?</h3>
+<p>Around 40 to 50 per warmed mailbox. To go beyond that, add more warmed mailboxes rather than raising the rate on one. Volume per mailbox is what providers watch, and a sudden climb on a single address is the clearest spam signal you can send.</p>b:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$f"}}]}]}]
+c:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":[["$","h2",null,{"className":"pk-h2","children":"Keep reading."}],["$","ul",null,{"className":"post-list","children":[["$","li","build-an-icp-for-outbound",{"children":["$","$L3",null,{"href":"/blog/build-an-icp-for-outbound","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Build an ICP Your Outbound Can Actually Use"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","whatsapp-business-api-setup-b2b",{"children":["$","$L3",null,{"href":"/blog/whatsapp-business-api-setup-b2b","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"WhatsApp Business API Setup for B2B: What Actually Takes the Time"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","performance-marketing-for-saas",{"children":["$","$L3",null,{"href":"/blog/performance-marketing-for-saas","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"4 min read"}]]}],["$","h3",null,{"className":"post-title","children":"Performance Marketing for SaaS: Building a Predictable Lead Engine"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}]]}]]}]}]
+d:["$","section",null,{"className":"pk-section cta","style":{"borderTop":"1px solid var(--border-color)","paddingBottom":"8rem"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"cta-inner","children":[["$","h2",null,{"children":"Want this run for you?"}],["$","p",null,{"className":"cta-sub","children":"Tell us what you are trying to grow. We will tell you which channels fit and what it takes."}],["$","a",null,{"href":"https://cal.id/fastexmedia/discovery-call-with-aagam","target":"_blank","rel":"noopener noreferrer","className":"btn btn-primary","children":"Book a Strategy Call"}]]}]}]}]
+e:["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]
+12:null

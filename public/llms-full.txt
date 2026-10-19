@@ -624,6 +624,229 @@ Metrics: 360° GTM Coverage, Unified Operations, Scaled Distribution
 Written by Aagam Shah, Founder of Fastex Media, from campaigns run
 for client accounts. Figures quoted come from those campaigns.
 
+## How to Build an ICP Your Outbound Can Actually Use
+
+https://www.fastexmedia.com/blog/build-an-icp-for-outbound/
+Published 2026-10-16 · 6 min read · Revenue Architecture
+
+Most ideal customer profiles are too vague to act on. Here is how to build one specific enough to filter a list, write a first line, and tell you when to walk away.
+
+Ask most B2B teams who their ideal customer is and you get something like "mid-market SaaS companies in North America". That is not an ideal customer profile. That is a filter on a database.
+
+A useful ICP tells you who to contact, what to say in the first line, and when to walk away. If yours doesn't do all three, it isn't finished.
+
+### Start with the customers you already have
+
+Don't invent an ICP in a workshop. Build it from your own invoices.
+
+List every client from the last two years. Then mark the ones you'd happily take ten more of. Not the biggest ones. The ones that closed without a fight, paid on time, got a result and didn't drain your team. Those accounts are your ICP, and they already exist.
+
+Five of them is enough to see the pattern. You're looking for what they share that your difficult clients don't.
+
+### The four layers that make it usable
+
+A profile you can act on needs more than firmographics.
+
+- Firmographic: sector, headcount, revenue band, location. This is the easy layer and the only one most teams finish.
+
+- Structural: do they have the team or system your service plugs into? A company with no sales rep cannot act on booked meetings.
+
+- Situational: what has to be true right now? New funding, a hire in a relevant role, a new location, a product launch.
+
+- Human: who actually signs, and who blocks it? These are rarely the same person.
+
+The situational layer is the one that makes outbound work, because it gives you a reason to make contact today rather than in general.
+
+### Write down who you are not for
+
+This feels counterproductive and it is the fastest improvement most teams can make.
+
+Our own exclusion list is short and strict. We don't take direct-to-consumer brands, because the playbook is different and we would be learning on someone's budget. We don't take companies with no one to receive a booked meeting. We don't take anyone who wants leads counted rather than conversations booked.
+
+Writing that down did more for close rates than any messaging change. When a prospect doesn't fit, you find out in week one instead of month four.
+
+### Turn it into something a list builder can use
+
+An ICP that lives in a slide deck changes nothing. It has to become search criteria.
+
+Take each layer and ask what observable signal proves it. "Growing fast" is not observable. "Posted two or more sales roles in the last ninety days" is. "Cares about compliance" is not observable. "Has a named compliance lead on LinkedIn" is.
+
+If you cannot name the signal, you cannot build the list, and the targeting will quietly drift back to whoever the tool suggests.
+
+### Test it on fifty accounts before you scale
+
+Build a list of fifty companies that match the profile exactly. Run outbound to those fifty before you build a list of two thousand.
+
+What you're looking for is not the reply rate. It's the quality of the replies. Are the people answering the ones who can actually sign? Are the objections the ones you expected? If you get polite interest from people who turn out to have no budget, the profile is wrong somewhere and fifty accounts is a cheap place to find that out.
+
+We rebuild the ICP in the first two weeks of every engagement for exactly this reason. It's unglamorous and it decides everything downstream, because no amount of good copy rescues a list of the wrong companies.
+
+### Frequently Asked Questions
+
+#### What is the difference between an ICP and a buyer persona?
+
+An ICP describes the company worth selling to: sector, size, structure and situation. A buyer persona describes the individual inside it, including their role, what they are measured on and what they object to. You need both, and the ICP comes first because it decides which personas are even relevant.
+
+#### How many customers do I need before I can build an ICP?
+
+Five good ones is enough to see a pattern. What matters is that you pick the accounts that closed cleanly and got a result, not simply the largest. If you have no customers yet, build the profile from the companies you have had the best conversations with and treat it as a hypothesis to test.
+
+#### How often should an ICP be reviewed?
+
+Every six months, and immediately after any quarter where close rates moved sharply in either direction. Markets shift, your own capability shifts, and a profile built on last year's wins slowly stops describing this year's.
+
+---
+
+## WhatsApp Business API Setup for B2B: What Actually Takes the Time
+
+https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/
+Published 2026-10-14 · 6 min read · Revenue Architecture
+
+Business verification, template approval and the mistakes that get numbers banned. A realistic walkthrough of what WhatsApp API setup involves and how long each stage really takes.
+
+Most people think WhatsApp API setup is a technical job. It isn't. It's an approvals job, and approvals run on someone else's schedule.
+
+Here is what actually happens between deciding to use WhatsApp and sending your first broadcast, including the parts that take longer than anyone tells you.
+
+### The free app is not an option for this
+
+Let's clear this up first. WhatsApp Business, the free app you install on a phone, is built for a shop replying to customers. It is not built for outbound at volume, and using it that way gets the number banned. Usually within days.
+
+The official Business API is a different product. Approved message templates, multiple agents on one number, automation hooks, and a number that does not disappear because you sent too many messages on a Tuesday. If outbound is the plan, the API is the only path.
+
+### Business verification is the long pole
+
+Before anything else, Meta has to confirm your business exists. You will need a Meta Business Manager account, a registered business name that matches your documents, and a verifiable phone number and address.
+
+Budget one to two weeks. It can clear in days if your paperwork is tidy. It can run longer if the legal name on your registration does not match the name you trade under, which is the single most common reason verification stalls.
+
+Start this first. Everything else waits on it.
+
+### Template approval is where campaigns die
+
+Any message you send to someone who has not messaged you first must use a pre-approved template. Meta reviews each one, usually within a day, and rejects more than people expect.
+
+What gets rejected, reliably:
+
+- Anything that reads as a cold sales pitch with no prior relationship.
+
+- Vague variables, like a template that is mostly {{1}} and {{2}} with no readable sentence around them.
+
+- Promotional language in a template submitted under a utility category.
+
+- Links to anything Meta considers a restricted category.
+
+Write templates that read like a person following up on a real reason to make contact. "Hi {{1}}, you enquired about bulk pricing on {{2}} last week. Shall I send the quote?" clears review. "Hi {{1}}, great offers available now!" does not.
+
+### What you pay for, and what you don't
+
+WhatsApp charges per conversation, not per message. A conversation window opens when the first message lands and stays open for 24 hours, and everything inside that window is covered by the one charge.
+
+This changes how you should think about sequencing. Getting a reply inside the window costs you nothing extra. Starting a fresh conversation three days later costs again. Front-load the exchange that matters into the first 24 hours.
+
+### The opt-in question everyone gets wrong
+
+You need consent before messaging someone. That consent does not have to come from WhatsApp itself. A tick box on your enquiry form, a line in your checkout, a field on a trade show lead capture card, all of it counts as long as it clearly says you will contact them on WhatsApp.
+
+What does not count is a purchased list. Buying numbers and broadcasting to them is how businesses lose a verified number they spent three weeks earning. Is a faster start worth that risk? It never is.
+
+### A realistic timeline
+
+From a standing start, plan on three to five weeks before your first broadcast goes out. Business verification is one to two weeks. API onboarding and number registration is a few days. Template writing and approval is another week once revisions are counted. Flow building and testing runs alongside.
+
+We run this stage for clients as a fixed piece of work precisely because it is unglamorous and easy to get wrong. The channel is excellent once it is live. Getting it live is an administrative exercise, and treating it as one is what keeps the number safe.
+
+### Frequently Asked Questions
+
+#### How long does WhatsApp Business API approval take?
+
+Business verification with Meta typically takes one to two weeks, and template approval is usually reviewed within a day per template. From a standing start, plan three to five weeks before your first broadcast, since templates often need a revision round after the first submission.
+
+#### Can I send WhatsApp marketing messages without opt-in?
+
+No. You need consent before messaging someone, though it can be collected anywhere, including a web form, a checkout, or a lead capture card at an event. Messaging a purchased list is the fastest way to lose a verified number.
+
+#### How much does the WhatsApp Business API cost?
+
+Meta charges per 24 hour conversation rather than per message, so everything exchanged inside that window is covered by a single charge. Rates vary by country and by whether the conversation is marketing, utility or service. Platform and management fees sit on top of that and are separate.
+
+---
+
+## How to Warm Up a Cold Email Domain (Without Burning It)
+
+https://www.fastexmedia.com/blog/warm-up-cold-email-domain/
+Published 2026-10-09 · 6 min read · Revenue Architecture
+
+Most cold email fails before anyone reads it. Here is the domain warmup process we run before a single prospect gets contacted, and the mistakes that put campaigns in spam.
+
+Here is the uncomfortable truth about cold email. Most campaigns don't fail because the copy was weak. They fail because nobody ever read them. The messages landed in spam on day three and the sender never found out.
+
+Domain warmup is the boring part everyone skips. It's also the part that decides whether the rest of the work matters. So let's go through exactly how we do it.
+
+### Never send cold email from your main domain
+
+This is the one rule you cannot bend. If you send cold outreach from yourcompany.com and the volume gets flagged, you don't just lose the campaign. You lose your invoices, your client threads and your internal mail.
+
+Buy a separate domain. Something close to your brand, like getyourcompany.com or yourcompany.co. Point it at the same website. Send cold outreach only from there. If the new domain gets burned, your business carries on as normal.
+
+### Authenticate before you send anything
+
+Three DNS records decide whether mailbox providers trust you at all. SPF says which servers may send on your behalf. DKIM signs each message so it can't be altered in transit. DMARC tells providers what to do when a message fails the first two.
+
+Set all three before the first send. Not after the first campaign underperforms. Providers form an opinion of a new domain quickly, and a domain that starts sending without authentication has already answered the only question they were asking.
+
+### The warmup schedule we actually use
+
+A brand new domain has no sending history. Go from zero to two hundred emails on Monday and you have told every spam filter exactly what you are. Volume has to climb slowly enough to look like a person.
+
+- Week 1: 5 to 10 emails a day, mostly to inboxes that will reply.
+
+- Week 2: 15 to 20 a day. Replies still matter more than volume.
+
+- Week 3: 25 to 35 a day. Start mixing in real prospects.
+
+- Week 4 onward: climb toward 40 to 50 a day per mailbox and hold there.
+
+Two to three weeks is the honest answer to "how long does this take". Anyone promising a domain ready in three days is selling you a domain that will be dead in three weeks.
+
+### Why 40 to 50 a day is the ceiling
+
+People ask why we cap a mailbox so low when the platform allows more. Because a human being with a real job does not send two hundred individual emails before lunch, and providers know the difference.
+
+Need more volume? Add mailboxes, not send rate. Three warmed mailboxes at 40 a day is 120 emails that land. One mailbox at 120 a day is 120 emails that mostly don't. Scale sideways, never upward.
+
+### What quietly kills a warmed domain
+
+Plenty of domains get warmed properly and then burned in week five. Usually by one of these.
+
+Bad data. Every message to a dead address is a hard bounce, and a bounce rate above 3% tells providers you bought a list. Verify every address before it enters a sequence.
+
+No reply path. If nobody ever replies, your domain looks like a broadcaster. Sequences that ask a genuine question earn replies, and replies are the strongest trust signal you have.
+
+Link stuffing. Three links and a tracking pixel in a first touch reads like marketing. One link, or none, reads like a person.
+
+Ask yourself this. If this exact email arrived in your inbox from a stranger, would you reply, or would you archive it without thinking? That question has fixed more campaigns than any subject line test.
+
+### Where this fits in the bigger picture
+
+At Fastex Media we treat the first two to three weeks of any email engagement as infrastructure, not campaigning. Domains, authentication, warmup and verified data get built before anyone writes a sequence. It feels slow at the start and it is the reason the programme still works in month six.
+
+### Frequently Asked Questions
+
+#### How long does cold email domain warmup take?
+
+Two to three weeks before you should send to real prospects at any meaningful volume. You can start mixing in genuine targets around week three, but the ramp continues for about a month before a mailbox settles at a steady 40 to 50 sends a day.
+
+#### Can I use my company domain for cold email?
+
+No. If deliverability goes wrong you lose your normal business mail along with the campaign, and that damage takes months to undo. Use a separate sending domain that points at the same site, and keep your main domain for conversations with people who already know you.
+
+#### How many cold emails can I send per day?
+
+Around 40 to 50 per warmed mailbox. To go beyond that, add more warmed mailboxes rather than raising the rate on one. Volume per mailbox is what providers watch, and a sudden climb on a single address is the clearest spam signal you can send.
+
+---
+
 ## Performance Marketing for SaaS: Building a Predictable Lead Engine
 
 https://www.fastexmedia.com/blog/performance-marketing-for-saas/

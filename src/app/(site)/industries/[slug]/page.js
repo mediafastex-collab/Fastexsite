@@ -104,7 +104,7 @@ export default async function IndustryPage({ params }) {
             <span className="sep">/</span>
             <span className="current">{industry.name}</span>
           </div>
-          <div className="sector-badge"><span className="sector-emoji" aria-hidden="true">{industry.icon}</span><span>{industry.tagline}</span></div>
+          <div className="sector-badge"><span>{industry.tagline}</span></div>
           <h1>{industry.h1}</h1>
           <p className="page-lede">{industry.heroSub}</p>
           <div className="hero-btns" style={{ display: "flex", gap: "1rem" }}>

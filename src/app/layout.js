@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { Inter, Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import { founder } from "@/data/site";
 import "./globals.css";
 
@@ -10,12 +10,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
-  variable: "--font-outfit",
-  display: "swap",
-});
+/*
+ * The headline face (Newsreader) loads in src/app/(site)/layout.js, not here,
+ * so the campaign landing pages, which keep Outfit, never download it.
+ */
 
 const DESCRIPTION =
   "Global B2B lead generation agency. Multi-channel outbound systems across performance marketing, LinkedIn, WhatsApp and cold email that book qualified meetings.";
@@ -217,7 +215,7 @@ const siteSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"

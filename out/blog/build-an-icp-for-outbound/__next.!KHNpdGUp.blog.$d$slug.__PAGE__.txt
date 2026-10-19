@@ -1,0 +1,69 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0-v0e~qz9hqbs.js","/_next/static/chunks/05a597fvke86d.js"],""]
+a:I[97367,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+2:Ta2d,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://www.fastexmedia.com/blog/build-an-icp-for-outbound/","headline":"How to Build an ICP Your Outbound Can Actually Use","description":"Most ideal customer profiles are too vague to act on. Here is how to build one specific enough to filter a list, write a first line, and tell you when to walk away.","url":"https://www.fastexmedia.com/blog/build-an-icp-for-outbound/","datePublished":"2026-10-16","dateModified":"2026-10-16","inLanguage":"en","image":"https://www.fastexmedia.com/og-image.jpg","articleSection":"Revenue Architecture","keywords":"ideal customer profile, b2b icp, icp definition, outbound targeting","author":{"@id":"https://www.fastexmedia.com/#aagam-shah"},"publisher":{"@id":"https://www.fastexmedia.com/#organization"},"isPartOf":{"@id":"https://www.fastexmedia.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.fastexmedia.com/blog/build-an-icp-for-outbound/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fastexmedia.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.fastexmedia.com/blog/"},{"@type":"ListItem","position":3,"name":"How to Build an ICP Your Outbound Can Actually Use","item":"https://www.fastexmedia.com/blog/build-an-icp-for-outbound/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between an ICP and a buyer persona?","acceptedAnswer":{"@type":"Answer","text":"An ICP describes the company worth selling to: sector, size, structure and situation. A buyer persona describes the individual inside it, including their role, what they are measured on and what they object to. You need both, and the ICP comes first because it decides which personas are even relevant."}},{"@type":"Question","name":"How many customers do I need before I can build an ICP?","acceptedAnswer":{"@type":"Answer","text":"Five good ones is enough to see a pattern. What matters is that you pick the accounts that closed cleanly and got a result, not simply the largest. If you have no customers yet, build the profile from the companies you have had the best conversations with and treat it as a hypothesis to test."}},{"@type":"Question","name":"How often should an ICP be reviewed?","acceptedAnswer":{"@type":"Answer","text":"Every six months, and immediately after any quarter where close rates moved sharply in either direction. Markets shift, your own capability shifts, and a profile built on last year's wins slowly stops describing this year's."}}]}]}0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","section",null,{"className":"page-hero article-hero","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"breadcrumb","children":[["$","$L3",null,{"href":"/","children":"Home"}],["$","span",null,{"className":"sep","children":"/"}],["$","$L3",null,{"href":"/blog","children":"Blog"}],["$","span",null,{"className":"sep","children":"/"}],["$","span",null,{"className":"current","children":"Revenue Architecture"}]]}],["$","h1",null,{"children":"How to Build an ICP Your Outbound Can Actually Use"}],["$","p",null,{"className":"page-lede","children":"Most ideal customer profiles are too vague to act on. Here is how to build one specific enough to filter a list, write a first line, and tell you when to walk away."}],"$L4"]}]}],"$L5","$L6","$L7"],null,"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"wCaqZrNCHVykaet123QVz"}
+4:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-author","children":["By ","Aagam Shah"]}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","time",null,{"dateTime":"2026-10-16","children":"16 October 2026"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}]
+9:T1231,<p>Ask most B2B teams who their ideal customer is and you get something like "mid-market SaaS companies in North America". That is not an ideal customer profile. That is a filter on a database.</p>
+
+<p>A useful ICP tells you who to contact, what to say in the first line, and when to walk away. If yours doesn't do all three, it isn't finished.</p>
+
+<h2>Start with the customers you already have</h2>
+
+<p>Don't invent an ICP in a workshop. Build it from your own invoices.</p>
+
+<p>List every client from the last two years. Then mark the ones you'd happily take ten more of. Not the biggest ones. The ones that closed without a fight, paid on time, got a result and didn't drain your team. <strong>Those accounts are your ICP, and they already exist.</strong></p>
+
+<p>Five of them is enough to see the pattern. You're looking for what they share that your difficult clients don't.</p>
+
+<h2>The four layers that make it usable</h2>
+
+<p>A profile you can act on needs more than firmographics.</p>
+
+<ul>
+<li><strong>Firmographic:</strong> sector, headcount, revenue band, location. This is the easy layer and the only one most teams finish.</li>
+<li><strong>Structural:</strong> do they have the team or system your service plugs into? A company with no sales rep cannot act on booked meetings.</li>
+<li><strong>Situational:</strong> what has to be true right now? New funding, a hire in a relevant role, a new location, a product launch.</li>
+<li><strong>Human:</strong> who actually signs, and who blocks it? These are rarely the same person.</li>
+</ul>
+
+<p>The situational layer is the one that makes outbound work, because it gives you a reason to make contact today rather than in general.</p>
+
+<h2>Write down who you are not for</h2>
+
+<p>This feels counterproductive and it is the fastest improvement most teams can make.</p>
+
+<p>Our own exclusion list is short and strict. We don't take direct-to-consumer brands, because the playbook is different and we would be learning on someone's budget. We don't take companies with no one to receive a booked meeting. We don't take anyone who wants leads counted rather than conversations booked.</p>
+
+<p>Writing that down did more for close rates than any messaging change. When a prospect doesn't fit, you find out in week one instead of month four.</p>
+
+<h2>Turn it into something a list builder can use</h2>
+
+<p>An ICP that lives in a slide deck changes nothing. It has to become search criteria.</p>
+
+<p>Take each layer and ask what observable signal proves it. "Growing fast" is not observable. "Posted two or more sales roles in the last ninety days" is. "Cares about compliance" is not observable. "Has a named compliance lead on LinkedIn" is.</p>
+
+<p>If you cannot name the signal, you cannot build the list, and the targeting will quietly drift back to whoever the tool suggests.</p>
+
+<h2>Test it on fifty accounts before you scale</h2>
+
+<p>Build a list of fifty companies that match the profile exactly. Run outbound to those fifty before you build a list of two thousand.</p>
+
+<p>What you're looking for is not the reply rate. It's the quality of the replies. Are the people answering the ones who can actually sign? Are the objections the ones you expected? If you get polite interest from people who turn out to have no budget, the profile is wrong somewhere and fifty accounts is a cheap place to find that out.</p>
+
+<p>We rebuild the ICP in the first two weeks of every engagement for exactly this reason. It's unglamorous and it decides everything downstream, because no amount of good copy rescues a list of the wrong companies.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What is the difference between an ICP and a buyer persona?</h3>
+<p>An ICP describes the company worth selling to: sector, size, structure and situation. A buyer persona describes the individual inside it, including their role, what they are measured on and what they object to. You need both, and the ICP comes first because it decides which personas are even relevant.</p>
+
+<h3>How many customers do I need before I can build an ICP?</h3>
+<p>Five good ones is enough to see a pattern. What matters is that you pick the accounts that closed cleanly and got a result, not simply the largest. If you have no customers yet, build the profile from the companies you have had the best conversations with and treat it as a hypothesis to test.</p>
+
+<h3>How often should an ICP be reviewed?</h3>
+<p>Every six months, and immediately after any quarter where close rates moved sharply in either direction. Markets shift, your own capability shifts, and a profile built on last year's wins slowly stops describing this year's.</p>5:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]
+6:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":[["$","h2",null,{"className":"pk-h2","children":"Keep reading."}],["$","ul",null,{"className":"post-list","children":[["$","li","whatsapp-business-api-setup-b2b",{"children":["$","$L3",null,{"href":"/blog/whatsapp-business-api-setup-b2b","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"WhatsApp Business API Setup for B2B: What Actually Takes the Time"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","warm-up-cold-email-domain",{"children":["$","$L3",null,{"href":"/blog/warm-up-cold-email-domain","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Warm Up a Cold Email Domain (Without Burning It)"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","performance-marketing-for-saas",{"children":["$","$L3",null,{"href":"/blog/performance-marketing-for-saas","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"4 min read"}]]}],["$","h3",null,{"className":"post-title","children":"Performance Marketing for SaaS: Building a Predictable Lead Engine"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}]]}]]}]}]
+7:["$","section",null,{"className":"pk-section cta","style":{"borderTop":"1px solid var(--border-color)","paddingBottom":"8rem"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"cta-inner","children":[["$","h2",null,{"children":"Want this run for you?"}],["$","p",null,{"className":"cta-sub","children":"Tell us what you are trying to grow. We will tell you which channels fit and what it takes."}],["$","a",null,{"href":"https://cal.id/fastexmedia/discovery-call-with-aagam","target":"_blank","rel":"noopener noreferrer","className":"btn btn-primary","children":"Book a Strategy Call"}]]}]}]}]
+8:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

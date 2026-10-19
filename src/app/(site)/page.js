@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { industries } from "@/data/industries";
 import { services } from "@/data/services";
-import { portfolioStats, testimonials } from "@/data/caseStudies";
+import { portfolioStats, testimonials, featuredCases } from "@/data/caseStudies";
 import { site } from "@/data/site";
 import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
+import ClientLogos from "@/components/ClientLogos";
 
 
 const process = [
@@ -68,30 +69,22 @@ export default function Home() {
 
       </section>
 
-      {/* ---------- CAPABILITY MARQUEE ---------- */}
-      <div className="marquee" aria-hidden="true">
-        <div className="marquee-track">
-          {[0, 1].map((pass) => (
-            <div className="marquee-group" key={pass}>
-              {capabilities.map((item) => (
-                <span className="marquee-item" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* ---------- PROOF: CLIENTS ----------
+          Directly under the hero, so a first-time visitor sees who already
+          works with us before being asked to read about what we do. */}
+      <ClientLogos />
 
-      {/* ---------- BRAND STATEMENT ---------- */}
-      <section className="section-padding brand-band">
-        <div className="container">
-          <div className="brand-inner reveal">
-            <div className="section-label">Who we are</div>
-            <h2 className="brand-wordmark">
+      {/* ---------- WHO WE ARE ----------
+          Same heading and statement as before. The giant wordmark repeated
+          the logo; the statement is what does the work, so it now leads. */}
+      <section className="section-padding about-band">
+        <div className="container about-grid">
+          <div className="section-label reveal">Who we are</div>
+          <div className="about-body reveal">
+            <h2 className="about-name">
               Fastex <span className="mark">Media</span>
             </h2>
-            <p className="brand-line">
+            <p className="about-statement">
               A B2B lead generation agency. We build the outbound systems that
               put qualified meetings in your sales calendar — every week, on
               purpose, in the sectors we know.
@@ -100,7 +93,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- SERVICES ---------- */}
+      {/* ---------- SERVICES ----------
+          A ruled list rather than a card grid: five items in three columns
+          always left an empty cell, and a list reads faster when the
+          differences between rows are the point. */}
       <section
         className="section-padding"
         style={{ borderTop: "1px solid var(--border-color)" }}
@@ -114,85 +110,62 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="industry-grid">
+          <ul className="svc-list">
             {services.map((service, i) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="industry-card reveal"
-                style={{ transitionDelay: `${i * 0.06}s` }}
-              >
-                <div className="card-index">{service.num}</div>
-                <h3>{service.title}</h3>
-                <p className="card-copy">{service.summary}</p>
-                <span className="card-link">
-                  View service <span aria-hidden="true">→</span>
-                </span>
-              </Link>
+              <li key={service.slug}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="svc-row reveal"
+                  style={{ transitionDelay: `${i * 0.05}s` }}
+                >
+                  <span className="svc-num">{service.num}</span>
+                  <h3 className="svc-title">{service.title}</h3>
+                  <p className="svc-copy">{service.summary}</p>
+                  <span className="svc-cta">
+                    View service <span aria-hidden="true">→</span>
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* ---------- INDUSTRIES ---------- */}
+      {/* ---------- SELECTED WORK ----------
+          Proof with a story attached. These engagements were already on
+          /work; surfacing two of them here puts the evidence on the page
+          people land on. */}
       <section
-        className="section-padding"
+        className="section-padding work-band"
         style={{ borderTop: "1px solid var(--border-color)" }}
       >
         <div className="container">
           <div className="section-header reveal">
-            <div className="section-label">Specialisation</div>
-            <h2>Industries we work in.</h2>
-            <p>
-              We already know who signs, what they object to and how long the
-              cycle runs.
-            </p>
+            <div className="section-label">Selected work</div>
+            <h2>Results we can point to.</h2>
           </div>
 
-          <div className="industry-grid">
-            {industries.map((industry, i) => (
+          <div className="case-pair">
+            {featuredCases.map((c, i) => (
               <Link
-                key={industry.slug}
-                href={`/industries/${industry.slug}`}
-                className="industry-card reveal"
-                style={{ transitionDelay: `${i * 0.06}s` }}
-              >
-                <div className="card-emoji" aria-hidden="true">
-                  {industry.icon}
-                </div>
-                <h3>{industry.name}</h3>
-                <div className="card-tagline">{industry.tagline}</div>
-                <span className="card-link">
-                  View sector <span aria-hidden="true">→</span>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------- PROCESS ---------- */}
-      <section
-        className="section-padding"
-        style={{ borderTop: "1px solid var(--border-color)" }}
-      >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="section-label">How We Work</div>
-            <h2>Three moves. One machine.</h2>
-          </div>
-
-          <div className="process-list">
-            {process.map((step, i) => (
-              <div
-                key={step.num}
-                className="process-row reveal"
+                key={c.client}
+                href="/work"
+                className="case-tile reveal"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
-                <div className="process-num">{step.num}</div>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
-              </div>
+                <span className="case-tile-meta">
+                  {c.sector} <span aria-hidden="true">·</span> {c.service}
+                </span>
+                <h3 className="case-tile-client">{c.client}</h3>
+                <div className="case-tile-metric">
+                  <span className="case-tile-value">{c.metrics[0].value}</span>
+                  <span className="case-tile-label">{c.metrics[0].label}</span>
+                </div>
+                <p className="case-tile-outcome">{c.outcome}</p>
+                <span className="case-tile-cta">
+                  Read the case study <span aria-hidden="true">→</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -235,6 +208,85 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ---------- PROCESS ---------- */}
+      <section
+        className="section-padding"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">How We Work</div>
+            <h2>Three moves. One machine.</h2>
+          </div>
+
+          <div className="process-list">
+            {process.map((step, i) => (
+              <div
+                key={step.num}
+                className="process-row reveal"
+                style={{ transitionDelay: `${i * 0.08}s` }}
+              >
+                <div className="process-num">{step.num}</div>
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- INDUSTRIES ----------
+          Five sectors in five columns, so the row is always full. Numbered
+          rather than emoji: emoji read as consumer, not as a B2B firm. */}
+      <section
+        className="section-padding"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">Specialisation</div>
+            <h2>Industries we work in.</h2>
+            <p>
+              We already know who signs, what they object to and how long the
+              cycle runs.
+            </p>
+          </div>
+
+          <div className="ind-grid">
+            {industries.map((industry, i) => (
+              <Link
+                key={industry.slug}
+                href={`/industries/${industry.slug}`}
+                className="ind-card reveal"
+                style={{ transitionDelay: `${i * 0.05}s` }}
+              >
+                <span className="ind-num">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{industry.name}</h3>
+                <div className="card-tagline">{industry.tagline}</div>
+                <span className="card-link">
+                  View sector <span aria-hidden="true">→</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- CAPABILITY MARQUEE ---------- */}
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {[0, 1].map((pass) => (
+            <div className="marquee-group" key={pass}>
+              {capabilities.map((item) => (
+                <span className="marquee-item" key={item}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* ---------- CLOSING CTA ---------- */}
       <section

@@ -12,8 +12,34 @@
   --accent-color: #c94a00; /* passes for small labels; use sparingly */
   --accent-bright: #ff6600; /* brand orange, for fills and large marks only */
 
-  --font-heading: var(--font-outfit), sans-serif;
+  /* Real fallback at the root; the site and landing wrappers each set
+     their own face, because a font variable only resolves on or below the
+     element its class is applied to. */
+  --font-heading: Georgia, "Times New Roman", serif;
   --font-body: var(--font-inter), sans-serif;
+
+  /* Type scale. Every font-size on the site resolves to one of these steps.
+     There were 51 distinct sizes before, many within a hair of each other
+     (0.66, 0.68, 0.70, 0.72rem…), which is what made the page read as
+     unsettled. Root is 17px, so: 12.75 / 14.9 / 17 / 19 / 23 / 30px. */
+  --fs-xs: 0.75rem;   /* eyebrows, labels, metadata */
+  --fs-sm: 0.875rem;  /* secondary copy, captions */
+  --fs-base: 1rem;    /* body */
+  --fs-md: 1.125rem;  /* lead copy, card titles */
+  --fs-lg: 1.375rem;  /* small headings */
+  --fs-xl: 1.75rem;   /* sub-section headings */
+
+  /* Responsive headline steps. These replaced twenty separate clamp() values.
+     Sized for a serif: Newsreader carries more presence per pixel than the
+     geometric sans it replaced, so the section headline ceiling drops from
+     4rem to 3.25rem and still reads larger. */
+  --fs-display: clamp(3rem, 7.5vw, 6.5rem);   /* home hero */
+  --fs-h1: clamp(2.5rem, 5.5vw, 4.5rem);      /* inner page titles, closing CTA */
+  --fs-h2: clamp(2rem, 3.6vw, 3.25rem);       /* section headings */
+  --fs-h3: clamp(1.45rem, 2.4vw, 2rem);       /* card and sub-section headings */
+  --fs-h4: clamp(1.2rem, 1.9vw, 1.5rem);      /* list and accordion headings */
+  --fs-lead: clamp(1.1rem, 1.5vw, 1.3rem);    /* intro paragraphs */
+  --fs-stat: clamp(2rem, 3.2vw, 2.75rem);     /* figures */
 
   --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -113,7 +139,7 @@ ul {
   align-items: center;
   gap: 10px;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: var(--fs-lg);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -136,7 +162,7 @@ ul {
 }
 
 .nav-links li a {
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
@@ -184,7 +210,7 @@ ul {
 }
 
 .nav-number {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   opacity: 0.5;
   margin-right: 2px;
   transition: var(--transition);
@@ -208,7 +234,7 @@ ul {
   background: none;
   border: none;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   line-height: 1;
   cursor: pointer;
   padding: 0.25rem;
@@ -256,7 +282,7 @@ ul {
   align-items: center;
   gap: 0.9rem;
   padding: 0.85rem 1rem;
-  font-size: 0.85rem;
+  font-size: var(--fs-sm);
   text-transform: none;
   letter-spacing: 0;
   color: var(--text-muted);
@@ -309,8 +335,8 @@ ul {
 
 .dropdown-num {
   font-family: var(--font-heading);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
   opacity: 0.45;
   flex-shrink: 0;
 }
@@ -337,9 +363,9 @@ ul {
   margin-top: 0.4rem;
   padding: 0.85rem 1rem;
   border-top: 1px solid var(--border-color);
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
@@ -352,7 +378,7 @@ ul {
   background: none;
   border: none;
   color: var(--text-main);
-  font-size: 2rem;
+  font-size: var(--fs-xl);
   cursor: pointer;
 }
 
@@ -365,7 +391,7 @@ ul {
   justify-content: center;
   padding: 1rem 2rem;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -451,7 +477,7 @@ ul {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: var(--fs-display);
   line-height: 0.98;
   margin-bottom: 2rem;
   font-weight: 400;
@@ -476,11 +502,11 @@ ul {
 }
 
 .hero p {
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-size: var(--fs-lead);
   color: var(--text-muted);
   max-width: 560px;
   margin-bottom: 3rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* --- Eyebrow label --- */
@@ -488,9 +514,9 @@ ul {
   display: inline-flex;
   align-items: flex-start; /* keeps the dot on the first line when the label wraps */
   gap: 0.7rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 2.5rem;
 }
@@ -520,16 +546,16 @@ ul {
 
 .hero-stats .stat-value {
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-size: var(--fs-stat);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .hero-stats .stat-label {
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-top: 0.7rem;
 }
@@ -613,9 +639,9 @@ ul {
   gap: 2.5rem;
   padding-right: 2.5rem;
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   white-space: nowrap;
 }
@@ -642,9 +668,9 @@ ul {
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 2.5rem;
 }
@@ -673,7 +699,7 @@ ul {
 }
 
 .split-body h2 {
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  font-size: var(--fs-h2);
   font-weight: 400;
   line-height: 1.18;
   margin-bottom: 2.5rem;
@@ -682,8 +708,8 @@ ul {
 
 .split-body p {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: var(--fs-md);
+  font-weight: 400;
   max-width: 60ch;
   margin-bottom: 2.5rem;
 }
@@ -746,8 +772,8 @@ ul {
 
 .service-index {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 3.5rem;
   transition: var(--transition);
@@ -758,7 +784,7 @@ ul {
 }
 
 .services-grid .service-card h3 {
-  font-size: 1.55rem;
+  font-size: var(--fs-xl);
   margin-bottom: 1rem;
   font-weight: 400;
 }
@@ -766,7 +792,7 @@ ul {
 .service-arrow {
   margin-top: auto;
   padding-top: 2.5rem;
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   color: var(--text-muted);
   opacity: 0;
   transform: translateX(-8px);
@@ -802,19 +828,19 @@ ul {
 
 .process-num {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .process-row h3 {
-  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-size: var(--fs-h3);
   font-weight: 400;
 }
 
 .process-row p {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* =========================================
@@ -851,16 +877,16 @@ ul {
 }
 
 .cta h2 {
-  font-size: clamp(2.75rem, 7vw, 5.5rem);
-  font-weight: 300;
+  font-size: var(--fs-h1);
+  font-weight: 400;
   line-height: 1;
   margin-bottom: 2rem;
 }
 
 .cta-sub {
   color: var(--text-muted);
-  font-size: 1.15rem;
-  font-weight: 300;
+  font-size: var(--fs-md);
+  font-weight: 400;
   max-width: 46ch;
   margin: 0 auto 3rem;
 }
@@ -873,7 +899,7 @@ ul {
   margin-top: 3.5rem;
   padding-top: 2.5rem;
   border-top: 1px solid var(--border-color);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: var(--text-muted);
 }
 
@@ -915,7 +941,7 @@ ul {
 }
 
 .page-hero h1 {
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-size: var(--fs-h1);
   font-weight: 400;
   line-height: 1.04;
   max-width: 18ch;
@@ -923,9 +949,9 @@ ul {
 }
 
 .page-hero .page-lede {
-  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-size: var(--fs-lead);
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 62ch;
   margin-bottom: 2.5rem;
 }
@@ -936,9 +962,9 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 2rem;
 }
@@ -1021,8 +1047,8 @@ ul {
 
 .industry-card .card-index {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 3rem;
   transition: var(--transition);
@@ -1033,13 +1059,13 @@ ul {
 }
 
 .industry-card h3 {
-  font-size: 1.55rem;
+  font-size: var(--fs-xl);
   font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
 .industry-card .card-tagline {
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-muted);
@@ -1048,16 +1074,16 @@ ul {
 
 .industry-card .card-copy {
   color: var(--text-muted);
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
 }
 
 .industry-card .card-link {
   margin-top: auto;
   padding-top: 2.5rem;
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
@@ -1087,7 +1113,7 @@ ul {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   padding-right: 2rem;
 }
 
@@ -1121,7 +1147,7 @@ ul {
   cursor: pointer;
   list-style: none;
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-size: var(--fs-h4);
   font-weight: 400;
   letter-spacing: -0.01em;
   transition: var(--transition);
@@ -1137,7 +1163,7 @@ ul {
 
 .faq-item summary .sign {
   flex-shrink: 0;
-  font-size: 1.4rem;
+  font-size: var(--fs-lg);
   line-height: 1;
   color: var(--text-muted);
   transition: var(--transition);
@@ -1150,7 +1176,7 @@ ul {
 
 .faq-item .faq-answer {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 78ch;
   padding-bottom: 2rem;
   margin-top: -0.5rem;
@@ -1170,16 +1196,16 @@ ul {
 
 .proof-band .stat-value {
   font-family: var(--font-heading);
-  font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+  font-size: var(--fs-stat);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .proof-band .stat-label {
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-top: 0.7rem;
 }
@@ -1196,7 +1222,7 @@ ul {
   padding: 1.25rem 0;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   display: flex;
   gap: 1.25rem;
 }
@@ -1223,7 +1249,7 @@ ul {
   padding: 0.5rem 1.1rem;
   border: 1px solid var(--border-color);
   border-radius: 100px;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-muted);
@@ -1247,7 +1273,7 @@ ul {
 }
 
 .brand-wordmark {
-  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-size: var(--fs-display);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -1293,8 +1319,8 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 
 .brand-line {
   color: var(--text-muted);
-  font-size: 1.15rem;
-  font-weight: 300;
+  font-size: var(--fs-md);
+  font-weight: 400;
   max-width: 58ch;
   margin: 0 auto;
 }
@@ -1331,23 +1357,23 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .founder-body h2 {
-  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-size: var(--fs-h2);
   font-weight: 400;
   margin-bottom: 0.4rem;
 }
 
 .founder-role {
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.12em;
   color: var(--accent-color);
   margin-bottom: 2rem;
 }
 
 .founder-body p {
   color: var(--text-muted);
-  font-weight: 300;
-  font-size: 1.05rem;
+  font-weight: 400;
+  font-size: var(--fs-md);
   max-width: 60ch;
   margin-bottom: 1.5rem;
 }
@@ -1360,7 +1386,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   padding: 0.85rem 1.5rem 0.85rem 1.1rem;
   border: 1px solid var(--border-color);
   border-radius: 100px;
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-muted);
@@ -1368,7 +1394,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .founder-social i {
-  font-size: 1.3rem;
+  font-size: var(--fs-lg);
 }
 
 .founder-social:hover {
@@ -1392,7 +1418,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
    SECTOR EMOJI
 ========================================= */
 .card-emoji {
-  font-size: 1.75rem;
+  font-size: var(--fs-xl);
   line-height: 1;
   margin-bottom: 2.5rem;
   filter: saturate(1.05);
@@ -1410,15 +1436,15 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   padding: 0.5rem 1.1rem 0.5rem 0.6rem;
   border: 1px solid var(--border-color);
   border-radius: 100px;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
 .sector-emoji {
-  font-size: 1.1rem;
+  font-size: var(--fs-md);
   line-height: 1;
 }
 
@@ -1447,9 +1473,9 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
@@ -1462,14 +1488,14 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .case-item h3 {
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-size: var(--fs-h3);
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .case-service {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
   margin-bottom: 2.5rem;
 }
 
@@ -1481,9 +1507,9 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .case-label {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 0.8rem;
   padding-bottom: 0.8rem;
@@ -1492,8 +1518,8 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 
 .case-block p {
   color: var(--text-muted);
-  font-weight: 300;
-  font-size: 0.98rem;
+  font-weight: 400;
+  font-size: var(--fs-base);
 }
 
 .case-metrics {
@@ -1506,16 +1532,16 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 
 .case-metrics .stat-value {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-size: var(--fs-stat);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .case-metrics .stat-label {
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-top: 0.6rem;
 }
@@ -1584,27 +1610,27 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   border: 1px solid var(--border-color);
   background: rgba(0, 0, 0, 0.038);
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.05em;
 }
 
 .project-sector {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .project-card h3 {
-  font-size: 1.3rem;
+  font-size: var(--fs-lg);
   font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
 .project-card p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
@@ -1615,9 +1641,9 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .tag {
-  font-size: 0.68rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   padding: 0.35rem 0.75rem;
   border: 1px solid var(--border-color);
   border-radius: 100px;
@@ -1650,14 +1676,14 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 
 .quote-stars {
   color: var(--accent-color);
-  letter-spacing: 0.2em;
-  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  font-size: var(--fs-sm);
   margin-bottom: 1.5rem;
 }
 
 .quote-card blockquote {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.01em;
@@ -1684,18 +1710,18 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   border: 1px solid var(--border-color);
   background: rgba(0, 0, 0, 0.038);
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.05em;
 }
 
 .quote-name {
   display: block;
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
 }
 
 .quote-role {
   display: block;
-  font-size: 0.78rem;
+  font-size: var(--fs-xs);
   color: var(--text-muted);
   margin-top: 0.15rem;
 }
@@ -1711,7 +1737,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 .footer-blurb {
   max-width: 300px;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
   margin-bottom: 2rem;
 }
 
@@ -1729,7 +1755,7 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
   height: 42px;
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   color: var(--text-muted);
   transition: var(--transition);
 }
@@ -1749,13 +1775,13 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .section-header h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: var(--fs-h2);
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
 .section-header p {
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   color: var(--text-muted);
 }
 
@@ -1784,14 +1810,14 @@ html:not(.js-reveal) .brand-wordmark .mark::before {
 }
 
 .service-card h3, .pricing-card h3 {
-  font-size: 1.8rem;
+  font-size: var(--fs-xl);
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
 .service-card p, .pricing-card p {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
 /* =========================================
@@ -1816,7 +1842,7 @@ footer {
 }
 
 .link-group h4 {
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--text-muted);
@@ -1825,7 +1851,7 @@ footer {
 
 .link-group a {
   display: block;
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: var(--text-main);
   margin-bottom: 0.8rem;
 }
@@ -1839,7 +1865,7 @@ footer {
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 
 /* =========================================
@@ -1888,12 +1914,12 @@ footer {
   }
 
   .nav-links li a {
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 
   .nav-caret {
     display: block;
-    font-size: 1.5rem;
+    font-size: var(--fs-lg);
   }
 
   .dropdown {
@@ -2096,14 +2122,14 @@ footer {
 
 .pl-pillar h3 {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: var(--fs-lg);
   font-weight: 400;
   margin-bottom: 0.6rem;
 }
 
 .pl-pillar p {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 62ch;
 }
 
@@ -2137,29 +2163,29 @@ footer {
 }
 
 .pl-tier-num {
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .pl-tier h3 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: var(--fs-lg);
   font-weight: 400;
   margin-bottom: 0.6rem;
 }
 
 .pl-tier p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
 }
 
 .pl-rec {
   flex-shrink: 0;
-  font-size: 0.62rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--accent-color);
   white-space: nowrap;
 }
@@ -2175,7 +2201,7 @@ footer {
   width: 100%;
   min-width: 720px;
   border-collapse: collapse;
-  font-size: 0.92rem;
+  font-size: var(--fs-base);
 }
 
 .pl-table thead th {
@@ -2189,7 +2215,7 @@ footer {
 .pl-th-name {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: var(--text-main);
 }
 
@@ -2213,15 +2239,15 @@ footer {
   padding: 1.15rem 1.5rem 1.15rem 1.75rem;
   background: var(--bg-color);
   text-align: left;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--text-muted);
   border-right: 1px solid var(--border-color);
 }
 
 .pl-th-label {
-  font-size: 0.68rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
 }
 
 .pl-table tbody tr {
@@ -2236,7 +2262,7 @@ footer {
   padding: 1.15rem 1.25rem;
   text-align: center;
   color: var(--text-main);
-  font-weight: 300;
+  font-weight: 400;
   vertical-align: middle;
 }
 
@@ -2250,10 +2276,10 @@ footer {
   background: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid var(--border-color);
   text-align: left;
-  font-size: 0.68rem;
+  font-size: var(--fs-xs);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
@@ -2263,8 +2289,8 @@ footer {
 
 .pl-note {
   color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   max-width: 80ch;
   line-height: 1.7;
 }
@@ -2304,15 +2330,15 @@ footer {
 }
 
 .pl-service-pillar {
-  font-size: 0.66rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .pl-service-name {
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 2.1vw, 1.65rem);
+  font-size: var(--fs-h4);
   font-weight: 400;
   letter-spacing: -0.01em;
   transition: var(--transition);
@@ -2326,21 +2352,21 @@ footer {
 }
 
 .pl-service-price {
-  font-size: 0.88rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   color: var(--text-muted);
   white-space: nowrap;
 }
 
 .pl-service-price strong {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   font-weight: 400;
   color: var(--text-main);
 }
 
 .pl-service summary .sign {
-  font-size: 1.4rem;
+  font-size: var(--fs-lg);
   line-height: 1;
   color: var(--text-muted);
   transition: var(--transition);
@@ -2357,7 +2383,7 @@ footer {
 
 .pl-service-summary {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 72ch;
   margin: -0.5rem 0 2rem;
 }
@@ -2372,16 +2398,16 @@ footer {
 }
 
 .pl-excludes-label {
-  font-size: 0.68rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .pl-excludes p {
   color: var(--text-muted);
-  font-size: 0.92rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
   max-width: 80ch;
 }
 
@@ -2410,20 +2436,20 @@ footer {
 
 .pl-addon h3 {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: var(--fs-md);
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .pl-addon-copy {
   color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   margin-bottom: 0.75rem;
 }
 
 .pl-addon-applies {
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   color: var(--text-muted);
   opacity: 0.72;
   line-height: 1.5;
@@ -2434,7 +2460,7 @@ footer {
   padding: 0.35rem 0.85rem;
   border: 1px solid var(--border-color);
   border-radius: 100px;
-  font-size: 0.66rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-muted);
@@ -2458,7 +2484,7 @@ footer {
 .pl-fact h3,
 .pl-term h3 {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   font-weight: 400;
   margin-bottom: 0.75rem;
 }
@@ -2466,16 +2492,16 @@ footer {
 .pl-fact p,
 .pl-term p {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 62ch;
 }
 
 .pl-fact p {
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
 .pl-term p {
-  font-size: 0.95rem;
+  font-size: var(--fs-base);
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
@@ -2508,12 +2534,12 @@ footer {
     max-width: 160px;
     padding-left: 1.25rem;
     padding-right: 1rem;
-    font-size: 0.8rem;
+    font-size: var(--fs-sm);
   }
 
   .pl-table {
     min-width: 620px;
-    font-size: 0.85rem;
+    font-size: var(--fs-sm);
   }
 
   .pl-terms {
@@ -2543,7 +2569,7 @@ footer {
 }
 
 .pk-h2 {
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-size: var(--fs-h2);
   font-weight: 400;
   letter-spacing: -0.01em;
   margin-bottom: 2.5rem;
@@ -2552,8 +2578,8 @@ footer {
 .pk-sub {
   margin-top: 2rem;
   color: var(--text-muted);
-  font-size: 0.92rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
   max-width: 60ch;
 }
 
@@ -2571,8 +2597,8 @@ footer {
   border: 1px solid var(--border-color);
   border-radius: 100px;
   font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   color: var(--text-muted);
   cursor: pointer;
   transition: var(--transition);
@@ -2599,7 +2625,7 @@ footer {
   padding: 2.5rem 0;
   border-top: 1px solid var(--border-color);
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* ── Selected service ───────────────────────────────────── */
@@ -2609,14 +2635,14 @@ footer {
 
 .pk-intro h3 {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-size: var(--fs-h3);
   font-weight: 400;
   margin-bottom: 0.6rem;
 }
 
 .pk-intro p {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 68ch;
 }
 
@@ -2655,7 +2681,7 @@ footer {
 
 .pk-card-name {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   font-weight: 400;
 }
 
@@ -2670,8 +2696,8 @@ footer {
   padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--border-color);
   color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -2693,15 +2719,15 @@ footer {
 }
 
 .pk-row-label {
-  font-size: 0.7rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 .pk-row-value {
-  font-size: 0.95rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
   color: var(--text-main);
 }
 
@@ -2709,15 +2735,15 @@ footer {
   width: 100%;
   margin-top: auto;
   padding: 0.85rem 1rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
 }
 
 .pk-note,
 .pk-excludes {
   margin-top: 2rem;
   color: var(--text-muted);
-  font-size: 0.85rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
   line-height: 1.7;
   max-width: 78ch;
 }
@@ -2742,12 +2768,12 @@ footer {
 
 .pk-inc-label {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .pk-inc-value {
   font-family: var(--font-heading);
-  font-size: 0.98rem;
+  font-size: var(--fs-base);
   text-align: right;
 }
 
@@ -2769,20 +2795,20 @@ footer {
 }
 
 .pk-step-num {
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
   color: var(--accent-color);
 }
 
 .pk-step-title {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: var(--fs-md);
 }
 
 .pk-step-copy {
   color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
 }
 
 /* ── Folded detail ──────────────────────────────────────── */
@@ -2796,8 +2822,8 @@ footer {
 
 .pk-detail-p {
   color: var(--text-muted);
-  font-size: 0.92rem;
-  font-weight: 300;
+  font-size: var(--fs-base);
+  font-weight: 400;
   line-height: 1.75;
   max-width: 80ch;
   margin-bottom: 1rem;
@@ -2831,19 +2857,19 @@ footer {
 .pk-addon-name,
 .pk-term-title {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
 .pk-addon-copy,
 .pk-term-copy {
   color: var(--text-muted);
-  font-size: 0.86rem;
-  font-weight: 300;
+  font-size: var(--fs-sm);
+  font-weight: 400;
 }
 
 .pk-addon-basis {
   margin-top: 0.3rem;
-  font-size: 0.66rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent-color);
@@ -2883,7 +2909,7 @@ footer {
   }
 
   .pk-tab {
-    font-size: 0.8rem;
+    font-size: var(--fs-sm);
     padding: 0.6rem 1.1rem;
   }
 }
@@ -3140,9 +3166,9 @@ summary:focus-visible,
   flex-wrap: wrap;
   align-items: center;
   gap: 0.55rem;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   margin-bottom: 0.9rem;
 }
@@ -3157,7 +3183,7 @@ summary:focus-visible,
 
 .post-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-size: var(--fs-h3);
   font-weight: 400;
   line-height: 1.22;
   letter-spacing: -0.01em;
@@ -3172,7 +3198,7 @@ summary:focus-visible,
 
 .post-desc {
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 70ch;
   margin-bottom: 1rem;
 }
@@ -3181,9 +3207,9 @@ summary:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
   transition: var(--transition);
 }
@@ -3206,16 +3232,16 @@ summary:focus-visible,
   margin-top: 2rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border-color);
-  font-size: 0.72rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 
 /* One measured column. Long-form reading is the only job here. */
 .article-body {
   max-width: 68ch;
-  font-size: 1.06rem;
+  font-size: var(--fs-md);
   line-height: 1.75;
   color: var(--text-main);
 }
@@ -3226,12 +3252,12 @@ summary:focus-visible,
 
 .article-body p {
   color: var(--text-main);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .article-body h2 {
   font-family: var(--font-heading);
-  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-size: var(--fs-h3);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -3242,7 +3268,7 @@ summary:focus-visible,
 
 .article-body h3 {
   font-family: var(--font-heading);
-  font-size: 1.16rem;
+  font-size: var(--fs-md);
   font-weight: 400;
   margin-top: 2.25rem;
 }
@@ -3272,7 +3298,7 @@ summary:focus-visible,
   padding-left: 1.4rem;
   margin-top: 0.7rem;
   color: var(--text-main);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .article-body li::before {
@@ -3307,7 +3333,7 @@ summary:focus-visible,
   }
 
   .article-body {
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 }
 
@@ -3349,7 +3375,7 @@ summary:focus-visible,
   }
 
   .nav-links li a {
-    font-size: 0.8rem;
+    font-size: var(--fs-sm);
     letter-spacing: 0.6px;
   }
 }
@@ -3357,4 +3383,484 @@ summary:focus-visible,
 /* Byline on an article. Sits in .article-meta with the date and read time. */
 .article-author {
   color: var(--text-main);
+}
+
+.site-wrapper {
+  /* Fallbacks come from the localFont call in (site)/layout.js. */
+  --font-heading: var(--font-newsreader);
+}
+
+/* =========================================
+   EDITORIAL TYPE — site only
+   Scoped to .site-wrapper so the bare h1–h6 rule above, which the campaign
+   landing pages share, is left exactly as it was.
+========================================= */
+
+/* Newsreader is a text-weight serif; 400 at display sizes is where it looks
+   deliberate. Bolder serif headlines read as tabloid. Serifs also need far
+   less negative tracking than the geometric sans they replaced. */
+.site-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  font-synthesis: none;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  font-optical-sizing: auto;
+}
+
+.site-wrapper :is(h3, h4) {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Figures in the serif's lining numerals, so a row of stats reads as one
+   set rather than as mismatched glyphs. */
+.site-wrapper .stat-value {
+  font-variant-numeric: lining-nums;
+  font-weight: 400;
+}
+
+/* The wordmark stays a sans: it is the logo, not a headline, and it should
+   not change face just because the headline face did. */
+.site-wrapper .logo,
+.site-wrapper .logo-text {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Body copy: comfortable measure and real contrast. Thin, small, grey text
+   is the single biggest reason a page reads as unfinished. */
+.site-wrapper p {
+  text-wrap: pretty;
+}
+
+.site-wrapper :is(h1, h2) {
+  text-wrap: balance;
+}
+
+
+/* =========================================
+   HOMEPAGE STRUCTURE
+   Order: hero, client proof, who we are, services, selected work,
+   testimonials, process, industries, capabilities ticker, call to action.
+========================================= */
+
+/* ── Client logos ───────────────────────────────────────── */
+.logo-strip {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-raised);
+}
+
+.logo-strip-inner {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.logo-strip-label {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.logo-strip-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem 2.5rem;
+}
+
+/* Width and height come from the component (area-normalised), so here
+   they only need to respect those attributes and scale down on phones. */
+.logo-strip-list img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.1);
+  mix-blend-mode: multiply;
+  opacity: 0.78;
+  transition: opacity 0.3s var(--ease-out), filter 0.3s var(--ease-out);
+}
+
+.logo-strip-list img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* ── Who we are ─────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-grid .section-label {
+  margin-bottom: 0;
+  padding-top: 0.55rem;
+}
+
+/* Doubled class so it outranks the scoped headline rule without !important. */
+.site-wrapper .about-name {
+  font-size: var(--fs-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  color: var(--accent-color);
+  margin-bottom: 1.25rem;
+}
+
+/* The wordmark's orange highlight box belonged to the old giant layout. */
+.about-name .mark {
+  color: inherit;
+  background: none;
+}
+
+.about-name .mark::before {
+  display: none;
+}
+
+.about-statement {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  color: var(--text-main);
+  max-width: 30ch;
+  font-weight: 400;
+}
+
+/* ── Services list ──────────────────────────────────────── */
+.svc-list {
+  border-top: 1px solid var(--border-color);
+}
+
+.svc-list li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.svc-row {
+  display: grid;
+  grid-template-columns: 4rem minmax(14rem, 1.05fr) 1.6fr 9rem;
+  align-items: baseline;
+  gap: 1.5rem 2rem;
+  padding: 2rem 0.75rem 2rem 0;
+  transition: background 0.35s var(--ease-out), padding 0.35s var(--ease-out);
+}
+
+.svc-row:hover {
+  background: rgba(255, 102, 0, 0.035);
+  padding-left: 0.75rem;
+}
+
+.svc-num {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  color: var(--accent-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.svc-title {
+  font-size: var(--fs-h4);
+  transition: color 0.3s var(--ease-out);
+}
+
+.svc-row:hover .svc-title {
+  color: var(--accent-color);
+}
+
+.svc-copy {
+  color: var(--text-muted);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.svc-cta {
+  justify-self: end;
+  white-space: nowrap;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  transition: color 0.3s var(--ease-out);
+}
+
+.svc-row:hover .svc-cta {
+  color: var(--accent-color);
+}
+
+/* ── Selected work ──────────────────────────────────────── */
+.work-band {
+  background: var(--bg-raised);
+}
+
+.case-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.case-tile {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2.25rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+
+.case-tile:hover {
+  border-color: rgba(255, 102, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.case-tile-meta {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  /* Two lines reserved, so a one-line meta on one card and a wrapped one on
+     the other still put both client names and both metric rows level. */
+  min-height: 3.2em;
+}
+
+.case-tile-client {
+  font-size: var(--fs-h3);
+  margin-bottom: 2rem;
+}
+
+.case-tile-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.case-tile-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-stat);
+  line-height: 1;
+  color: var(--text-main);
+}
+
+.case-tile-label {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.case-tile-outcome {
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.case-tile-cta {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+}
+
+.case-tile:hover .case-tile-cta {
+  color: var(--accent-color);
+}
+
+/* ── Testimonials: set as pull quotes ───────────────────── */
+/* Upright, not italic: only the regular Newsreader cut is loaded, and a
+   browser-synthesised italic would just be the roman slanted. */
+.quote-card blockquote {
+  font-size: var(--fs-lg);
+  line-height: 1.45;
+}
+
+/* ── Industries ─────────────────────────────────────────── */
+.ind-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border-color);
+  border: 1px solid var(--border-color);
+}
+
+.ind-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem 1.6rem 1.75rem;
+  background: var(--bg-color);
+  min-height: 15rem;
+  transition: background 0.35s var(--ease-out);
+}
+
+.ind-card:hover {
+  background: rgba(255, 102, 0, 0.035);
+}
+
+.ind-num {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  color: var(--accent-color);
+  margin-bottom: 1.25rem;
+}
+
+/* Two lines reserved: "Solar & Renewable Energy" wraps where its neighbours
+   do not, and without this its tagline started lower than the rest. */
+.ind-card h3 {
+  font-size: var(--fs-md);
+  line-height: 1.25;
+  min-height: 2.5em;
+}
+
+.ind-card .card-tagline {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.ind-card .card-link {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.ind-card:hover .card-link {
+  color: var(--accent-color);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .svc-row {
+    grid-template-columns: 3rem 1fr;
+  }
+
+  .svc-copy {
+    grid-column: 2;
+  }
+
+  .svc-cta {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  /* Five sectors: three over two, every card the same height and the
+     second row split evenly rather than leaving a stretched card. */
+  .ind-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .ind-card {
+    grid-column: span 2;
+  }
+
+  .ind-card:nth-child(4),
+  .ind-card:nth-child(5) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-strip-inner,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .logo-strip-list {
+    justify-content: flex-start;
+  }
+
+  .case-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .ind-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ind-card,
+  .ind-card:nth-child(4),
+  .ind-card:nth-child(5) {
+    grid-column: auto;
+    min-height: 0;
+  }
+
+  .svc-row {
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0.75rem 1rem;
+    padding: 1.6rem 0;
+  }
+
+  .svc-row:hover {
+    padding-left: 0;
+  }
+
+  /* Seven logos: three, three, then the last centred beneath, so the strip
+     reads as a deliberate grid instead of a ragged wrap. */
+  .logo-strip-list {
+    justify-content: center;
+    gap: 1.75rem 0;
+  }
+
+  .logo-strip-list li {
+    flex: 0 0 33.333%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-strip-list img {
+    max-width: 86%;
+  }
+
+  .case-tile {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* =========================================
+   GRID RULES THAT SURVIVE THE REVEAL ANIMATION
+   These grids drew their 1px separators by painting the container grey and
+   letting it show through the gaps between cards. Cards fade in on scroll,
+   so until they were opaque the whole grid read as a solid grey block. The
+   cards now carry their own rules: an unrevealed card just shows the page
+   behind it, and the lines arrive with the card.
+========================================= */
+.industry-grid,
+.quote-grid,
+.ind-grid {
+  gap: 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.industry-grid > *,
+.quote-grid > *,
+.ind-grid > * {
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }

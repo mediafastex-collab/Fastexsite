@@ -1,0 +1,71 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0-v0e~qz9hqbs.js","/_next/static/chunks/05a597fvke86d.js"],""]
+a:I[97367,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+2:Ta7c,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/","headline":"WhatsApp Business API Setup for B2B: What Actually Takes the Time","description":"Business verification, template approval and the mistakes that get numbers banned. A realistic walkthrough of what WhatsApp API setup involves and how long each stage really takes.","url":"https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/","datePublished":"2026-10-14","dateModified":"2026-10-14","inLanguage":"en","image":"https://www.fastexmedia.com/og-image.jpg","articleSection":"Revenue Architecture","keywords":"whatsapp business api setup, whatsapp api verification, whatsapp template approval, b2b whatsapp","author":{"@id":"https://www.fastexmedia.com/#aagam-shah"},"publisher":{"@id":"https://www.fastexmedia.com/#organization"},"isPartOf":{"@id":"https://www.fastexmedia.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fastexmedia.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.fastexmedia.com/blog/"},{"@type":"ListItem","position":3,"name":"WhatsApp Business API Setup for B2B: What Actually Takes the Time","item":"https://www.fastexmedia.com/blog/whatsapp-business-api-setup-b2b/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does WhatsApp Business API approval take?","acceptedAnswer":{"@type":"Answer","text":"Business verification with Meta typically takes one to two weeks, and template approval is usually reviewed within a day per template. From a standing start, plan three to five weeks before your first broadcast, since templates often need a revision round after the first submission."}},{"@type":"Question","name":"Can I send WhatsApp marketing messages without opt-in?","acceptedAnswer":{"@type":"Answer","text":"No. You need consent before messaging someone, though it can be collected anywhere, including a web form, a checkout, or a lead capture card at an event. Messaging a purchased list is the fastest way to lose a verified number."}},{"@type":"Question","name":"How much does the WhatsApp Business API cost?","acceptedAnswer":{"@type":"Answer","text":"Meta charges per 24 hour conversation rather than per message, so everything exchanged inside that window is covered by a single charge. Rates vary by country and by whether the conversation is marketing, utility or service. Platform and management fees sit on top of that and are separate."}}]}]}0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","section",null,{"className":"page-hero article-hero","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"breadcrumb","children":[["$","$L3",null,{"href":"/","children":"Home"}],["$","span",null,{"className":"sep","children":"/"}],["$","$L3",null,{"href":"/blog","children":"Blog"}],["$","span",null,{"className":"sep","children":"/"}],["$","span",null,{"className":"current","children":"Revenue Architecture"}]]}],["$","h1",null,{"children":"WhatsApp Business API Setup for B2B: What Actually Takes the Time"}],["$","p",null,{"className":"page-lede","children":"Business verification, template approval and the mistakes that get numbers banned. A realistic walkthrough of what WhatsApp API setup involves and how long each stage really takes."}],"$L4"]}]}],"$L5","$L6","$L7"],null,"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"wCaqZrNCHVykaet123QVz"}
+4:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-author","children":["By ","Aagam Shah"]}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","time",null,{"dateTime":"2026-10-14","children":"14 October 2026"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}]
+9:T13a6,<p>Most people think WhatsApp API setup is a technical job. It isn't. It's an approvals job, and approvals run on someone else's schedule.</p>
+
+<p>Here is what actually happens between deciding to use WhatsApp and sending your first broadcast, including the parts that take longer than anyone tells you.</p>
+
+<h2>The free app is not an option for this</h2>
+
+<p>Let's clear this up first. WhatsApp Business, the free app you install on a phone, is built for a shop replying to customers. It is not built for outbound at volume, and using it that way gets the number banned. Usually within days.</p>
+
+<p>The official Business API is a different product. Approved message templates, multiple agents on one number, automation hooks, and a number that does not disappear because you sent too many messages on a Tuesday. <strong>If outbound is the plan, the API is the only path.</strong></p>
+
+<h2>Business verification is the long pole</h2>
+
+<p>Before anything else, Meta has to confirm your business exists. You will need a Meta Business Manager account, a registered business name that matches your documents, and a verifiable phone number and address.</p>
+
+<p>Budget one to two weeks. It can clear in days if your paperwork is tidy. It can run longer if the legal name on your registration does not match the name you trade under, which is the single most common reason verification stalls.</p>
+
+<p>Start this first. Everything else waits on it.</p>
+
+<h2>Template approval is where campaigns die</h2>
+
+<p>Any message you send to someone who has not messaged you first must use a pre-approved template. Meta reviews each one, usually within a day, and rejects more than people expect.</p>
+
+<p>What gets rejected, reliably:</p>
+
+<ul>
+<li>Anything that reads as a cold sales pitch with no prior relationship.</li>
+<li>Vague variables, like a template that is mostly {{1}} and {{2}} with no readable sentence around them.</li>
+<li>Promotional language in a template submitted under a utility category.</li>
+<li>Links to anything Meta considers a restricted category.</li>
+</ul>
+
+<p>Write templates that read like a person following up on a real reason to make contact. "Hi {{1}}, you enquired about bulk pricing on {{2}} last week. Shall I send the quote?" clears review. "Hi {{1}}, great offers available now!" does not.</p>
+
+<h2>What you pay for, and what you don't</h2>
+
+<p>WhatsApp charges per conversation, not per message. A conversation window opens when the first message lands and stays open for 24 hours, and everything inside that window is covered by the one charge.</p>
+
+<p>This changes how you should think about sequencing. Getting a reply inside the window costs you nothing extra. Starting a fresh conversation three days later costs again. <strong>Front-load the exchange that matters into the first 24 hours.</strong></p>
+
+<h2>The opt-in question everyone gets wrong</h2>
+
+<p>You need consent before messaging someone. That consent does not have to come from WhatsApp itself. A tick box on your enquiry form, a line in your checkout, a field on a trade show lead capture card, all of it counts as long as it clearly says you will contact them on WhatsApp.</p>
+
+<p>What does not count is a purchased list. Buying numbers and broadcasting to them is how businesses lose a verified number they spent three weeks earning. Is a faster start worth that risk? It never is.</p>
+
+<h2>A realistic timeline</h2>
+
+<p>From a standing start, plan on three to five weeks before your first broadcast goes out. Business verification is one to two weeks. API onboarding and number registration is a few days. Template writing and approval is another week once revisions are counted. Flow building and testing runs alongside.</p>
+
+<p>We run this stage for clients as a fixed piece of work precisely because it is unglamorous and easy to get wrong. The channel is excellent once it is live. Getting it live is an administrative exercise, and treating it as one is what keeps the number safe.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How long does WhatsApp Business API approval take?</h3>
+<p>Business verification with Meta typically takes one to two weeks, and template approval is usually reviewed within a day per template. From a standing start, plan three to five weeks before your first broadcast, since templates often need a revision round after the first submission.</p>
+
+<h3>Can I send WhatsApp marketing messages without opt-in?</h3>
+<p>No. You need consent before messaging someone, though it can be collected anywhere, including a web form, a checkout, or a lead capture card at an event. Messaging a purchased list is the fastest way to lose a verified number.</p>
+
+<h3>How much does the WhatsApp Business API cost?</h3>
+<p>Meta charges per 24 hour conversation rather than per message, so everything exchanged inside that window is covered by a single charge. Rates vary by country and by whether the conversation is marketing, utility or service. Platform and management fees sit on top of that and are separate.</p>5:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]
+6:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":[["$","h2",null,{"className":"pk-h2","children":"Keep reading."}],["$","ul",null,{"className":"post-list","children":[["$","li","build-an-icp-for-outbound",{"children":["$","$L3",null,{"href":"/blog/build-an-icp-for-outbound","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Build an ICP Your Outbound Can Actually Use"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","warm-up-cold-email-domain",{"children":["$","$L3",null,{"href":"/blog/warm-up-cold-email-domain","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Warm Up a Cold Email Domain (Without Burning It)"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","performance-marketing-for-saas",{"children":["$","$L3",null,{"href":"/blog/performance-marketing-for-saas","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"4 min read"}]]}],["$","h3",null,{"className":"post-title","children":"Performance Marketing for SaaS: Building a Predictable Lead Engine"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}]]}]]}]}]
+7:["$","section",null,{"className":"pk-section cta","style":{"borderTop":"1px solid var(--border-color)","paddingBottom":"8rem"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"cta-inner","children":[["$","h2",null,{"children":"Want this run for you?"}],["$","p",null,{"className":"cta-sub","children":"Tell us what you are trying to grow. We will tell you which channels fit and what it takes."}],["$","a",null,{"href":"https://cal.id/fastexmedia/discovery-call-with-aagam","target":"_blank","rel":"noopener noreferrer","className":"btn btn-primary","children":"Book a Strategy Call"}]]}]}]}]
+8:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

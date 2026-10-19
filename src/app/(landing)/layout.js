@@ -1,14 +1,32 @@
 import Script from "next/script";
+import { Outfit } from "next/font/google";
 import { landing } from "@/data/landing";
 
 /**
  * Campaign landing pages: no site nav or footer, plus the Meta pixel, which
  * only these pages load. Events are fired from src/lib/track.js.
  */
+/**
+ * Campaign pages keep their own headline face. The main site moved to
+ * Newsreader; these pages run paid traffic with their own conversion history,
+ * so their look is pinned here rather than inherited from the global token.
+ */
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
 export default function LandingLayout({ children }) {
   return (
     <>
-      {children}
+      <div
+        className={outfit.variable}
+        style={{ "--font-heading": "var(--font-outfit), sans-serif" }}
+      >
+        {children}
+      </div>
       <Script id="meta-pixel" strategy="afterInteractive">
         {`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
