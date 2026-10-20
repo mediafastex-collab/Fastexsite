@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import BookingModal from "@/components/BookingModal";
 import localFont from "next/font/local";
 
 /**
@@ -25,6 +26,7 @@ export default function SiteLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <BookingModal />
       </div>
       <Reveal />
     </>

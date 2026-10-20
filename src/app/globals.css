@@ -4569,18 +4569,14 @@ p mark.hl {
 /* =========================================
    HEADER MOTION
    - On load, the logo, links and call button drop in one after another.
-   - Past the hero the bar condenses into a floating, frosted pill.
-   - Scrolling down tucks it away; any scroll up brings it back.
+   - Past the hero the bar condenses into a floating, frosted pill that
+     stays on screen all the way down.
    - The current page keeps its underline; the phone menu's lines fold
      into a cross and its links cascade in.
 ========================================= */
 .navbar {
   transition: transform 0.5s var(--ease-out), background 0.35s var(--ease-out),
     border-color 0.35s var(--ease-out);
-}
-
-.navbar.is-tucked {
-  transform: translateY(-110%);
 }
 
 @keyframes nav-drop {
@@ -5048,5 +5044,204 @@ p mark.hl {
   .navbar.scrolled .nav-links {
     background: transparent;
     border-color: transparent;
+  }
+}
+
+/* =========================================
+   BOOKING DIALOG
+   "Book a call" opens the cal.id calendar over the page.
+========================================= */
+.booking-modal {
+  width: min(1040px, calc(100% - 32px));
+  max-width: none;
+  height: min(800px, calc(100dvh - 48px));
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: transparent;
+  overflow: visible;
+}
+
+.booking-modal::backdrop {
+  background: rgba(13, 13, 13, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.booking-modal[open] {
+  animation: booking-in 0.45s var(--ease-out) both;
+}
+
+.booking-modal[open]::backdrop {
+  animation: booking-fade 0.35s var(--ease-out) both;
+}
+
+@keyframes booking-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+}
+
+@keyframes booking-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* The page behind stays put while the calendar is open. */
+html.booking-open {
+  overflow: hidden;
+}
+
+.booking-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-raised);
+  border-radius: 20px;
+  box-shadow: 0 30px 80px -30px rgba(13, 13, 13, 0.45);
+}
+
+.booking-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem 1.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.booking-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+.booking-sub {
+  margin-top: 0.25rem;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.booking-close {
+  position: relative;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--bg-color);
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease-out), transform 0.35s var(--ease-out);
+}
+
+.booking-close:hover {
+  border-color: rgba(255, 102, 0, 0.5);
+  transform: rotate(90deg);
+}
+
+.booking-close span::before,
+.booking-close span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 1.6px;
+  border-radius: 2px;
+  background: var(--text-main);
+}
+
+.booking-close span::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.booking-close span::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.booking-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.booking-body iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+}
+
+.booking-body iframe.is-ready {
+  opacity: 1;
+}
+
+.booking-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.booking-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent-bright);
+  border-radius: 50%;
+  animation: booking-spin 0.8s linear infinite;
+}
+
+@keyframes booking-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.booking-fallback {
+  padding: 0.7rem 1.75rem 0.85rem;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+
+.booking-fallback:hover {
+  color: var(--accent-color);
+}
+
+/* Phones: the calendar takes the whole screen. */
+@media (max-width: 620px) {
+  .booking-modal {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 0;
+  }
+
+  .booking-panel {
+    border-radius: 0;
+  }
+
+  .booking-head {
+    padding: 1rem 1rem 0.85rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-modal[open],
+  .booking-modal[open]::backdrop {
+    animation: none;
   }
 }

@@ -39,7 +39,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
 
   const pathname = usePathname();
 
@@ -88,20 +87,12 @@ export default function Navbar() {
   }
 
   /*
-   * Past the hero the bar condenses into a floating pill. Scrolling down
-   * tucks it away so it never covers what is being read; the smallest scroll
-   * back up brings it straight back.
+   * Past the hero the bar condenses into a floating pill. It stays on
+   * screen the whole way down, so the menu and the call button are always
+   * one click away.
    */
   useEffect(() => {
-    let lastY = window.scrollY;
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setIsScrolled(y > 50);
-      if (Math.abs(y - lastY) > 6) {
-        setIsHidden(y > lastY && y > 480);
-        lastY = y;
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -123,7 +114,6 @@ export default function Navbar() {
       className={[
         "navbar",
         isScrolled && "scrolled",
-        isHidden && !isMobileMenuOpen && !openMenu && "is-tucked",
         isMobileMenuOpen && "menu-open",
       ]
         .filter(Boolean)
