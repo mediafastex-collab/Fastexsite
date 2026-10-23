@@ -7,6 +7,16 @@
  */
 export const aiVideos = [
   {
+    slug: "fastex-lead-system",
+    title: "Fastex Media · Lead system",
+    kind: "Motion graphics explainer",
+    summary:
+      "Our own reel: Mehta ji's business runs on referrals until one system brings leads every week through ads, WhatsApp, LinkedIn and email. In Hinglish.",
+    w: 1080,
+    h: 1920,
+    duration: 74,
+  },
+  {
     slug: "spacepartner",
     title: "SpacePartner",
     kind: "2D character explainer",
