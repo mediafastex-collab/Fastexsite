@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { breadcrumb, webPage, graph, SITE } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
 import Hl from "@/components/Hl";
-import VideoReel from "@/components/VideoReel";
+import VideoSlider from "@/components/VideoSlider";
 
 const TITLE = "AI Video Production: 2D & 3D Animation for Brands | Fastex Media";
 const DESCRIPTION =
@@ -81,12 +81,8 @@ export default function AiVideos() {
             <h2>Videos we have made.</h2>
             <p>Press play to watch with sound. One plays at a time.</p>
           </div>
-          <div className="vr-grid">
-            {aiVideos.map((v, i) => (
-              <div key={v.slug} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <VideoReel video={v} />
-              </div>
-            ))}
+          <div className="reveal">
+            <VideoSlider videos={aiVideos} />
           </div>
         </div>
       </section>

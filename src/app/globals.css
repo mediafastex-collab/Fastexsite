@@ -5622,3 +5622,129 @@ html.booking-open {
   inset: 0;
   background: linear-gradient(#fff, #fff) center / 2px 18px no-repeat;
 }
+
+/* =========================================
+   VIDEO SLIDER
+   Three reels in view on desktop, two on tablets, one and a peek on
+   phones. Native scrolling with snap; arrows and dots drive it.
+========================================= */
+.vs {
+  --vs-per: 3;
+  --vs-gap: 1.75rem;
+}
+
+.vs-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--vs-per) - 1) * var(--vs-gap)) / var(--vs-per));
+  column-gap: var(--vs-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Room for the card's hover lift and shadow inside the scroll box. */
+  padding: 0.5rem 0 1rem;
+  margin: -0.5rem 0 -1rem;
+}
+
+.vs-track::-webkit-scrollbar {
+  display: none;
+}
+
+.vs-track:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+
+.vs-slide {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.vs-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.vs-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vs-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--border-color);
+  cursor: pointer;
+  transition: width 0.4s var(--ease-out), background 0.3s var(--ease-out);
+}
+
+.vs-dot.is-on {
+  width: 28px;
+  background: var(--accent-bright);
+}
+
+.vs-arrows {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.vs-arrow {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  color: var(--text-main);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.25s var(--ease-out), color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+}
+
+.vs-arrow:hover:not(:disabled) {
+  color: #fff;
+  background: var(--text-main);
+  border-color: var(--text-main);
+}
+
+.vs-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.vs-arrow:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1000px) {
+  .vs {
+    --vs-per: 2;
+    --vs-gap: 1.25rem;
+  }
+}
+
+/* Phones: one reel and a slice of the next, so it reads as swipeable. */
+@media (max-width: 620px) {
+  .vs {
+    --vs-per: 1.25;
+    --vs-gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vs-track {
+    scroll-behavior: auto;
+  }
+}

@@ -7,7 +7,7 @@ import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
 import ClientMarquee from "@/components/ClientMarquee";
 import Hl from "@/components/Hl";
-import VideoReel from "@/components/VideoReel";
+import VideoSlider from "@/components/VideoSlider";
 import { aiVideos } from "@/data/aiVideos";
 
 
@@ -170,12 +170,8 @@ export default function Home() {
               </Hl>
             </p>
           </div>
-          <div className="vr-grid">
-            {aiVideos.map((v, i) => (
-              <div key={v.slug} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <VideoReel video={v} />
-              </div>
-            ))}
+          <div className="reveal">
+            <VideoSlider videos={aiVideos} />
           </div>
           <div className="home-videos-foot reveal">
             <Link href="/ai-videos" className="btn btn-outline">
