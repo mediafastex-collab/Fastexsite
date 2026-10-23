@@ -5623,128 +5623,398 @@ html.booking-open {
   background: linear-gradient(#fff, #fff) center / 2px 18px no-repeat;
 }
 
+
 /* =========================================
-   VIDEO SLIDER
-   Three reels in view on desktop, two on tablets, one and a peek on
-   phones. Native scrolling with snap; arrows and dots drive it.
+   REEL STAGE  ("Projection room", design/projection-room.md)
+   A dark band: one reel lit at the centre, its neighbours turned away into
+   depth, a numbered index whose rail fills in orange as each turn runs.
 ========================================= */
-.vs {
-  --vs-per: 3;
-  --vs-gap: 1.75rem;
+.rs {
+  --rs-ink: #110f0e;
+  --rs-bone: #f0ece4;
+  --rs-mute: #8a847c;
+  --rs-line: rgba(240, 236, 228, 0.14);
+  position: relative;
+  overflow: hidden;
+  padding: 7.5rem 0 6.5rem;
+  color: var(--rs-bone);
+  background:
+    radial-gradient(ellipse 48% 62% at 68% 52%, rgba(120, 48, 12, 0.55), transparent 70%),
+    var(--rs-ink);
 }
 
-.vs-track {
+/* Desktop: heading, index and link down the left; the stage spans the
+   right. Phones re-stack the same areas as heading, stage, index. */
+.rs-grid {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - (var(--vs-per) - 1) * var(--vs-gap)) / var(--vs-per));
-  column-gap: var(--vs-gap);
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  /* Room for the card's hover lift and shadow inside the scroll box. */
-  padding: 0.5rem 0 1rem;
-  margin: -0.5rem 0 -1rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "head  stage"
+    "list  stage"
+    "extra stage";
+  column-gap: 4rem;
+  align-items: start;
 }
 
-.vs-track::-webkit-scrollbar {
+.rs-head { grid-area: head; }
+.rs-list { grid-area: list; }
+.rs-extra { grid-area: extra; }
+.rs-stage-wrap { grid-area: stage; align-self: center; }
+
+/* ── Index ── */
+.rs-label {
+  display: inline-block;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.6rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--rs-mute);
+  border-bottom: 2px solid var(--accent-bright);
+}
+
+.site-wrapper .rs-heading {
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  color: var(--rs-bone);
+}
+
+.rs-intro {
+  margin-top: 1.1rem;
+  max-width: 42ch;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--rs-mute);
+}
+
+.rs-list {
+  margin-top: 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.rs-item {
+  display: grid;
+  grid-template-columns: 4.25rem 1fr;
+  grid-template-areas:
+    "num text"
+    ".   rail";
+  column-gap: 1rem;
+  width: 100%;
+  padding: 1rem 0 0;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.rs-num {
+  grid-area: num;
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(240, 236, 228, 0.28);
+  transition: color 0.4s var(--ease-out);
+}
+
+.rs-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.15rem;
+}
+
+.rs-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  line-height: 1.15;
+  color: rgba(240, 236, 228, 0.55);
+  transition: color 0.4s var(--ease-out);
+}
+
+.rs-kind {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(138, 132, 124, 0.8);
+}
+
+.rs-summary {
+  margin-top: 0.45rem;
+  max-width: 44ch;
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--rs-mute);
+  animation: rs-fade 0.6s var(--ease-out) both;
+}
+
+@keyframes rs-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.rs-rail {
+  grid-area: rail;
+  position: relative;
+  display: block;
+  height: 1px;
+  margin-top: 1rem;
+  background: var(--rs-line);
+}
+
+.rs-fill {
+  position: absolute;
+  inset: -0.5px auto -0.5px 0;
+  width: 100%;
+  background: var(--accent-bright);
+  transform-origin: left;
+  animation: rs-turn linear both;
+}
+
+.rs-fill.is-held {
+  animation-play-state: paused;
+}
+
+@keyframes rs-turn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.rs-item:hover .rs-title,
+.rs-item:hover .rs-num {
+  color: rgba(240, 236, 228, 0.85);
+}
+
+.rs-item.is-on .rs-num {
+  color: var(--accent-bright);
+}
+
+.rs-item.is-on .rs-title {
+  color: var(--rs-bone);
+}
+
+.rs-item:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.rs-more {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 2.25rem;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--rs-bone);
+  transition: color 0.25s var(--ease-out);
+}
+
+.rs-more:hover {
+  color: var(--accent-bright);
+}
+
+/* ── Stage ── */
+.rs-stage-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rs-stage {
+  position: relative;
+  width: 100%;
+  height: clamp(30rem, 44vw, 40rem);
+  perspective: 1600px;
+}
+
+.rs-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(clamp(30rem, 44vw, 40rem) * 9 / 16);
+  transition: transform 0.9s var(--ease-out), opacity 0.7s var(--ease-out),
+    filter 0.7s var(--ease-out);
+  transform-style: preserve-3d;
+}
+
+/* The stage shows the frame only; titles live in the index. */
+.rs-slide .vr-caption {
   display: none;
 }
 
-.vs-track:focus-visible {
-  outline: 2px solid var(--accent-bright);
-  outline-offset: 6px;
-  border-radius: 12px;
+.rs-slide .vr-frame {
+  border-radius: 26px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 40px 80px -30px rgba(0, 0, 0, 0.8);
 }
 
-.vs-slide {
-  scroll-snap-align: start;
-  min-width: 0;
+.rs-slide .vr-card:hover .vr-frame {
+  transform: none;
 }
 
-.vs-controls {
+.rs-slide.is-center {
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.rs-slide.is-left,
+.rs-slide.is-right {
+  z-index: 2;
+  opacity: 0.55;
+  filter: saturate(0.7) brightness(0.7);
+}
+
+.rs-slide.is-left {
+  transform: translate(-112%, -50%) rotateY(24deg) scale(0.8);
+}
+
+.rs-slide.is-right {
+  transform: translate(12%, -50%) rotateY(-24deg) scale(0.8);
+}
+
+.rs-slide.is-away {
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  pointer-events: none;
+}
+
+.rs-slide.is-left:hover,
+.rs-slide.is-right:hover {
+  opacity: 0.8;
+  filter: none;
+}
+
+/* Side reels are not playable in place: a click brings them to the centre. */
+.rs-slide:not(.is-center) .vr-toggle,
+.rs-slide:not(.is-center) .vr-full,
+.rs-slide:not(.is-center) .vr-progress {
+  display: none;
+}
+
+.rs-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.rs-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  width: calc(clamp(30rem, 44vw, 40rem) * 9 / 16);
+  margin-top: 1.75rem;
 }
 
-.vs-dots {
-  display: flex;
-  gap: 0.5rem;
+.rs-count {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  color: var(--rs-mute);
+  font-variant-numeric: tabular-nums;
 }
 
-.vs-dot {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: var(--border-color);
-  cursor: pointer;
-  transition: width 0.4s var(--ease-out), background 0.3s var(--ease-out);
+.rs-count span {
+  color: var(--accent-bright);
 }
 
-.vs-dot.is-on {
-  width: 28px;
-  background: var(--accent-bright);
-}
-
-.vs-arrows {
+.rs-arrows {
   display: flex;
   gap: 0.6rem;
 }
 
-.vs-arrow {
-  width: 52px;
-  height: 52px;
+.rs-arrow {
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  font-size: 1.15rem;
-  color: var(--text-main);
-  background: var(--bg-raised);
-  border: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  color: var(--rs-bone);
+  background: transparent;
+  border: 1px solid rgba(240, 236, 228, 0.28);
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.25s var(--ease-out), color 0.25s var(--ease-out),
-    border-color 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
+    border-color 0.25s var(--ease-out);
 }
 
-.vs-arrow:hover:not(:disabled) {
-  color: #fff;
-  background: var(--text-main);
-  border-color: var(--text-main);
+.rs-arrow:hover {
+  color: var(--rs-ink);
+  background: var(--rs-bone);
+  border-color: var(--rs-bone);
 }
 
-.vs-arrow:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
-
-.vs-arrow:focus-visible {
+.rs-arrow:focus-visible {
   outline: 2px solid var(--accent-bright);
   outline-offset: 3px;
 }
 
+/* Tablet and phone: the stage first, the index beneath it. */
 @media (max-width: 1000px) {
-  .vs {
-    --vs-per: 2;
-    --vs-gap: 1.25rem;
+  .rs {
+    padding: 5.5rem 0 5rem;
+  }
+
+  .rs-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "head"
+      "stage"
+      "list"
+      "extra";
+    row-gap: 2.25rem;
+  }
+
+  .rs-list {
+    margin-top: 0;
+  }
+
+  .rs-stage {
+    height: clamp(26rem, 110vw, 34rem);
+  }
+
+  .rs-slide,
+  .rs-controls {
+    width: calc(clamp(26rem, 110vw, 34rem) * 9 / 16);
   }
 }
 
-/* Phones: one reel and a slice of the next, so it reads as swipeable. */
 @media (max-width: 620px) {
-  .vs {
-    --vs-per: 1.25;
-    --vs-gap: 1rem;
+  .rs-slide.is-left {
+    transform: translate(-96%, -50%) rotateY(26deg) scale(0.72);
+  }
+
+  .rs-slide.is-right {
+    transform: translate(-4%, -50%) rotateY(-26deg) scale(0.72);
+  }
+
+  .rs-num {
+    font-size: 2rem;
+  }
+
+  .rs-item {
+    grid-template-columns: 3.25rem 1fr;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .vs-track {
-    scroll-behavior: auto;
+  .rs-slide,
+  .rs-summary {
+    transition: none;
+    animation: none;
   }
 }

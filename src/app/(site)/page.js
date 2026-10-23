@@ -7,7 +7,7 @@ import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
 import ClientMarquee from "@/components/ClientMarquee";
 import Hl from "@/components/Hl";
-import VideoSlider from "@/components/VideoSlider";
+import ReelStage from "@/components/ReelStage";
 import { aiVideos } from "@/data/aiVideos";
 
 
@@ -152,34 +152,18 @@ export default function Home() {
       </section>
 
       {/* ---------- AI VIDEOS ----------
-          The newest service, shown with the work itself: the same reels as
-          /ai-videos, each with play, pause and full screen. */}
-      <section
-        className="section-padding home-videos"
-        style={{ borderTop: "1px solid var(--border-color)" }}
+          The newest service, shown with the work itself on a dark stage
+          (ReelStage, design/projection-room.md). */}
+      <ReelStage
+        videos={aiVideos}
+        label="AI video production · New"
+        heading="Stories, set in motion."
+        intro="2D and 3D AI animation for brands: explainers, product animation and character-led reels, made with AI and finished by people."
       >
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="section-label">
-              AI video production <span className="label-new">New</span>
-            </div>
-            <h2>2D and 3D AI animation, made for brands.</h2>
-            <p>
-              <Hl terms={["made with AI and finished by people"]}>
-                {"Explainers, product animation and character-led reels, made with AI and finished by people. Press play to watch with sound."}
-              </Hl>
-            </p>
-          </div>
-          <div className="reveal">
-            <VideoSlider videos={aiVideos} />
-          </div>
-          <div className="home-videos-foot reveal">
-            <Link href="/ai-videos" className="btn btn-outline">
-              Explore AI videos <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+        <Link href="/ai-videos" className="rs-more">
+          Explore AI videos <span aria-hidden="true">→</span>
+        </Link>
+      </ReelStage>
 
       {/* ---------- TESTIMONIALS ---------- */}
       <section

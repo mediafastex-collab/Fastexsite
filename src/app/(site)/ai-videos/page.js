@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { breadcrumb, webPage, graph, SITE } from "@/lib/schema";
 import BookCall from "@/components/BookCall";
 import Hl from "@/components/Hl";
-import VideoSlider from "@/components/VideoSlider";
+import ReelStage from "@/components/ReelStage";
 
 const TITLE = "AI Video Production: 2D & 3D Animation for Brands | Fastex Media";
 const DESCRIPTION =
@@ -74,18 +74,13 @@ export default function AiVideos() {
       </section>
 
       {/* ---------- WORK ---------- */}
-      <section id="work" className="section-padding vr-section">
-        <div className="container">
-          <div className="section-header reveal">
-            <div className="section-label">Recent work</div>
-            <h2>Videos we have made.</h2>
-            <p>Press play to watch with sound. One plays at a time.</p>
-          </div>
-          <div className="reveal">
-            <VideoSlider videos={aiVideos} />
-          </div>
-        </div>
-      </section>
+      <ReelStage
+        id="work"
+        videos={aiVideos}
+        label="Recent work"
+        heading="Videos we have made."
+        intro="Press play to watch with sound. One plays at a time; the corner button opens it full screen."
+      />
 
       {/* ---------- FORMATS ---------- */}
       <section
