@@ -79,7 +79,7 @@ export default function AiVideos() {
           <div className="section-header reveal">
             <div className="section-label">Recent work</div>
             <h2>Videos we have made.</h2>
-            <p>Plays on mute as you scroll. Tap “Sound on” to listen.</p>
+            <p>Press play to watch with sound. One plays at a time.</p>
           </div>
           <div className="vr-grid">
             {aiVideos.map((v, i) => (
