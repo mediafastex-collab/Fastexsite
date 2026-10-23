@@ -1,0 +1,74 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0jxnhyzlr5ved.js","/_next/static/chunks/010ruk1i0.ywp.js"],""]
+a:I[27893,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0jxnhyzlr5ved.js","/_next/static/chunks/010ruk1i0.ywp.js"],"default"]
+b:I[97367,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+2:Ta2b,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://www.fastexmedia.com/blog/b2b-ads-wrong-leads/","headline":"Why Your B2B Ads Bring Students and Job Seekers (and How to Fix It)","description":"If your ad account is full of cheap leads that never convert, the platform is doing exactly what you asked. Here is how to change what you are asking for.","url":"https://www.fastexmedia.com/blog/b2b-ads-wrong-leads/","datePublished":"2026-10-23","dateModified":"2026-10-23","inLanguage":"en","image":"https://www.fastexmedia.com/og-image.jpg","articleSection":"Horror Stories","keywords":"b2b ads lead quality, cost per qualified lead, b2b paid ads targeting, lead quality problem","author":{"@id":"https://www.fastexmedia.com/#aagam-shah"},"publisher":{"@id":"https://www.fastexmedia.com/#organization"},"isPartOf":{"@id":"https://www.fastexmedia.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.fastexmedia.com/blog/b2b-ads-wrong-leads/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fastexmedia.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.fastexmedia.com/blog/"},{"@type":"ListItem","position":3,"name":"Why Your B2B Ads Bring Students and Job Seekers (and How to Fix It)","item":"https://www.fastexmedia.com/blog/b2b-ads-wrong-leads/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are my B2B ad leads such poor quality?","acceptedAnswer":{"@type":"Answer","text":"Usually because the campaign is optimised for lead volume, so the platform finds people who readily fill in forms rather than people who buy. Feeding qualified-lead events back from your CRM retrains it toward buyers, and tightening the form and the offer filters out the rest."}},{"@type":"Question","name":"Should I use lead forms or send traffic to a landing page?","acceptedAnswer":{"@type":"Answer","text":"Native lead forms convert at a higher rate and typically at lower quality, because they can be submitted in one tap with pre-filled details. A landing page adds friction, which costs you volume and filters out people who were never going to buy. For high-ticket B2B the landing page usually wins on cost per qualified conversation."}},{"@type":"Question","name":"How long before ad lead quality improves?","acceptedAnswer":{"@type":"Answer","text":"Expect four to eight weeks. The platform needs roughly thirty qualified conversion events before it has enough signal to shift who it targets, and that takes time to accumulate at normal B2B volumes."}}]}]}0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","section",null,{"className":"page-hero article-hero","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"breadcrumb","children":[["$","$L3",null,{"href":"/","children":"Home"}],["$","span",null,{"className":"sep","children":"/"}],["$","$L3",null,{"href":"/blog","children":"Blog"}],["$","span",null,{"className":"sep","children":"/"}],["$","span",null,{"className":"current","children":"Horror Stories"}]]}],["$","h1",null,{"children":"Why Your B2B Ads Bring Students and Job Seekers (and How to Fix It)"}],["$","p",null,{"className":"page-lede","children":"If your ad account is full of cheap leads that never convert, the platform is doing exactly what you asked. Here is how to change what you are asking for."}],"$L4"]}]}],"$L5","$L6","$L7"],null,"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6C_xSCKvlB81LDU_kVKBb"}
+4:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-author","children":["By ","Aagam Shah"]}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"className":"post-pillar","children":"Horror Stories"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","time",null,{"dateTime":"2026-10-23","children":"23 October 2026"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}]
+9:T11f5,<p>You're spending on ads. Leads are coming in. Cost per lead looks fine, maybe even good. And your sales team has quietly stopped calling them.</p>
+
+<p>We see this constantly, and the cause is almost never the targeting settings. It's what you told the platform to optimise for.</p>
+
+<h2>The platform is doing what you asked</h2>
+
+<p>Set a campaign to optimise for leads and the algorithm goes and finds people who fill in forms. That is the whole instruction.</p>
+
+<p>Who fills in forms readily? Students researching a project. Job seekers hoping it's a careers page. Competitors having a look. People who will trade an email address for anything.</p>
+
+<p>Who fills in forms reluctantly? A procurement head with eleven other things on today. <strong>Your best buyer is the hardest conversion the algorithm can find, so it stops looking for them.</strong></p>
+
+<p>The account isn't broken. It's succeeding at the wrong goal.</p>
+
+<h2>Feed qualification back into the platform</h2>
+
+<p>Here's the fix almost nobody implements, and it changes everything.</p>
+
+<p>The platform only knows a lead was created. It has no idea which ones were any good, unless you tell it. So tell it. When a lead gets qualified in your CRM, send that back as a conversion event. When a deal is won, send that too.</p>
+
+<p>Now the algorithm is optimising toward people who looked like your qualified leads, not people who looked like form fillers. Cost per lead usually goes up. Cost per qualified conversation goes down, which is the number that pays salaries.</p>
+
+<p>This needs a working CRM connection and roughly thirty qualified events before the platform has enough signal. It's the single highest-return piece of plumbing in a B2B ad account.</p>
+
+<h2>Make the form do some filtering</h2>
+
+<p>A three-field form maximises volume. For B2B that's usually the wrong target.</p>
+
+<ul>
+<li>Ask for a company name and a work email, and block free email domains.</li>
+<li>Add a question only a real buyer can answer, like team size or current tooling.</li>
+<li>Drop any auto-fill form that submits in one tap without the person reading anything.</li>
+<li>Say plainly what happens next, so people who don't want a call don't start one.</li>
+</ul>
+
+<p>You'll get fewer leads. That is the point. Would you rather your team called forty people or four who might buy?</p>
+
+<h2>Change the offer, not just the audience</h2>
+
+<p>"Download our guide" attracts everyone, because a guide is useful to anyone curious. There is no filter in the offer itself.</p>
+
+<p>"Get a teardown of your current setup" attracts people who have a current setup worth examining. The offer has done the qualifying before the form ever loads.</p>
+
+<p>The strongest filter we use is specificity about who it's for. An offer that names the role, the sector and the situation repels everyone else, which is exactly what you want it to do.</p>
+
+<h2>What good looks like</h2>
+
+<p>We took over a real estate account at Fastex Media where leads were expensive and inconsistent. Rebuilt the targeting around the actual buyer, cleaned up the lead flow, and <strong>cut cost per lead by 60% while tripling volume</strong>.</p>
+
+<p>That combination is only possible when you stop optimising for the cheapest form fill and start optimising for the right person. Cheap and wrong is not cheaper than expensive and right. It only looks that way on the dashboard.</p>
+
+<p>So before you touch the targeting again, go and ask your sales team what happened to last month's leads. Their answer is your real campaign report.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Why are my B2B ad leads such poor quality?</h3>
+<p>Usually because the campaign is optimised for lead volume, so the platform finds people who readily fill in forms rather than people who buy. Feeding qualified-lead events back from your CRM retrains it toward buyers, and tightening the form and the offer filters out the rest.</p>
+
+<h3>Should I use lead forms or send traffic to a landing page?</h3>
+<p>Native lead forms convert at a higher rate and typically at lower quality, because they can be submitted in one tap with pre-filled details. A landing page adds friction, which costs you volume and filters out people who were never going to buy. For high-ticket B2B the landing page usually wins on cost per qualified conversation.</p>
+
+<h3>How long before ad lead quality improves?</h3>
+<p>Expect four to eight weeks. The platform needs roughly thirty qualified conversion events before it has enough signal to shift who it targets, and that takes time to accumulate at normal B2B volumes.</p>5:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]
+6:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":[["$","h2",null,{"className":"pk-h2","children":"Keep reading."}],["$","ul",null,{"className":"post-list","children":[["$","li","linkedin-outreach-limits",{"children":["$","$L3",null,{"href":"/blog/linkedin-outreach-limits","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Horror Stories"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"5 min read"}]]}],["$","h3",null,{"className":"post-title","children":"LinkedIn Limits in 2026: What's Safe and What Gets You Restricted"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","build-an-icp-for-outbound",{"children":["$","$L3",null,{"href":"/blog/build-an-icp-for-outbound","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Build an ICP Your Outbound Can Actually Use"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","whatsapp-business-api-setup-b2b",{"children":["$","$L3",null,{"href":"/blog/whatsapp-business-api-setup-b2b","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"WhatsApp Business API Setup for B2B: What Actually Takes the Time"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}]]}]]}]}]
+7:["$","section",null,{"className":"pk-section cta","style":{"borderTop":"1px solid var(--border-color)","paddingBottom":"8rem"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"cta-inner","children":[["$","h2",null,{"children":"Want this run for you?"}],["$","p",null,{"className":"cta-sub","children":"Tell us what you are trying to grow. We will tell you which channels fit and what it takes."}],["$","$La",null,{"children":"Book a Strategy Call"}]]}]}]}]
+8:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

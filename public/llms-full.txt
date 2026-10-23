@@ -671,6 +671,156 @@ Metrics: ↑ 5x Revenue B2B, Daily Campaigns, High Authority
 Written by Aagam Shah, Founder of Fastex Media, from campaigns run
 for client accounts. Figures quoted come from those campaigns.
 
+## Why Your B2B Ads Bring Students and Job Seekers (and How to Fix It)
+
+https://www.fastexmedia.com/blog/b2b-ads-wrong-leads/
+Published 2026-10-23 · 6 min read · Horror Stories
+
+If your ad account is full of cheap leads that never convert, the platform is doing exactly what you asked. Here is how to change what you are asking for.
+
+You're spending on ads. Leads are coming in. Cost per lead looks fine, maybe even good. And your sales team has quietly stopped calling them.
+
+We see this constantly, and the cause is almost never the targeting settings. It's what you told the platform to optimise for.
+
+### The platform is doing what you asked
+
+Set a campaign to optimise for leads and the algorithm goes and finds people who fill in forms. That is the whole instruction.
+
+Who fills in forms readily? Students researching a project. Job seekers hoping it's a careers page. Competitors having a look. People who will trade an email address for anything.
+
+Who fills in forms reluctantly? A procurement head with eleven other things on today. Your best buyer is the hardest conversion the algorithm can find, so it stops looking for them.
+
+The account isn't broken. It's succeeding at the wrong goal.
+
+### Feed qualification back into the platform
+
+Here's the fix almost nobody implements, and it changes everything.
+
+The platform only knows a lead was created. It has no idea which ones were any good, unless you tell it. So tell it. When a lead gets qualified in your CRM, send that back as a conversion event. When a deal is won, send that too.
+
+Now the algorithm is optimising toward people who looked like your qualified leads, not people who looked like form fillers. Cost per lead usually goes up. Cost per qualified conversation goes down, which is the number that pays salaries.
+
+This needs a working CRM connection and roughly thirty qualified events before the platform has enough signal. It's the single highest-return piece of plumbing in a B2B ad account.
+
+### Make the form do some filtering
+
+A three-field form maximises volume. For B2B that's usually the wrong target.
+
+- Ask for a company name and a work email, and block free email domains.
+
+- Add a question only a real buyer can answer, like team size or current tooling.
+
+- Drop any auto-fill form that submits in one tap without the person reading anything.
+
+- Say plainly what happens next, so people who don't want a call don't start one.
+
+You'll get fewer leads. That is the point. Would you rather your team called forty people or four who might buy?
+
+### Change the offer, not just the audience
+
+"Download our guide" attracts everyone, because a guide is useful to anyone curious. There is no filter in the offer itself.
+
+"Get a teardown of your current setup" attracts people who have a current setup worth examining. The offer has done the qualifying before the form ever loads.
+
+The strongest filter we use is specificity about who it's for. An offer that names the role, the sector and the situation repels everyone else, which is exactly what you want it to do.
+
+### What good looks like
+
+We took over a real estate account at Fastex Media where leads were expensive and inconsistent. Rebuilt the targeting around the actual buyer, cleaned up the lead flow, and cut cost per lead by 60% while tripling volume.
+
+That combination is only possible when you stop optimising for the cheapest form fill and start optimising for the right person. Cheap and wrong is not cheaper than expensive and right. It only looks that way on the dashboard.
+
+So before you touch the targeting again, go and ask your sales team what happened to last month's leads. Their answer is your real campaign report.
+
+### Frequently Asked Questions
+
+#### Why are my B2B ad leads such poor quality?
+
+Usually because the campaign is optimised for lead volume, so the platform finds people who readily fill in forms rather than people who buy. Feeding qualified-lead events back from your CRM retrains it toward buyers, and tightening the form and the offer filters out the rest.
+
+#### Should I use lead forms or send traffic to a landing page?
+
+Native lead forms convert at a higher rate and typically at lower quality, because they can be submitted in one tap with pre-filled details. A landing page adds friction, which costs you volume and filters out people who were never going to buy. For high-ticket B2B the landing page usually wins on cost per qualified conversation.
+
+#### How long before ad lead quality improves?
+
+Expect four to eight weeks. The platform needs roughly thirty qualified conversion events before it has enough signal to shift who it targets, and that takes time to accumulate at normal B2B volumes.
+
+---
+
+## LinkedIn Limits in 2026: What's Safe and What Gets You Restricted
+
+https://www.fastexmedia.com/blog/linkedin-outreach-limits/
+Published 2026-10-21 · 5 min read · Horror Stories
+
+Connection caps, what triggers a restriction, and how to recover an account that has been limited. The actual numbers we run outreach at, and why we stay well under the ceiling.
+
+Every few months someone comes to us with the same problem. They scaled LinkedIn outreach, it worked for a fortnight, and then the account got restricted. Now the profile they spent years building is in read only mode and nobody knows why.
+
+It's almost always the same cause, and it's almost always avoidable.
+
+### The numbers we actually run
+
+LinkedIn does not publish a hard limit, which is why the advice online is all over the place. What exists is a weekly invitation cap that tightens or loosens based on how your account behaves.
+
+Here is what we run across managed profiles, and these are deliberately conservative.
+
+- Connection requests: 20 to 25 a day on a warmed, established profile.
+
+- New or recently quiet profiles: start at 5 to 10 a day and climb over three weeks.
+
+- Profile views: keep them proportionate. Hundreds of views with no other activity looks automated.
+
+- Messages to existing connections: higher ceiling, but still spread through the day.
+
+Could you push to 40 a day? For a while, yes. The question is whether two extra weeks of volume is worth the account.
+
+### What actually triggers a restriction
+
+Volume alone is rarely the whole story. It's volume combined with behaviour that doesn't look like a person.
+
+A low acceptance rate. This is the big one. If fewer than about 30% of your invitations get accepted, LinkedIn reads it as spraying. Tighter targeting fixes this faster than lower volume does.
+
+Mechanical timing. Exactly 25 requests, exactly 9am, exactly every weekday. Real people are irregular. Spread activity through working hours and vary the daily number.
+
+Logging in from two countries at once. A tool running on a server in one country while you use the app in another is an obvious flag. Keep sessions on a consistent location.
+
+Being reported. Enough people marking your message as spam will restrict you at any volume. This is a copy problem, not a limits problem.
+
+### If you are already restricted
+
+Stop all automation immediately. Everything. If a tool is still running while you appeal, the appeal fails.
+
+Then use the account normally for a week or two. Read your feed, comment on things, reply to messages. Appeal through the official form, and be straightforward about it. Restrictions on a first offence are usually temporary. Restrictions on a second are often not.
+
+The recovery takes longer than the restriction did to earn, which is the whole argument for staying under the ceiling in the first place.
+
+### The approach that doesn't need limits
+
+Here is the thing worth sitting with. Teams that obsess over limits are usually compensating for a list that isn't good enough.
+
+If your acceptance rate is 60% because you're contacting people with a genuine reason to connect, 20 requests a day produces more conversations than 40 requests at a 20% acceptance rate. You get more pipeline, and you keep the account.
+
+Better targeting isn't the cautious option. It's the higher output one.
+
+We run outreach for clients at 20 to 25 requests a day per profile, and add profiles when more volume is needed rather than pushing a single account harder. It is slower to set up and it does not end with a message explaining why the founder's profile is locked.
+
+### Frequently Asked Questions
+
+#### How many LinkedIn connection requests can I send per day?
+
+Around 20 to 25 a day on an established profile is the safe working range, and a new or recently inactive profile should start at 5 to 10 and build over about three weeks. LinkedIn applies a weekly invitation cap that tightens if your acceptance rate is poor, so the ceiling is partly set by your own targeting.
+
+#### Does LinkedIn automation get you banned?
+
+Automation itself is against LinkedIn's terms, and heavy, mechanical activity is what gets detected. Most restrictions come from a low acceptance rate, perfectly regular timing, or sessions running from two locations at once rather than from the volume alone.
+
+#### How do I recover a restricted LinkedIn account?
+
+Stop every tool immediately, use the account manually for a week or two, then appeal through LinkedIn's official form. First restrictions are usually temporary. Repeat restrictions frequently are not, so treat the first one as the only warning you will get.
+
+---
+
 ## How to Build an ICP Your Outbound Can Actually Use
 
 https://www.fastexmedia.com/blog/build-an-icp-for-outbound/

@@ -1876,9 +1876,9 @@ footer {
 /* =========================================
    RESPONSIVE
 ========================================= */
-/* The full bar (logo, seven links, call button) needs ~1240px to breathe. Below that
+/* The full bar (logo, seven links, call button) needs ~1360px to breathe (eight links). Below that
    the links fold into the menu button rather than squeezing or overflowing. */
-@media (max-width: 1239px) {
+@media (max-width: 1359px) {
   .nav-links {
     position: fixed;
     top: var(--nav-height);
@@ -4618,7 +4618,7 @@ p mark.hl {
 }
 
 .navbar.scrolled .nav-content {
-  max-width: 1260px;
+  max-width: 1380px;
   width: calc(100% - 48px);
   height: 66px;
   padding: 0 0.55rem 0 1.6rem;
@@ -4699,7 +4699,7 @@ p mark.hl {
   }
 }
 
-@media (max-width: 1239px) {
+@media (max-width: 1359px) {
   .navbar.scrolled .nav-content {
     width: calc(100% - 24px);
     height: 58px;
@@ -4955,7 +4955,7 @@ p mark.hl {
   display: none;
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1360px) {
   .site-wrapper .navbar .logo {
     font-size: 1.05rem;
     letter-spacing: 0.06em;
@@ -4972,8 +4972,8 @@ p mark.hl {
   }
 
   .nav-links li a {
-    padding: 0.5rem 0.85rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
     font-weight: 500;
     text-transform: none;
     letter-spacing: 0;
@@ -5243,5 +5243,158 @@ html.booking-open {
   .booking-modal[open],
   .booking-modal[open]::backdrop {
     animation: none;
+  }
+}
+
+/* =========================================
+   "NEW" BADGE IN THE HEADER
+========================================= */
+.nav-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.42rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent-bright);
+  border-radius: 999px;
+  animation: badge-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.35); }
+  50% { box-shadow: 0 0 0 4px rgba(255, 102, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-badge {
+    animation: none;
+  }
+}
+
+/* =========================================
+   AI VIDEOS PAGE (/ai-videos)
+========================================= */
+.vr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.vr-card {
+  margin: 0;
+}
+
+.vr-frame {
+  position: relative;
+  aspect-ratio: var(--ar, 9 / 16);
+  overflow: hidden;
+  border-radius: 22px;
+  background: #0d0d0d;
+  box-shadow: 0 0 0 1px var(--border-color), 0 24px 50px -30px rgba(13, 13, 13, 0.45);
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+}
+
+.vr-card:hover .vr-frame {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px rgba(255, 102, 0, 0.45), 0 30px 60px -30px rgba(201, 74, 0, 0.45);
+}
+
+.vr-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vr-sound {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  font: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: #fff;
+  background: rgba(13, 13, 13, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s var(--ease-out);
+}
+
+.vr-sound:hover,
+.vr-sound[aria-pressed="true"] {
+  background: var(--accent-bright);
+  border-color: var(--accent-bright);
+}
+
+.vr-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.1rem 0.25rem 0;
+}
+
+.vr-kind {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-color);
+}
+
+.vr-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--text-main);
+}
+
+.vr-summary {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Four formats: two by two reads better than three plus one. */
+.vf-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .vr-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .vr-grid {
+    grid-template-columns: 1fr;
+    max-width: 24rem;
+    margin: 0 auto;
+  }
+
+  .vf-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Eight links: the header may use a little more of a wide screen than the
+   page content does, so the three groups keep clear space between them. */
+@media (min-width: 1360px) {
+  .navbar .nav-content {
+    max-width: 1500px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+  }
+
+  .navbar.scrolled .nav-content {
+    padding: 0 0.55rem 0 1.5rem;
   }
 }

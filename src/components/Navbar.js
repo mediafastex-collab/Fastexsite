@@ -20,8 +20,9 @@ const navItems = [
   },
   { num: "02", label: "Case Studies", href: "/work" },
   { num: "03", label: "Founder Brands", href: "/founders" },
+  { num: "04", label: "AI Videos", href: "/ai-videos", badge: "New" },
   {
-    num: "04",
+    num: "05",
     label: "Industries",
     href: "/industries",
     children: industries.map((industry, i) => ({
@@ -30,9 +31,9 @@ const navItems = [
       meta: String(i + 1).padStart(2, "0"),
     })),
   },
-  { num: "05", label: "Pricing", href: "/pricing" },
-  { num: "06", label: "Blog", href: "/blog" },
-  { num: "07", label: "About Us", href: "/about" },
+  { num: "06", label: "Pricing", href: "/pricing" },
+  { num: "07", label: "Blog", href: "/blog" },
+  { num: "08", label: "About Us", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -167,6 +168,9 @@ export default function Navbar() {
                   >
                     <span className="nav-number">{item.num}</span>
                     {item.label}
+                    {item.badge ? (
+                      <span className="nav-badge">{item.badge}</span>
+                    ) : null}
                   </Link>
                   {hasChildren && (
                     <button

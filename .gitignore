@@ -43,3 +43,6 @@ Site/
 
 # Cloudflare Pages Functions local secrets
 .dev.vars
+
+# Original, uncompressed AI videos (web copies live in public/videos/ai)
+/Ai videos/

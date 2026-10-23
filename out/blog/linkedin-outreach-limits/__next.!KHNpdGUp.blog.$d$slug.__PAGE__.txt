@@ -1,0 +1,70 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0jxnhyzlr5ved.js","/_next/static/chunks/010ruk1i0.ywp.js"],""]
+a:I[27893,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0jxnhyzlr5ved.js","/_next/static/chunks/010ruk1i0.ywp.js"],"default"]
+b:I[97367,["/_next/static/chunks/0g65zv~fun4x7.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
+2:Ta71,{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://www.fastexmedia.com/blog/linkedin-outreach-limits/","headline":"LinkedIn Limits in 2026: What's Safe and What Gets You Restricted","description":"Connection caps, what triggers a restriction, and how to recover an account that has been limited. The actual numbers we run outreach at, and why we stay well under the ceiling.","url":"https://www.fastexmedia.com/blog/linkedin-outreach-limits/","datePublished":"2026-10-21","dateModified":"2026-10-21","inLanguage":"en","image":"https://www.fastexmedia.com/og-image.jpg","articleSection":"Horror Stories","keywords":"linkedin connection limit, linkedin restriction, linkedin outreach limits, linkedin automation safe","author":{"@id":"https://www.fastexmedia.com/#aagam-shah"},"publisher":{"@id":"https://www.fastexmedia.com/#organization"},"isPartOf":{"@id":"https://www.fastexmedia.com/#website"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.fastexmedia.com/blog/linkedin-outreach-limits/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.fastexmedia.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.fastexmedia.com/blog/"},{"@type":"ListItem","position":3,"name":"LinkedIn Limits in 2026: What's Safe and What Gets You Restricted","item":"https://www.fastexmedia.com/blog/linkedin-outreach-limits/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many LinkedIn connection requests can I send per day?","acceptedAnswer":{"@type":"Answer","text":"Around 20 to 25 a day on an established profile is the safe working range, and a new or recently inactive profile should start at 5 to 10 and build over about three weeks. LinkedIn applies a weekly invitation cap that tightens if your acceptance rate is poor, so the ceiling is partly set by your own targeting."}},{"@type":"Question","name":"Does LinkedIn automation get you banned?","acceptedAnswer":{"@type":"Answer","text":"Automation itself is against LinkedIn's terms, and heavy, mechanical activity is what gets detected. Most restrictions come from a low acceptance rate, perfectly regular timing, or sessions running from two locations at once rather than from the volume alone."}},{"@type":"Question","name":"How do I recover a restricted LinkedIn account?","acceptedAnswer":{"@type":"Answer","text":"Stop every tool immediately, use the account manually for a week or two, then appeal through LinkedIn's official form. First restrictions are usually temporary. Repeat restrictions frequently are not, so treat the first one as the only warning you will get."}}]}]}0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}],["$","section",null,{"className":"page-hero article-hero","children":["$","div",null,{"className":"container","children":[["$","div",null,{"className":"breadcrumb","children":[["$","$L3",null,{"href":"/","children":"Home"}],["$","span",null,{"className":"sep","children":"/"}],["$","$L3",null,{"href":"/blog","children":"Blog"}],["$","span",null,{"className":"sep","children":"/"}],["$","span",null,{"className":"current","children":"Horror Stories"}]]}],["$","h1",null,{"children":"LinkedIn Limits in 2026: What's Safe and What Gets You Restricted"}],["$","p",null,{"className":"page-lede","children":"Connection caps, what triggers a restriction, and how to recover an account that has been limited. The actual numbers we run outreach at, and why we stay well under the ceiling."}],"$L4"]}]}],"$L5","$L6","$L7"],null,"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"6C_xSCKvlB81LDU_kVKBb"}
+4:["$","div",null,{"className":"article-meta","children":[["$","span",null,{"className":"article-author","children":["By ","Aagam Shah"]}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"className":"post-pillar","children":"Horror Stories"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","time",null,{"dateTime":"2026-10-21","children":"21 October 2026"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"5 min read"}]]}]
+9:T11ed,<p>Every few months someone comes to us with the same problem. They scaled LinkedIn outreach, it worked for a fortnight, and then the account got restricted. Now the profile they spent years building is in read only mode and nobody knows why.</p>
+
+<p>It's almost always the same cause, and it's almost always avoidable.</p>
+
+<h2>The numbers we actually run</h2>
+
+<p>LinkedIn does not publish a hard limit, which is why the advice online is all over the place. What exists is a weekly invitation cap that tightens or loosens based on how your account behaves.</p>
+
+<p>Here is what we run across managed profiles, and these are deliberately conservative.</p>
+
+<ul>
+<li><strong>Connection requests:</strong> 20 to 25 a day on a warmed, established profile.</li>
+<li><strong>New or recently quiet profiles:</strong> start at 5 to 10 a day and climb over three weeks.</li>
+<li><strong>Profile views:</strong> keep them proportionate. Hundreds of views with no other activity looks automated.</li>
+<li><strong>Messages to existing connections:</strong> higher ceiling, but still spread through the day.</li>
+</ul>
+
+<p>Could you push to 40 a day? For a while, yes. The question is whether two extra weeks of volume is worth the account.</p>
+
+<h2>What actually triggers a restriction</h2>
+
+<p>Volume alone is rarely the whole story. It's volume combined with behaviour that doesn't look like a person.</p>
+
+<p><strong>A low acceptance rate.</strong> This is the big one. If fewer than about 30% of your invitations get accepted, LinkedIn reads it as spraying. Tighter targeting fixes this faster than lower volume does.</p>
+
+<p><strong>Mechanical timing.</strong> Exactly 25 requests, exactly 9am, exactly every weekday. Real people are irregular. Spread activity through working hours and vary the daily number.</p>
+
+<p><strong>Logging in from two countries at once.</strong> A tool running on a server in one country while you use the app in another is an obvious flag. Keep sessions on a consistent location.</p>
+
+<p><strong>Being reported.</strong> Enough people marking your message as spam will restrict you at any volume. This is a copy problem, not a limits problem.</p>
+
+<h2>If you are already restricted</h2>
+
+<p>Stop all automation immediately. Everything. If a tool is still running while you appeal, the appeal fails.</p>
+
+<p>Then use the account normally for a week or two. Read your feed, comment on things, reply to messages. Appeal through the official form, and be straightforward about it. Restrictions on a first offence are usually temporary. Restrictions on a second are often not.</p>
+
+<p>The recovery takes longer than the restriction did to earn, which is the whole argument for staying under the ceiling in the first place.</p>
+
+<h2>The approach that doesn't need limits</h2>
+
+<p>Here is the thing worth sitting with. Teams that obsess over limits are usually compensating for a list that isn't good enough.</p>
+
+<p>If your acceptance rate is 60% because you're contacting people with a genuine reason to connect, 20 requests a day produces more conversations than 40 requests at a 20% acceptance rate. You get more pipeline, and you keep the account.</p>
+
+<p>Better targeting isn't the cautious option. It's the higher output one.</p>
+
+<p>We run outreach for clients at 20 to 25 requests a day per profile, and add profiles when more volume is needed rather than pushing a single account harder. It is slower to set up and it does not end with a message explaining why the founder's profile is locked.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How many LinkedIn connection requests can I send per day?</h3>
+<p>Around 20 to 25 a day on an established profile is the safe working range, and a new or recently inactive profile should start at 5 to 10 and build over about three weeks. LinkedIn applies a weekly invitation cap that tightens if your acceptance rate is poor, so the ceiling is partly set by your own targeting.</p>
+
+<h3>Does LinkedIn automation get you banned?</h3>
+<p>Automation itself is against LinkedIn's terms, and heavy, mechanical activity is what gets detected. Most restrictions come from a low acceptance rate, perfectly regular timing, or sessions running from two locations at once rather than from the volume alone.</p>
+
+<h3>How do I recover a restricted LinkedIn account?</h3>
+<p>Stop every tool immediately, use the account manually for a week or two, then appeal through LinkedIn's official form. First restrictions are usually temporary. Repeat restrictions frequently are not, so treat the first one as the only warning you will get.</p>5:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"article-body","dangerouslySetInnerHTML":{"__html":"$9"}}]}]}]
+6:["$","section",null,{"className":"pk-section","style":{"borderTop":"1px solid var(--border-color)"},"children":["$","div",null,{"className":"container","children":[["$","h2",null,{"className":"pk-h2","children":"Keep reading."}],["$","ul",null,{"className":"post-list","children":[["$","li","b2b-ads-wrong-leads",{"children":["$","$L3",null,{"href":"/blog/b2b-ads-wrong-leads","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Horror Stories"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"Why Your B2B Ads Bring Students and Job Seekers (and How to Fix It)"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","build-an-icp-for-outbound",{"children":["$","$L3",null,{"href":"/blog/build-an-icp-for-outbound","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"How to Build an ICP Your Outbound Can Actually Use"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}],["$","li","whatsapp-business-api-setup-b2b",{"children":["$","$L3",null,{"href":"/blog/whatsapp-business-api-setup-b2b","className":"post-row","children":[["$","span",null,{"className":"post-meta","children":[["$","span",null,{"className":"post-pillar","children":"Revenue Architecture"}],["$","span",null,{"className":"post-dot","aria-hidden":"true","children":"·"}],["$","span",null,{"children":"6 min read"}]]}],["$","h3",null,{"className":"post-title","children":"WhatsApp Business API Setup for B2B: What Actually Takes the Time"}],["$","span",null,{"className":"post-more","children":["Read ",["$","span",null,{"aria-hidden":"true","children":"→"}]]}]]}]}]]}]]}]}]
+7:["$","section",null,{"className":"pk-section cta","style":{"borderTop":"1px solid var(--border-color)","paddingBottom":"8rem"},"children":["$","div",null,{"className":"container","children":["$","div",null,{"className":"cta-inner","children":[["$","h2",null,{"children":"Want this run for you?"}],["$","p",null,{"className":"cta-sub","children":"Tell us what you are trying to grow. We will tell you which channels fit and what it takes."}],["$","$La",null,{"children":"Book a Strategy Call"}]]}]}]}]
+8:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null
