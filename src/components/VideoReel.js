@@ -8,7 +8,8 @@ import { useEffect, useRef, useState } from "react";
  * Shows its poster with a play button. Pressing play starts it with sound;
  * pressing it again (or the video itself) pauses it. Only one video plays at
  * a time: starting one announces itself and every other reel pauses. A video
- * also pauses when it is scrolled off screen. Nothing is downloaded until the
+ * also pauses when it is scrolled off screen. The corner button opens it full
+ * screen, with sound and the browser's own controls. Nothing is downloaded until the
  * first press, so the page stays light.
  */
 const PLAY_EVENT = "fastex:video-play";
@@ -17,6 +18,9 @@ export default function VideoReel({ video }) {
   const ref = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  // In-page "theatre" view: the fallback when the browser will not go full
+  // screen (in-app browsers such as Instagram's and LinkedIn's often refuse).
+  const [theater, setTheater] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -31,14 +35,22 @@ export default function VideoReel({ video }) {
     // Scrolled out of view: stop.
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting && !el.paused) el.pause();
+        if (!entry.isIntersecting && !el.paused && !document.fullscreenElement) el.pause();
       },
       { threshold: 0.15 }
     );
     io.observe(el);
 
+    // Native controls while full screen (seek, volume, exit), none inline.
+    const onFullscreen = () => {
+      el.controls = document.fullscreenElement === el;
+      if (document.fullscreenElement === el) setTheater(false);
+    };
+    document.addEventListener("fullscreenchange", onFullscreen);
+
     return () => {
       window.removeEventListener(PLAY_EVENT, onOtherPlay);
+      document.removeEventListener("fullscreenchange", onFullscreen);
       io.disconnect();
     };
   }, [video.slug]);
@@ -52,6 +64,43 @@ export default function VideoReel({ video }) {
       el.pause();
     }
   };
+
+  // Full screen, with sound. iPhone Safari only supports full screen on the
+  // video itself, through its own player.
+  const fullscreen = () => {
+    const el = ref.current;
+    el.muted = false;
+    el.play().catch(() => {});
+    if (el.requestFullscreen) {
+      let granted = false;
+      el.requestFullscreen()
+        .then(() => (granted = true))
+        .catch(() => setTheater(true));
+      // Some browsers neither grant nor refuse; don't leave the visitor waiting.
+      setTimeout(() => {
+        if (!granted && document.fullscreenElement !== el) setTheater(true);
+      }, 700);
+    } else if (el.webkitEnterFullscreen) {
+      el.webkitEnterFullscreen();
+    } else {
+      setTheater(true);
+    }
+  };
+
+  // Theatre view: Escape closes it, and the page behind does not scroll.
+  useEffect(() => {
+    if (!theater) return;
+    const el = ref.current;
+    el.controls = true;
+    const onKey = (e) => e.key === "Escape" && setTheater(false);
+    window.addEventListener("keydown", onKey);
+    document.documentElement.classList.add("booking-open");
+    return () => {
+      el.controls = false;
+      window.removeEventListener("keydown", onKey);
+      document.documentElement.classList.remove("booking-open");
+    };
+  }, [theater]);
 
   const onPlay = () => {
     setPlaying(true);
@@ -70,7 +119,7 @@ export default function VideoReel({ video }) {
       <div
         className={`vr-frame${playing ? " is-playing" : ""}${
           progress > 0 ? " has-started" : ""
-        }`}
+        }${theater ? " is-theater" : ""}`}
       >
         <video
           ref={ref}
@@ -95,6 +144,26 @@ export default function VideoReel({ video }) {
         >
           <span className={playing ? "vr-icon-pause" : "vr-icon-play"} aria-hidden="true" />
         </button>
+
+        {theater ? (
+          <button
+            type="button"
+            className="vr-full vr-close"
+            onClick={() => setTheater(false)}
+            aria-label="Close full screen"
+          >
+            <span aria-hidden="true" />
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="vr-full"
+            onClick={fullscreen}
+            aria-label={`Watch ${video.title} full screen`}
+          >
+            <span aria-hidden="true" />
+          </button>
+        )}
 
         <div className="vr-progress" aria-hidden="true">
           <span style={{ transform: `scaleX(${progress})` }} />

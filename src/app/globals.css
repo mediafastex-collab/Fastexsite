@@ -5497,3 +5497,126 @@ html.booking-open {
     padding: 0 0.55rem 0 1.5rem;
   }
 }
+
+/* Full-screen button: top-right corner of every video, always visible. */
+.vr-full {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  background: rgba(13, 13, 13, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background 0.25s var(--ease-out), border-color 0.25s var(--ease-out),
+    transform 0.3s var(--ease-out);
+}
+
+.vr-full:hover {
+  background: var(--accent-bright);
+  border-color: var(--accent-bright);
+  transform: scale(1.06);
+}
+
+.vr-full:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+/* Four corner brackets drawn with borders: the usual "expand" mark. */
+.vr-full span {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background:
+    linear-gradient(#fff, #fff) left top / 6px 2px,
+    linear-gradient(#fff, #fff) left top / 2px 6px,
+    linear-gradient(#fff, #fff) right top / 6px 2px,
+    linear-gradient(#fff, #fff) right top / 2px 6px,
+    linear-gradient(#fff, #fff) left bottom / 6px 2px,
+    linear-gradient(#fff, #fff) left bottom / 2px 6px,
+    linear-gradient(#fff, #fff) right bottom / 6px 2px,
+    linear-gradient(#fff, #fff) right bottom / 2px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Full screen: the picture fits the screen instead of being cropped. */
+.vr-frame video:fullscreen {
+  object-fit: contain;
+  background: #000;
+}
+
+/* =========================================
+   HOMEPAGE: AI VIDEOS BAND
+========================================= */
+.home-videos .vr-grid {
+  margin-top: 0.5rem;
+}
+
+.home-videos-foot {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.section-label .label-new {
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: var(--accent-bright);
+  border-radius: 999px;
+}
+
+/* Theatre view (full-screen fallback): the video fills the window.
+   Doubled up so the card's hover lift cannot move it. */
+.vr-card .vr-frame.is-theater,
+.vr-card:hover .vr-frame.is-theater {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: #000;
+  box-shadow: none;
+  transform: none;
+  animation: booking-fade 0.3s var(--ease-out) both;
+}
+
+.vr-frame.is-theater video {
+  object-fit: contain;
+}
+
+/* In theatre the browser's own controls take over play, pause and seek. */
+.vr-frame.is-theater .vr-toggle,
+.vr-frame.is-theater .vr-progress {
+  display: none;
+}
+
+.vr-frame.is-theater .vr-full {
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.vr-close span {
+  width: 16px;
+  height: 16px;
+  background:
+    linear-gradient(#fff, #fff) center / 18px 2px no-repeat;
+  transform: rotate(45deg);
+}
+
+.vr-close span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#fff, #fff) center / 2px 18px no-repeat;
+}

@@ -7,6 +7,8 @@ import HeroFlow from "@/components/HeroFlow";
 import BookCall from "@/components/BookCall";
 import ClientMarquee from "@/components/ClientMarquee";
 import Hl from "@/components/Hl";
+import VideoReel from "@/components/VideoReel";
+import { aiVideos } from "@/data/aiVideos";
 
 
 const process = [
@@ -146,6 +148,40 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* ---------- AI VIDEOS ----------
+          The newest service, shown with the work itself: the same reels as
+          /ai-videos, each with play, pause and full screen. */}
+      <section
+        className="section-padding home-videos"
+        style={{ borderTop: "1px solid var(--border-color)" }}
+      >
+        <div className="container">
+          <div className="section-header reveal">
+            <div className="section-label">
+              AI video production <span className="label-new">New</span>
+            </div>
+            <h2>2D and 3D AI animation, made for brands.</h2>
+            <p>
+              <Hl terms={["made with AI and finished by people"]}>
+                {"Explainers, product animation and character-led reels, made with AI and finished by people. Press play to watch with sound."}
+              </Hl>
+            </p>
+          </div>
+          <div className="vr-grid">
+            {aiVideos.map((v, i) => (
+              <div key={v.slug} className="reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
+                <VideoReel video={v} />
+              </div>
+            ))}
+          </div>
+          <div className="home-videos-foot reveal">
+            <Link href="/ai-videos" className="btn btn-outline">
+              Explore AI videos <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
