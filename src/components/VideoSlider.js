@@ -13,9 +13,10 @@ import VideoReel from "@/components/VideoReel";
  * you are.
  *
  * It also advances on its own every few seconds and loops back to the start.
- * Autoplay holds while the pointer is over it, for a while after someone
- * swipes or clicks, whenever a video is playing, when it is off screen or the
- * tab is hidden, and never runs for visitors who ask for reduced motion.
+ * Autoplay holds for a while after someone swipes or clicks the arrows or
+ * dots, whenever a video is playing, when it is off screen or the tab is
+ * hidden, and never runs for visitors who ask for reduced motion. It keeps
+ * moving while a mouse merely rests over it.
  */
 const AUTO_MS = 4000; // time each position is shown
 const RESUME_MS = 8000; // quiet time after an interaction before it resumes
@@ -74,16 +75,13 @@ export default function VideoSlider({ videos }) {
     const t = trackRef.current;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    let hovering = false;
-    // Mouse only: a tap on a phone fires pointerenter but no matching leave.
-    const onEnter = (e) => {
-      if (e.pointerType === "mouse") hovering = true;
+    // Only a sideways scroll counts as the visitor using the slider; scrolling
+    // the page up and down over it does not.
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) touched();
     };
-    const onLeave = () => (hovering = false);
-    root.addEventListener("pointerenter", onEnter);
-    root.addEventListener("pointerleave", onLeave);
     t.addEventListener("pointerdown", touched);
-    t.addEventListener("wheel", touched, { passive: true });
+    t.addEventListener("wheel", onWheel, { passive: true });
     t.addEventListener("touchstart", touched, { passive: true });
 
     const timer = setInterval(() => {
@@ -92,7 +90,6 @@ export default function VideoSlider({ videos }) {
       const r = root.getBoundingClientRect();
       const onScreen = r.bottom > window.innerHeight * 0.25 && r.top < window.innerHeight * 0.75;
       if (
-        hovering ||
         !onScreen ||
         document.hidden ||
         videoPlaying ||
@@ -109,10 +106,8 @@ export default function VideoSlider({ videos }) {
 
     return () => {
       clearInterval(timer);
-      root.removeEventListener("pointerenter", onEnter);
-      root.removeEventListener("pointerleave", onLeave);
       t.removeEventListener("pointerdown", touched);
-      t.removeEventListener("wheel", touched);
+      t.removeEventListener("wheel", onWheel);
       t.removeEventListener("touchstart", touched);
     };
   }, []);
